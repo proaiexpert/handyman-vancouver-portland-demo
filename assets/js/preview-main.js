@@ -71,4 +71,37 @@ transformTabs.forEach((button) => {
   });
 });
 
+const scopeVisual = document.querySelector('[data-scope-visual]');
+const scopeToggles = [...document.querySelectorAll('.scope-toggle-btn')];
+const scopeChips = [...document.querySelectorAll('.scope-chip')];
+const scopeProblemTitle = document.querySelector('[data-scope-problem-title]');
+const scopeImprovedTitle = document.querySelector('[data-scope-improved-title]');
+const scopeProblemCopy = document.querySelector('[data-scope-problem-copy]');
+const scopeCardType = document.querySelector('[data-scope-card-type]');
+const scopeCardNote = document.querySelector('[data-scope-card-note]');
+
+scopeToggles.forEach((button) => {
+  button.addEventListener('click', () => {
+    scopeToggles.forEach((item) => item.classList.remove('is-active'));
+    button.classList.add('is-active');
+    if (scopeVisual) {
+      scopeVisual.classList.toggle('is-problem', button.dataset.scopeView === 'problem');
+      scopeVisual.classList.toggle('is-improved', button.dataset.scopeView === 'improved');
+    }
+  });
+});
+
+scopeChips.forEach((button) => {
+  button.addEventListener('click', () => {
+    scopeChips.forEach((item) => item.classList.remove('is-active'));
+    button.classList.add('is-active');
+    const type = button.dataset.scopeType || button.textContent.trim();
+    if (scopeProblemTitle) scopeProblemTitle.textContent = type;
+    if (scopeImprovedTitle) scopeImprovedTitle.textContent = button.dataset.scopeImproved || 'Reviewed repair scope';
+    if (scopeProblemCopy) scopeProblemCopy.textContent = button.dataset.scopeProblem || 'Repair area ready for scope review.';
+    if (scopeCardType) scopeCardType.textContent = type;
+    if (scopeCardNote) scopeCardNote.textContent = button.dataset.scopeNote || 'Add photos and project details.';
+  });
+});
+
 document.documentElement.classList.add('js-ready');

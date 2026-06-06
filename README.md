@@ -1,13 +1,14 @@
 # Handyman v2 First-Screen Previews
 
 ## Purpose
-Compare four first-screen visual and UX directions before building the full homepage v2.
+Compare five first-screen visual and UX directions before building the full homepage v2.
 
 ## Routes included
 1. Estimate OS - archived/reference
 2. PNW Craft Board - archived/reference
-3. Hybrid Rotating Preview Hero - new wow test
-4. Hybrid Transformation Hero - new wow test
+3. Hybrid Rotating Preview Hero - archived/reference
+4. Hybrid Transformation Hero - archived/reference
+5. RepairScope Transformation Hero - best-of route / new primary test
 
 ## Live URL paths
 - `/`
@@ -17,9 +18,18 @@ Compare four first-screen visual and UX directions before building the full home
 - `/hybrid-rotating-preview/`
 - `/hybrid-transformation.html`
 - `/hybrid-transformation/`
+- `/repairscope-transformation.html`
+- `/repairscope-transformation/`
 
 ## Preservation rule
-Estimate OS and PNW Craft Board remain preserved as archive/reference routes. Do not rename or remove them while testing the new Hybrid routes.
+Estimate OS, PNW Craft Board, Hybrid Rotating Preview Hero, and Hybrid Transformation Hero remain preserved as archive/reference routes. Do not rename or remove them while testing RepairScope.
+
+## Best-of route
+RepairScope Transformation Hero synthesizes the strongest parts of the first four routes:
+- transformation visual punch
+- estimate/request clarity
+- PNW material visual language
+- controlled repair category chips
 
 ## New wow tests
 Hybrid Rotating Preview tests a fixed headline and CTA with only the repair preview zone changing.
@@ -34,6 +44,8 @@ Hybrid Transformation tests a featured sample before/after visual mechanism with
 - `hybrid-rotating-preview/index.html`
 - `hybrid-transformation.html`
 - `hybrid-transformation/index.html`
+- `repairscope-transformation.html`
+- `repairscope-transformation/index.html`
 - `estimate-os/index.html`
 - `pnw-craft-board/index.html`
 - `assets/css/preview-styles.css`
@@ -57,6 +69,7 @@ Hybrid Transformation tests a featured sample before/after visual mechanism with
 - No console errors
 - Service chip interaction works or degrades cleanly
 - Before/after toggle works
+- RepairScope chips and toggle work
 
 ## Status
 These are preview routes only, not a full v2 homepage implementation.

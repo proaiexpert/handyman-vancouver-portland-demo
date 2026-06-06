@@ -94,6 +94,11 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--cta); outline-o
 .selector-card.archived { opacity: .92; }
 .selector-card.rotating { background: linear-gradient(145deg, #fff, #f8efe2); }
 .selector-card.transformation { background: linear-gradient(145deg, #fff, #eaf0ed); }
+.selector-card.repairscope { background: linear-gradient(145deg, #102033, #243D32); color: white; grid-column: span 2; }
+.selector-card.repairscope h2, .selector-card.repairscope strong { color: white; }
+.selector-card.repairscope p, .selector-card.repairscope em { color: rgba(255,255,255,.78); }
+.selector-card.repairscope span { color: #f1b56b; }
+.selector-action-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .redirect-card { max-width: 720px; border: 1px solid var(--border); border-radius: 28px; background: rgba(255,255,255,.9); padding: clamp(24px, 5vw, 44px); box-shadow: var(--shadow); }
 
 .hybrid-rotate-screen { grid-template-columns: minmax(0, .74fr) minmax(0, 1fr); background: radial-gradient(circle at 70% 20%, rgba(201,130,43,.17), transparent 32%), repeating-linear-gradient(135deg, rgba(36,61,50,.04) 0 1px, transparent 1px 18px), var(--background); }
@@ -147,6 +152,49 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--cta); outline-o
 .attached-estimate-card p { color: rgba(255,255,255,.78); }
 .transform-tabs { position: absolute; left: 30px; right: 30px; bottom: 28px; display: flex; flex-wrap: wrap; gap: 10px; z-index: 6; }
 
+.repairscope-route { background: radial-gradient(circle at 6% 10%, rgba(201,130,43,.17), transparent 25%), radial-gradient(circle at 92% 18%, rgba(36,61,50,.18), transparent 30%), repeating-linear-gradient(90deg, rgba(16,32,51,.025) 0 1px, transparent 1px 20px), var(--background); }
+.repairscope-screen { min-height: calc(100vh - 70px); padding: clamp(18px, 4vw, 54px); display: grid; grid-template-columns: minmax(280px, 4fr) minmax(360px, 6fr) minmax(260px, 2.8fr); gap: clamp(16px, 2.8vw, 34px); align-items: center; position: relative; }
+.scope-headline-slab { background: rgba(255,255,255,.88); border: 1px solid var(--border); border-radius: 34px; padding: clamp(22px, 3vw, 34px); box-shadow: var(--shadow); position: relative; z-index: 4; }
+.scope-headline-slab h1 { font-size: clamp(2.45rem, 6vw, 5.15rem); }
+.scope-trust-chips { margin-top: 18px; }
+.scope-stage { min-width: 0; min-height: 650px; border: 1px solid var(--border); border-radius: 42px; padding: clamp(18px, 3vw, 30px); background: linear-gradient(145deg, rgba(255,255,255,.82), rgba(238,242,239,.9)); box-shadow: 0 26px 70px rgba(16,32,51,.18); position: relative; overflow: hidden; }
+.scope-stage::before { content: ""; position: absolute; inset: 16px; border: 1px solid rgba(203,210,208,.84); border-radius: 32px; pointer-events: none; }
+.scope-stage-topline { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; position: relative; z-index: 3; color: var(--muted); font-weight: 850; font-size: .82rem; }
+.scope-stage-topline strong { color: var(--secondary); }
+.scope-toggle { display: flex; gap: 8px; margin: 18px 0; position: relative; z-index: 4; }
+.scope-toggle-btn, .scope-chip { border: 0; border-radius: 999px; background: rgba(255,255,255,.86); color: var(--primary); font-weight: 950; padding: 10px 14px; box-shadow: inset 0 0 0 1px var(--border); cursor: pointer; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.scope-toggle-btn.is-active { background: var(--secondary); color: white; }
+.scope-chip { position: relative; padding-left: 24px; }
+.scope-chip::before { content: ""; position: absolute; left: 10px; top: 50%; width: 7px; height: 7px; border-radius: 999px; background: var(--divider); transform: translateY(-50%); }
+.scope-chip:hover { transform: translateY(-2px); }
+.scope-chip.is-active { box-shadow: inset 0 0 0 2px var(--secondary); background: white; color: var(--secondary); }
+.scope-chip.is-active::before { background: var(--cta); }
+.scope-visual-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; position: relative; z-index: 2; }
+.scope-visual-pair::after { content: ""; position: absolute; left: 50%; top: 16px; bottom: 16px; width: 4px; border-radius: 999px; background: var(--cta); box-shadow: 0 0 0 8px rgba(201,130,43,.12); }
+.scope-visual-panel { min-height: 355px; border: 1px solid var(--divider); border-radius: 30px; padding: 22px; position: relative; overflow: hidden; }
+.scope-visual-panel span { color: var(--cta); font-weight: 950; text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; }
+.scope-visual-panel h2 { margin: 10px 0; color: var(--primary); font-size: clamp(1.8rem, 4vw, 3.15rem); line-height: .98; letter-spacing: -.04em; }
+.scope-visual-panel p { color: var(--muted); font-weight: 800; max-width: 290px; }
+.scope-problem-panel { background: linear-gradient(135deg, #dfd1c0, #f2ebdf); }
+.scope-improved-panel { background: linear-gradient(135deg, #f9f6ef, #e7f0ea); }
+.scope-surface { position: absolute; left: 24px; right: 24px; bottom: 26px; height: 132px; border-radius: 26px; background: rgba(255,255,255,.46); border: 1px solid rgba(255,255,255,.7); overflow: hidden; }
+.scope-surface i, .scope-surface b, .scope-surface em { position: absolute; display: block; border-radius: 999px; }
+.scope-surface i { left: 22px; top: 30px; width: 68%; height: 16px; background: rgba(95,80,60,.22); transform: rotate(-7deg); }
+.scope-surface b { right: 28px; top: 44px; width: 74px; height: 58px; border-radius: 22px; background: rgba(95,80,60,.18); }
+.scope-surface em { left: 40px; bottom: 26px; width: 45%; height: 14px; background: rgba(95,80,60,.16); transform: rotate(4deg); }
+.scope-surface.improved i { transform: none; background: rgba(36,61,50,.15); }
+.scope-surface.improved b { width: 90px; height: 70px; border-radius: 26px; background: rgba(201,130,43,.13); }
+.scope-surface.improved em { width: 62%; transform: none; background: rgba(36,61,50,.12); }
+.scope-chip-row { position: absolute; left: 30px; right: 30px; bottom: 28px; display: flex; flex-wrap: wrap; gap: 10px; z-index: 5; }
+.scope-estimate-card { align-self: end; margin-left: clamp(-72px, -5vw, -36px); margin-bottom: clamp(24px, 5vw, 58px); background: var(--primary); color: white; border: 1px solid rgba(255,255,255,.18); border-radius: 30px; padding: 22px; box-shadow: 0 24px 60px rgba(16,32,51,.27); position: relative; z-index: 6; }
+.scope-estimate-card h2 { margin: 8px 0; color: white; font-size: 1.55rem; }
+.scope-estimate-card p { color: rgba(255,255,255,.76); }
+.scope-field-grid { display: grid; gap: 10px; margin: 16px 0; }
+.scope-field { display: grid; gap: 4px; min-height: 62px; align-content: center; padding: 12px; border-radius: 16px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); }
+.scope-field span { color: rgba(255,255,255,.62); font-size: .78rem; font-weight: 900; }
+.scope-field strong { color: white; }
+.scope-support-note { font-size: .86rem; margin-bottom: 0; }
+
 .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: grid; grid-template-columns: 1fr 1fr; background: white; border-top: 1px solid var(--border); box-shadow: 0 -10px 30px rgba(16,32,51,.18); }
 .sticky-cta a { min-height: 56px; display: grid; place-items: center; text-decoration: none; font-weight: 950; color: var(--primary); }
 .sticky-cta a:first-child { background: var(--cta); color: #241300; }
@@ -173,6 +221,10 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--cta); outline-o
   .sticky-cta { display: none; }
 }
 
+@media (min-width: 1100px) {
+  .four-route-grid .selector-card.repairscope { grid-column: span 4; min-height: 260px; }
+}
+
 @media (max-width: 759px) {
   body { padding-bottom: 58px; }
   .preview-header { padding-inline: 16px; }
@@ -184,6 +236,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--cta); outline-o
   h1 { font-size: clamp(2.15rem, 13vw, 3.45rem); }
   .selector-main { place-items: start; padding: 18px 14px; }
   .four-route-grid .selector-card { min-height: auto; }
+  .selector-card.repairscope { grid-column: auto; }
   .hybrid-rotate-screen, .transform-screen { display: grid; grid-template-columns: 1fr; padding: 24px 16px; align-items: start; }
   .rotating-stage, .transformation-frame { min-height: auto; border-radius: 26px; padding: 16px; }
   .active-repair-card { min-height: 250px; }
@@ -195,6 +248,18 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--cta); outline-o
   .visual-pair.is-before .after-panel { display: none; }
   .visual-pair.is-after .before-panel { display: none; }
   .transform-copy-card { order: -1; }
+  .repairscope-screen { display: grid; grid-template-columns: 1fr; padding: 24px 16px; align-items: start; }
+  .scope-headline-slab { order: 1; padding: 20px; border-radius: 28px; }
+  .scope-stage { order: 2; min-height: auto; border-radius: 28px; padding: 16px; }
+  .scope-toggle { margin-top: 16px; }
+  .scope-visual-pair { grid-template-columns: 1fr; }
+  .scope-visual-pair::after { display: none; }
+  .scope-visual-panel { min-height: 280px; }
+  .scope-visual-pair.is-problem .scope-improved-panel { display: none; }
+  .scope-visual-pair.is-improved .scope-problem-panel { display: none; }
+  .scope-chip-row { position: relative; left: auto; right: auto; bottom: auto; margin-top: 16px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+  .scope-chip { flex: 0 0 auto; }
+  .scope-estimate-card { order: 3; margin: 0; border-radius: 26px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
