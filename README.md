@@ -1,16 +1,41 @@
 # Handyman v2 First-Screen Previews
 
 ## Purpose
-Compare two first-screen visual and UX directions before building the full homepage v2.
+Compare four first-screen visual and UX directions before building the full homepage v2.
 
 ## Routes included
-1. Estimate OS
-2. PNW Craft Board
+1. Estimate OS - archived/reference
+2. PNW Craft Board - archived/reference
+3. Hybrid Rotating Preview Hero - new wow test
+4. Hybrid Transformation Hero - new wow test
+
+## Live URL paths
+- `/`
+- `/estimate-os.html`
+- `/pnw-craft-board.html`
+- `/hybrid-rotating-preview.html`
+- `/hybrid-rotating-preview/`
+- `/hybrid-transformation.html`
+- `/hybrid-transformation/`
+
+## Preservation rule
+Estimate OS and PNW Craft Board remain preserved as archive/reference routes. Do not rename or remove them while testing the new Hybrid routes.
+
+## New wow tests
+Hybrid Rotating Preview tests a fixed headline and CTA with only the repair preview zone changing.
+
+Hybrid Transformation tests a featured sample before/after visual mechanism without real-project proof claims.
 
 ## Files created
 - `index.html`
 - `estimate-os.html`
 - `pnw-craft-board.html`
+- `hybrid-rotating-preview.html`
+- `hybrid-rotating-preview/index.html`
+- `hybrid-transformation.html`
+- `hybrid-transformation/index.html`
+- `estimate-os/index.html`
+- `pnw-craft-board/index.html`
 - `assets/css/preview-styles.css`
 - `assets/js/preview-main.js`
 
@@ -20,6 +45,7 @@ Compare two first-screen visual and UX directions before building the full homep
 - No warranty, same-day, emergency, or years-in-business claims.
 - No completed-project claims.
 - Demo visuals and cards are concept placeholders only.
+- Replace sample visuals with verified real project photos before launch.
 
 ## QA checklist
 - Desktop layout
@@ -30,6 +56,7 @@ Compare two first-screen visual and UX directions before building the full homep
 - Touch targets usable
 - No console errors
 - Service chip interaction works or degrades cleanly
+- Before/after toggle works
 
 ## Status
 These are preview routes only, not a full v2 homepage implementation.
