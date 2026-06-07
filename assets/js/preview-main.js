@@ -117,6 +117,16 @@ const finalMenuButton = document.querySelector('.final-menu-button');
 const finalMobileMenu = document.querySelector('#final-mobile-menu');
 const finalMenuBackdrop = document.querySelector('.final-menu-backdrop');
 const finalMenuCloseItems = [...document.querySelectorAll('[data-final-menu-close]')];
+const finalSiteHeader = document.querySelector('.final-site-header');
+let finalLastScrollY = window.scrollY;
+
+function finalMenuIsMobile() {
+  return window.matchMedia('(max-width: 900px)').matches;
+}
+
+function showFinalHeader() {
+  finalSiteHeader?.classList.remove('site-header--hidden');
+}
 
 function setFinalMenu(open) {
   if (!finalMenuButton || !finalMobileMenu || !finalMenuBackdrop) return;
@@ -125,6 +135,7 @@ function setFinalMenu(open) {
   finalMobileMenu.hidden = !open;
   finalMenuBackdrop.hidden = !open;
   document.body.classList.toggle('final-menu-open', open);
+  if (open) showFinalHeader();
   if (open) {
     finalMobileMenu.querySelector('a, button')?.focus();
   } else {
@@ -151,9 +162,31 @@ document.addEventListener('keydown', (event) => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth >= 760 && finalMenuButton?.getAttribute('aria-expanded') === 'true') {
+  if (!finalMenuIsMobile() && finalMenuButton?.getAttribute('aria-expanded') === 'true') {
     setFinalMenu(false);
   }
+  if (!finalMenuIsMobile()) showFinalHeader();
+  finalLastScrollY = window.scrollY;
 });
+
+window.addEventListener('scroll', () => {
+  if (!finalMenuIsMobile() || !finalSiteHeader) return;
+  if (finalMenuButton?.getAttribute('aria-expanded') === 'true') {
+    showFinalHeader();
+    finalLastScrollY = window.scrollY;
+    return;
+  }
+
+  const currentScrollY = window.scrollY;
+  const delta = currentScrollY - finalLastScrollY;
+  if (currentScrollY <= 80) {
+    showFinalHeader();
+  } else if (delta > 8) {
+    finalSiteHeader.classList.add('site-header--hidden');
+  } else if (delta < 0) {
+    showFinalHeader();
+  }
+  finalLastScrollY = currentScrollY;
+}, { passive: true });
 
 document.documentElement.classList.add('js-ready');
