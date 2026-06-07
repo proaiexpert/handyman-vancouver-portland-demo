@@ -104,4 +104,13 @@ scopeChips.forEach((button) => {
   });
 });
 
+const finalServiceChips = [...document.querySelectorAll('.final-service-chip')];
+
+finalServiceChips.forEach((button) => {
+  button.addEventListener('click', () => {
+    finalServiceChips.forEach((item) => item.classList.remove('is-active'));
+    button.classList.add('is-active');
+  });
+});
+
 document.documentElement.classList.add('js-ready');

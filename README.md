@@ -1,7 +1,7 @@
 # Handyman v2 First-Screen Previews
 
 ## Purpose
-Compare five first-screen visual and UX directions before building the full homepage v2.
+Compare six first-screen visual and UX directions before building the full homepage v2.
 
 ## Routes included
 1. Estimate OS - archived/reference
@@ -9,6 +9,7 @@ Compare five first-screen visual and UX directions before building the full home
 3. Hybrid Rotating Preview Hero - archived/reference
 4. Hybrid Transformation Hero - archived/reference
 5. RepairScope Transformation Hero - best-of route / new primary test
+6. Final Hero Reference - coded preview from selected visual reference
 
 ## Live URL paths
 - `/`
@@ -20,6 +21,8 @@ Compare five first-screen visual and UX directions before building the full home
 - `/hybrid-transformation/`
 - `/repairscope-transformation.html`
 - `/repairscope-transformation/`
+- `/final-hero-reference.html`
+- `/final-hero-reference/`
 
 ## Preservation rule
 Estimate OS, PNW Craft Board, Hybrid Rotating Preview Hero, and Hybrid Transformation Hero remain preserved as archive/reference routes. Do not rename or remove them while testing RepairScope.
@@ -30,6 +33,14 @@ RepairScope Transformation Hero synthesizes the strongest parts of the first fou
 - estimate/request clarity
 - PNW material visual language
 - controlled repair category chips
+
+## Final Hero Reference
+- Route: `final-hero-reference.html`
+- Folder route: `final-hero-reference/`
+- Based on image: `assets/img/final-hero-reference.png`
+- Direction: Premium PNW Entryway Trim Transformation Hero
+- Purpose: coded responsive preview before full homepage build
+- Safety: demo/sample visuals only, not real proof
 
 ## New wow tests
 Hybrid Rotating Preview tests a fixed headline and CTA with only the repair preview zone changing.
@@ -46,6 +57,8 @@ Hybrid Transformation tests a featured sample before/after visual mechanism with
 - `hybrid-transformation/index.html`
 - `repairscope-transformation.html`
 - `repairscope-transformation/index.html`
+- `final-hero-reference.html`
+- `final-hero-reference/index.html`
 - `estimate-os/index.html`
 - `pnw-craft-board/index.html`
 - `assets/css/preview-styles.css`
@@ -70,6 +83,7 @@ Hybrid Transformation tests a featured sample before/after visual mechanism with
 - Service chip interaction works or degrades cleanly
 - Before/after toggle works
 - RepairScope chips and toggle work
+- Final Hero Reference mobile layout remains readable
 
 ## Status
 These are preview routes only, not a full v2 homepage implementation.
