@@ -113,4 +113,41 @@ finalServiceChips.forEach((button) => {
   });
 });
 
+const finalMenuButton = document.querySelector('.final-menu-button');
+const finalMobileMenu = document.querySelector('#final-mobile-menu');
+const finalMenuBackdrop = document.querySelector('.final-menu-backdrop');
+const finalMenuCloseItems = [...document.querySelectorAll('[data-final-menu-close]')];
+
+function setFinalMenu(open) {
+  if (!finalMenuButton || !finalMobileMenu || !finalMenuBackdrop) return;
+  finalMenuButton.setAttribute('aria-expanded', String(open));
+  finalMenuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  finalMobileMenu.hidden = !open;
+  finalMenuBackdrop.hidden = !open;
+  document.body.classList.toggle('final-menu-open', open);
+  if (open) {
+    finalMobileMenu.querySelector('a, button')?.focus();
+  } else {
+    finalMenuButton.focus();
+  }
+}
+
+finalMenuButton?.addEventListener('click', () => {
+  setFinalMenu(finalMenuButton.getAttribute('aria-expanded') !== 'true');
+});
+
+finalMenuCloseItems.forEach((item) => {
+  item.addEventListener('click', () => setFinalMenu(false));
+});
+
+finalMobileMenu?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => setFinalMenu(false));
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && finalMenuButton?.getAttribute('aria-expanded') === 'true') {
+    setFinalMenu(false);
+  }
+});
+
 document.documentElement.classList.add('js-ready');
