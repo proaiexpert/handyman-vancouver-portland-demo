@@ -34,6 +34,8 @@
           <a class="btn primary" href="#request">Request Estimate</a>
           <a class="btn secondary final-secondary" href="#request">Send Photos</a>
         </div>
+        <p class="microcopy">Photos help clarify the repair scope before scheduling.</p>
+        <div class="final-safe-proof">Demo repair preview - real project photos can replace this before launch.</div>
         <div id="services" class="final-service-chips" role="group" aria-label="Service examples">
           <button type="button" class="final-service-chip is-active" data-final-service="Wall">Wall</button>
           <button type="button" class="final-service-chip" data-final-service="Door / Trim">Door / Trim</button>
@@ -44,18 +46,24 @@
 
       <div class="final-visual-stage">
         <p class="final-safe-label">Demo repair preview - real project photos can replace this before launch.</p>
-        <div class="entryway-transform" aria-label="Sample before and sample after trim transformation">
-          <article class="entry-panel before-entry">
-            <span>Sample Before</span>
-            <div class="entry-door" aria-hidden="true"><i></i><b></b><em></em></div>
-            <div class="trim-scuffs" aria-hidden="true"><i></i><b></b><em></em></div>
-          </article>
-          <article class="entry-panel after-entry">
-            <span>Sample After</span>
-            <div class="entry-door clean" aria-hidden="true"><i></i><b></b><em></em></div>
-            <div class="trim-highlight" aria-hidden="true"></div>
-          </article>
-          <div class="entry-divider" aria-hidden="true"><span></span></div>
+        <div class="hero-visual">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                assets/img/hero-finished-pnw-768.webp 768w,
+                assets/img/hero-finished-pnw-1200.webp 1200w,
+                assets/img/hero-finished-pnw-1536.webp 1536w"
+              sizes="(max-width: 768px) 100vw, 62vw">
+            <img
+              src="assets/img/hero-finished-pnw-1536.jpg"
+              alt="Modern Pacific Northwest entryway with finished trim, warm wood, and dark front door"
+              width="1536"
+              height="1024"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async">
+          </picture>
         </div>
         <aside id="request" class="final-support-card" aria-label="Support card">
           <h2>Tell us what needs attention.</h2>
@@ -77,6 +85,10 @@
         <div><span>3</span><strong>Next Step</strong></div>
       </div>
     </section>
+
+    <section id="about" class="final-anchors" aria-label="About placeholder"></section>
+    <section id="areas" class="final-anchors" aria-label="Areas placeholder"></section>
+    <section id="resources" class="final-anchors" aria-label="Resources placeholder"></section>
   </main>
 
   <div class="sticky-cta final-sticky"><a href="#request">Estimate</a><a href="tel:0000000000">Call</a></div>

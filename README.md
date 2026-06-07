@@ -42,6 +42,14 @@ RepairScope Transformation Hero synthesizes the strongest parts of the first fou
 - Purpose: coded responsive preview before full homepage build
 - Safety: demo/sample visuals only, not real proof
 
+## Final hero image assets
+- `assets/img/hero-finished-pnw-768.webp`
+- `assets/img/hero-finished-pnw-1200.webp`
+- `assets/img/hero-finished-pnw-1536.webp`
+- `assets/img/hero-finished-pnw-1536.jpg`
+
+These are the optimized responsive image files used by the final hero route.
+
 ## New wow tests
 Hybrid Rotating Preview tests a fixed headline and CTA with only the repair preview zone changing.
 
