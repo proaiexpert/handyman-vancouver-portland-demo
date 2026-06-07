@@ -3,9 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Handyman v2 Preview Set | Vancouver WA & Portland Metro</title>
+  <title>Handyman v2 Preview Set | Vancouver WA &amp; Portland Metro</title>
   <meta name="description" content="Handyman v2 preview routes and full homepage prototype for Vancouver WA and nearby areas.">
   <link rel="stylesheet" href="assets/css/preview-styles.css">
+  <style>
+    .hub-premium { border: 2px solid var(--cta); background: linear-gradient(145deg, #FAF6EE, #FFF8EE); }
+    .hub-premium .eyebrow { color: var(--cta); font-weight: 950; }
+    .hub-archived { opacity: .75; filter: grayscale(0.3); }
+    .hub-archived:hover { opacity: .9; filter: grayscale(0.1); }
+    .hub-divider { grid-column: 1 / -1; text-align: center; padding: 24px 0; border-top: 1px solid var(--border); margin-top: 16px; }
+    .hub-divider p { color: var(--muted); font-size: .9rem; font-weight: 850; margin: 0; }
+  </style>
 </head>
 <body class="selector-page comparison-hub">
   <main class="selector-main">
@@ -20,62 +28,9 @@
         <span>Preview only — no real request is sent.</span>
       </div>
       <div class="selector-grid four-route-grid">
-        <article class="selector-card archived">
-          <span>Route 1 — Archived/reference</span>
-          <h2>Estimate OS</h2>
-          <p>Structured intake system for selecting a service, adding photos, and requesting the next step.</p>
-          <strong>Strength: clear conversion path</strong>
-          <em>Risk: can feel too SaaS if pushed too far</em>
-          <a class="btn secondary" href="estimate-os.html">Open Estimate OS</a>
-        </article>
-        <article class="selector-card craft archived">
-          <span>Route 2 — Archived/reference</span>
-          <h2>PNW Craft Board</h2>
-          <p>Tactile local repair board with warm PNW texture and a less corporate visual language.</p>
-          <strong>Strength: local character</strong>
-          <em>Risk: weaker immediate conversion focus</em>
-          <a class="btn secondary" href="pnw-craft-board.html">Open PNW Craft Board</a>
-        </article>
-        <article class="selector-card new-test rotating">
-          <span>Route 3 — Archived/reference</span>
-          <h2>Hybrid Rotating Preview Hero</h2>
-          <p>Stable headline and CTA with a controlled repair preview zone that changes by service type.</p>
-          <strong>Strength: motion without moving the CTA</strong>
-          <em>Risk: needs restraint so it does not become a slider</em>
-          <a class="btn primary" href="hybrid-rotating-preview.html">Open Hybrid Rotating Preview</a>
-        </article>
-        <article class="selector-card new-test transformation">
-          <span>Route 4 — Archived/reference</span>
-          <h2>Hybrid Transformation Hero</h2>
-          <p>Featured repair transformation concept using sample before/after logic without proof claims.</p>
-          <strong>Strength: stronger visual improvement story</strong>
-          <em>Risk: must be clearly labeled as sample visual logic</em>
-          <a class="btn primary" href="hybrid-transformation.html">Open Hybrid Transformation</a>
-        </article>
-        <article class="selector-card best-of repairscope">
-          <span>Route 5 — Best-of route / primary test</span>
-          <h2>RepairScope Transformation Hero</h2>
-          <p>Transformation visual punch, structured estimate clarity, PNW material warmth, and controlled repair chips in one conversion-focused hero.</p>
-          <strong>Strength: strongest synthesis for full homepage direction</strong>
-          <em>Risk: demo visual labels must stay prominent until real photos exist</em>
-          <div class="selector-action-row">
-            <a class="btn primary" href="repairscope-transformation.html">Open RepairScope Transformation</a>
-            <a class="btn secondary" href="repairscope-transformation/">Folder route</a>
-          </div>
-        </article>
-        <article class="selector-card final-reference-card">
-          <span>Route 6 — Final coded hero preview</span>
-          <h2>Final Hero Reference</h2>
-          <p>Coded preview based on the selected final visual reference — premium PNW entryway trim transformation hero.</p>
-          <strong>Strength: closest coded match to the approved visual direction</strong>
-          <em>Risk: demo/sample visual language must remain clear until real project photos exist</em>
-          <div class="selector-action-row">
-            <a class="btn primary" href="final-hero-reference.html">Open Final Hero Reference</a>
-            <a class="btn secondary" href="final-hero-reference/">Folder route</a>
-          </div>
-        </article>
-        <article class="selector-card final-reference-card" style="border-color: rgba(201,130,43,.75); background: linear-gradient(145deg, #FAF6EE, #FFF8EE);">
-          <span>Route 7 — NEW: Full Homepage v2 Premium</span>
+        <!-- PRIMARY: Homepage V2 Premium -->
+        <article class="selector-card hub-premium" style="grid-column: 1 / -1;">
+          <span>CURRENT — Full Homepage v2 Premium</span>
           <h2>Homepage v2 Premium</h2>
           <p>Full homepage prototype using approved finished-result PNW hero, repair-value sections, services, photo request flow, scope &amp; safety, service area, trust verification, FAQ, and final CTA.</p>
           <strong>Strength: complete conversion-focused homepage experience</strong>
@@ -83,6 +38,63 @@
           <div class="selector-action-row">
             <a class="btn primary" href="homepage-v2-premium.html">Open Homepage v2 Premium</a>
             <a class="btn secondary" href="homepage-v2-premium/">Folder route</a>
+          </div>
+        </article>
+        <div class="hub-divider">
+          <p>Archived concept routes — preserved for reference</p>
+        </div>
+        <article class="selector-card hub-archived">
+          <span>Route 1 — Archived/reference</span>
+          <h2>Estimate OS</h2>
+          <p>Structured intake system for selecting a service, adding photos, and requesting the next step.</p>
+          <strong>Strength: clear conversion path</strong>
+          <em>Risk: can feel too SaaS if pushed too far</em>
+          <a class="btn secondary" href="estimate-os.html">Open Estimate OS</a>
+        </article>
+        <article class="selector-card craft hub-archived">
+          <span>Route 2 — Archived/reference</span>
+          <h2>PNW Craft Board</h2>
+          <p>Tactile local repair board with warm PNW texture and a less corporate visual language.</p>
+          <strong>Strength: local character</strong>
+          <em>Risk: weaker immediate conversion focus</em>
+          <a class="btn secondary" href="pnw-craft-board.html">Open PNW Craft Board</a>
+        </article>
+        <article class="selector-card new-test rotating hub-archived">
+          <span>Route 3 — Archived/reference</span>
+          <h2>Hybrid Rotating Preview Hero</h2>
+          <p>Stable headline and CTA with a controlled repair preview zone that changes by service type.</p>
+          <strong>Strength: motion without moving the CTA</strong>
+          <em>Risk: needs restraint so it does not become a slider</em>
+          <a class="btn secondary" href="hybrid-rotating-preview.html">Open Hybrid Rotating Preview</a>
+        </article>
+        <article class="selector-card new-test transformation hub-archived">
+          <span>Route 4 — Archived/reference</span>
+          <h2>Hybrid Transformation Hero</h2>
+          <p>Featured repair transformation concept using sample before/after logic without proof claims.</p>
+          <strong>Strength: stronger visual improvement story</strong>
+          <em>Risk: must be clearly labeled as sample visual logic</em>
+          <a class="btn secondary" href="hybrid-transformation.html">Open Hybrid Transformation</a>
+        </article>
+        <article class="selector-card best-of repairscope hub-archived">
+          <span>Route 5 — Best-of route / primary test</span>
+          <h2>RepairScope Transformation Hero</h2>
+          <p>Transformation visual punch, structured estimate clarity, PNW material warmth, and controlled repair chips in one conversion-focused hero.</p>
+          <strong>Strength: strongest synthesis for full homepage direction</strong>
+          <em>Risk: demo visual labels must stay prominent until real photos exist</em>
+          <div class="selector-action-row">
+            <a class="btn secondary" href="repairscope-transformation.html">Open RepairScope Transformation</a>
+            <a class="btn secondary" href="repairscope-transformation/">Folder route</a>
+          </div>
+        </article>
+        <article class="selector-card final-reference-card hub-archived">
+          <span>Route 6 — Final coded hero preview</span>
+          <h2>Final Hero Reference</h2>
+          <p>Coded preview based on the selected final visual reference — premium PNW entryway trim transformation hero.</p>
+          <strong>Strength: closest coded match to the approved visual direction</strong>
+          <em>Risk: demo/sample visual language must remain clear until real project photos exist</em>
+          <div class="selector-action-row">
+            <a class="btn secondary" href="final-hero-reference.html">Open Final Hero Reference</a>
+            <a class="btn secondary" href="final-hero-reference/">Folder route</a>
           </div>
         </article>
       </div>
