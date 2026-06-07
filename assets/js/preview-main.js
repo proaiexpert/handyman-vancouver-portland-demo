@@ -150,4 +150,10 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 760 && finalMenuButton?.getAttribute('aria-expanded') === 'true') {
+    setFinalMenu(false);
+  }
+});
+
 document.documentElement.classList.add('js-ready');
