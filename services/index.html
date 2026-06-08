@@ -124,57 +124,7 @@
     .final-menu-button[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .final-menu-button[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
     .final-menu-button[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .final-menu-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.45);
-      z-index: 98;
-    }
-    .final-mobile-menu {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: min(320px, 90vw);
-      background: var(--primary);
-      z-index: 99;
-      display: flex;
-      flex-direction: column;
-      padding: 24px 28px;
-      gap: 4px;
-      overflow-y: auto;
-    }
-    .final-mobile-menu a {
-      text-decoration: none;
-      color: rgba(255,255,255,.85);
-      font-weight: 800;
-      font-size: 1.05rem;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .final-mobile-menu a.active {
-      color: #E6B16C;
-    }
-    .final-mobile-menu a:last-of-type { border-bottom: none; }
-    .final-menu-close {
-      align-self: flex-end;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-      padding: 4px 8px;
-      margin-bottom: 12px;
-      line-height: 1;
-    }
-    .final-menu-close::before { content: "\00D7"; }
-    .final-mobile-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .final-secondary { border-color: rgba(255,255,255,.3) !important; color: white !important; }
+    /* Mobile menu styles handled by shared CSS */
     @media (min-width: 768px) {
       .final-desktop-nav { display: flex; }
       .final-header-actions { display: flex; }
@@ -621,6 +571,50 @@
     @media (max-width: 560px) {
       .footer-content { grid-template-columns: 1fr; }
     }
+
+    /* ===== SERVICES MOBILE BOTTOM CTA ===== */
+    .svc-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: rgba(16,32,51,.97);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 12px 20px;
+      padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+      gap: 10px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      justify-content: center;
+      align-items: center;
+    }
+    .svc-sticky-cta.is-visible {
+      display: flex;
+    }
+    .svc-sticky-primary {
+      flex: 1;
+      max-width: 200px;
+      font-size: .9rem;
+      min-height: 44px;
+    }
+    .svc-sticky-secondary {
+      flex: 1;
+      max-width: 160px;
+      font-size: .9rem;
+      min-height: 44px;
+      color: rgba(255,255,255,.85) !important;
+      border-color: rgba(255,255,255,.25) !important;
+      background: rgba(255,255,255,.08) !important;
+    }
+    @media (min-width: 768px) {
+      .svc-sticky-cta { display: none !important; }
+    }
+    /* Add bottom padding to page when sticky CTA is visible */
+    body.svc-sticky-active {
+      padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    }
   </style>
 </head>
 <body>
@@ -649,6 +643,7 @@
       <a href="./" class="active" aria-current="page">Services</a>
       <a href="../#service-area">Service Area</a>
       <a href="../#faq">FAQ</a>
+      <a href="../request/">Request Review</a>
       <div class="final-mobile-actions">
         <a class="btn primary" href="../request/">Request Review</a>
         <a class="btn secondary final-secondary" href="tel:0000000000">Call Now</a>
@@ -669,6 +664,7 @@
           <a class="btn secondary final-secondary" href="../request/#photo-checklist">Send Photos</a>
         </div>
         <p class="microcopy">Some requests may require permits, licensed trades, or another provider depending on project type and location.</p>
+        <div style="height: clamp(16px, 4vw, 32px);"></div>
       </div>
     </section>
 
@@ -1003,6 +999,10 @@
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') closeMenu();
       });
+      // Close menu when a nav link is tapped
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() { closeMenu(); });
+      });
     })();
 
     // FAQ accordion
@@ -1035,6 +1035,65 @@
         els.forEach(function(el) { el.classList.add('is-visible'); });
       }
     })();
+
+    // Services page mobile bottom sticky CTA
+    (function() {
+      var bar = document.getElementById('svc-sticky-cta');
+      var hero = document.querySelector('.svc-hero');
+      var finalCta = document.getElementById('final-cta');
+      var footer = document.getElementById('footer');
+      if (!bar) return;
+
+      var heroBottom = 0;
+      var footerTop = Infinity;
+      var ticking = false;
+      var scrollTimer = null;
+      var isScrolling = false;
+
+      function updatePositions() {
+        if (hero) { var r = hero.getBoundingClientRect(); heroBottom = r.bottom + window.scrollY; }
+        if (finalCta) { var r2 = finalCta.getBoundingClientRect(); footerTop = r2.top + window.scrollY - 80; }
+        else if (footer) { var r3 = footer.getBoundingClientRect(); footerTop = r3.top + window.scrollY - 80; }
+      }
+
+      function updateBar() {
+        var y = window.scrollY;
+        var inRange = y > (heroBottom - 80) && y < footerTop;
+        if (inRange && !isScrolling) {
+          bar.hidden = false;
+          bar.classList.add('is-visible');
+          document.body.classList.add('svc-sticky-active');
+        } else {
+          bar.hidden = true;
+          bar.classList.remove('is-visible');
+          document.body.classList.remove('svc-sticky-active');
+        }
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        isScrolling = true;
+        bar.hidden = true;
+        bar.classList.remove('is-visible');
+        document.body.classList.remove('svc-sticky-active');
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function() {
+          isScrolling = false;
+          if (!ticking) { requestAnimationFrame(updateBar); ticking = true; }
+        }, 350);
+        if (!ticking) { requestAnimationFrame(updateBar); ticking = true; }
+      }, { passive: true });
+
+      window.addEventListener('resize', updatePositions, { passive: true });
+      updatePositions();
+      updateBar();
+    })();
   </script>
+
+  <!-- Services page mobile bottom CTA -->
+  <div id="svc-sticky-cta" class="svc-sticky-cta" aria-label="Mobile bottom CTA" hidden>
+    <a class="btn primary svc-sticky-primary" href="../request/">Request Review</a>
+    <a class="btn secondary svc-sticky-secondary" href="../request/#photo-checklist">Send Photos</a>
+  </div>
 </body>
 </html>
