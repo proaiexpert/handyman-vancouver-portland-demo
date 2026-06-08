@@ -22,11 +22,13 @@ Handyman-specific details are documented as case study examples, not as hardcode
 
 For a new project, read in this order:
 
-1. **WEBSITE-PRODUCTION-FACTORY.md** — Start here. Understand the 20-phase workflow before doing anything else.
+0. **SKILL.md** — Start here if you are a new agent or pasting context into a new chat. Compact operational summary.
+1. **WEBSITE-PRODUCTION-FACTORY.md** — Full 20-phase workflow. Read before your first build.
 2. **PROMPT-LIBRARY.md** — Use these prompts to drive each phase. Copy, fill in placeholders, paste into a new chat.
 3. **AGENT-TASK-TEMPLATES.md** — Use these templates when handing a specific task to a coding agent.
 4. **QA-CHECKLISTS.md** — Run these checklists at each QA gate. Do not skip mobile widths or fake-proof checks.
 5. **HANDYMAN-V2-CASE-STUDY.md** — Read this after your first build to compare decisions and lessons.
+6. **SKILL-PACKAGE-NOTES.md** — Read this when updating, versioning, or exporting the skill.
 
 ---
 
@@ -96,4 +98,6 @@ computer — but the GitHub repo remains the canonical source. Always pull from 
 | Commit | Description |
 |---|---|
 | `ac85850` | Website Production Factory extraction — this folder created |
-| this patch | Factory docs consistency and handoff rules patch |
+| `cac39ed` | Factory docs consistency and handoff rules patch |
+| `503ee51` | Changelog updated with cac39ed entry |
+| this commit | SKILL.md and SKILL-PACKAGE-NOTES.md created |
