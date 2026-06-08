@@ -100,4 +100,4 @@ computer — but the GitHub repo remains the canonical source. Always pull from 
 | `ac85850` | Website Production Factory extraction — this folder created |
 | `cac39ed` | Factory docs consistency and handoff rules patch |
 | `503ee51` | Changelog updated with cac39ed entry |
-| this commit | SKILL.md and SKILL-PACKAGE-NOTES.md created |
+| `66a3472` | SKILL.md and SKILL-PACKAGE-NOTES.md created; INDEX.md updated with SKILL.md as step 0 |

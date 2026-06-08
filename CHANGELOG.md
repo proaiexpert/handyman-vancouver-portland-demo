@@ -31,7 +31,7 @@ It does not include every commit — only commits with documented, verified desc
 | `ac85850` | Docs | Extracted Website Production Factory workflow to `docs/website-production-factory/` |
 | `cac39ed` | Docs | Patched factory docs consistency and handoff rules: commit-state terminology, GitHub-only/local export handoff rule, INDEX.md entry point, ask-vs-assume rules for Phases 2-3, versioning policy, Template 4 JS-edit gate, docs/ protection in Template 1, Prompt 19 reusable placeholders, QA severity upgrades, CHANGELOG.md |
 | `503ee51` | Docs | Updated CHANGELOG.md with cac39ed entry |
-| *(this commit)* | Docs | Created SKILL.md (compact portable skill entrypoint), SKILL-PACKAGE-NOTES.md (maintenance/export guide), updated INDEX.md reading order; commit hash reported in final task report |
+| `66a3472` | Docs | Created SKILL.md (compact portable Website Production Factory entrypoint), SKILL-PACKAGE-NOTES.md (maintenance/export guide), updated INDEX.md reading order with SKILL.md as step 0 |
 
 
 ---

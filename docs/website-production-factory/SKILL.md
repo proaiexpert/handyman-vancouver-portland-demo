@@ -60,7 +60,7 @@ consultants, and other local/professional service businesses.
 | 12 | Prototype / Implementation | Working homepage at preview route | Basic mobile QA passes | Fake claims found in prototype copy |
 | 13 | QA | QA report P0/P1/P2/P3 | Zero P0 items | Any P0 found |
 | 14 | Deployment | Live on custom domain | HTTPS active, correct content | DNS not propagated |
-| 15 | Polish | All P1 items resolved | P2 documented | Fixing one issue breaks another |
+| 15 | Polish | All P1 items resolved | P2 documented | Stop and escalate if a P1 fix cannot be resolved without creating another P1 regression |
 | 16 | Root Promotion | index.html = final homepage | Old routes return 404 | Old routes still active |
 | 17 | Launch Readiness | Go/no-go report | Canonical, OG, favicon present | Missing P1 metadata |
 | 18 | Documentation Snapshot | README + PROJECT-SNAPSHOT committed | No production files edited | Snapshot missing do-not-touch list |
@@ -105,7 +105,12 @@ consultants, and other local/professional service businesses.
 | Real public launch | Remove | Add after | Add if verified | Replace all |
 | Portfolio/case-study | Optional | Optional | No | Not applicable |
 
+**Placeholder data includes:** phone number / tel link, contact form endpoint, email routing, business name, address, service area, license / insurance / bonding status, reviews / portfolio proof.
+
 **Rules:**
+- Demo / prototype may use placeholders only when labeled internally or protected by noindex.
+- Production-like demo may keep placeholders only when noindex is active and no fake claims are made.
+- Real public launch must replace all placeholder phone/form/business facts with verified real data before removing noindex, adding sitemap entry, or adding LocalBusiness schema.
 - Add `noindex, nofollow` during any demo phase with placeholder data.
 - Do not add sitemap entry while noindex is active.
 - Do not add LocalBusiness schema until name, address, phone, and category are verified.
