@@ -285,9 +285,11 @@
       place-items: center;
       background: var(--secondary);
       color: white;
-      font-weight: 950;
-      font-size: 1.1rem;
       transition: transform 0.25s ease, background 0.25s ease;
+    }
+    .detail-icon svg {
+      width: 24px;
+      height: 24px;
     }
     .detail-card:hover .detail-icon {
       transform: scale(1.08);
@@ -1410,8 +1412,19 @@
       .scenario-visual { display: none; }
       .scenarios-section { padding-left: 0; padding-right: 0; }
       .scenarios-header { padding-left: 16px; padding-right: 16px; }
-      .scenarios-board { display: block; max-width: 100%; padding-left: 16px; padding-right: 16px; }
-      .scenario-grid { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding-bottom: 16px; width: 100%; max-width: 100%; box-sizing: border-box; }
+      .scenarios-board { display: block; max-width: 100%; padding-left: 16px; padding-right: 16px; position: relative; }
+      .scenario-grid { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding-bottom: 16px; width: 100%; max-width: 100%; box-sizing: border-box; position: relative; }
+      .scenario-grid::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 16px;
+        width: 40px;
+        background: linear-gradient(to right, transparent, rgba(247,242,234,0.9));
+        pointer-events: none;
+        display: block;
+      }
       .scenario-card { flex: 0 0 min(84vw, 320px); max-width: min(84vw, 320px); scroll-snap-align: start; min-width: 0; }
       .area-chips { flex-wrap: wrap; gap: 8px; }
       .area-chip { flex: 0 0 auto; white-space: nowrap; }
@@ -1520,17 +1533,37 @@
         </div>
         <div class="detail-cards">
           <div class="detail-card">
-            <div class="detail-icon">1</div>
+            <div class="detail-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h20"/>
+                <path d="M2 12l5-5"/>
+                <path d="M2 12l5 5"/>
+                <path d="M22 12l-5-5"/>
+                <path d="M22 12l-5 5"/>
+              </svg>
+            </div>
             <h3>Cleaner edges</h3>
             <p>Door casing, baseboards, caulk lines, and finish details that affect the overall look of a room.</p>
           </div>
           <div class="detail-card">
-            <div class="detail-icon">2</div>
+            <div class="detail-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                <path d="M2 2l7.586 7.586"/>
+                <circle cx="11" cy="11" r="2"/>
+              </svg>
+            </div>
             <h3>Better touch-ups</h3>
             <p>Small scuffs, patch areas, and touch-ups that need a cleaner finished look.</p>
           </div>
           <div class="detail-card">
-            <div class="detail-icon">3</div>
+            <div class="detail-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
             <h3>Grouped punch-lists</h3>
             <p>Group several small home maintenance details into one request for review.</p>
           </div>
@@ -1551,7 +1584,7 @@
       </div>
       <div class="scenarios-board">
         <div class="scenario-feature-card">
-          <span class="scenario-label">Example request</span>
+          <span class="scenario-label">Trim detail</span>
           <h3>Trim &amp; baseboard refresh</h3>
           <p>Clean up worn edges, casing, baseboards, and finish details that affect the room's overall feel.</p>
           <a href="#request" class="scenario-cta">Send trim details</a>
@@ -1564,31 +1597,31 @@
         </div>
         <div class="scenario-grid">
           <div class="scenario-card">
-            <span class="scenario-label">Common request type</span>
+            <span class="scenario-label">Wall refresh</span>
             <h3>Wall scuffs &amp; touch-ups</h3>
             <p>Request review for small wall marks, patch areas, and touch-ups that need a cleaner finished look.</p>
             <a href="#request" class="scenario-cta">Send wall photos</a>
           </div>
           <div class="scenario-card">
-            <span class="scenario-label">Example request</span>
+            <span class="scenario-label">Door detail</span>
             <h3>Door &amp; hardware details</h3>
             <p>Small door, hinge, handle, and trim details can make an entryway feel more finished.</p>
             <a href="#request" class="scenario-cta">Ask about door details</a>
           </div>
           <div class="scenario-card">
-            <span class="scenario-label">Request category</span>
+            <span class="scenario-label">Punch-list</span>
             <h3>Punch-list maintenance</h3>
             <p>Group several small home details into one request so the overall scope can be reviewed together.</p>
             <a href="#request" class="scenario-cta">Start a punch-list</a>
           </div>
           <div class="scenario-card">
-            <span class="scenario-label">Common request type</span>
+            <span class="scenario-label">Entryway refresh</span>
             <h3>Entryway detail refresh</h3>
             <p>Touch-ups around doors, trim, walls, and small home details can improve the first impression.</p>
             <a href="#request" class="scenario-cta">Send entryway photos</a>
           </div>
           <div class="scenario-card">
-            <span class="scenario-label">Scope-reviewed category</span>
+            <span class="scenario-label">Exterior touch-up</span>
             <h3>Ground-level exterior touch-ups</h3>
             <p>Exterior requests can be reviewed when safety, access, location, and project type are clear.</p>
             <a href="#request" class="scenario-cta">Ask about exterior scope</a>
@@ -1745,8 +1778,8 @@
           <div class="scope-card">
             <div class="scope-icon">4</div>
             <div>
-              <h4>Availability depends</h4>
-              <p>Availability depends on project type, location, and schedule.</p>
+              <h4>Scope reviewed carefully</h4>
+              <p>Every project is different. We review the details before confirming the next step.</p>
             </div>
           </div>
         </div>
@@ -1802,37 +1835,6 @@
             </div>
             <h3>Clark County &amp; Nearby Areas</h3>
             <p>Service requests are reviewed based on location and project scope.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 7: Process -->
-    <section class="process-section reveal" id="process" aria-label="Clear details before the next step">
-      <div class="process-content">
-        <p class="eyebrow">Process</p>
-        <h2>Clear details before the next step.</h2>
-        <p>A focused request process helps keep the work realistic, scoped, and easier to review.</p>
-        <div class="process-grid">
-          <div class="process-item">
-            <div class="process-icon">1</div>
-            <h4>Photo-first review</h4>
-            <p>Photos help clarify the repair area before the next step is confirmed.</p>
-          </div>
-          <div class="process-item">
-            <div class="process-icon">2</div>
-            <h4>Scope-aware planning</h4>
-            <p>Project type, materials, access, and location are reviewed before scheduling.</p>
-          </div>
-          <div class="process-item">
-            <div class="process-icon">3</div>
-            <h4>Home-detail focus</h4>
-            <p>The page is built around small repairs, trim details, touch-ups, and punch-list items.</p>
-          </div>
-          <div class="process-item">
-            <div class="process-icon">4</div>
-            <h4>No instant-price promise</h4>
-            <p>Some requests need additional context before an estimate path is confirmed.</p>
           </div>
         </div>
       </div>
@@ -1927,9 +1929,6 @@
       </div>
       <div class="footer-bottom">
         <p>Service availability and scope are reviewed by request.</p>
-        <div>
-          <a href="#">Privacy</a> · <a href="#">Terms</a>
-        </div>
       </div>
     </footer>
   </main>
