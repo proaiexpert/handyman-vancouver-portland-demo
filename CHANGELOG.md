@@ -29,7 +29,8 @@ It does not include every commit — only commits with documented, verified desc
 | `1cda438` | Website | Added canonical, OG, Twitter, favicon, noindex meta; contrast-safe CTA text color (`--cta-text: #9E5F10`) |
 | `4a85815` | Docs | Updated README.md and created PROJECT-SNAPSHOT.md for stable demo snapshot |
 | `ac85850` | Docs | Extracted Website Production Factory workflow to `docs/website-production-factory/` |
-| this commit | Docs | Patched factory docs for consistency and handoff rules (Prompt 19 placeholders, Template 4 JS rule, ask-vs-assume rules, INDEX.md, CHANGELOG.md) |
+| `cac39ed` | Docs | Patched factory docs consistency and handoff rules: commit-state terminology, GitHub-only/local export handoff rule, INDEX.md entry point, ask-vs-assume rules for Phases 2-3, versioning policy, Template 4 JS-edit gate, docs/ protection in Template 1, Prompt 19 reusable placeholders, QA severity upgrades, CHANGELOG.md |
+
 
 ---
 
