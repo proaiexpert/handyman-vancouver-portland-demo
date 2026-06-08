@@ -18,10 +18,18 @@ The site is demo-ready but not real public-launch-ready. Placeholder business da
 
 ## Current Architecture
 
-- `index.html` is the canonical root homepage — the only active page.
+- `index.html` is the canonical root homepage.
+- `request/index.html` is the Request Review page — active and client-demo ready.
 - All old preview routes have been removed and return **404**.
 - The root is no longer a preview hub. No route cards appear on the live root.
 - Do not restore old preview routes.
+
+### Active routes
+
+| Route | Description |
+|---|---|
+| `/handyman-vancouver-portland-demo/` | Homepage — stable |
+| `/handyman-vancouver-portland-demo/request/` | Request Review — demo-safe form, noindex active |
 
 ### Old routes (all 404 — do not restore)
 
@@ -46,10 +54,15 @@ The site is demo-ready but not real public-launch-ready. Placeholder business da
 | `1cda438` | Website | Added canonical, OG, Twitter, favicon, noindex; contrast-safe CTA text color |
 | `4a85815` | Docs | Updated README and created PROJECT-SNAPSHOT.md for stable demo snapshot |
 | `ac85850` | Docs | Extracted Website Production Factory docs to docs/website-production-factory/ |
+| `7b038cd` | Website | Added /request/ page with request review structure |
+| `894921e` | Website | Refined /request/ into two-path Quick Question / Repair Request form flow |
+| `9446655` | Website | Polished active path state, robust submit label, form separation |
 
-**Stable website commit: `1cda438`** — the live homepage is unchanged by documentation commits.
+**Homepage stable commit: `1cda438`** — the homepage is unchanged since that commit.
 
-**Documentation commits:** `4a85815` (snapshot) and `ac85850` (factory extraction) add docs only — no production files were edited.
+**Request page commits:** `7b038cd` → `894921e` → `9446655` — added and refined the /request/ page.
+
+**Request form:** Demo-safe only. No real endpoint. No real upload. noindex remains active.
 
 ---
 
@@ -57,7 +70,8 @@ The site is demo-ready but not real public-launch-ready. Placeholder business da
 
 | File | Purpose |
 |---|---|
-| `index.html` | Canonical root homepage — only active page |
+| `index.html` | Canonical root homepage |
+| `request/index.html` | Request Review page — two-path form, demo-safe, noindex active |
 | `assets/css/preview-styles.css` | All styles including sticky CTA, mobile layout, contrast tokens |
 | `assets/js/preview-main.js` | Shared JS (hamburger, FAQ, scenario swipe, scroll reveal) |
 | `assets/img/hero-finished-pnw-1536.webp` | Approved hero image |
@@ -134,6 +148,10 @@ This site is **not ready for real public launch** until the following are resolv
 - [ ] No forbidden claims in visible copy
 - [ ] No console errors
 - [ ] Required assets load (CSS, JS, hero image)
+- [ ] /request/ path selector switches correctly (Quick Question / Repair Request)
+- [ ] /request/ form validation works (required fields, focus, aria-live)
+- [ ] /request/ demo-safe submit message appears (no fake delivery claim)
+- [ ] /request/ footer and header links work
 
 ---
 
@@ -142,7 +160,7 @@ This site is **not ready for real public launch** until the following are resolv
 Before real public launch:
 
 - [ ] Replace `tel:0000000000` with real phone number
-- [ ] Add real contact form or submission endpoint
+- [ ] Connect real contact form endpoint to /request/ (Formspree, Netlify Forms, or similar)
 - [ ] Verify real business name, address, license status, and service area
 - [ ] Decide whether to remove `noindex, nofollow`
 - [ ] Only then add this URL to `sitemap.xml`

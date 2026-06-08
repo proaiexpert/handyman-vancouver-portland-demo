@@ -188,6 +188,24 @@ Final report: [A. files changed B. QA result C. no fake claims confirmed D. comm
 
 Never use "improve everything" or open-ended scope. Every task is narrowly bounded.
 
+
+---
+
+## Request Page Pattern
+
+When a service-business demo needs a contact/request page:
+
+- **Use one page with two paths** when the service has variable scope:
+  - **Quick Question** — for users unsure if the request fits
+  - **Repair Request / Detailed Request** — for users ready to share scope details
+- **Use one "Best contact method" field** (email or phone in one input) unless the real business requires both separately
+- **Do not fake file uploads** — use a photo notes textarea or checklist instead
+- **Do not claim form delivery** without a real endpoint — use demo-safe status messages
+- **Demo-safe message pattern:** "Details are ready. A live contact endpoint can be connected before launch."
+- **Path selector:** use `aria-pressed` on buttons; CSS-driven selected state; no JS required for visual state
+- **Submit label:** use `<span id="submit-label">` inside the button — do not rely on `nextSibling.textContent`
+- **noindex remains active** until real endpoint, real phone, and real business facts are in place
+
 ---
 
 ## QA Gates

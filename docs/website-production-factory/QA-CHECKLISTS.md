@@ -352,3 +352,22 @@ Reusable QA checklists for every phase of the Website Production Factory workflo
 | PROJECT-SNAPSHOT includes QA sign-off table | Yes | Missing | P2 |
 | PROJECT-SNAPSHOT includes next recommended steps | Yes | Missing | P2 |
 | No production website files edited in doc commit | Yes | Any edited | P0 |
+---
+
+## Checklist 21 — Request / Contact Form QA
+
+| Check | PASS | FAIL | Severity |
+|---|---|---|---|
+| Quick path available if form is long (two-path selector or similar) | Yes | Single long form only | P1 |
+| Required fields are minimal — contact method + message at minimum | Yes | Too many required fields | P1 |
+| Phone and email not both forced unless justified by real business need | Yes | Both forced | P1 |
+| Demo-safe submit does not claim real delivery, receipt, or response time | Yes | Fake claim present | P0 |
+| File upload absent or clearly non-live unless real endpoint exists | Yes | Fake upload present | P0 |
+| Form errors accessible — `role="alert"` or `aria-live` on error messages | Yes | Missing | P1 |
+| Form status uses `aria-live="polite"` | Yes | Missing | P1 |
+| No fake contact data (no fake phone, no fake email) | Yes | Fake data present | P0 |
+| Path selector state communicated via `aria-pressed` or equivalent | Yes | Missing | P1 |
+| Submit button label updates when path switches | Yes | Stale label | P2 |
+| noindex remains active until real endpoint and real data are in place | Yes | Removed prematurely | P1 |
+| No sitemap entry for request page while noindex is active | Yes | Added prematurely | P1 |
+| No LocalBusiness schema added without verified facts | Yes | Added with placeholder data | P0 |

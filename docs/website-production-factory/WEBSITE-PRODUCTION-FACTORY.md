@@ -479,6 +479,35 @@ It covers every phase from intake through launch-readiness and reusable extracti
 - Do not add LocalBusiness schema until business name, address, phone, and category are verified.
 - Do not add sitemap entry while noindex is active.
 - Do not remove noindex until real launch decision is made and placeholder data is replaced.
+
+---
+
+## Request / Contact Flow Pattern
+
+When adding a request or contact page to a local-service demo:
+
+**Reduce friction:**
+- Offer a quick question path for users who are uncertain about scope or fit.
+- Offer a detailed request path for users ready to provide location, project type, and photo context.
+- Do not force both phone and email unless the real business requires both.
+
+**Be honest about demo state:**
+- Do not simulate file uploads as real. Use a photo notes textarea or checklist.
+- Do not claim form delivery without a real endpoint.
+- Use demo-safe status messages: "Details are ready. A live contact endpoint can be connected before launch."
+- Form endpoint connection is a launch-readiness requirement, not a fake demo claim.
+
+**Path selector pattern:**
+- Use `aria-pressed` on path selector buttons.
+- CSS-driven selected state (no JS required for visual feedback).
+- JS updates form fields, labels, and submit button text when path switches.
+- Default path: the more detailed one (Repair Request), so users see full scope by default.
+
+**noindex / sitemap / schema:**
+- Keep noindex active until real endpoint, real phone, and real business facts are in place.
+- Do not add sitemap entry for the request page while noindex is active.
+- Do not add LocalBusiness schema until facts are verified.
+
 ---
 
 ## Versioning Policy

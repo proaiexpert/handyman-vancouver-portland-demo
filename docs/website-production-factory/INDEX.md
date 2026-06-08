@@ -65,7 +65,8 @@ Full case study of the first Website Production Factory build. Documents: strate
 key design decisions (hero sells finished value, no fake before/after, abstract service area,
 scenarios as request categories), key technical lessons (sticky CTA color inheritance, iOS Safari
 text-fill fix, amber contrast fix, route cleanup), major issue timeline, fake-proof lessons,
-reusable patterns, and remaining limitations. Read this after your first build to calibrate
+reusable patterns, and remaining limitations. Section 13 documents the /request/ page evolution
+and the two-path Quick Question / Repair Request pattern. Read this after your first build to calibrate
 decisions for future verticals.
 
 ---
@@ -101,3 +102,7 @@ computer — but the GitHub repo remains the canonical source. Always pull from 
 | `cac39ed` | Factory docs consistency and handoff rules patch |
 | `503ee51` | Changelog updated with cac39ed entry |
 | `66a3472` | SKILL.md and SKILL-PACKAGE-NOTES.md created; INDEX.md updated with SKILL.md as step 0 |
+| `7b038cd` | /request/ page added to live site |
+| `894921e` | /request/ refined into two-path Quick Question / Repair Request flow |
+| `9446655` | /request/ polished: Selected badge, robust submit label, form separation |
+| (current) | Factory docs updated with request-flow pattern and lessons |

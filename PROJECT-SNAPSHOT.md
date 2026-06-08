@@ -10,10 +10,15 @@ https://proai-expert.com/handyman-vancouver-portland-demo/
 https://github.com/proaiexpert/handyman-vancouver-portland-demo
 
 ## Current Stable Commit
-`1cda438` — Add head metadata and contrast-safe amber text
+`9446655` — Polish request form state and submit label (latest)
+
+**Homepage stable commit:** `1cda438` — Add head metadata and contrast-safe amber text
 
 ## Current Status
 Production-like demo — stable. `noindex, nofollow` active. Not ready for real public launch.
+
+**Pages:** Homepage (`/`) and Request Review page (`/request/`) are both active and client-demo ready.
+**Request form:** Demo-safe only. No real endpoint connected. No real upload. No fake delivery claim.
 
 ---
 
@@ -50,6 +55,21 @@ Do not replace or crop without approval.
 9. FAQ — details/summary accordion
 10. Final CTA — "Have a repair list?"
 11. Footer
+
+---
+
+## Request Page Sections (`/request/`)
+
+1. Header / mobile hamburger nav (shared nav pattern)
+2. Hero — "Send a quick question or repair request."
+3. Path selector — Quick Question / Repair Request (default: Repair Request)
+4. Dynamic form area — fields update based on selected path
+5. Photo checklist — Wide view, Close-up, Access, Matching area/scale
+6. What happens next — 4-step scope review process
+7. Service area reminder — Vancouver WA and nearby Clark County
+8. FAQ — 7 questions about the two-path flow
+9. Final CTA — scrolls back to form
+10. Footer
 
 ---
 
@@ -176,3 +196,15 @@ A reusable workflow library has been extracted from this build and stored in [`d
 - **QA-CHECKLISTS.md** — 20 QA checklists
 - **AGENT-TASK-TEMPLATES.md** — 10 coding-agent task templates
 - **HANDYMAN-V2-CASE-STUDY.md** — Full case study from this build
+
+---
+
+## Known Limitations (as of 9446655)
+
+- `tel:0000000000` remains placeholder — replace with real number before public launch
+- Request form is demo-safe only — no real endpoint connected
+- Contact endpoint must be connected before real launch (Formspree, Netlify Forms, or similar)
+- Photo delivery/upload is not live — photo notes textarea used instead
+- noindex,nofollow remains active — do not remove until real launch decision is made
+- No sitemap entry for /request/ while noindex is active
+- No LocalBusiness schema — intentionally omitted until facts are verified

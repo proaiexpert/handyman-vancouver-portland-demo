@@ -32,6 +32,9 @@ It does not include every commit — only commits with documented, verified desc
 | `cac39ed` | Docs | Patched factory docs consistency and handoff rules: commit-state terminology, GitHub-only/local export handoff rule, INDEX.md entry point, ask-vs-assume rules for Phases 2-3, versioning policy, Template 4 JS-edit gate, docs/ protection in Template 1, Prompt 19 reusable placeholders, QA severity upgrades, CHANGELOG.md |
 | `503ee51` | Docs | Updated CHANGELOG.md with cac39ed entry |
 | `66a3472` | Docs | Created SKILL.md (compact portable Website Production Factory entrypoint), SKILL-PACKAGE-NOTES.md (maintenance/export guide), updated INDEX.md reading order with SKILL.md as step 0 |
+| `7b038cd` | Website | Added /request/ page with request review structure, photo checklist, FAQ, and demo-safe form |
+| `894921e` | Website | Refined /request/ into two-path Quick Question / Repair Request form flow with unified contact field |
+| `9446655` | Website | Polished active path state (Selected badge), robust submit label span, and subtle form separation |
 
 
 ---
@@ -48,5 +51,5 @@ If this description is confirmed, add it to the table above between `01c97ca` an
 
 ## Stable Website Commit
 
-The production website (live at https://proai-expert.com/handyman-vancouver-portland-demo/) is
-stable at commit `1cda438`. Documentation commits after `1cda438` do not change the live site.
+The homepage is stable at commit `1cda438`. The /request/ page was added in `7b038cd` and refined through `9446655`.
+Documentation commits do not change the live site.

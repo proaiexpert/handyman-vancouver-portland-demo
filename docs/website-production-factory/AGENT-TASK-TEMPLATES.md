@@ -545,3 +545,90 @@ GO / NO-GO decision
 Explicit list of remaining blockers with severity
 Recommended next step
 ```
+---
+
+## Template 11 — Request Page / Contact Flow
+
+```
+TASK — Build or refine /request/ page
+
+Repository: [REPO_URL]
+Current known commit: [COMMIT_HASH]
+Live URL: [LIVE_URL]/request/
+
+Task type: Targeted /request/ page build or refactor.
+
+Goal:
+Build or refine the /request/ page to support two user intents:
+1. Quick Question — low-friction path for uncertain users
+2. Repair Request — detailed path for users ready to provide scope
+
+Do not create a separate /estimate/ or /contact/ page.
+Do not connect a real form endpoint.
+Do not remove noindex.
+Do not add schema.
+Do not update sitemap.
+
+Allowed files:
+- request/index.html
+- index.html (only if fixing broken CTA links)
+
+Do not edit:
+- assets/css/preview-styles.css
+- assets/js/preview-main.js
+- assets/img/*
+- README.md / PROJECT-SNAPSHOT.md / CHANGELOG.md
+- docs/website-production-factory/*
+- sitemap.xml / robots.txt
+
+Required form behavior:
+- Path selector: Quick Question (default off) / Repair Request (default on)
+- Path selector uses aria-pressed on buttons
+- Switching path updates visible fields, labels, and submit button text
+- Shared required fields: Best contact method + message/question
+- Repair Request additional required: City/ZIP + Request type
+- No forced separate phone and email fields
+- Submit button uses <span id="submit-label"> — not nextSibling.textContent
+- Demo-safe submit: "Details are ready. A live contact endpoint can be connected before launch."
+- No fake delivery claim. No fake upload. No fake response time.
+
+Photo behavior:
+- No real file upload unless endpoint is live
+- Use photo notes textarea or photo checklist section
+- Copy: "Photo delivery can be connected before launch."
+
+Fake-proof guardrails:
+Forbidden: licensed (as self-claim), insured, bonded, 5-star, top-rated, years of experience,
+guaranteed, same-day, emergency, 24/7, instant estimate, exact price, real address, exact radius.
+Allowed: scope reviewed, request reviewed by location/type/scope, photo-based request,
+some work may require permits or licensed trades.
+
+QA widths: 430, 390, 375, 360, 320 (mobile) | 1440, 1366 (desktop)
+
+Verify:
+- Path selector switches correctly
+- Quick Question shows compact fields
+- Repair Request shows detailed fields
+- Submit label updates on path switch
+- Validation works (required fields, focus, aria-live)
+- Demo-safe status message appears
+- No fake delivery claim
+- No horizontal overflow
+- Header/footer links correct from subdirectory
+- Homepage CTAs still point to /request/ or /request/#photo-checklist
+
+Commit message: [DESCRIBE CHANGE]
+
+Final report:
+A. Files changed
+B. Form UX changes
+C. Quick Question behavior
+D. Repair Request behavior
+E. Photo/file behavior
+F. Header/footer/link QA
+G. Mobile/desktop QA
+H. Demo-safe submit/validation
+I. No forbidden files touched
+J. No sitemap/robots/schema/backend added
+K. Commit hash
+```

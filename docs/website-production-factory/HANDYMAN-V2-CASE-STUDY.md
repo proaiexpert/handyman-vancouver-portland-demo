@@ -236,5 +236,46 @@ Remove only when real business facts are verified and the site is ready for publ
 12. ~~**Extract to Website Production Factory**~~ — **COMPLETED in `ac85850`.**
     Factory docs are in `docs/website-production-factory/`. See INDEX.md for reading order.
 
-13. **Package factory into portable skill** — after the factory docs consistency patch,
-    extract the factory into a portable SKILL.md or Coworker skill for use in future chats.
+13. ~~**Package factory into portable skill**~~ — **COMPLETED in `66a3472`.**
+    SKILL.md and SKILL-PACKAGE-NOTES.md created. See INDEX.md step 0.
+
+14. ~~**Add /request/ page**~~ — **COMPLETED in `7b038cd` → `894921e` → `9446655`.**
+    See Section 13 below for the full request page evolution and lessons.
+---
+
+## 13. Request Page Evolution (Commits 7b038cd → 894921e → 9446655)
+
+### What was built
+
+A dedicated `/request/` page was added after the homepage was stable. The page supports two user intents:
+
+1. **Quick Question** — low-friction path for users who want to ask if a repair fits before committing to details.
+2. **Repair Request** — detailed path for users ready to share location, project type, scope, and photo context.
+
+### Key decisions
+
+- **Two-path form flow** — a single page with a path selector (radio-card style, `aria-pressed`) rather than two separate pages or a single long form. Reduces friction without losing detail.
+- **Unified contact field** — "Best contact method" accepts email or phone in one field. No forced split. Avoids blocking users who prefer one over the other.
+- **No real file upload** — photo notes textarea used instead. Photo delivery noted as a launch-readiness item, not faked as live.
+- **Demo-safe submit** — status messages say "details are ready" and "endpoint can be connected before launch." No fake delivery, no fake receipt, no fake response time.
+- **Selected-state badge** — small CSS-driven "Selected" pill badge inside the active path card. Visible on mobile without JS. `aria-hidden="true"` since `aria-pressed` already communicates state to screen readers.
+- **Robust submit label** — `<span id="submit-label">` inside submit button instead of `svg.nextSibling.textContent`. Stable across browsers.
+- **Subtle form separation** — `border-top: 2px solid var(--soft)` between path selector and form area. Not harsh, not invisible.
+
+### Lesson extracted
+
+For service-business demos, a request page should support both low-friction questions and more detailed repair/scope review without forcing phone/email separately. The two-path pattern works well when:
+- The service has variable scope (some requests need detail, some just need a quick check)
+- The business is not ready for a real booking/scheduling flow
+- The demo must be honest about what is and is not live
+
+### Fake-proof guardrails applied
+
+- No claim that the form was submitted or received
+- No claim that photos were uploaded
+- No claim of response time
+- No instant estimate language
+- Licensed/permit language appears only as disclaimers ("some work may require...")
+- noindex,nofollow remains active
+- No sitemap entry added
+- No LocalBusiness schema added

@@ -702,3 +702,60 @@ COMMIT MESSAGE: [DESCRIBE WHAT WILL BE CHANGED]
 FINAL REPORT FORMAT:
 [SPECIFY REPORT FORMAT]
 ```
+---
+
+## Prompt 20 — Request / Contact Flow Strategy
+
+Use this prompt to decide the right request/contact flow for a local-service demo before building.
+
+```
+I am building a request or contact page for a local [SERVICE TYPE] demo site.
+
+Help me decide the right approach by answering these questions:
+
+1. ONE FORM VS TWO PATHS
+   Should I use a single form or a two-path selector (Quick Question / Detailed Request)?
+   Consider: Is the service scope variable? Are some users uncertain about fit?
+   Rule of thumb: Use two paths when scope varies and some users just need a quick check.
+
+2. QUESTION VS DETAILED REQUEST
+   What fields belong in the Quick Question path vs the Detailed Request path?
+   Quick Question minimum: contact method + question
+   Detailed Request minimum: contact method + location + project type + description
+
+3. ESTIMATE WORDING SAFETY
+   Is any estimate-related language safe to use?
+   Forbidden: instant estimate, exact price, guaranteed estimate, book now.
+   Allowed: scope reviewed before scheduling, request reviewed by location/type/scope.
+
+4. PHONE / EMAIL REQUIREMENTS
+   Should I force phone, email, or both?
+   Default: one "Best contact method" field (email or phone accepted).
+   Only force both if the real business explicitly requires both for follow-up.
+
+5. PHOTO UPLOAD VS PHOTO NOTES
+   Should I include a file upload or a photo notes textarea?
+   If no real endpoint exists: use photo notes textarea + photo checklist.
+   If real endpoint exists: file input is acceptable with clear copy about what happens.
+   Never claim photos were uploaded or sent without a real endpoint.
+
+6. DEMO-SAFE VS REAL ENDPOINT
+   Is the form endpoint live or demo-safe?
+   Demo-safe: status message says "details are ready, endpoint can be connected before launch."
+   Real endpoint: status message can say "your request was sent" only when actually sent.
+   Never fake delivery.
+
+Context:
+- Service type: [HANDYMAN / PLUMBER / ELECTRICIAN / OTHER]
+- Real endpoint available: [YES / NO]
+- Real phone available: [YES / NO]
+- Scope variability: [HIGH / LOW]
+- Target audience: [HOMEOWNERS / PROPERTY MANAGERS / OTHER]
+
+Output:
+- Recommended form structure
+- Required vs optional fields
+- Safe estimate/contact wording
+- Photo approach
+- Demo-safe or real endpoint guidance
+```
