@@ -2,6 +2,7 @@
   --primary: #102033;
   --secondary: #243D32;
   --cta: #C9822B;
+  --cta-text: #9E5F10;
   --background: #F7F2EA;
   --surface: #FFFFFF;
   --text: #1D2329;
@@ -28,7 +29,7 @@ a { color: inherit; }
 .preview-screen { min-height: calc(100vh - 70px); padding: clamp(22px, 5vw, 58px); display: grid; gap: 28px; align-items: center; position: relative; }
 .estimate-screen { background: radial-gradient(circle at 80% 15%, rgba(36, 61, 50, 0.14), transparent 35%), linear-gradient(135deg, #f7f2ea, #eef2ef); }
 .craft-screen { background: linear-gradient(135deg, rgba(203,210,208,.55), transparent 35%), repeating-linear-gradient(90deg, rgba(36,61,50,.025) 0 1px, transparent 1px 18px), var(--background); }
-.eyebrow { margin: 0 0 12px; color: var(--cta); font-weight: 950; letter-spacing: .12em; text-transform: uppercase; font-size: .75rem; }
+.eyebrow { margin: 0 0 12px; color: var(--cta-text); font-weight: 950; letter-spacing: .12em; text-transform: uppercase; font-size: .75rem; }
 h1 { margin: 0; color: var(--primary); font-size: clamp(2.25rem, 11vw, 5.6rem); line-height: .94; letter-spacing: -.06em; max-width: 920px; }
 .lead { color: var(--muted); font-size: clamp(1.04rem, 2vw, 1.25rem); line-height: 1.55; max-width: 640px; }
 .microcopy { color: var(--secondary); font-weight: 800; }
@@ -65,7 +66,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--cta); outline-o
 .board-card { background: rgba(255,255,255,.92); border: 1px solid var(--border); border-radius: 24px; padding: 18px; box-shadow: 0 14px 34px rgba(16,32,51,.12); transition: transform .2s ease, box-shadow .2s ease; animation: cardIn .45s ease both; }
 .board-card:hover { transform: translateY(-4px) rotate(0deg); box-shadow: var(--shadow); }
 .board-card h2 { margin: 8px 0; color: var(--primary); }
-.label { display: inline-block; color: var(--cta); font-weight: 950; text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; }
+.label { display: inline-block; color: var(--cta-text); font-weight: 950; text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; }
 .estimate-note { border-top: 6px solid var(--cta); }
 .area-chip { background: #eef2ef; }
 .pending { border-style: dashed; }
