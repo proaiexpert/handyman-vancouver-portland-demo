@@ -359,8 +359,11 @@
       margin: 0 0 18px;
       background: linear-gradient(135deg, var(--secondary), var(--primary));
       color: white;
-      font-size: 1.3rem;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .service-card .service-icon svg {
+      width: 24px;
+      height: 24px;
     }
     .service-card:hover .service-icon {
       transform: scale(1.1) rotate(-3deg);
@@ -1114,37 +1117,71 @@
       </div>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">W</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+          </div>
           <h3>Wall repair &amp; touch-ups</h3>
           <p>Small wall repairs, scuffs, patch areas, and touch-up requests. Final scope depends on surface condition and repair size.</p>
           <a href="#request" class="card-cta">Ask about wall repair</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">D</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"/>
+              <path d="M5 21V7l8-4 8 4v14"/>
+              <path d="M14 21v-6a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v6"/>
+            </svg>
+          </div>
           <h3>Door, trim &amp; finish details</h3>
           <p>Door trim, casing, baseboards, and finish details that affect how a home looks and feels.</p>
           <a href="#request" class="card-cta">Ask about trim details</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">I</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <line x1="12" y1="4" x2="12" y2="20"/>
+              <line x1="4" y1="12" x2="20" y2="12"/>
+            </svg>
+          </div>
           <h3>Assembly &amp; small installs</h3>
           <p>Simple assembly and small installation requests where scope, mounting, and materials are clear.</p>
           <a href="#request" class="card-cta">Ask about installs</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">P</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+          </div>
           <h3>Painting touch-ups</h3>
           <p>Small paint and trim touch-ups for areas that need a cleaner finished look.</p>
           <a href="#request" class="card-cta">Ask about touch-ups</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">L</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </div>
           <h3>Punch-list maintenance</h3>
           <p>Group several small home maintenance items into one request so the overall scope can be reviewed together.</p>
           <a href="#request" class="card-cta">Start a punch-list</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">E</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
           <h3>Minor exterior touch-ups</h3>
           <p>Ground-level exterior touch-ups by request. Availability depends on safety, access, and project type.</p>
           <a href="#request" class="card-cta">Ask about exterior</a>
@@ -1378,7 +1415,10 @@
     </footer>
   </main>
 
-  <div class="sticky-cta final-sticky"><a href="#request">Estimate</a><a href="tel:0000000000">Call</a></div>
+  <div class="premium-sticky-cta" id="sticky-cta-bar" data-sticky-cta>
+    <a class="sticky-primary" href="#request">Request Estimate</a>
+    <a class="sticky-secondary" href="tel:0000000000">Call</a>
+  </div>
   
   <script src="assets/js/preview-main.js"></script>
   <script>
@@ -1433,6 +1473,59 @@
       reveals.forEach(function(el) {
         observer.observe(el);
       });
+    })();
+    
+    // Smart sticky CTA — show after hero, hide near footer
+    (function() {
+      const stickyBar = document.getElementById('sticky-cta-bar');
+      const heroSection = document.querySelector('.final-hero-shell');
+      const finalCta = document.getElementById('final-cta');
+      const footer = document.getElementById('footer');
+      
+      if (!stickyBar || !heroSection) return;
+      
+      let heroBottom = 0;
+      let footerTop = Infinity;
+      let ticking = false;
+      
+      function updatePositions() {
+        const heroRect = heroSection.getBoundingClientRect();
+        heroBottom = heroRect.bottom + window.scrollY;
+        
+        if (finalCta) {
+          const finalRect = finalCta.getBoundingClientRect();
+          footerTop = finalRect.top + window.scrollY - 120;
+        } else if (footer) {
+          const footerRect = footer.getBoundingClientRect();
+          footerTop = footerRect.top + window.scrollY - 120;
+        }
+      }
+      
+      function updateSticky() {
+        const scrollY = window.scrollY;
+        const showThreshold = heroBottom - 100;
+        
+        if (scrollY > showThreshold && scrollY < footerTop) {
+          stickyBar.classList.add('is-visible');
+          document.body.classList.add('sticky-active');
+        } else {
+          stickyBar.classList.remove('is-visible');
+          document.body.classList.remove('sticky-active');
+        }
+        
+        ticking = false;
+      }
+      
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          requestAnimationFrame(updateSticky);
+          ticking = true;
+        }
+      }, { passive: true });
+      
+      window.addEventListener('resize', updatePositions, { passive: true });
+      updatePositions();
+      updateSticky();
     })();
   </script>
 </body>
