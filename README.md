@@ -158,3 +158,17 @@ Before real public launch:
 - Georgia serif headings, system-ui body
 - Floating pill sticky CTA dock (mobile only)
 - Scroll-reveal sections
+
+## Production Factory Documentation
+
+This project includes a reusable workflow library extracted from the Handyman v2 build:
+
+| File | Description |
+|------|-------------|
+| [WEBSITE-PRODUCTION-FACTORY.md](docs/website-production-factory/WEBSITE-PRODUCTION-FACTORY.md) | 20-phase master workflow for building handyman/service-business demo sites |
+| [PROMPT-LIBRARY.md](docs/website-production-factory/PROMPT-LIBRARY.md) | 19 reusable prompt templates for every production phase |
+| [QA-CHECKLISTS.md](docs/website-production-factory/QA-CHECKLISTS.md) | 20 QA checklists covering accessibility, SEO, mobile, and performance |
+| [AGENT-TASK-TEMPLATES.md](docs/website-production-factory/AGENT-TASK-TEMPLATES.md) | 10 coding-agent task templates with guardrails and acceptance criteria |
+| [HANDYMAN-V2-CASE-STUDY.md](docs/website-production-factory/HANDYMAN-V2-CASE-STUDY.md) | Full case study: decisions, fixes, and lessons from this build |
+
+See [`docs/website-production-factory/`](docs/website-production-factory/) for the complete library.

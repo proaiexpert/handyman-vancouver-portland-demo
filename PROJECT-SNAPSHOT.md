@@ -149,3 +149,13 @@ Do not replace or crop without approval.
 | No forbidden claims | PASS |
 | Console clean | PASS |
 | Required assets 200 | PASS |
+
+## Production Factory Documentation
+
+A reusable workflow library has been extracted from this build and stored in [`docs/website-production-factory/`](docs/website-production-factory/):
+
+- **WEBSITE-PRODUCTION-FACTORY.md** — 20-phase master workflow
+- **PROMPT-LIBRARY.md** — 19 reusable prompt templates
+- **QA-CHECKLISTS.md** — 20 QA checklists
+- **AGENT-TASK-TEMPLATES.md** — 10 coding-agent task templates
+- **HANDYMAN-V2-CASE-STUDY.md** — Full case study from this build
