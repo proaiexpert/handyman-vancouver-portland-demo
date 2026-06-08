@@ -497,7 +497,24 @@
     .site-footer {
       background: #0B1A29;
       color: rgba(255,255,255,.7);
-      padding: clamp(40px, 6vw, 72px) clamp(22px, 5vw, 72px) 0;
+      padding: clamp(40px, 6vw, 72px) clamp(22px, 5vw, 72px) calc(24px + env(safe-area-inset-bottom, 0px));
+    }
+    /* Extend dark footer background over safe area to prevent cream strip */
+    body {
+      background: #0B1A29;
+    }
+    /* But restore cream background for non-footer sections */
+    .svc-hero, .svc-section, .svc-bg-warm, .svc-bg-soft {
+      background-color: inherit;
+    }
+    .svc-bg-warm {
+      background: linear-gradient(180deg, var(--background) 0%, #FAF6EE 100%);
+    }
+    .svc-bg-soft {
+      background: var(--soft);
+    }
+    .svc-section:not(.svc-bg-warm):not(.svc-bg-soft):not(.svc-final-cta) {
+      background: var(--background);
     }
     .footer-content {
       display: grid;
@@ -630,7 +647,6 @@
       <a href="../#faq">FAQ</a>
     </nav>
     <div class="final-header-actions final-desktop-actions">
-      <a class="final-call-link" href="tel:0000000000">Call Now</a>
       <a class="btn primary" href="../request/">Request Review</a>
     </div>
     <button class="final-menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="svc-mobile-menu">
@@ -643,10 +659,9 @@
       <a href="./" class="active" aria-current="page">Services</a>
       <a href="../#service-area">Service Area</a>
       <a href="../#faq">FAQ</a>
-      <a href="../request/">Request Review</a>
       <div class="final-mobile-actions">
         <a class="btn primary" href="../request/">Request Review</a>
-        <a class="btn secondary final-secondary" href="tel:0000000000">Call Now</a>
+        <a class="btn secondary final-secondary" href="../request/#photo-checklist">Send Photos</a>
       </div>
     </nav>
   </header>
@@ -957,7 +972,7 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <a href="../request/">Request Review</a>
-          <a href="tel:0000000000">Call Now</a>
+          <a href="../request/">Request Review</a>
         </div>
       </div>
       <div class="footer-bottom">

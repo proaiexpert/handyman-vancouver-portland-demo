@@ -141,7 +141,8 @@
     .final-cta-btn:hover{background:#b8711f}
 
     /* ── Footer ── */
-    .rq-footer{background:var(--primary);padding:40px 24px 32px;margin-top:0}
+    .rq-footer{background:var(--primary);padding:40px 24px calc(32px + env(safe-area-inset-bottom, 0px));margin-top:0}
+    body{background:var(--primary)}
     .footer-inner{max-width:1100px;margin:0 auto}
     .footer-brand{font-size:1.0625rem;font-weight:800;color:#fff;text-decoration:none;display:inline-block;margin-bottom:16px}
     .footer-brand span{color:#E6B16C}

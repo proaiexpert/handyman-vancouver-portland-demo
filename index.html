@@ -920,7 +920,11 @@
     .site-footer {
       background: #0a1828;
       color: rgba(255,255,255,.72);
-      padding: clamp(48px, 7vw, 80px) clamp(22px, 4vw, 58px) 32px;
+      padding: clamp(48px, 7vw, 80px) clamp(22px, 4vw, 58px) calc(32px + env(safe-area-inset-bottom, 0px));
+    }
+    /* Extend dark footer background over safe area to prevent cream strip */
+    body.homepage-v2-premium {
+      background: #0a1828;
     }
     .footer-content {
       max-width: 1200px;
@@ -1480,7 +1484,6 @@
       <a href="#faq">FAQ</a>
     </nav>
     <div class="final-header-actions final-desktop-actions">
-      <a class="final-call-link" href="tel:0000000000">Call Now</a>
       <a class="btn primary" href="request/">Request Estimate</a>
     </div>
     <button class="final-menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="final-mobile-menu">
@@ -1495,7 +1498,7 @@
       <a href="#faq">FAQ</a>
       <div class="final-mobile-actions">
         <a class="btn primary" href="request/">Request Review</a>
-        <a class="btn secondary final-secondary" href="tel:0000000000">Call Now</a>
+        <a class="btn secondary final-secondary" href="request/#photo-checklist">Send Photos</a>
       </div>
     </nav>
   </header>
@@ -1922,7 +1925,6 @@
           <a class="btn primary" href="request/">Request Estimate</a>
           <a class="btn secondary" href="request/#photo-checklist" >Send Photos</a>
         </div>
-        <p class="final-cta-call">Or <a href="tel:0000000000">call now</a> to discuss your project.</p>
       </div>
     </section>
 
@@ -1949,7 +1951,7 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <a href="request/">Request Estimate</a>
-          <a href="tel:0000000000">Call Now</a>
+          <a href="request/">Request Review</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1960,7 +1962,7 @@
 
   <div class="premium-sticky-cta" id="sticky-cta-bar" data-sticky-cta>
     <a class="sticky-primary" href="request/">Request Estimate</a>
-    <a class="sticky-secondary" href="tel:0000000000">Call</a>
+    <a class="sticky-secondary" href="request/#photo-checklist">Send Photos</a>
   </div>
   
   <script src="assets/js/preview-main.js"></script>
