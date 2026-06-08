@@ -39,6 +39,8 @@ It does not include every commit — only commits with documented, verified desc
 | `86ab48a` | Website | Fixed cross-page mobile navigation and footer CTA behavior; corrected /services/ mobile menu conflict, added services mobile bottom CTA, and verified footer consistency across active pages |
 | `d1386f6` | Website | Fixed footer bottom safe-area/background gap and removed visible placeholder Call / Call Now CTAs while no real phone exists |
 | `544e58a` | Website | Removed duplicate Request Review link in /services/ footer |
+| `84ea02c` | Website | Upgraded homepage hero visual layout to a cleaner hybrid immersive image treatment, removed the heavy image overlay card, and moved request-review cues into a subtle micro-row |
+| `3a3f49d` | Website | Refined homepage immersive hero layout so the image fills the right-side hero height, improves desktop above-the-fold CTA visibility, and preserves mobile hero stability |
 
 
 ---
