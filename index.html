@@ -40,7 +40,7 @@
     .final-hero-shell {
       min-height: calc(100vh - 76px);
       display: grid;
-      grid-template-columns: minmax(0, .38fr) minmax(0, .62fr);
+      grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
       align-items: center;
       background: var(--primary);
       position: relative;
@@ -143,58 +143,40 @@
       position: relative;
       z-index: 2;
       min-width: 0;
-      padding: clamp(28px, 5vw, 72px) clamp(16px, 2.5vw, 34px) clamp(28px, 5vw, 72px) 0;
-      display: grid;
-      align-content: center;
+      padding: 0;
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+    }
+    /* Soft gradient from hero bg into image — left edge of visual stage */
+    .final-visual-stage::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: clamp(48px, 8vw, 96px);
+      height: 100%;
+      background: linear-gradient(to right, var(--primary), transparent);
+      z-index: 4;
+      pointer-events: none;
     }
     .hero-visual {
-      aspect-ratio: 3 / 2;
+      flex: 1;
       overflow: hidden;
-      border-radius: 28px;
-      box-shadow: 0 28px 80px rgba(0,0,0,.28);
+      border-radius: 0;
+      box-shadow: none;
       position: relative;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .hero-visual:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 32px 88px rgba(0,0,0,.32);
+      min-height: 480px;
     }
     .hero-visual img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 45% center;
+      object-position: 42% center;
       display: block;
     }
     .final-support-card {
-      position: absolute;
-      right: clamp(28px, 4vw, 64px);
-      bottom: clamp(44px, 6vw, 88px);
-      z-index: 8;
-      width: min(286px, 32%);
-      border-radius: 24px;
-      background: linear-gradient(145deg, #102033, #243D32);
-      color: white;
-      padding: 22px;
-      box-shadow: 0 22px 48px rgba(16,32,51,.25);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .final-support-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 26px 56px rgba(16,32,51,.3);
-    }
-    .final-support-card h2 {
-      margin: 0 0 12px;
-      color: white;
-      font-size: 1.25rem;
-      font-weight: 800;
-    }
-    .final-support-card ul {
-      margin: 0 0 16px;
-      padding-left: 18px;
-      color: rgba(255,255,255,.78);
-      line-height: 1.55;
-      font-size: .92rem;
+      display: none;
     }
     .final-support-card .btn {
       min-height: 42px;
@@ -1400,6 +1382,31 @@
     }
     
     /* ===== MOBILE RESPONSIVE ===== */
+    .hero-micro-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .hero-micro-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,.58);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+    .hero-micro-item::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(201,130,43,.7);
+      flex-shrink: 0;
+    }
     @media (max-width: 900px) {
       .repair-value-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr; }
@@ -1410,7 +1417,10 @@
       .footer-content { grid-template-columns: 1fr 1fr; }
       .detail-cards { grid-template-columns: 1fr; }
       .final-hero-shell { grid-template-columns: 1fr; }
-      .final-visual-stage { padding: 24px 16px; }
+      .final-visual-stage { padding: 0; height: 280px; }
+      .final-visual-stage::before { display: none; }
+      .hero-visual { min-height: 280px; border-radius: 0; }
+      .hero-micro-row { display: none; }
       .final-support-card { position: relative; right: auto; bottom: auto; width: 100%; margin-top: 16px; }
       .scenarios-board { grid-template-columns: 1fr; }
       .scenario-grid { grid-template-columns: 1fr; }
@@ -1517,6 +1527,11 @@
         </div>
         <p class="microcopy">Photos help clarify the repair scope before scheduling.</p>
         <div class="final-safe-proof">Scope reviewed before scheduling.</div>
+        <div class="hero-micro-row" aria-hidden="true">
+          <span class="hero-micro-item">Send details</span>
+          <span class="hero-micro-item">Add photos</span>
+          <span class="hero-micro-item">Scope reviewed</span>
+        </div>
         <div id="services" class="final-service-chips" role="group" aria-label="Service examples">
           <button type="button" class="final-service-chip is-active" data-final-service="Wall">Wall</button>
           <button type="button" class="final-service-chip" data-final-service="Door / Trim">Door / Trim</button>
@@ -1536,15 +1551,7 @@
             fetchpriority="high"
             decoding="async">
         </div>
-        <aside id="request" class="final-support-card" aria-label="Request support">
-          <h2>Tell us what needs attention.</h2>
-          <ul>
-            <li>Send details and photos</li>
-            <li>We review the project scope</li>
-            <li>Next step depends on project type and location</li>
-          </ul>
-          <a class="btn primary" href="request/#photo-checklist" >Send Photos</a>
-        </aside>
+
       </div>
     </section>
 
