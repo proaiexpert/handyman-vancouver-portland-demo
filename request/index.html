@@ -4,81 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Request a Repair Review | Local Repair Pro</title>
-  <meta name="description" content="Send photos and details about your repair project. We review scope, location, and project type before scheduling.">
+  <meta name="description" content="Send a quick question or repair request. We review scope, location, and project type before the next step — no instant estimates.">
   <link rel="canonical" href="https://proai-expert.com/handyman-vancouver-portland-demo/request/">
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="noindex,nofollow">
   <link rel="icon" href="/favicon.ico">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://proai-expert.com/handyman-vancouver-portland-demo/request/">
   <meta property="og:title" content="Request a Repair Review | Local Repair Pro">
-  <meta property="og:description" content="Send photos and details about your repair project. Scope is reviewed before next steps.">
+  <meta property="og:description" content="Send a quick question or repair request. Scope is reviewed before next steps.">
   <meta property="og:image" content="https://proai-expert.com/handyman-vancouver-portland-demo/assets/img/hero-finished-pnw-1536.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Request a Repair Review | Local Repair Pro">
-  <meta name="twitter:description" content="Send photos and details about your repair project. Scope is reviewed before next steps.">
+  <meta name="twitter:description" content="Send a quick question or repair request. Scope is reviewed before next steps.">
   <meta name="twitter:image" content="https://proai-expert.com/handyman-vancouver-portland-demo/assets/img/hero-finished-pnw-1536.webp">
   <link rel="stylesheet" href="../assets/css/preview-styles.css">
   <style>
-    .rq-page{background:var(--background)}
-    .rq-hero{background:var(--primary);padding:72px 24px 64px;text-align:center}
-    .rq-hero .eyebrow{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E6B16C;margin-bottom:16px}
-    .rq-hero h1{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;margin:0 auto 16px;max-width:640px}
-    .rq-hero .lead{font-size:1.0625rem;color:rgba(255,255,255,.82);max-width:520px;margin:0 auto;line-height:1.6}
-    .rq-section{max-width:860px;margin:0 auto;padding:56px 24px}
-    .rq-section-title{font-size:1.375rem;font-weight:700;color:var(--primary);margin:0 0 8px}
-    .rq-section-sub{font-size:.9375rem;color:var(--muted);margin:0 0 32px;line-height:1.55}
-    .path-cards{background:var(--soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .path-card{background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:28px 22px}
-    .path-card .path-icon{font-size:1.75rem;margin-bottom:12px;display:block}
-    .path-card h3{font-size:1rem;font-weight:700;color:var(--primary);margin:0 0 8px}
-    .path-card p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.55}
-    .form-section{background:var(--surface)}
-    .rq-form{display:flex;flex-direction:column;gap:20px}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .field-group{display:flex;flex-direction:column;gap:6px}
-    .field-group label{font-size:.875rem;font-weight:600;color:var(--text)}
-    .field-group input,.field-group select,.field-group textarea{font-family:inherit;font-size:.9375rem;color:var(--text);background:var(--background);border:1.5px solid var(--border);border-radius:7px;padding:11px 14px;transition:border-color .18s;width:100%;box-sizing:border-box}
-    .field-group input:focus,.field-group select:focus,.field-group textarea:focus{outline:none;border-color:var(--cta);box-shadow:0 0 0 3px rgba(201,130,43,.18)}
-    .field-group textarea{resize:vertical;min-height:110px}
-    .field-hint{font-size:.8125rem;color:var(--muted);margin-top:2px}
-    .form-submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--cta);color:#241300;font-size:1rem;font-weight:700;border:none;border-radius:8px;padding:15px 36px;cursor:pointer;transition:background .18s,transform .12s;align-self:flex-start}
-    .form-submit-btn:hover{background:#b8711f}
-    .form-submit-btn:active{transform:scale(.98)}
-    .form-status{font-size:.9375rem;padding:14px 18px;border-radius:8px;display:none}
-    .form-status.success{display:block;background:#EEF7EE;color:#1D4D1D;border:1.5px solid #A8D5A8}
-    .form-status.error{display:block;background:#FEF2F2;color:#7F1D1D;border:1.5px solid #FCA5A5}
-    .checklist-section{background:var(--soft);border-top:1px solid var(--border)}
-    .checklist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .checklist-card{background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:22px 20px;display:flex;gap:14px;align-items:flex-start}
-    .checklist-card .ck-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
-    .checklist-card h4{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 5px}
-    .checklist-card p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.5}
-    .next-section{background:var(--surface)}
-    .next-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-    .next-step{text-align:center;padding:24px 16px;background:var(--soft);border-radius:10px;border:1px solid var(--border)}
-    .next-step .step-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;font-size:.875rem;font-weight:700;margin-bottom:12px}
-    .next-step h4{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 6px}
-    .next-step p{font-size:.8125rem;color:var(--muted);margin:0;line-height:1.5}
-    .area-section{background:var(--soft);border-top:1px solid var(--border)}
-    .area-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-    .area-chip{background:var(--surface);border:1.5px solid var(--border);border-radius:100px;padding:7px 16px;font-size:.875rem;color:var(--text);font-weight:500}
-    .area-note{font-size:.8125rem;color:var(--muted);margin-top:16px;line-height:1.55}
-    .faq-section{background:var(--surface)}
-    .faq-list{display:flex;flex-direction:column;gap:0}
-    .faq-item{border-bottom:1px solid var(--border)}
-    .faq-item:first-child{border-top:1px solid var(--border)}
-    .faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-family:inherit;font-size:1rem;font-weight:600;color:var(--primary);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .faq-q:focus-visible{outline:3px solid var(--cta);outline-offset:2px;border-radius:3px}
-    .faq-q .faq-chevron{flex-shrink:0;transition:transform .22s;color:var(--muted)}
-    .faq-item.open .faq-chevron{transform:rotate(180deg)}
-    .faq-a{font-size:.9375rem;color:var(--muted);line-height:1.6;padding:0 0 18px;display:none}
-    .faq-item.open .faq-a{display:block}
-    .final-cta-section{background:var(--primary);text-align:center;padding:64px 24px}
-    .final-cta-section h2{font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:800;color:#fff;margin:0 0 12px}
-    .final-cta-section p{font-size:1rem;color:rgba(255,255,255,.8);margin:0 0 28px;max-width:480px;margin-left:auto;margin-right:auto}
-    .final-cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#241300;font-size:1rem;font-weight:700;text-decoration:none;border-radius:8px;padding:15px 36px;transition:background .18s}
-    .final-cta-btn:hover{background:#b8711f}
+    /* ── Base ── */
+    *,*::before,*::after{box-sizing:border-box}
+    .rq-page{background:var(--background);min-height:100vh}
+
+    /* ── Nav ── */
     .site-header{background:var(--primary);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.08)}
     .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
     .nav-brand{font-size:1.125rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.01em}
@@ -88,8 +33,8 @@
     .nav-links a:hover{color:#E6B16C}
     .nav-links a.active{color:#E6B16C}
     .nav-cta-link{background:var(--cta);color:#241300 !important;padding:8px 18px;border-radius:6px;font-weight:700 !important}
-    .nav-cta-link:hover{background:#b8711f}
-    .hamburger-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#fff}
+    .nav-cta-link:hover{background:#b8711f !important}
+    .hamburger-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#fff;line-height:0}
     .mobile-nav{position:fixed;inset:0;background:var(--primary);z-index:200;display:flex;flex-direction:column;padding:24px}
     .mobile-nav[hidden]{display:none}
     .mobile-nav-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
@@ -97,40 +42,154 @@
     .mobile-nav-links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
     .mobile-nav-links a{display:block;font-size:1.125rem;font-weight:600;color:rgba(255,255,255,.9);text-decoration:none;padding:14px 8px;border-bottom:1px solid rgba(255,255,255,.1)}
     .mobile-nav-links a.active{color:#E6B16C}
-    .mobile-nav-links .mobile-cta{margin-top:16px;background:var(--cta);color:#241300 !important;border-radius:8px;text-align:center;font-weight:700 !important;border-bottom:none}
+    .mobile-nav-links .mobile-cta{margin-top:16px;background:var(--cta);color:#241300 !important;border-radius:8px;text-align:center;font-weight:700 !important;border-bottom:none;padding:14px 8px}
+
+    /* ── Hero ── */
+    .rq-hero{background:var(--primary);padding:72px 24px 64px;text-align:center}
+    .rq-hero .eyebrow{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E6B16C;margin-bottom:16px}
+    .rq-hero h1{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;margin:0 auto 16px;max-width:680px}
+    .rq-hero .lead{font-size:1.0625rem;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 28px;line-height:1.6}
+    .hero-cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+    .hero-btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#241300;font-size:1rem;font-weight:700;text-decoration:none;border-radius:8px;padding:14px 28px;transition:background .18s}
+    .hero-btn-primary:hover{background:#b8711f}
+    .hero-btn-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:#fff;font-size:.9375rem;font-weight:600;text-decoration:none;border-radius:8px;padding:13px 24px;border:1.5px solid rgba(255,255,255,.25);transition:background .18s}
+    .hero-btn-secondary:hover{background:rgba(255,255,255,.2)}
+    .hero-microcopy{font-size:.8125rem;color:rgba(255,255,255,.55);max-width:480px;margin:0 auto;line-height:1.55}
+
+    /* ── Section wrapper ── */
+    .rq-section{max-width:860px;margin:0 auto;padding:56px 24px}
+    .rq-section-title{font-size:1.375rem;font-weight:700;color:var(--primary);margin:0 0 8px}
+    .rq-section-sub{font-size:.9375rem;color:var(--muted);margin:0 0 32px;line-height:1.55}
+
+    /* ── Path selector ── */
+    .path-selector-section{background:var(--surface);border-bottom:1px solid var(--border)}
+    .path-selector{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:0}
+    .path-btn{background:var(--soft);border:2px solid var(--border);border-radius:12px;padding:22px 20px;text-align:left;cursor:pointer;transition:border-color .18s,background .18s;font-family:inherit;width:100%}
+    .path-btn:hover{border-color:var(--cta);background:#fff}
+    .path-btn[aria-pressed="true"]{border-color:var(--primary);background:#fff;box-shadow:0 0 0 3px rgba(16,32,51,.08)}
+    .path-btn .path-label{display:flex;align-items:center;gap:10px;font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:6px}
+    .path-btn .path-icon{font-size:1.25rem;flex-shrink:0}
+    .path-btn .path-desc{font-size:.875rem;color:var(--muted);line-height:1.5;margin:0}
+    .path-indicator{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:2px solid var(--border);margin-left:auto;flex-shrink:0;transition:border-color .18s,background .18s}
+    .path-btn[aria-pressed="true"] .path-indicator{background:var(--primary);border-color:var(--primary)}
+    .path-btn[aria-pressed="true"] .path-indicator::after{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#fff}
+
+    /* ── Form section ── */
+    .form-section{background:var(--surface)}
+    .rq-form{display:flex;flex-direction:column;gap:20px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .field-group{display:flex;flex-direction:column;gap:6px}
+    .field-group label{font-size:.875rem;font-weight:600;color:var(--text)}
+    .field-group input,.field-group select,.field-group textarea{font-family:inherit;font-size:.9375rem;color:var(--text);background:var(--background);border:1.5px solid var(--border);border-radius:7px;padding:11px 14px;transition:border-color .18s;width:100%}
+    .field-group input:focus,.field-group select:focus,.field-group textarea:focus{outline:none;border-color:var(--cta);box-shadow:0 0 0 3px rgba(201,130,43,.18)}
+    .field-group input.field-error,.field-group select.field-error,.field-group textarea.field-error{border-color:#c0392b}
+    .field-group textarea{resize:vertical;min-height:110px}
+    .field-hint{font-size:.8125rem;color:var(--muted);margin-top:2px}
+    .field-error-msg{font-size:.8125rem;color:#c0392b;margin-top:3px;display:none}
+    .field-error-msg.visible{display:block}
+    .form-submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--cta);color:#241300;font-size:1rem;font-weight:700;border:none;border-radius:8px;padding:15px 36px;cursor:pointer;transition:background .18s,transform .12s;align-self:flex-start}
+    .form-submit-btn:hover{background:#b8711f}
+    .form-submit-btn:active{transform:scale(.98)}
+    .form-status{font-size:.9375rem;padding:16px 20px;border-radius:8px;display:none;line-height:1.55}
+    .form-status.success{display:block;background:#EEF7EE;color:#1D4D1D;border:1.5px solid #A8D5A8}
+    .form-status.error{display:block;background:#FEF2F2;color:#7F1D1D;border:1.5px solid #FCA5A5}
+    .optional-tag{font-size:.75rem;font-weight:400;color:var(--muted);margin-left:4px}
+    .file-note{font-size:.8125rem;color:var(--muted);margin-top:4px;font-style:italic}
+
+    /* ── Checklist ── */
+    .checklist-section{background:var(--soft);border-top:1px solid var(--border)}
+    .checklist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .checklist-card{background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:22px 20px;display:flex;gap:14px;align-items:flex-start}
+    .checklist-card .ck-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+    .checklist-card h4{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 5px}
+    .checklist-card p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.5}
+    .checklist-note{font-size:.8125rem;color:var(--muted);margin-top:20px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:8px;line-height:1.55}
+
+    /* ── What happens next ── */
+    .next-section{background:var(--surface)}
+    .next-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .next-step{text-align:center;padding:24px 16px;background:var(--soft);border-radius:10px;border:1px solid var(--border)}
+    .next-step .step-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;font-size:.875rem;font-weight:700;margin-bottom:12px}
+    .next-step h4{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 6px}
+    .next-step p{font-size:.8125rem;color:var(--muted);margin:0;line-height:1.5}
+
+    /* ── Area ── */
+    .area-section{background:var(--soft);border-top:1px solid var(--border)}
+    .area-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .area-chip{background:var(--surface);border:1.5px solid var(--border);border-radius:100px;padding:7px 16px;font-size:.875rem;color:var(--text);font-weight:500}
+    .area-note{font-size:.8125rem;color:var(--muted);margin-top:16px;line-height:1.55}
+
+    /* ── FAQ ── */
+    .faq-section{background:var(--surface)}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid var(--border)}
+    .faq-item:first-child{border-top:1px solid var(--border)}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-family:inherit;font-size:1rem;font-weight:600;color:var(--primary);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:focus-visible{outline:3px solid var(--cta);outline-offset:2px;border-radius:3px}
+    .faq-chevron{flex-shrink:0;transition:transform .22s;color:var(--muted)}
+    .faq-item.open .faq-chevron{transform:rotate(180deg)}
+    .faq-a{font-size:.9375rem;color:var(--muted);line-height:1.6;padding:0 0 18px;display:none}
+    .faq-item.open .faq-a{display:block}
+
+    /* ── Final CTA ── */
+    .final-cta-section{background:var(--primary);text-align:center;padding:64px 24px}
+    .final-cta-section h2{font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:800;color:#fff;margin:0 0 12px}
+    .final-cta-section p{font-size:1rem;color:rgba(255,255,255,.8);margin:0 0 28px;max-width:480px;margin-left:auto;margin-right:auto}
+    .final-cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#241300;font-size:1rem;font-weight:700;text-decoration:none;border-radius:8px;padding:15px 36px;transition:background .18s}
+    .final-cta-btn:hover{background:#b8711f}
+
+    /* ── Footer ── */
+    .rq-footer{background:var(--primary);padding:40px 24px 32px;margin-top:0}
+    .footer-inner{max-width:1100px;margin:0 auto}
+    .footer-brand{font-size:1.0625rem;font-weight:800;color:#fff;text-decoration:none;display:inline-block;margin-bottom:16px}
+    .footer-brand span{color:#E6B16C}
+    .footer-tagline{font-size:.875rem;color:rgba(255,255,255,.55);margin:0 0 24px;line-height:1.5}
+    .footer-nav{display:flex;flex-wrap:wrap;gap:8px 24px;list-style:none;margin:0 0 24px;padding:0}
+    .footer-nav a{font-size:.875rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .15s}
+    .footer-nav a:hover{color:#E6B16C}
+    .footer-nav a.active{color:#E6B16C}
+    .footer-copy{font-size:.8125rem;color:rgba(255,255,255,.4);margin:0;border-top:1px solid rgba(255,255,255,.1);padding-top:20px}
+
+    /* ── Responsive ── */
     @media(max-width:759px){
-      .path-grid{grid-template-columns:1fr;gap:14px}
+      .nav-links{display:none}
+      .hamburger-btn{display:flex;align-items:center}
+      .path-selector{grid-template-columns:1fr}
       .form-row{grid-template-columns:1fr}
       .form-submit-btn{width:100%}
       .checklist-grid{grid-template-columns:1fr}
       .next-steps{grid-template-columns:1fr 1fr}
-      .nav-links{display:none}
-      .hamburger-btn{display:flex;align-items:center}
+      .hero-cta-row{flex-direction:column;align-items:center}
+      .hero-btn-primary,.hero-btn-secondary{width:100%;max-width:320px;justify-content:center}
     }
     @media(max-width:400px){.next-steps{grid-template-columns:1fr}}
   </style>
 </head>
 <body class="rq-page">
   <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="nav-inner">
       <a href="../" class="nav-brand">Local <span>Repair</span> Pro</a>
       <nav aria-label="Primary navigation">
         <ul class="nav-links">
           <li><a href="../">Home</a></li>
-          <li><a href="../#services">Services</a></li>
-          <li><a href="../#how-it-works">How It Works</a></li>
-          <li><a href="../#areas">Areas</a></li>
+          <li><a href="../#services-full">Services</a></li>
+          <li><a href="../#service-area">Service Area</a></li>
+          <li><a href="../#faq">FAQ</a></li>
           <li><a href="./" class="nav-cta-link active" aria-current="page">Request Review</a></li>
         </ul>
       </nav>
       <button class="hamburger-btn" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
       </button>
     </div>
   </header>
+
+  <!-- Mobile nav -->
   <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile navigation">
     <div class="mobile-nav-header">
       <a href="../" class="nav-brand">Local <span>Repair</span> Pro</a>
@@ -138,137 +197,185 @@
     </div>
     <ul class="mobile-nav-links">
       <li><a href="../">Home</a></li>
-      <li><a href="../#services">Services</a></li>
-      <li><a href="../#how-it-works">How It Works</a></li>
-      <li><a href="../#areas">Areas</a></li>
+      <li><a href="../#services-full">Services</a></li>
+      <li><a href="../#service-area">Service Area</a></li>
+      <li><a href="../#faq">FAQ</a></li>
       <li><a href="./" class="mobile-cta active" aria-current="page">Request Review</a></li>
     </ul>
   </nav>
+
   <main id="main">
+
+    <!-- Hero -->
     <section class="rq-hero" aria-labelledby="rq-h1">
-      <span class="eyebrow">Step 1 of 2</span>
-      <h1 id="rq-h1">Request a Repair Review</h1>
-      <p class="lead">Send photos and project details. We review scope, location, and project type before scheduling — no instant estimates, no surprises.</p>
+      <span class="eyebrow">Photo-based request review</span>
+      <h1 id="rq-h1">Send a quick question or repair request.</h1>
+      <p class="lead">Choose the path that fits. Ask a simple question, or share repair details, location, and photos so the scope can be reviewed before the next step.</p>
+      <div class="hero-cta-row">
+        <a href="#request-form" class="hero-btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Start Request
+        </a>
+        <a href="#photo-checklist" class="hero-btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Photo Checklist
+        </a>
+      </div>
+      <p class="hero-microcopy">Photos help clarify the request, but the next step depends on project type, location, access, materials, safety, and schedule.</p>
     </section>
-    <section class="path-cards" aria-labelledby="path-heading">
+
+    <!-- Path selector + Form -->
+    <section class="path-selector-section" id="request-form" aria-labelledby="form-heading">
       <div class="rq-section">
-        <h2 class="rq-section-title" id="path-heading">How Requests Work</h2>
-        <p class="rq-section-sub">Every request is reviewed individually — not auto-quoted. Here's what to expect.</p>
-        <div class="path-grid">
-          <div class="path-card">
-            <span class="path-icon" aria-hidden="true">📋</span>
-            <h3>Fill Out the Form</h3>
-            <p>Describe the repair, select the project type, and share your location. The more detail, the better.</p>
-          </div>
-          <div class="path-card">
-            <span class="path-icon" aria-hidden="true">📸</span>
-            <h3>Send Photos</h3>
-            <p>Photos help us understand scope before any scheduling. Use the photo checklist below as a guide.</p>
-          </div>
-          <div class="path-card">
-            <span class="path-icon" aria-hidden="true">🔍</span>
-            <h3>Scope Is Reviewed</h3>
-            <p>We review your request by location, project type, and scope. You'll hear back with next steps — not an instant price.</p>
-          </div>
+        <h2 class="rq-section-title" id="form-heading">Choose Your Request Path</h2>
+        <p class="rq-section-sub">Select the option that best fits. You can switch at any time.</p>
+        <div class="path-selector" role="group" aria-label="Request path">
+          <button class="path-btn" id="path-qq" type="button" aria-pressed="false">
+            <span class="path-label">
+              <span class="path-icon" aria-hidden="true">💬</span>
+              Quick Question
+              <span class="path-indicator" aria-hidden="true"></span>
+            </span>
+            <p class="path-desc">Ask if the repair fits, what details to send, or whether the request should be reviewed.</p>
+          </button>
+          <button class="path-btn" id="path-rr" type="button" aria-pressed="true">
+            <span class="path-label">
+              <span class="path-icon" aria-hidden="true">🔧</span>
+              Repair Request
+              <span class="path-indicator" aria-hidden="true"></span>
+            </span>
+            <p class="path-desc">Share repair details, location, timing, and optional photos for a more complete scope review.</p>
+          </button>
         </div>
       </div>
     </section>
-    <section class="form-section" aria-labelledby="form-heading">
-      <div class="rq-section">
-        <h2 class="rq-section-title" id="form-heading">Tell Us About Your Project</h2>
-        <p class="rq-section-sub">All fields marked * are required. Photos can be sent separately — see the checklist below.</p>
+
+    <section class="form-section" aria-labelledby="form-fields-heading">
+      <div class="rq-section" style="padding-top:32px">
+        <h2 class="rq-section-title" id="form-fields-heading" aria-live="polite">Repair Request</h2>
+        <p class="rq-section-sub" id="form-sub">Share repair details, location, and timing. Photos can be described or attached below.</p>
+
         <form class="rq-form" id="rq-form" novalidate>
-          <div class="form-row">
-            <div class="field-group">
-              <label for="f-name">Your Name *</label>
-              <input type="text" id="f-name" name="name" autocomplete="name" required placeholder="Jane Smith">
-            </div>
-            <div class="field-group">
-              <label for="f-phone">Phone Number *</label>
-              <input type="tel" id="f-phone" name="phone" autocomplete="tel" required placeholder="(360) 555-0100">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field-group">
-              <label for="f-email">Email Address *</label>
-              <input type="email" id="f-email" name="email" autocomplete="email" required placeholder="jane@example.com">
-            </div>
-            <div class="field-group">
-              <label for="f-city">City / Neighborhood *</label>
-              <input type="text" id="f-city" name="city" required placeholder="Vancouver WA, Camas, Ridgefield">
-            </div>
-          </div>
+
+          <!-- Shared: Name -->
           <div class="field-group">
-            <label for="f-type">Project Type *</label>
-            <select id="f-type" name="project_type" required>
-              <option value="" disabled selected>Select a category</option>
-              <option value="drywall">Drywall Repair</option>
-              <option value="doors">Door / Lock / Hardware</option>
-              <option value="trim">Trim and Molding</option>
-              <option value="deck">Deck and Fence Repair</option>
-              <option value="tile">Tile and Grout</option>
-              <option value="caulk">Caulking and Weatherstripping</option>
-              <option value="shelving">Shelving and Mounting</option>
-              <option value="gutter">Gutter Cleaning and Minor Repair</option>
-              <option value="other">Other / Not Sure</option>
+            <label for="f-name">Your Name <span class="optional-tag">(optional)</span></label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Jane Smith">
+          </div>
+
+          <!-- Shared: Contact -->
+          <div class="field-group">
+            <label for="f-contact">Best contact method *</label>
+            <input type="text" id="f-contact" name="contact" autocomplete="email" required placeholder="Email or phone">
+            <span class="field-hint">Email or phone — whichever is best for reply.</span>
+            <span class="field-error-msg" id="f-contact-err" role="alert">Please enter an email or phone number.</span>
+          </div>
+
+          <!-- Shared: City/ZIP -->
+          <div class="field-group" id="field-city-wrap">
+            <label for="f-city" id="f-city-label">City / ZIP *</label>
+            <input type="text" id="f-city" name="city" placeholder="Vancouver WA, Camas, 98661">
+            <span class="field-hint" id="f-city-hint">Helps review whether the location may fit.</span>
+            <span class="field-error-msg" id="f-city-err" role="alert">Please enter your city or ZIP.</span>
+          </div>
+
+          <!-- Repair Request: Request type -->
+          <div class="field-group rr-only">
+            <label for="f-type">Request type *</label>
+            <select id="f-type" name="request_type">
+              <option value="" disabled selected>Select a type</option>
+              <option value="wall">Wall / drywall</option>
+              <option value="door">Door / trim</option>
+              <option value="paint">Paint / touch-up</option>
+              <option value="install">Small install</option>
+              <option value="exterior">Exterior touch-up</option>
+              <option value="punchlist">Grouped punch-list</option>
+              <option value="unsure">Not sure yet</option>
             </select>
+            <span class="field-error-msg" id="f-type-err" role="alert">Please select a request type.</span>
           </div>
-          <div class="field-group">
-            <label for="f-desc">Describe the Repair *</label>
-            <textarea id="f-desc" name="description" required placeholder="What needs attention? How long has it been an issue? Any previous repair attempts?"></textarea>
-            <span class="field-hint">The more detail you share, the better we can assess scope.</span>
+
+          <!-- Repair Request: Location of issue -->
+          <div class="field-group rr-only">
+            <label for="f-location">Where is the issue? <span class="optional-tag">(optional)</span></label>
+            <input type="text" id="f-location" name="location" placeholder="Hallway, entryway, kitchen, exterior, several areas">
           </div>
+
+          <!-- Shared: Description / Question -->
           <div class="field-group">
-            <label for="f-timing">Preferred Timing</label>
+            <label for="f-desc" id="f-desc-label">What needs attention? *</label>
+            <textarea id="f-desc" name="description" required placeholder="Describe the repair, what needs attention, and any relevant details."></textarea>
+            <span class="field-error-msg" id="f-desc-err" role="alert">Please describe what needs attention.</span>
+          </div>
+
+          <!-- Repair Request: Timing -->
+          <div class="field-group rr-only">
+            <label for="f-timing">Timing <span class="optional-tag">(optional)</span></label>
             <select id="f-timing" name="timing">
               <option value="">No preference</option>
-              <option value="asap">As soon as possible</option>
-              <option value="2weeks">Within 2 weeks</option>
-              <option value="month">Within a month</option>
-              <option value="flexible">Flexible / planning ahead</option>
+              <option value="flexible">Flexible</option>
+              <option value="soon">Soon</option>
+              <option value="specific">Specific date</option>
+              <option value="unsure">Not sure yet</option>
             </select>
           </div>
-          <div class="field-group">
-            <label for="f-notes">Anything Else We Should Know?</label>
-            <textarea id="f-notes" name="notes" placeholder="Access notes, pets, parking, HOA restrictions, permit questions"></textarea>
+
+          <!-- Repair Request: Punch-list checkbox -->
+          <div class="field-group rr-only" style="flex-direction:row;align-items:flex-start;gap:10px">
+            <input type="checkbox" id="f-punchlist" name="punchlist" style="margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:var(--primary)">
+            <label for="f-punchlist" style="font-weight:400;font-size:.9375rem;color:var(--text);cursor:pointer">This may include several small items for review together.</label>
           </div>
+
+          <!-- Repair Request: Photo notes -->
+          <div class="field-group rr-only">
+            <label for="f-photos">Photo notes <span class="optional-tag">(optional)</span></label>
+            <textarea id="f-photos" name="photo_notes" style="min-height:80px" placeholder="Wide view, close-up, access, matching area, measurements, etc."></textarea>
+            <span class="field-hint">Describe what photos you have or would take. Photo delivery can be connected before launch.</span>
+          </div>
+
           <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
-          <button type="submit" class="form-submit-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            Send Request
+
+          <button type="submit" class="form-submit-btn" id="submit-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Request Details
           </button>
         </form>
       </div>
     </section>
+    <!-- Photo checklist -->
     <section class="checklist-section" id="photo-checklist" aria-labelledby="checklist-heading">
       <div class="rq-section">
-        <h2 class="rq-section-title" id="checklist-heading">Photo Checklist</h2>
-        <p class="rq-section-sub">Good photos help us understand scope before any scheduling. Send photos by text or email after submitting the form.</p>
+        <h2 class="rq-section-title" id="checklist-heading">Helpful Photos to Include</h2>
+        <p class="rq-section-sub">Good photos help clarify scope before any scheduling. Describe what you have or would take — photo delivery can be connected before launch.</p>
         <div class="checklist-grid">
-          <div class="checklist-card"><span class="ck-icon" aria-hidden="true">📐</span><div><h4>Wide Shot — Full Area</h4><p>Step back and capture the full wall, door, deck section, or room. Shows scale and surrounding context.</p></div></div>
-          <div class="checklist-card"><span class="ck-icon" aria-hidden="true">🔎</span><div><h4>Close-Up — The Problem</h4><p>Get within 12 to 18 inches of the damage, crack, gap, or issue. Sharp focus helps assess material and depth.</p></div></div>
-          <div class="checklist-card"><span class="ck-icon" aria-hidden="true">📏</span><div><h4>Reference for Scale</h4><p>Place a coin, tape measure, or your hand next to the damage so we can gauge actual size.</p></div></div>
-          <div class="checklist-card"><span class="ck-icon" aria-hidden="true">💡</span><div><h4>Good Lighting</h4><p>Natural light or a flashlight pointed at the area works best. Avoid flash-only shots that wash out detail.</p></div></div>
+          <div class="checklist-card"><span class="ck-icon" aria-hidden="true">📐</span><div><h4>Wide View</h4><p>Step back and capture the full wall, door, deck section, or room. Shows scale and surrounding context.</p></div></div>
+          <div class="checklist-card"><span class="ck-icon" aria-hidden="true">🔎</span><div><h4>Close-Up</h4><p>Get within 12 to 18 inches of the damage, crack, gap, or issue. Sharp focus helps assess material and depth.</p></div></div>
+          <div class="checklist-card"><span class="ck-icon" aria-hidden="true">🚪</span><div><h4>Access</h4><p>Show how the area is reached — doorway clearance, tight corners, exterior access, or anything that affects the work.</p></div></div>
+          <div class="checklist-card"><span class="ck-icon" aria-hidden="true">📏</span><div><h4>Matching Area / Scale</h4><p>Place a coin, tape measure, or your hand next to the damage. Include a matching surface if paint or material needs to blend.</p></div></div>
         </div>
-        <p style="margin-top:24px;font-size:.9375rem;color:var(--text);">After submitting, send photos to <strong><a href="tel:0000000000" style="color:var(--primary);">(000) 000-0000</a></strong> by text, or reply to the confirmation email.</p>
+        <p class="checklist-note">Photo upload or photo delivery can be connected before launch once the contact endpoint is confirmed. For now, describe what photos you have in the photo notes field above.</p>
       </div>
     </section>
+
+    <!-- What happens next -->
     <section class="next-section" aria-labelledby="next-heading">
       <div class="rq-section">
         <h2 class="rq-section-title" id="next-heading">What Happens Next</h2>
-        <p class="rq-section-sub">Here's what to expect after you submit your request.</p>
+        <p class="rq-section-sub">Here is what to expect after the details are prepared.</p>
         <div class="next-steps">
-          <div class="next-step"><div class="step-num" aria-hidden="true">1</div><h4>Request Received</h4><p>You'll get a confirmation. No automated quote — a real review follows.</p></div>
-          <div class="next-step"><div class="step-num" aria-hidden="true">2</div><h4>Scope Review</h4><p>We review location, project type, and scope. Some projects may require a licensed trade or permit.</p></div>
-          <div class="next-step"><div class="step-num" aria-hidden="true">3</div><h4>We Reach Out</h4><p>If the project is a fit, we'll contact you to discuss next steps and scheduling.</p></div>
-          <div class="next-step"><div class="step-num" aria-hidden="true">4</div><h4>On-Site Review</h4><p>For larger or complex scopes, an on-site look may be needed before any work begins.</p></div>
+          <div class="next-step"><div class="step-num" aria-hidden="true">1</div><h4>Details Are Prepared</h4><p>You choose the request path and add the helpful details.</p></div>
+          <div class="next-step"><div class="step-num" aria-hidden="true">2</div><h4>Scope Is Reviewed</h4><p>Project type, location, access, materials, safety, and schedule affect the next step.</p></div>
+          <div class="next-step"><div class="step-num" aria-hidden="true">3</div><h4>Follow-Up May Be Needed</h4><p>Some requests need clarification before estimate or scheduling discussion.</p></div>
+          <div class="next-step"><div class="step-num" aria-hidden="true">4</div><h4>Proper Provider Confirmed</h4><p>Some work may require permits, licensed trades, or another provider depending on project type and location.</p></div>
         </div>
       </div>
     </section>
+
+    <!-- Service area -->
     <section class="area-section" aria-labelledby="area-heading">
       <div class="rq-section">
         <h2 class="rq-section-title" id="area-heading">Service Area</h2>
-        <p class="rq-section-sub">We currently focus on Southwest Washington and nearby areas. Not sure if you're in range? Submit a request and we'll let you know.</p>
+        <p class="rq-section-sub">Requests are centered around Vancouver, WA and nearby Clark County. Portland-area requests can be reviewed by location and scope.</p>
         <div class="area-chips" role="list">
           <span class="area-chip" role="listitem">Vancouver, WA</span>
           <span class="area-chip" role="listitem">Camas, WA</span>
@@ -277,66 +384,249 @@
           <span class="area-chip" role="listitem">Battle Ground, WA</span>
           <span class="area-chip" role="listitem">La Center, WA</span>
           <span class="area-chip" role="listitem">Woodland, WA</span>
-          <span class="area-chip" role="listitem">Nearby Areas</span>
+          <span class="area-chip" role="listitem">Nearby Clark County</span>
         </div>
-        <p class="area-note">Some projects may require a licensed trade contractor or permit depending on scope. We'll flag this during review.</p>
+        <p class="area-note">Some projects may require a licensed trade contractor or permit depending on scope. This will be flagged during review.</p>
       </div>
     </section>
+
+    <!-- FAQ -->
     <section class="faq-section" aria-labelledby="faq-heading">
       <div class="rq-section">
         <h2 class="rq-section-title" id="faq-heading">Common Questions</h2>
-        <p class="rq-section-sub">Answers to what people usually ask before submitting.</p>
+        <p class="rq-section-sub">Answers about the two request paths and how the process works.</p>
         <div class="faq-list" role="list">
-          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">Do I get an instant price when I submit?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">No — and that's intentional. Repair scope varies too much for instant pricing to be accurate. We review your request and photos before any numbers are discussed.</div></div>
-          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">How long does the review take?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Review time depends on request volume and project complexity. We'll reach out once we've had a chance to look at your details and photos.</div></div>
-          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">What if my project needs a permit or licensed contractor?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Some work — electrical, plumbing, structural — requires a licensed trade or permit. We'll flag this during scope review. We don't take on work that falls outside what we can properly handle.</div></div>
-          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">Do I need to be home when I submit?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">No — just fill out the form and send photos at your convenience. We'll follow up to coordinate any on-site visit if needed.</div></div>
-          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">What areas do you serve?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">We focus on Southwest Washington — Vancouver, Camas, Washougal, Ridgefield, Battle Ground, and nearby areas. Not sure if you're in range? Submit a request and we'll let you know.</div></div>
-          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">Can I call instead of filling out the form?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Yes. Call or text <a href="tel:0000000000" style="color:var(--primary);font-weight:600;">(000) 000-0000</a> if you prefer to talk through your project first.</div></div>
+
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">Should I use Quick Question or Repair Request?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Use Quick Question if you are not sure whether the request fits. Use Repair Request when you are ready to share location, repair details, and photo context.</div></div>
+
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">Do I have to provide a phone number?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">No. Use the best contact method field with email or phone, whichever is best for reply.</div></div>
+
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">Can I get an exact estimate from photos?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Not always. Photos help clarify the request, but scope depends on project type, access, materials, location, and condition.</div></div>
+
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">Can I attach photos?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Photo delivery can be connected before launch. For now, describe what the photos would show in the photo notes field.</div></div>
+
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">Can I group several small repairs?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Yes. A grouped punch-list can include several smaller home details for review together.</div></div>
+
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">What if the work requires a licensed trade or permit?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Some work may require permits, licensed trades, or another provider depending on project type and location. This will be flagged during review.</div></div>
+
+          <div class="faq-item" role="listitem"><button class="faq-q" aria-expanded="false">What areas can be reviewed?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Requests are centered around Vancouver, WA and nearby Clark County. Portland-area requests can be reviewed by location and scope.</div></div>
+
         </div>
       </div>
     </section>
+
+    <!-- Final CTA -->
     <section class="final-cta-section" aria-labelledby="final-cta-heading">
       <h2 id="final-cta-heading">Ready to Send Your Request?</h2>
-      <p>Scroll up to fill out the form, or call us directly.</p>
-      <a href="#rq-form" class="final-cta-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Fill Out the Form</a>
+      <p>Choose a path and fill in the details. No instant estimate — scope is reviewed before the next step.</p>
+      <a href="#request-form" class="final-cta-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Start Request
+      </a>
     </section>
+
   </main>
-  <footer style="background:var(--primary);padding:32px 24px;text-align:center;" role="contentinfo">
-    <p style="color:rgba(255,255,255,.6);font-size:.875rem;margin:0 0 12px;">&copy; 2025 Local Repair Pro &mdash; Vancouver, WA &amp; Nearby Areas</p>
-    <nav aria-label="Footer navigation">
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
-        <li><a href="../" style="color:rgba(255,255,255,.7);font-size:.875rem;text-decoration:none;">Home</a></li>
-        <li><a href="../#services" style="color:rgba(255,255,255,.7);font-size:.875rem;text-decoration:none;">Services</a></li>
-        <li><a href="../#how-it-works" style="color:rgba(255,255,255,.7);font-size:.875rem;text-decoration:none;">How It Works</a></li>
-        <li><a href="../#areas" style="color:rgba(255,255,255,.7);font-size:.875rem;text-decoration:none;">Areas</a></li>
-        <li><a href="./" style="color:#E6B16C;font-size:.875rem;text-decoration:none;">Request Review</a></li>
-      </ul>
-    </nav>
+
+  <!-- Footer -->
+  <footer class="rq-footer" role="contentinfo">
+    <div class="footer-inner">
+      <a href="../" class="footer-brand">Local <span>Repair</span> Pro</a>
+      <p class="footer-tagline">Vancouver, WA and nearby areas. Scope reviewed before scheduling.</p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="../">Home</a></li>
+          <li><a href="../#services-full">Services</a></li>
+          <li><a href="../#service-area">Service Area</a></li>
+          <li><a href="../#faq">FAQ</a></li>
+          <li><a href="#request-form" class="active">Request Review</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Local Repair Pro &mdash; Vancouver, WA &amp; Nearby Areas</p>
+    </div>
   </footer>
   <script>
-    var hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobile-nav'),mobileClose=document.getElementById('mobile-nav-close');
-    function openNav(){mobileNav.removeAttribute('hidden');hamburger.setAttribute('aria-expanded','true');mobileClose.focus();document.body.style.overflow='hidden';}
-    function closeNav(){mobileNav.setAttribute('hidden','');hamburger.setAttribute('aria-expanded','false');hamburger.focus();document.body.style.overflow='';}
-    hamburger.addEventListener('click',openNav);
-    mobileClose.addEventListener('click',closeNav);
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mobileNav.hasAttribute('hidden'))closeNav();});
-    var form=document.getElementById('rq-form'),statusEl=document.getElementById('form-status');
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      var required=form.querySelectorAll('[required]'),valid=true;
-      required.forEach(function(f){if(!f.value.trim()){valid=false;f.focus();}});
-      if(!valid){statusEl.className='form-status error';statusEl.textContent='Please fill in all required fields before submitting.';return;}
-      statusEl.className='form-status success';
-      statusEl.textContent='Request received! This is a demo — no data was sent. A live site would send your details for review.';
-      form.reset();
-      statusEl.scrollIntoView({behavior:'smooth',block:'nearest'});
+    // ── Mobile nav ──
+    var hamburger = document.getElementById('hamburger');
+    var mobileNav = document.getElementById('mobile-nav');
+    var mobileClose = document.getElementById('mobile-nav-close');
+    function openNav() {
+      mobileNav.removeAttribute('hidden');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileClose.focus();
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      mobileNav.setAttribute('hidden', '');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', openNav);
+    mobileClose.addEventListener('click', closeNav);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !mobileNav.hasAttribute('hidden')) closeNav();
     });
-    document.querySelectorAll('.faq-q').forEach(function(btn){
-      btn.addEventListener('click',function(){
-        var item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');});
-        if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+
+    // ── Path selector ──
+    var pathQQ = document.getElementById('path-qq');
+    var pathRR = document.getElementById('path-rr');
+    var formTitle = document.getElementById('form-fields-heading');
+    var formSub = document.getElementById('form-sub');
+    var submitBtn = document.getElementById('submit-btn');
+    var rrFields = document.querySelectorAll('.rr-only');
+    var cityWrap = document.getElementById('field-city-wrap');
+    var cityLabel = document.getElementById('f-city-label');
+    var cityHint = document.getElementById('f-city-hint');
+    var descLabel = document.getElementById('f-desc-label');
+    var fCity = document.getElementById('f-city');
+    var fType = document.getElementById('f-type');
+    var currentPath = 'rr';
+
+    function setPath(path) {
+      currentPath = path;
+      if (path === 'qq') {
+        pathQQ.setAttribute('aria-pressed', 'true');
+        pathRR.setAttribute('aria-pressed', 'false');
+        formTitle.textContent = 'Quick Question';
+        formSub.textContent = 'Ask about the repair, service area, or what details to send.';
+        submitBtn.querySelector('svg').nextSibling.textContent = ' Send Question';
+        // Hide RR-only fields
+        rrFields.forEach(function(f) { f.style.display = 'none'; });
+        // City optional in QQ
+        cityLabel.innerHTML = 'City / ZIP <span class="optional-tag">(optional)</span>';
+        cityHint.textContent = 'Helps review whether the location may fit.';
+        fCity.removeAttribute('required');
+        fCity.classList.remove('field-error');
+        document.getElementById('f-city-err').classList.remove('visible');
+        // Description label
+        descLabel.innerHTML = 'Your question *';
+        document.getElementById('f-desc').placeholder = 'Ask about the repair, service area, or what details to send.';
+        // Remove required from RR-only fields
+        if (fType) fType.removeAttribute('required');
+      } else {
+        pathRR.setAttribute('aria-pressed', 'true');
+        pathQQ.setAttribute('aria-pressed', 'false');
+        formTitle.textContent = 'Repair Request';
+        formSub.textContent = 'Share repair details, location, and timing. Photos can be described or attached below.';
+        submitBtn.querySelector('svg').nextSibling.textContent = ' Send Request Details';
+        // Show RR-only fields
+        rrFields.forEach(function(f) { f.style.display = ''; });
+        // City required in RR
+        cityLabel.innerHTML = 'City / ZIP *';
+        cityHint.textContent = 'Helps review whether the location may fit.';
+        fCity.setAttribute('required', '');
+        // Description label
+        descLabel.innerHTML = 'What needs attention? *';
+        document.getElementById('f-desc').placeholder = 'Describe the repair, what needs attention, and any relevant details.';
+        // Restore required on RR type
+        if (fType) fType.setAttribute('required', '');
+      }
+      // Reset form status
+      var statusEl = document.getElementById('form-status');
+      statusEl.className = 'form-status';
+      statusEl.textContent = '';
+    }
+
+    pathQQ.addEventListener('click', function() { setPath('qq'); });
+    pathRR.addEventListener('click', function() { setPath('rr'); });
+    // Keyboard: Enter/Space already fires click on buttons
+
+    // ── Form validation + demo submit ──
+    var form = document.getElementById('rq-form');
+    var statusEl = document.getElementById('form-status');
+
+    function showFieldError(inputId, errId, show) {
+      var inp = document.getElementById(inputId);
+      var err = document.getElementById(errId);
+      if (!inp || !err) return;
+      if (show) {
+        inp.classList.add('field-error');
+        err.classList.add('visible');
+      } else {
+        inp.classList.remove('field-error');
+        err.classList.remove('visible');
+      }
+    }
+
+    // Clear errors on input
+    ['f-contact','f-city','f-type','f-desc'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('input', function() {
+        el.classList.remove('field-error');
+        var errEl = document.getElementById(id + '-err');
+        if (errEl) errEl.classList.remove('visible');
+      });
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var valid = true;
+      var firstInvalid = null;
+
+      // Contact always required
+      var contact = document.getElementById('f-contact');
+      if (!contact.value.trim()) {
+        showFieldError('f-contact', 'f-contact-err', true);
+        if (!firstInvalid) firstInvalid = contact;
+        valid = false;
+      } else { showFieldError('f-contact', 'f-contact-err', false); }
+
+      if (currentPath === 'rr') {
+        // City required
+        var city = document.getElementById('f-city');
+        if (!city.value.trim()) {
+          showFieldError('f-city', 'f-city-err', true);
+          if (!firstInvalid) firstInvalid = city;
+          valid = false;
+        } else { showFieldError('f-city', 'f-city-err', false); }
+        // Type required
+        var type = document.getElementById('f-type');
+        if (type && !type.value) {
+          showFieldError('f-type', 'f-type-err', true);
+          if (!firstInvalid) firstInvalid = type;
+          valid = false;
+        } else if (type) { showFieldError('f-type', 'f-type-err', false); }
+      }
+
+      // Description always required
+      var desc = document.getElementById('f-desc');
+      if (!desc.value.trim()) {
+        showFieldError('f-desc', 'f-desc-err', true);
+        if (!firstInvalid) firstInvalid = desc;
+        valid = false;
+      } else { showFieldError('f-desc', 'f-desc-err', false); }
+
+      if (!valid) {
+        statusEl.className = 'form-status error';
+        statusEl.textContent = 'Please fill in the required fields above.';
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      // Demo-safe success
+      statusEl.className = 'form-status success';
+      if (currentPath === 'qq') {
+        statusEl.textContent = 'Question details are ready. A live contact endpoint can be connected before launch.';
+      } else {
+        statusEl.textContent = 'Request details are ready for review. A live contact endpoint can be connected before launch.';
+      }
+      form.reset();
+      statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    // ── FAQ accordion ──
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(i) {
+          i.classList.remove('open');
+          i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
   </script>
