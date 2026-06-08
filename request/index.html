@@ -73,9 +73,11 @@
     .path-indicator{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:2px solid var(--border);margin-left:auto;flex-shrink:0;transition:border-color .18s,background .18s}
     .path-btn[aria-pressed="true"] .path-indicator{background:var(--primary);border-color:var(--primary)}
     .path-btn[aria-pressed="true"] .path-indicator::after{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#fff}
+    .path-selected-tag{display:none;font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);background:rgba(16,32,51,.07);border-radius:4px;padding:2px 7px;margin-left:6px;white-space:nowrap}
+    .path-btn[aria-pressed="true"] .path-selected-tag{display:inline-block}
 
     /* ── Form section ── */
-    .form-section{background:var(--surface)}
+    .form-section{background:var(--surface);border-top:2px solid var(--soft)}
     .rq-form{display:flex;flex-direction:column;gap:20px}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
     .field-group{display:flex;flex-direction:column;gap:6px}
@@ -234,6 +236,7 @@
             <span class="path-label">
               <span class="path-icon" aria-hidden="true">💬</span>
               Quick Question
+              <span class="path-selected-tag" aria-hidden="true">Selected</span>
               <span class="path-indicator" aria-hidden="true"></span>
             </span>
             <p class="path-desc">Ask if the repair fits, what details to send, or whether the request should be reviewed.</p>
@@ -242,6 +245,7 @@
             <span class="path-label">
               <span class="path-icon" aria-hidden="true">🔧</span>
               Repair Request
+              <span class="path-selected-tag" aria-hidden="true">Selected</span>
               <span class="path-indicator" aria-hidden="true"></span>
             </span>
             <p class="path-desc">Share repair details, location, timing, and optional photos for a more complete scope review.</p>
@@ -337,7 +341,7 @@
 
           <button type="submit" class="form-submit-btn" id="submit-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            Send Request Details
+            <span id="submit-label">Send Request Details</span>
           </button>
         </form>
       </div>
@@ -473,6 +477,7 @@
     var formTitle = document.getElementById('form-fields-heading');
     var formSub = document.getElementById('form-sub');
     var submitBtn = document.getElementById('submit-btn');
+    var submitLabel = document.getElementById('submit-label');
     var rrFields = document.querySelectorAll('.rr-only');
     var cityWrap = document.getElementById('field-city-wrap');
     var cityLabel = document.getElementById('f-city-label');
@@ -489,7 +494,7 @@
         pathRR.setAttribute('aria-pressed', 'false');
         formTitle.textContent = 'Quick Question';
         formSub.textContent = 'Ask about the repair, service area, or what details to send.';
-        submitBtn.querySelector('svg').nextSibling.textContent = ' Send Question';
+        submitLabel.textContent = 'Send Question';
         // Hide RR-only fields
         rrFields.forEach(function(f) { f.style.display = 'none'; });
         // City optional in QQ
@@ -508,7 +513,7 @@
         pathQQ.setAttribute('aria-pressed', 'false');
         formTitle.textContent = 'Repair Request';
         formSub.textContent = 'Share repair details, location, and timing. Photos can be described or attached below.';
-        submitBtn.querySelector('svg').nextSibling.textContent = ' Send Request Details';
+        submitLabel.textContent = 'Send Request Details';
         // Show RR-only fields
         rrFields.forEach(function(f) { f.style.display = ''; });
         // City required in RR
