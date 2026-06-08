@@ -1441,6 +1441,9 @@
       .faq-split { max-width: 100%; padding-left: 16px; padding-right: 16px; }
       .faq-info { position: static; margin-bottom: 32px; max-width: 100%; }
       .faq-accordion { max-width: 100%; }
+      /* Extra bottom clearance so sticky CTA dock does not cover card text */
+      .scenarios-section { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
+      .photo-flow-section { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
     }
     
     /* Smart header hide/show */
@@ -2002,23 +2005,24 @@
       });
     })();
     
-    // Smart sticky CTA — show after hero, hide near footer
+    // Smart sticky CTA — show after hero, hide near footer, hide while scrolling
     (function() {
       const stickyBar = document.getElementById('sticky-cta-bar');
       const heroSection = document.querySelector('.final-hero-shell');
       const finalCta = document.getElementById('final-cta');
       const footer = document.getElementById('footer');
-      
+
       if (!stickyBar || !heroSection) return;
-      
+
       let heroBottom = 0;
       let footerTop = Infinity;
       let ticking = false;
-      
+      let scrollTimer = null;
+      let isScrolling = false;
+
       function updatePositions() {
         const heroRect = heroSection.getBoundingClientRect();
         heroBottom = heroRect.bottom + window.scrollY;
-        
         if (finalCta) {
           const finalRect = finalCta.getBoundingClientRect();
           footerTop = finalRect.top + window.scrollY - 120;
@@ -2027,29 +2031,32 @@
           footerTop = footerRect.top + window.scrollY - 120;
         }
       }
-      
+
       function updateSticky() {
         const scrollY = window.scrollY;
-        const showThreshold = heroBottom - 100;
-        
-        if (scrollY > showThreshold && scrollY < footerTop) {
+        const inRange = scrollY > (heroBottom - 100) && scrollY < footerTop;
+        if (inRange && !isScrolling) {
           stickyBar.classList.add('is-visible');
           document.body.classList.add('sticky-active');
         } else {
           stickyBar.classList.remove('is-visible');
           document.body.classList.remove('sticky-active');
         }
-        
         ticking = false;
       }
-      
+
       window.addEventListener('scroll', function() {
-        if (!ticking) {
-          requestAnimationFrame(updateSticky);
-          ticking = true;
-        }
+        isScrolling = true;
+        stickyBar.classList.remove('is-visible');
+        document.body.classList.remove('sticky-active');
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function() {
+          isScrolling = false;
+          if (!ticking) { requestAnimationFrame(updateSticky); ticking = true; }
+        }, 400);
+        if (!ticking) { requestAnimationFrame(updateSticky); ticking = true; }
       }, { passive: true });
-      
+
       window.addEventListener('resize', updatePositions, { passive: true });
       updatePositions();
       updateSticky();

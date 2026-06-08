@@ -300,37 +300,49 @@ body.final-menu-open { overflow: hidden; }
   pointer-events: auto;
 }
 .premium-sticky-cta a {
-  min-height: 50px;
+  min-height: 46px;
   display: grid;
   place-items: center;
   text-decoration: none;
   font-weight: 900;
-  font-size: .95rem;
+  font-size: .92rem;
   border-radius: 999px;
-  padding: 0 22px;
+  padding: 0 20px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }
 .premium-sticky-cta a:active {
   transform: scale(0.96);
 }
-.premium-sticky-cta .sticky-primary {
+/* Primary — amber filled */
+.premium-sticky-cta .sticky-primary,
+.premium-sticky-cta .sticky-primary:visited,
+.premium-sticky-cta .sticky-primary:hover,
+.premium-sticky-cta .sticky-primary:active,
+.premium-sticky-cta .sticky-primary:focus {
   background: var(--cta);
   color: #241300;
+  -webkit-text-fill-color: #241300;
   box-shadow: 0 6px 20px rgba(201,130,43,.45), 0 2px 8px rgba(0,0,0,.18);
   flex: 1 1 auto;
-  max-width: 220px;
+  max-width: 210px;
 }
 .premium-sticky-cta .sticky-primary:hover {
   box-shadow: 0 8px 24px rgba(201,130,43,.55);
 }
-.premium-sticky-cta .sticky-secondary {
-  background: rgba(255,255,255,.92);
+/* Secondary — frosted white pill, always readable on any background */
+.premium-sticky-cta .sticky-secondary,
+.premium-sticky-cta .sticky-secondary:visited,
+.premium-sticky-cta .sticky-secondary:hover,
+.premium-sticky-cta .sticky-secondary:active,
+.premium-sticky-cta .sticky-secondary:focus {
+  background: rgba(255,255,255,.96);
   color: #102033;
+  -webkit-text-fill-color: #102033;
   border: 2px solid rgba(36,61,50,.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 18px rgba(16,32,51,.22), 0 1px 4px rgba(0,0,0,.12);
+  box-shadow: 0 4px 18px rgba(16,32,51,.25), 0 1px 4px rgba(0,0,0,.14);
   flex: 0 0 auto;
   min-width: 80px;
 }
