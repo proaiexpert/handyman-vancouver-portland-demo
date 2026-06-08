@@ -24,6 +24,7 @@ Allowed files to edit:
 Forbidden files:
 - README.md
 - PROJECT-SNAPSHOT.md
+- docs/ (do not overwrite factory documentation during website build tasks)
 - sitemap.xml
 - robots.txt
 - assets/img/* (read only — do not replace approved hero)
@@ -175,11 +176,26 @@ Allowed files to edit:
 - index.html (inline styles and JS only)
 
 Forbidden files:
-- assets/js/preview-main.js (unless JS fix is required — state reason explicitly)
+- assets/js/preview-main.js — JS edits are allowed ONLY if the confirmed bug is behavior-related
+  (show/hide timing, scroll-pause behavior, safe state toggling, menu interaction).
+  CSS-only visual issues must NOT trigger JS edits.
+  If JS is edited, the agent must state:
+    1. The confirmed behavior bug
+    2. Why CSS cannot solve it
+    3. Exact function/listener changed
+    4. Regression checks run
 - assets/img/*
 - README.md
 - sitemap.xml
 - robots.txt
+
+Known successful scroll-pause pattern (Handyman v2, commit fa445e4):
+- Sticky CTA hides immediately on scroll start (scrolling class added)
+- isScrolling state is set to true
+- Existing visible state is removed during active scroll
+- A timer (clearTimeout + setTimeout) restores visibility after scroll stops
+- Delay used in Handyman v2: 400ms
+- Bottom section clearance (padding-bottom on content sections) remains CSS-controlled
 
 Problem:
 [DESCRIBE THE EXACT STICKY CTA ISSUE]

@@ -37,9 +37,9 @@ Reusable QA checklists for every phase of the Website Production Factory workflo
 
 | Claim | PASS | FAIL | Severity |
 |---|---|---|---|
-| Scope reviewed before scheduling | Present | Missing | P2 |
-| Request reviewed by location/scope | Present | Missing | P2 |
-| Photo-based request language | Present | Missing | P2 |
+| Scope reviewed before scheduling | Present | Missing | P1 |
+| Request reviewed by location/scope | Present | Missing | P1 |
+| Photo-based request language | Present | Missing | P1 |
 | Some work may require permits/licensed trades | Present | Missing | P2 |
 | Service area described by city/county (not exact radius) | Present | Exact radius claimed | P1 |
 | Portland-area described as "reviewed by scope" | Present | Claimed as full coverage | P1 |

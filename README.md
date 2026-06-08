@@ -39,13 +39,17 @@ The site is demo-ready but not real public-launch-ready. Placeholder business da
 
 ## Stable Commit History
 
-| Commit | Description |
-|---|---|
-| `01c97ca` | Promoted final homepage to root, removed preview routes |
-| `fa445e4` | Fixed sticky CTA Call button visibility and overlap behavior |
-| `1cda438` | Added canonical, OG, Twitter, favicon, noindex; contrast-safe CTA text color |
+| Commit | Type | Description |
+|---|---|---|
+| `01c97ca` | Website | Promoted final homepage to root, removed preview routes |
+| `fa445e4` | Website | Fixed sticky CTA Call button visibility and overlap behavior |
+| `1cda438` | Website | Added canonical, OG, Twitter, favicon, noindex; contrast-safe CTA text color |
+| `4a85815` | Docs | Updated README and created PROJECT-SNAPSHOT.md for stable demo snapshot |
+| `ac85850` | Docs | Extracted Website Production Factory docs to docs/website-production-factory/ |
 
-**Current stable commit: `1cda438`**
+**Stable website commit: `1cda438`** — the live homepage is unchanged by documentation commits.
+
+**Documentation commits:** `4a85815` (snapshot) and `ac85850` (factory extraction) add docs only — no production files were edited.
 
 ---
 

@@ -43,9 +43,12 @@ https://proai-expert.com/handyman-vancouver-portland-demo/
 
 ---
 
-## 5. Documentation Snapshot Commit
+## 5. Documentation Commits
 
-`4a85815` — Update documentation for stable root demo snapshot
+| Commit | Description |
+|---|---|
+| `4a85815` | README + PROJECT-SNAPSHOT.md documentation snapshot |
+| `ac85850` | Website Production Factory extraction — docs/website-production-factory/ created |
 
 ---
 
@@ -230,7 +233,8 @@ Remove only when real business facts are verified and the site is ready for publ
 11. **Run real-device iPhone Safari verification** — confirm sticky CTA behavior on
     actual device after all fixes are applied.
 
-12. **Extract to Website Production Factory** — use this project as the reference template
-    for the ProAI Expert Website Production Factory. The approved visual direction,
-    section structure, CSS tokens, content guardrails, and agent task templates
-    are all documented in `docs/website-production-factory/`.
+12. ~~**Extract to Website Production Factory**~~ — **COMPLETED in `ac85850`.**
+    Factory docs are in `docs/website-production-factory/`. See INDEX.md for reading order.
+
+13. **Package factory into portable skill** — after the factory docs consistency patch,
+    extract the factory into a portable SKILL.md or Coworker skill for use in future chats.

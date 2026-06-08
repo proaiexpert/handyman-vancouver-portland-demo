@@ -668,10 +668,15 @@ README: [PASTE README.md CONTENT]
 CURRENT STATE:
 - Root is the final [BUSINESS TYPE] homepage.
 - Old preview routes are deleted and return 404.
-- noindex, nofollow is active.
-- Placeholder phone: tel:0000000000.
-- No real contact form yet.
-- No LocalBusiness schema.
+- Indexing status: [noindex active / indexable / unknown]
+- Phone/contact status: [placeholder phone tel:0000000000 / verified real phone / unknown]
+- Contact flow status: [placeholder anchor only / real form endpoint wired / unknown]
+- Schema status: [none / safe schema with verified facts / not allowed yet]
+- Sitemap status: [not listed while noindex active / listed after launch / unknown]
+
+<!-- Handyman v2 demo-specific state for reference:
+     Placeholder phone: tel:0000000000 | No real form | No schema | noindex active
+     Replace the bracketed values above with the actual state of the project you are handing off. -->
 
 DO NOT TOUCH:
 - index.html (page structure, hero, copy, contact flow)

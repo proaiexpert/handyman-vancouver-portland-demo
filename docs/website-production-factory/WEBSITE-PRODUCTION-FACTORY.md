@@ -95,6 +95,10 @@ It covers every phase from intake through launch-readiness and reusable extracti
 
 **Agent task style:** Web research + synthesis. Cite sources. Label estimates as estimates.
 
+**When to stop:** If no credible current sources are available for the target market or city, stop and surface the research gap. Do not proceed with invented statistics or fabricated demand signals.
+
+**When to proceed with assumptions:** Only proceed with clearly labeled assumptions if the site is a demo/prototype and the assumption does not create fake proof, false local claims, or regulated claims (e.g., licensing, insurance, reviews).
+
 ---
 
 ## Phase 3 — Competitor Research
@@ -113,6 +117,10 @@ It covers every phase from intake through launch-readiness and reusable extracti
 - Missing the real local market leader
 
 **Agent task style:** Web research. Screenshot or fetch competitor homepages. Extract positioning.
+
+**When to stop:** If direct competitors cannot be found for the exact city and niche, report the gap and broaden the search only with explicit labeling. Do not fabricate competitor details or treat national chains as local competitors without evidence.
+
+**When to proceed with assumptions:** Use adjacent-city or adjacent-niche examples only when labeled as reference material, not as direct market proof. Always flag when a competitor is from a different city or vertical.
 
 ---
 
@@ -471,3 +479,12 @@ It covers every phase from intake through launch-readiness and reusable extracti
 - Do not add LocalBusiness schema until business name, address, phone, and category are verified.
 - Do not add sitemap entry while noindex is active.
 - Do not remove noindex until real launch decision is made and placeholder data is replaced.
+---
+
+## Versioning Policy
+
+- Factory docs use the format `Version: X.Y` in the file header. Increment the minor version for additions; increment the major version for structural changes.
+- **New verticals do not overwrite the base factory.** Create a new case study file (e.g., `PLUMBER-V1-CASE-STUDY.md`) and a new vertical-specific notes file if needed.
+- **New vertical lessons** should be added as case studies or versioned notes in `docs/website-production-factory/`. Do not edit the master workflow to be vertical-specific.
+- **Major policy changes** (new forbidden claims, new phase gates, new guardrail rules) must be recorded in `CHANGELOG.md` at the repo root.
+- **This repo is the source of truth.** A separate local-computer agent or process may later copy these files from GitHub to the user's computer. Do not save factory docs outside the repository.

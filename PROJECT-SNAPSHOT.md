@@ -108,6 +108,14 @@ Do not replace or crop without approval.
 
 ---
 
+## Commit State Summary
+
+- **Production website stable state:** `1cda438` — live homepage unchanged by documentation commits.
+- **Documentation snapshot:** `4a85815` — README + PROJECT-SNAPSHOT.md created.
+- **Website Production Factory extraction:** `ac85850` — factory docs extracted to `docs/website-production-factory/`.
+
+---
+
 ## Next Recommended Steps
 
 1. **Final optional real-device iPhone Safari screenshot** — confirm sticky CTA Call button
@@ -119,9 +127,18 @@ Do not replace or crop without approval.
 3. **Remove noindex + add sitemap entry** — only when the business is ready for real
    public indexing and all placeholder data has been replaced.
 
-4. **Website Production Factory extraction** — use this demo as the reference template
-   for the ProAI Expert Website Production Factory workflow. Extract the approved visual
-   direction, section structure, CSS tokens, and content guardrails as a reusable template.
+4. ~~**Website Production Factory extraction**~~ — **COMPLETED in `ac85850`.** Factory docs
+   are in `docs/website-production-factory/`. See INDEX.md for reading order.
+
+5. **Factory documentation consistency patch** — patch factory docs for consistency and
+   handoff rules (Prompt 19 placeholders, Template 4 JS rule, ask-vs-assume rules, INDEX.md,
+   CHANGELOG.md). Commit: this patch task.
+
+6. **Optional: Package factory into portable skill** — after consistency patch, extract
+   factory docs into a portable SKILL.md or Coworker skill for use in future chats.
+
+7. **Next vertical startup** — use the factory workflow to build the next local-service
+   demo site (plumber, electrician, landscaper, etc.).
 
 ---
 
