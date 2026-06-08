@@ -1028,6 +1028,9 @@
       position: relative;
       padding-left: clamp(20px, 3vw, 48px);
       box-sizing: border-box;
+      /* Premium edge fades — desktop/tablet only; disabled in landscape/mobile */
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 91%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 4%, black 91%, transparent 100%);
     }
     /* The moving track — 2 sets of 8 cards for seamless loop */
     /* Starts paused; JS adds .scenario-rail-playing when section enters viewport */
@@ -1163,6 +1166,10 @@
         padding-left: clamp(16px, 4vw, 24px);
         padding-right: clamp(16px, 4vw, 24px);
         padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+        -webkit-overflow-scrolling: touch;
+        /* Disable mask in mobile portrait — mask clips scrollable content */
+        -webkit-mask-image: none;
+        mask-image: none;
       }
       .scenario-rail-track {
         animation: none !important;
@@ -1180,6 +1187,39 @@
       }
     }
     
+
+    /* ===== SCENARIO LANDSCAPE FIX ===== */
+    /* Phone landscape only (max-height: 500px excludes iPad landscape ~768px) */
+    @media (orientation: landscape) and (max-height: 500px) {
+      .scenario-rail-viewport {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-left: clamp(16px, 3vw, 24px);
+        padding-right: clamp(16px, 3vw, 24px);
+        padding-bottom: 24px;
+        -webkit-overflow-scrolling: touch;
+        /* Disable mask in landscape — mask clips scrollable content */
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+      .scenario-rail-track {
+        animation: none !important;
+        animation-play-state: paused !important;
+        flex-wrap: nowrap;
+        overflow-x: visible;
+        scroll-snap-type: x mandatory;
+        width: max-content;
+      }
+      .scenario-rcard {
+        flex: 0 0 min(52vw, 280px);
+        width: min(52vw, 280px);
+        /* Height driven by vh so card never exceeds landscape viewport */
+        height: min(72vh, 340px);
+        scroll-snap-align: start;
+        border-radius: 20px;
+      }
+    }
+
     /* ===== SERVICE AREA UPGRADE ===== */
     .area-split {
       max-width: 1200px;
