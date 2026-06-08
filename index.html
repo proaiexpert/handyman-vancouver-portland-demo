@@ -1113,6 +1113,48 @@
     .scenario-cta:hover::after {
       transform: translateX(4px);
     }
+    /* Scenario section image upgrades */
+    .scenario-img-panel {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 58%;
+      height: 62%;
+      overflow: hidden;
+      border-radius: 18px 0 28px 0;
+      pointer-events: none;
+    }
+    .scenario-img-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 38% 40%;
+      display: block;
+      opacity: .82;
+    }
+    .scenario-card-img {
+      width: calc(100% + 56px);
+      margin: -28px -28px 18px -28px;
+      height: 140px;
+      overflow: hidden;
+      border-radius: 22px 22px 0 0;
+      flex-shrink: 0;
+    }
+    .scenario-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .scenario-card:hover .scenario-card-img img {
+      transform: scale(1.04);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scenario-card:hover .scenario-card-img img { transform: none; }
+      .scenario-feature-card:hover { transform: none; }
+      .scenario-card:hover { transform: none; }
+    }
     .scenario-visual {
       position: absolute;
       bottom: 0;
@@ -1613,7 +1655,7 @@
         <p>Small repairs, touch-ups, and finish details can change how a home feels. These example request types show the kinds of details that can be reviewed by photos, location, and scope.</p>
         <div class="scenarios-cta-row">
           <a class="btn primary" href="request/">Send a Similar Request</a>
-          <a class="btn secondary" href="request/">Request Estimate</a>
+          <a class="btn secondary" href="services/">View Services</a>
         </div>
       </div>
       <div class="scenarios-board">
@@ -1622,42 +1664,44 @@
           <h3>Trim &amp; baseboard refresh</h3>
           <p>Clean up worn edges, casing, baseboards, and finish details that affect the room's overall feel.</p>
           <a href="request/" class="scenario-cta">Send trim details</a>
-          <div class="scenario-visual trim-visual">
-            <div class="sv-line sv-line-1"></div>
-            <div class="sv-line sv-line-2"></div>
-            <div class="sv-line sv-line-3"></div>
-            <div class="sv-accent"></div>
+          <div class="scenario-img-panel">
+            <img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy">
           </div>
         </div>
         <div class="scenario-grid">
           <div class="scenario-card">
-            <span class="scenario-label">Wall refresh</span>
+            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:55% 30%"></div>
+            <span class="scenario-label">Sample request scenario</span>
             <h3>Wall scuffs &amp; touch-ups</h3>
-            <p>Request review for small wall marks, patch areas, and touch-ups that need a cleaner finished look.</p>
+            <p>Small surface marks reviewed by room, finish, and access.</p>
             <a href="request/#photo-checklist" class="scenario-cta">Send wall photos</a>
           </div>
           <div class="scenario-card">
-            <span class="scenario-label">Door detail</span>
+            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:30% 60%"></div>
+            <span class="scenario-label">Sample request scenario</span>
             <h3>Door &amp; hardware details</h3>
-            <p>Small door, hinge, handle, and trim details can make an entryway feel more finished.</p>
+            <p>Door alignment, handles, hinges, and finish details reviewed together.</p>
             <a href="request/" class="scenario-cta">Ask about door details</a>
           </div>
           <div class="scenario-card">
-            <span class="scenario-label">Punch-list</span>
+            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:70% 50%"></div>
+            <span class="scenario-label">Sample request scenario</span>
             <h3>Punch-list maintenance</h3>
-            <p>Group several small home details into one request so the overall scope can be reviewed together.</p>
+            <p>Several small tasks grouped into one organized request.</p>
             <a href="request/" class="scenario-cta">Start a punch-list</a>
           </div>
           <div class="scenario-card">
-            <span class="scenario-label">Entryway refresh</span>
+            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:42% 20%"></div>
+            <span class="scenario-label">Sample request scenario</span>
             <h3>Entryway detail refresh</h3>
-            <p>Touch-ups around doors, trim, walls, and small home details can improve the first impression.</p>
+            <p>Visible first-impression details that help the home feel cared for.</p>
             <a href="request/#photo-checklist" class="scenario-cta">Send entryway photos</a>
           </div>
           <div class="scenario-card">
-            <span class="scenario-label">Exterior touch-up</span>
+            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:20% 80%"></div>
+            <span class="scenario-label">Sample request scenario</span>
             <h3>Ground-level exterior touch-ups</h3>
-            <p>Exterior requests can be reviewed when safety, access, location, and project type are clear.</p>
+            <p>Small exterior details reviewed by access, height, and safety.</p>
             <a href="request/" class="scenario-cta">Ask about exterior scope</a>
           </div>
         </div>
