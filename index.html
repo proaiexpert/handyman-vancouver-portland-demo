@@ -988,18 +988,20 @@
     }
     
     /* ===== SCENARIOS SECTION ===== */
+    /* ===== SCENARIO RAIL ===== */
     .scenarios-section {
       background: linear-gradient(180deg, #FAF6EE 0%, var(--background) 100%);
-      padding: clamp(56px, 9vw, 120px) clamp(22px, 4vw, 58px);
+      padding: clamp(56px, 9vw, 120px) 0;
       width: 100%;
       max-width: 100%;
       box-sizing: border-box;
-      overflow-x: hidden;
+      overflow: hidden;
     }
     .scenarios-header {
       text-align: center;
       max-width: 720px;
       margin: 0 auto 48px;
+      padding: 0 clamp(22px, 4vw, 58px);
       width: 100%;
       box-sizing: border-box;
     }
@@ -1027,214 +1029,126 @@
       width: 100%;
       box-sizing: border-box;
     }
-    .scenarios-board {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
-      gap: 22px;
-      align-items: start;
+    /* Rail viewport — clips overflow, no scrollbar */
+    .scenario-rail-viewport {
       width: 100%;
-      box-sizing: border-box;
-    }
-    .scenario-feature-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 36px;
-      position: relative;
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      min-height: 420px;
+      position: relative;
+    }
+    /* The moving track — contains 2 sets of 6 cards for seamless loop */
+    .scenario-rail-track {
       display: flex;
-      flex-direction: column;
-      min-width: 0;
-      max-width: 100%;
-      box-sizing: border-box;
+      gap: 22px;
+      width: max-content;
+      animation: rail-scroll 48s linear infinite;
+      will-change: transform;
     }
-    .scenario-feature-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 56px rgba(16,32,51,.12);
+    .scenario-rail-track:hover,
+    .scenario-rail-track:focus-within {
+      animation-play-state: paused;
     }
-    .scenario-feature-card::before {
+    @keyframes rail-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(calc(-50%)); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scenario-rail-track {
+        animation: none;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+        padding: 0 clamp(22px, 4vw, 58px) 16px;
+        box-sizing: border-box;
+      }
+      .scenario-rail-track .scenario-rcard {
+        scroll-snap-align: start;
+      }
+    }
+    /* Individual portrait card */
+    .scenario-rcard {
+      flex: 0 0 300px;
+      width: 300px;
+      height: 420px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      background: var(--primary);
+      box-shadow: 0 8px 32px rgba(16,32,51,.14);
+      border: 1px solid rgba(255,255,255,.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      flex-shrink: 0;
+    }
+    .scenario-rcard:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 48px rgba(16,32,51,.22);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scenario-rcard:hover { transform: none; }
+    }
+    /* Image fills top ~78% of card */
+    .scenario-rcard-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 78%;
+      overflow: hidden;
+    }
+    .scenario-rcard-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Gradient overlay fading image into caption area */
+    .scenario-rcard-img::after {
       content: "";
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--secondary), var(--cta));
+      height: 60%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(16,32,51,.55) 100%);
+      pointer-events: none;
     }
-    .scenario-label {
-      display: inline-block;
-      color: var(--cta-text);
+    /* Caption area — bottom 22% */
+    .scenario-rcard-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 26%;
+      background: var(--primary);
+      padding: 14px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+    }
+    .scenario-rcard-label {
+      display: block;
+      color: var(--cta);
       font-weight: 950;
       text-transform: uppercase;
       letter-spacing: .1em;
-      font-size: .72rem;
-      margin-bottom: 14px;
+      font-size: .65rem;
+      line-height: 1;
     }
-    .scenario-feature-card h3 {
-      color: var(--primary);
-      font-size: 1.6rem;
-      font-weight: 800;
-      margin: 0 0 12px;
-      font-family: Georgia, ui-serif, serif;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    .scenario-feature-card p {
-      color: var(--muted);
+    .scenario-rcard-title {
+      color: white;
       font-size: 1rem;
-      line-height: 1.55;
-      margin: 0 0 20px;
-      flex: 1;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    .scenario-cta {
-      color: var(--cta-text);
-      font-weight: 950;
-      font-size: .9rem;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap 0.2s ease, color 0.2s ease;
-    }
-    .scenario-cta::after {
-      content: "→";
-      transition: transform 0.2s ease;
-    }
-    .scenario-cta:hover {
-      gap: 10px;
-      color: var(--secondary);
-    }
-    .scenario-cta:hover::after {
-      transform: translateX(4px);
-    }
-    /* Scenario section image upgrades */
-    .scenario-img-panel {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 58%;
-      height: 62%;
-      overflow: hidden;
-      border-radius: 18px 0 28px 0;
-      pointer-events: none;
-    }
-    .scenario-img-panel img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 38% 40%;
-      display: block;
-      opacity: .82;
-    }
-    .scenario-card-img {
-      width: calc(100% + 56px);
-      margin: -28px -28px 18px -28px;
-      height: 140px;
-      overflow: hidden;
-      border-radius: 22px 22px 0 0;
-      flex-shrink: 0;
-    }
-    .scenario-card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .scenario-card:hover .scenario-card-img img {
-      transform: scale(1.04);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .scenario-card:hover .scenario-card-img img { transform: none; }
-      .scenario-feature-card:hover { transform: none; }
-      .scenario-card:hover { transform: none; }
-    }
-    .scenario-visual {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 55%;
-      height: 45%;
-      opacity: .12;
-      pointer-events: none;
-    }
-    .sv-line {
-      position: absolute;
-      height: 3px;
-      border-radius: 999px;
-      background: var(--secondary);
-    }
-    .sv-line-1 { top: 30%; left: 10%; width: 60%; transform: rotate(-8deg); }
-    .sv-line-2 { top: 50%; left: 20%; width: 50%; transform: rotate(4deg); background: var(--cta); }
-    .sv-line-3 { top: 70%; left: 5%; width: 70%; transform: rotate(-3deg); }
-    .sv-accent {
-      position: absolute;
-      bottom: 20%;
-      right: 15%;
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      background: var(--cta);
-      opacity: .3;
-    }
-    .scenario-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-      min-width: 0;
-    }
-    .scenario-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 28px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-      position: relative;
-      overflow: hidden;
-      min-width: 0;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-    .scenario-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 34px rgba(16,32,51,.1);
-      border-color: rgba(201,130,43,.25);
-    }
-    .scenario-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, var(--secondary), var(--cta));
-      transition: width 0.25s ease;
-    }
-    .scenario-card:hover::before {
-      width: 6px;
-    }
-    .scenario-card h3 {
-      color: var(--primary);
-      font-size: 1.1rem;
       font-weight: 800;
-      margin: 14px 0 8px;
+      margin: 0;
+      line-height: 1.25;
       word-break: break-word;
       overflow-wrap: break-word;
     }
-    .scenario-card p {
-      color: var(--muted);
-      font-size: .88rem;
-      line-height: 1.5;
-      margin: 0 0 14px;
+    .scenario-rcard-copy {
+      color: rgba(255,255,255,.68);
+      font-size: .78rem;
+      line-height: 1.4;
+      margin: 0;
       word-break: break-word;
       overflow-wrap: break-word;
     }
@@ -1463,8 +1377,7 @@
       .hero-visual { height: 260px; }
       .hero-micro-row { display: none; }
       .final-support-card { position: relative; right: auto; bottom: auto; width: 100%; margin-top: 16px; }
-      .scenarios-board { grid-template-columns: 1fr; }
-      .scenario-grid { grid-template-columns: 1fr; }
+
       .area-split { grid-template-columns: 1fr; min-width: 0; }
       .area-info { min-width: 0; max-width: 100%; box-sizing: border-box; }
       .area-info h2 { font-size: clamp(1.5rem, 7vw, 2rem); overflow-wrap: break-word; word-break: break-word; }
@@ -1485,24 +1398,7 @@
       .faq-info p { overflow-wrap: break-word; max-width: 100%; }
       .faq-item summary { overflow-wrap: break-word; word-break: break-word; }
       .faq-item p { overflow-wrap: break-word; max-width: 100%; }
-      .scenario-feature-card { min-height: auto; }
-      .scenario-visual { display: none; }
-      .scenarios-section { padding-left: 0; padding-right: 0; }
-      .scenarios-header { padding-left: 16px; padding-right: 16px; }
-      .scenarios-board { display: block; max-width: 100%; padding-left: 16px; padding-right: 16px; position: relative; }
-      .scenario-grid { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding-bottom: 16px; width: 100%; max-width: 100%; box-sizing: border-box; position: relative; }
-      .scenario-grid::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 16px;
-        width: 40px;
-        background: linear-gradient(to right, transparent, rgba(247,242,234,0.9));
-        pointer-events: none;
-        display: block;
-      }
-      .scenario-card { flex: 0 0 min(84vw, 320px); max-width: min(84vw, 320px); scroll-snap-align: start; min-width: 0; }
+
       .area-chips { flex-wrap: wrap; gap: 8px; }
       .area-chip { flex: 0 1 auto; white-space: normal; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; }
       .area-region-card { max-width: 100%; padding: 24px; }
@@ -1510,7 +1406,6 @@
       .faq-info { position: static; margin-bottom: 32px; max-width: 100%; }
       .faq-accordion { max-width: 100%; }
       /* Extra bottom clearance so sticky CTA dock does not cover card text */
-      .scenarios-section { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
       .photo-flow-section { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
     }
     
@@ -1658,51 +1553,105 @@
           <a class="btn secondary" href="services/">View Services</a>
         </div>
       </div>
-      <div class="scenarios-board">
-        <div class="scenario-feature-card">
-          <span class="scenario-label">Trim detail</span>
-          <h3>Trim &amp; baseboard refresh</h3>
-          <p>Clean up worn edges, casing, baseboards, and finish details that affect the room's overall feel.</p>
-          <a href="request/" class="scenario-cta">Send trim details</a>
-          <div class="scenario-img-panel">
-            <img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy">
+      <div class="scenario-rail-viewport" aria-label="Scenario card rail">
+        <div class="scenario-rail-track">
+          <!-- Set 1 -->
+          <div class="scenario-rcard">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:38% 25%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Trim &amp; baseboard refresh</h3>
+              <p class="scenario-rcard-copy">Clean edges, casing, and baseboard details reviewed by room and finish.</p>
+            </div>
           </div>
-        </div>
-        <div class="scenario-grid">
-          <div class="scenario-card">
-            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:55% 30%"></div>
-            <span class="scenario-label">Sample request scenario</span>
-            <h3>Wall scuffs &amp; touch-ups</h3>
-            <p>Small surface marks reviewed by room, finish, and access.</p>
-            <a href="request/#photo-checklist" class="scenario-cta">Send wall photos</a>
+          <div class="scenario-rcard">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:55% 30%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Wall scuffs &amp; touch-ups</h3>
+              <p class="scenario-rcard-copy">Surface marks and small finish issues reviewed by photos and access.</p>
+            </div>
           </div>
-          <div class="scenario-card">
-            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:30% 60%"></div>
-            <span class="scenario-label">Sample request scenario</span>
-            <h3>Door &amp; hardware details</h3>
-            <p>Door alignment, handles, hinges, and finish details reviewed together.</p>
-            <a href="request/" class="scenario-cta">Ask about door details</a>
+          <div class="scenario-rcard">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:70% 45%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Door &amp; hardware details</h3>
+              <p class="scenario-rcard-copy">Handles, hinges, alignment, and visible door details reviewed together.</p>
+            </div>
           </div>
-          <div class="scenario-card">
-            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:70% 50%"></div>
-            <span class="scenario-label">Sample request scenario</span>
-            <h3>Punch-list maintenance</h3>
-            <p>Several small tasks grouped into one organized request.</p>
-            <a href="request/" class="scenario-cta">Start a punch-list</a>
+          <div class="scenario-rcard">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:30% 60%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Punch-list maintenance</h3>
+              <p class="scenario-rcard-copy">Several small home tasks grouped into one organized request.</p>
+            </div>
           </div>
-          <div class="scenario-card">
-            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:42% 20%"></div>
-            <span class="scenario-label">Sample request scenario</span>
-            <h3>Entryway detail refresh</h3>
-            <p>Visible first-impression details that help the home feel cared for.</p>
-            <a href="request/#photo-checklist" class="scenario-cta">Send entryway photos</a>
+          <div class="scenario-rcard">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:42% 20%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Entryway detail refresh</h3>
+              <p class="scenario-rcard-copy">First-impression details that help the home feel cared for.</p>
+            </div>
           </div>
-          <div class="scenario-card">
-            <div class="scenario-card-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:20% 80%"></div>
-            <span class="scenario-label">Sample request scenario</span>
-            <h3>Ground-level exterior touch-ups</h3>
-            <p>Small exterior details reviewed by access, height, and safety.</p>
-            <a href="request/" class="scenario-cta">Ask about exterior scope</a>
+          <div class="scenario-rcard">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" aria-hidden="true" loading="lazy" style="object-position:20% 75%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Ground-level exterior touch-ups</h3>
+              <p class="scenario-rcard-copy">Small exterior details reviewed by access, height, and safety.</p>
+            </div>
+          </div>
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="scenario-rcard" aria-hidden="true">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" loading="lazy" style="object-position:38% 25%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Trim &amp; baseboard refresh</h3>
+              <p class="scenario-rcard-copy">Clean edges, casing, and baseboard details reviewed by room and finish.</p>
+            </div>
+          </div>
+          <div class="scenario-rcard" aria-hidden="true">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" loading="lazy" style="object-position:55% 30%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Wall scuffs &amp; touch-ups</h3>
+              <p class="scenario-rcard-copy">Surface marks and small finish issues reviewed by photos and access.</p>
+            </div>
+          </div>
+          <div class="scenario-rcard" aria-hidden="true">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" loading="lazy" style="object-position:70% 45%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Door &amp; hardware details</h3>
+              <p class="scenario-rcard-copy">Handles, hinges, alignment, and visible door details reviewed together.</p>
+            </div>
+          </div>
+          <div class="scenario-rcard" aria-hidden="true">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" loading="lazy" style="object-position:30% 60%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Punch-list maintenance</h3>
+              <p class="scenario-rcard-copy">Several small home tasks grouped into one organized request.</p>
+            </div>
+          </div>
+          <div class="scenario-rcard" aria-hidden="true">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" loading="lazy" style="object-position:42% 20%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Entryway detail refresh</h3>
+              <p class="scenario-rcard-copy">First-impression details that help the home feel cared for.</p>
+            </div>
+          </div>
+          <div class="scenario-rcard" aria-hidden="true">
+            <div class="scenario-rcard-img"><img src="assets/img/hero-finished-pnw-1536.webp" alt="" loading="lazy" style="object-position:20% 75%"></div>
+            <div class="scenario-rcard-caption">
+              <span class="scenario-rcard-label">Sample request scenario</span>
+              <h3 class="scenario-rcard-title">Ground-level exterior touch-ups</h3>
+              <p class="scenario-rcard-copy">Small exterior details reviewed by access, height, and safety.</p>
+            </div>
           </div>
         </div>
       </div>
