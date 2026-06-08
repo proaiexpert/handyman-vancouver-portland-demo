@@ -1,97 +1,160 @@
-# Handyman v2 First-Screen Previews
+# Local Repair Pro — Vancouver WA Demo
 
-## Purpose
-Compare six first-screen visual and UX directions before building the full homepage v2.
+## Project Purpose
 
-## Routes included
-1. Estimate OS - archived/reference
-2. PNW Craft Board - archived/reference
-3. Hybrid Rotating Preview Hero - archived/reference
-4. Hybrid Transformation Hero - archived/reference
-5. RepairScope Transformation Hero - best-of route / new primary test
-6. Final Hero Reference - coded preview from selected visual reference
+This is a production-like demo homepage for a local handyman / home repair service concept.
+It serves as a test case for the broader **ProAI Expert Website Production Factory** workflow.
 
-## Live URL paths
-- `/`
+The site is demo-ready but not real public-launch-ready. Placeholder business data remains.
+`noindex, nofollow` is intentionally active until real business facts are verified.
+
+---
+
+## Live URL
+
+**Canonical root:** https://proai-expert.com/handyman-vancouver-portland-demo/
+
+---
+
+## Current Architecture
+
+- `index.html` is the canonical root homepage — the only active page.
+- All old preview routes have been removed and return **404**.
+- The root is no longer a preview hub. No route cards appear on the live root.
+- Do not restore old preview routes.
+
+### Old routes (all 404 — do not restore)
+
 - `/estimate-os.html`
 - `/pnw-craft-board.html`
 - `/hybrid-rotating-preview.html`
-- `/hybrid-rotating-preview/`
 - `/hybrid-transformation.html`
-- `/hybrid-transformation/`
 - `/repairscope-transformation.html`
-- `/repairscope-transformation/`
 - `/final-hero-reference.html`
 - `/final-hero-reference/`
+- `/homepage-v2-premium.html`
+- `/homepage-v2-premium/`
 
-## Preservation rule
-Estimate OS, PNW Craft Board, Hybrid Rotating Preview Hero, and Hybrid Transformation Hero remain preserved as archive/reference routes. Do not rename or remove them while testing RepairScope.
+---
 
-## Best-of route
-RepairScope Transformation Hero synthesizes the strongest parts of the first four routes:
-- transformation visual punch
-- estimate/request clarity
-- PNW material visual language
-- controlled repair category chips
+## Stable Commit History
 
-## Final Hero Reference
-- Route: `final-hero-reference.html`
-- Folder route: `final-hero-reference/`
-- Based on image: `assets/img/final-hero-reference.png`
-- Direction: Premium PNW Entryway Trim Transformation Hero
-- Purpose: coded responsive preview before full homepage build
-- Safety: demo/sample visuals only, not real proof
+| Commit | Description |
+|---|---|
+| `01c97ca` | Promoted final homepage to root, removed preview routes |
+| `fa445e4` | Fixed sticky CTA Call button visibility and overlap behavior |
+| `1cda438` | Added canonical, OG, Twitter, favicon, noindex; contrast-safe CTA text color |
 
-## Final hero image assets
-- `assets/img/hero-finished-pnw-768.webp`
-- `assets/img/hero-finished-pnw-1200.webp`
-- `assets/img/hero-finished-pnw-1536.webp`
-- `assets/img/hero-finished-pnw-1536.jpg`
+**Current stable commit: `1cda438`**
 
-These are the optimized responsive image files used by the final hero route.
+---
 
-## New wow tests
-Hybrid Rotating Preview tests a fixed headline and CTA with only the repair preview zone changing.
+## Key Files
 
-Hybrid Transformation tests a featured sample before/after visual mechanism without real-project proof claims.
+| File | Purpose |
+|---|---|
+| `index.html` | Canonical root homepage — only active page |
+| `assets/css/preview-styles.css` | All styles including sticky CTA, mobile layout, contrast tokens |
+| `assets/js/preview-main.js` | Shared JS (hamburger, FAQ, scenario swipe, scroll reveal) |
+| `assets/img/hero-finished-pnw-1536.webp` | Approved hero image |
 
-## Files created
-- `index.html`
-- `estimate-os.html`
-- `pnw-craft-board.html`
-- `hybrid-rotating-preview.html`
-- `hybrid-rotating-preview/index.html`
-- `hybrid-transformation.html`
-- `hybrid-transformation/index.html`
-- `repairscope-transformation.html`
-- `repairscope-transformation/index.html`
-- `final-hero-reference.html`
-- `final-hero-reference/index.html`
-- `estimate-os/index.html`
-- `pnw-craft-board/index.html`
-- `assets/css/preview-styles.css`
-- `assets/js/preview-main.js`
+---
 
-## No-fake-proof rules
-- No reviews or star ratings.
-- No license, insurance, bonding, or registration claims.
-- No warranty, same-day, emergency, or years-in-business claims.
-- No completed-project claims.
-- Demo visuals and cards are concept placeholders only.
-- Replace sample visuals with verified real project photos before launch.
+## Current Demo Limitations
 
-## QA checklist
-- Desktop layout
-- Mobile 320 / 390 / 430
-- No horizontal overflow
-- CTA visible above fold
-- Sticky CTA does not block important content
-- Touch targets usable
-- No console errors
-- Service chip interaction works or degrades cleanly
-- Before/after toggle works
-- RepairScope chips and toggle work
-- Final Hero Reference mobile layout remains readable
+This site is **not ready for real public launch** until the following are resolved:
 
-## Status
-These are preview routes only, not a full v2 homepage implementation.
+- Placeholder phone: `tel:0000000000` — replace with real number
+- No real contact form or submission endpoint
+- No verified real business name, address, license, insurance, or reviews
+- No `LocalBusiness` schema (intentionally omitted until facts are verified)
+- No sitemap entry while `noindex` is active
+- No real Google Map or exact service radius
+- No real portfolio or completed project claims
+- No real OG image (hero image used as fallback)
+- No privacy policy or legal pages
+
+---
+
+## Fake-Proof Content Guardrails
+
+### Forbidden claims — never add
+
+- licensed *(as a self-claim)*
+- insured
+- bonded
+- 5-star
+- top-rated
+- years of experience
+- guaranteed
+- same-day
+- emergency / 24/7
+- completed projects
+- Our Work / portfolio
+- real address
+- exact service radius
+- serving all Portland metro
+- `LocalBusiness` schema with unverified facts
+
+### Allowed language
+
+- scope reviewed before scheduling
+- request reviewed by location, project type, and scope
+- photo-based request and review language
+- some work may require permits, licensed trades, or a different provider
+
+---
+
+## QA Checklist
+
+### Mobile widths
+- [ ] 430x932
+- [ ] 390x844
+- [ ] 375x812
+- [ ] 360x800
+- [ ] 320x700
+
+### Desktop widths
+- [ ] 1440x900
+- [ ] 1366x768
+
+### Functional checks
+- [ ] Sticky CTA appears after hero scroll, hides during scroll, reappears after stop
+- [ ] Sticky CTA Call button readable on light and dark backgrounds
+- [ ] Hamburger opens and closes correctly
+- [ ] FAQ opens and closes correctly
+- [ ] Scenario swipe works as internal horizontal scroll
+- [ ] Service Area chips do not clip
+- [ ] No horizontal body overflow
+- [ ] Old routes return 404
+- [ ] No forbidden claims in visible copy
+- [ ] No console errors
+- [ ] Required assets load (CSS, JS, hero image)
+
+---
+
+## Launch-Readiness Checklist
+
+Before real public launch:
+
+- [ ] Replace `tel:0000000000` with real phone number
+- [ ] Add real contact form or submission endpoint
+- [ ] Verify real business name, address, license status, and service area
+- [ ] Decide whether to remove `noindex, nofollow`
+- [ ] Only then add this URL to `sitemap.xml`
+- [ ] Add `LocalBusiness` schema only when facts are verified
+- [ ] Add a dedicated OG image if needed
+- [ ] Add privacy policy and legal pages if required
+
+---
+
+## Visual Direction
+
+**Approved direction:** Premium Local Repair Pro — Pacific Northwest Edition
+
+- Dark navy hero (`#102033`) with warm amber accents (`#C9822B`)
+- Forest green secondary (`#243D32`)
+- Warm off-white background (`#F7F2EA`)
+- Georgia serif headings, system-ui body
+- Floating pill sticky CTA dock (mobile only)
+- Scroll-reveal sections
