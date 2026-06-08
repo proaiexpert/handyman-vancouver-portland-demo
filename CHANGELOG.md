@@ -35,6 +35,10 @@ It does not include every commit — only commits with documented, verified desc
 | `7b038cd` | Website | Added /request/ page with request review structure, photo checklist, FAQ, and demo-safe form |
 | `894921e` | Website | Refined /request/ into two-path Quick Question / Repair Request form flow with unified contact field |
 | `9446655` | Website | Polished active path state (Selected badge), robust submit label span, and subtle form separation |
+| `1153f7f` | Website | Added /services/ page as a safe service-category/request-category page with 8 request categories, service-area reminder, licensed-trade disclaimers, FAQ, and CTAs to /request/ |
+| `86ab48a` | Website | Fixed cross-page mobile navigation and footer CTA behavior; corrected /services/ mobile menu conflict, added services mobile bottom CTA, and verified footer consistency across active pages |
+| `d1386f6` | Website | Fixed footer bottom safe-area/background gap and removed visible placeholder Call / Call Now CTAs while no real phone exists |
+| `544e58a` | Website | Removed duplicate Request Review link in /services/ footer |
 
 
 ---
@@ -52,4 +56,5 @@ If this description is confirmed, add it to the table above between `01c97ca` an
 ## Stable Website Commit
 
 The homepage is stable at commit `1cda438`. The /request/ page was added in `7b038cd` and refined through `9446655`.
+The /services/ page was added in `1153f7f` and cross-page chrome was fixed through `544e58a`.
 Documentation commits do not change the live site.
