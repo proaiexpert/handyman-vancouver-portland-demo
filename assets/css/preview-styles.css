@@ -283,15 +283,12 @@ body.final-menu-open { overflow: hidden; }
   right: 0;
   bottom: 0;
   z-index: 10;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
-  background: rgba(255,255,255,.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(203,210,208,.6);
-  box-shadow: 0 -4px 20px rgba(16,32,51,.08);
-  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: transparent;
+  padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
   transition: transform 0.35s ease, opacity 0.3s ease;
   transform: translateY(100%);
   opacity: 0;
@@ -303,14 +300,16 @@ body.final-menu-open { overflow: hidden; }
   pointer-events: auto;
 }
 .premium-sticky-cta a {
-  min-height: 48px;
+  min-height: 50px;
   display: grid;
   place-items: center;
   text-decoration: none;
   font-weight: 900;
   font-size: .95rem;
   border-radius: 999px;
+  padding: 0 22px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
 }
 .premium-sticky-cta a:active {
   transform: scale(0.96);
@@ -318,19 +317,26 @@ body.final-menu-open { overflow: hidden; }
 .premium-sticky-cta .sticky-primary {
   background: var(--cta);
   color: #241300;
-  box-shadow: 0 4px 12px rgba(201,130,43,.3);
+  box-shadow: 0 6px 20px rgba(201,130,43,.45), 0 2px 8px rgba(0,0,0,.18);
+  flex: 1 1 auto;
+  max-width: 220px;
 }
 .premium-sticky-cta .sticky-primary:hover {
-  box-shadow: 0 6px 18px rgba(201,130,43,.4);
+  box-shadow: 0 8px 24px rgba(201,130,43,.55);
 }
 .premium-sticky-cta .sticky-secondary {
-  background: transparent;
-  color: var(--primary);
-  border: 1.5px solid var(--border);
+  background: rgba(255,255,255,.18);
+  color: white;
+  border: 1.5px solid rgba(255,255,255,.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);
+  flex: 0 0 auto;
+  min-width: 80px;
 }
 .premium-sticky-cta .sticky-secondary:hover {
-  border-color: var(--secondary);
-  color: var(--secondary);
+  background: rgba(255,255,255,.28);
+  border-color: rgba(255,255,255,.8);
 }
 
 @keyframes cardIn { from { opacity: 0; transform: translateY(16px) rotate(-1deg); } to { opacity: 1; transform: translateY(0) rotate(0); } }
@@ -412,8 +418,8 @@ body.final-menu-open { overflow: hidden; }
   .final-menu-backdrop:not([hidden]), .final-mobile-menu:not([hidden]) { display: block; }
   .final-hero-shell { min-height: auto; display: grid; grid-template-columns: 1fr; background: var(--primary); }
   .final-copy-panel { padding: 28px 16px 22px; }
-  .final-copy-panel h1 { font-size: clamp(2.8rem, 14vw, 4rem); }
-  .final-copy-panel .lead { font-size: 1rem; }
+  .final-copy-panel h1 { font-size: clamp(2.4rem, 12vw, 3.6rem); overflow-wrap: break-word; word-break: break-word; }
+  .final-copy-panel .lead { font-size: 1rem; overflow-wrap: break-word; max-width: 100%; }
   .final-cta-row .btn { flex: 1 1 130px; }
   .final-service-chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
   .final-service-chip { flex: 0 0 auto; }
