@@ -579,11 +579,17 @@
     .area-section {
       background: linear-gradient(180deg, #FAF6EE 0%, var(--background) 100%);
       padding: clamp(56px, 9vw, 120px) clamp(22px, 4vw, 58px);
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
     .area-content {
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
+      width: 100%;
+      box-sizing: border-box;
     }
     .area-content h2 {
       color: var(--primary);
@@ -604,6 +610,9 @@
       justify-content: center;
       gap: 12px;
       margin-bottom: 48px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     .area-chip {
       border: 1px solid var(--border);
@@ -750,10 +759,16 @@
     .faq-section {
       background: var(--background);
       padding: clamp(56px, 9vw, 120px) clamp(22px, 4vw, 58px);
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
     .faq-content {
       max-width: 800px;
       margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
     }
     .faq-content h2 {
       color: var(--primary);
@@ -784,6 +799,8 @@
       justify-content: space-between;
       align-items: center;
       transition: background 0.2s ease;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .faq-item summary:hover {
       background: rgba(201,130,43,.04);
@@ -807,6 +824,8 @@
       line-height: 1.6;
       margin: 0;
       font-size: .95rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     
     /* ===== FINAL CTA POLISH ===== */
@@ -972,29 +991,41 @@
     .scenarios-section {
       background: linear-gradient(180deg, #FAF6EE 0%, var(--background) 100%);
       padding: clamp(56px, 9vw, 120px) clamp(22px, 4vw, 58px);
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
     .scenarios-header {
       text-align: center;
       max-width: 720px;
       margin: 0 auto 48px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .scenarios-header h2 {
       color: var(--primary);
       font-family: Georgia, ui-serif, serif;
       font-size: clamp(2rem, 4vw, 3.2rem);
       margin: 0 0 16px;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .scenarios-header p {
       color: var(--muted);
       font-size: 1.05rem;
       line-height: 1.55;
       margin: 0 0 24px;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .scenarios-cta-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .scenarios-board {
       max-width: 1280px;
@@ -1003,6 +1034,8 @@
       grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
       gap: 22px;
       align-items: start;
+      width: 100%;
+      box-sizing: border-box;
     }
     .scenario-feature-card {
       background: white;
@@ -1015,6 +1048,9 @@
       min-height: 420px;
       display: flex;
       flex-direction: column;
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     .scenario-feature-card:hover {
       transform: translateY(-6px);
@@ -1044,6 +1080,8 @@
       font-weight: 800;
       margin: 0 0 12px;
       font-family: Georgia, ui-serif, serif;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .scenario-feature-card p {
       color: var(--muted);
@@ -1051,6 +1089,8 @@
       line-height: 1.55;
       margin: 0 0 20px;
       flex: 1;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .scenario-cta {
       color: var(--cta);
@@ -1105,6 +1145,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
     }
     .scenario-card {
       background: white;
@@ -1114,6 +1158,9 @@
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       position: relative;
       overflow: hidden;
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     .scenario-card:hover {
       transform: translateY(-4px);
@@ -1138,12 +1185,16 @@
       font-size: 1.1rem;
       font-weight: 800;
       margin: 14px 0 8px;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .scenario-card p {
       color: var(--muted);
       font-size: .88rem;
       line-height: 1.5;
       margin: 0 0 14px;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     
     /* ===== SERVICE AREA UPGRADE ===== */
@@ -1154,6 +1205,8 @@
       grid-template-columns: minmax(0, .48fr) minmax(0, .52fr);
       gap: 40px;
       align-items: center;
+      width: 100%;
+      box-sizing: border-box;
     }
     .area-info h2 {
       color: var(--primary);
@@ -1161,12 +1214,16 @@
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
       margin: 0 0 16px;
       line-height: 1.1;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .area-info p {
       color: var(--muted);
       font-size: 1.05rem;
       line-height: 1.55;
       margin: 0 0 24px;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .area-info .btn {
       margin-top: 8px;
@@ -1178,6 +1235,8 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     .area-region-card:hover {
       transform: translateY(-4px);
@@ -1187,6 +1246,8 @@
       position: relative;
       height: 180px;
       margin-bottom: 20px;
+      max-width: 100%;
+      overflow: hidden;
     }
     .region-abstract svg {
       width: 100%;
@@ -1233,6 +1294,8 @@
       grid-template-columns: minmax(0, .35fr) minmax(0, .65fr);
       gap: 48px;
       align-items: start;
+      width: 100%;
+      box-sizing: border-box;
     }
     .faq-info {
       position: sticky;
@@ -1244,17 +1307,25 @@
       font-size: clamp(1.6rem, 3vw, 2.2rem);
       margin: 0 0 16px;
       line-height: 1.15;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .faq-info p {
       color: var(--muted);
       font-size: 1.05rem;
       line-height: 1.55;
       margin: 0 0 24px;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .faq-accordion {
       display: flex;
       flex-direction: column;
       gap: 12px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
     }
     .faq-item {
       background: white;
@@ -1262,6 +1333,9 @@
       border-radius: 20px;
       overflow: hidden;
       transition: box-shadow 0.25s ease, border-color 0.25s ease;
+      max-width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
     }
     .faq-item:hover {
       box-shadow: 0 8px 24px rgba(16,32,51,.06);
@@ -1334,10 +1408,17 @@
       .final-copy-panel h1 { font-size: clamp(2.8rem, 14vw, 4rem); }
       .scenario-feature-card { min-height: auto; }
       .scenario-visual { display: none; }
-      .scenario-grid { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding-bottom: 16px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
-      .scenario-card { flex: 0 0 85%; scroll-snap-align: start; min-width: 280px; }
-      .area-chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
-      .area-chip { flex: 0 0 auto; }
+      .scenarios-section { padding-left: 0; padding-right: 0; }
+      .scenarios-header { padding-left: 16px; padding-right: 16px; }
+      .scenarios-board { display: block; max-width: 100%; padding-left: 16px; padding-right: 16px; }
+      .scenario-grid { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding-bottom: 16px; width: 100%; max-width: 100%; box-sizing: border-box; }
+      .scenario-card { flex: 0 0 min(84vw, 320px); max-width: min(84vw, 320px); scroll-snap-align: start; min-width: 0; }
+      .area-chips { flex-wrap: wrap; gap: 8px; }
+      .area-chip { flex: 0 0 auto; white-space: nowrap; }
+      .area-region-card { max-width: 100%; padding: 24px; }
+      .faq-split { max-width: 100%; padding-left: 16px; padding-right: 16px; }
+      .faq-info { position: static; margin-bottom: 32px; max-width: 100%; }
+      .faq-accordion { max-width: 100%; }
     }
     
     /* Smart header hide/show */
@@ -1452,65 +1533,6 @@
             <div class="detail-icon">3</div>
             <h3>Grouped punch-lists</h3>
             <p>Group several small home maintenance details into one request for review.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 2.5: Visual Scenarios -->
-    <section class="scenarios-section reveal" id="scenarios" aria-label="Home details we help improve">
-      <div class="scenarios-header">
-        <p class="eyebrow">Common repair scenarios</p>
-        <h2>Home details we help improve</h2>
-        <p>Small repairs, touch-ups, and finish details can change how a home feels. These example request types show the kinds of details that can be reviewed by photos, location, and scope.</p>
-        <div class="scenarios-cta-row">
-          <a class="btn primary" href="#request">Send a Similar Request</a>
-          <a class="btn secondary" href="#request">Request Estimate</a>
-        </div>
-      </div>
-      <div class="scenarios-board">
-        <div class="scenario-feature-card">
-          <span class="scenario-label">Example request</span>
-          <h3>Trim &amp; baseboard refresh</h3>
-          <p>Clean up worn edges, casing, baseboards, and finish details that affect the room's overall feel.</p>
-          <a href="#request" class="scenario-cta">Send trim details</a>
-          <div class="scenario-visual trim-visual">
-            <div class="sv-line sv-line-1"></div>
-            <div class="sv-line sv-line-2"></div>
-            <div class="sv-line sv-line-3"></div>
-            <div class="sv-accent"></div>
-          </div>
-        </div>
-        <div class="scenario-grid">
-          <div class="scenario-card">
-            <span class="scenario-label">Common request type</span>
-            <h3>Wall scuffs &amp; touch-ups</h3>
-            <p>Request review for small wall marks, patch areas, and touch-ups that need a cleaner finished look.</p>
-            <a href="#request" class="scenario-cta">Send wall photos</a>
-          </div>
-          <div class="scenario-card">
-            <span class="scenario-label">Example request</span>
-            <h3>Door &amp; hardware details</h3>
-            <p>Small door, hinge, handle, and trim details can make an entryway feel more finished.</p>
-            <a href="#request" class="scenario-cta">Ask about door details</a>
-          </div>
-          <div class="scenario-card">
-            <span class="scenario-label">Request category</span>
-            <h3>Punch-list maintenance</h3>
-            <p>Group several small home details into one request so the overall scope can be reviewed together.</p>
-            <a href="#request" class="scenario-cta">Start a punch-list</a>
-          </div>
-          <div class="scenario-card">
-            <span class="scenario-label">Common request type</span>
-            <h3>Entryway detail refresh</h3>
-            <p>Touch-ups around doors, trim, walls, and small home details can improve the first impression.</p>
-            <a href="#request" class="scenario-cta">Send entryway photos</a>
-          </div>
-          <div class="scenario-card">
-            <span class="scenario-label">Scope-reviewed category</span>
-            <h3>Ground-level exterior touch-ups</h3>
-            <p>Exterior requests can be reviewed when safety, access, location, and project type are clear.</p>
-            <a href="#request" class="scenario-cta">Ask about exterior scope</a>
           </div>
         </div>
       </div>
