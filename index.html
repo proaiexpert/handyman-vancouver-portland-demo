@@ -1559,57 +1559,256 @@
     </section>
 
     <!-- Section 2: Repair Value -->
-    <section class="repair-value-section reveal" id="repair-value" aria-label="Small fixes that change how a home feels">
-      <div class="repair-value-grid">
-        <div class="repair-value-text">
-          <p class="eyebrow">Repair Value</p>
-          <h2>Small fixes that change how a home feels.</h2>
-          <p>Scuffed corners, worn trim, loose hardware, and touch-up areas can make a clean home feel unfinished. Send the details and photos so the scope can be reviewed before the next step is confirmed.</p>
-          <div class="repair-value-cta">
-            <a class="btn primary" href="request/">Send a Similar Project</a>
+    <section class="repair-value-section reveal" id="repair-value" aria-label="The finish details that change how a home feels">
+      <style>
+        .repair-value-section {
+          padding: clamp(56px, 8vw, 96px) clamp(20px, 6vw, 80px);
+          background: var(--background);
+        }
+        .rv-grid {
+          display: grid;
+          grid-template-columns: 2fr 3fr;
+          gap: clamp(40px, 6vw, 72px);
+          align-items: center;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .rv-left {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .rv-left h2 {
+          margin: 0;
+          color: var(--primary);
+          font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+          line-height: 1.08;
+          letter-spacing: -.04em;
+          font-weight: 900;
+        }
+        .rv-left p {
+          margin: 0;
+          color: var(--muted);
+          font-size: clamp(1rem, 1.6vw, 1.12rem);
+          line-height: 1.6;
+          max-width: 400px;
+        }
+        .rv-cta-group {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          align-items: flex-start;
+        }
+        .rv-microcopy {
+          color: var(--muted);
+          font-size: .82rem;
+          font-weight: 700;
+          line-height: 1.4;
+        }
+        .rv-process {
+          margin-top: 4px;
+          color: var(--secondary);
+          font-size: .78rem;
+          font-weight: 850;
+          letter-spacing: .04em;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+        .rv-process-dot {
+          width: 3px;
+          height: 3px;
+          border-radius: 999px;
+          background: var(--secondary);
+          opacity: .5;
+          display: inline-block;
+          flex-shrink: 0;
+        }
+        /* Right side: premium board */
+        .rv-board {
+          background: #FDFAF6;
+          border: 1px solid var(--border);
+          border-radius: 28px;
+          box-shadow: 0 18px 52px rgba(16,32,51,.11);
+          padding: clamp(20px, 3vw, 32px);
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          position: relative;
+          overflow: hidden;
+        }
+        .rv-board::before {
+          content: "";
+          position: absolute;
+          inset: 0 0 auto;
+          height: 4px;
+          background: linear-gradient(90deg, #243D32, #9E5F10);
+          border-radius: 28px 28px 0 0;
+        }
+        /* Featured card */
+        .rv-card-featured {
+          background: #FFFFFF;
+          border: 1px solid var(--border);
+          border-radius: 18px;
+          padding: clamp(18px, 2.5vw, 26px);
+          box-shadow: 0 6px 20px rgba(16,32,51,.07);
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 14px 16px;
+          align-items: start;
+        }
+        .rv-marker {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          background: var(--primary);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: .72rem;
+          font-weight: 950;
+          letter-spacing: .06em;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+        .rv-marker.forest {
+          background: #243D32;
+        }
+        .rv-marker.copper {
+          background: #9E5F10;
+        }
+        .rv-card-featured h3 {
+          margin: 0 0 6px;
+          color: var(--primary);
+          font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+          font-weight: 900;
+          letter-spacing: -.02em;
+          line-height: 1.2;
+        }
+        .rv-card-featured p {
+          margin: 0;
+          color: var(--muted);
+          font-size: .9rem;
+          line-height: 1.55;
+        }
+        /* Supporting cards row */
+        .rv-cards-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .rv-card-support {
+          background: var(--soft);
+          border: 1px solid var(--border);
+          border-radius: 14px;
+          padding: 16px 18px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .rv-card-support-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .rv-marker-sm {
+          width: 28px;
+          height: 28px;
+          border-radius: 8px;
+          background: var(--primary);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: .65rem;
+          font-weight: 950;
+          letter-spacing: .04em;
+          flex-shrink: 0;
+        }
+        .rv-marker-sm.forest { background: #243D32; }
+        .rv-marker-sm.copper { background: #9E5F10; }
+        .rv-card-support h3 {
+          margin: 0;
+          color: var(--primary);
+          font-size: .95rem;
+          font-weight: 900;
+          letter-spacing: -.01em;
+          line-height: 1.2;
+        }
+        .rv-card-support p {
+          margin: 0;
+          color: var(--muted);
+          font-size: .82rem;
+          line-height: 1.5;
+        }
+        /* Mobile stacking */
+        @media (max-width: 720px) {
+          .rv-grid {
+            grid-template-columns: 1fr;
+            gap: 32px;
+          }
+          .rv-left p { max-width: 100%; }
+          .rv-cards-row { grid-template-columns: 1fr; }
+          .rv-board { border-radius: 20px; }
+        }
+        @media (max-width: 400px) {
+          .rv-card-featured { grid-template-columns: 1fr; }
+          .rv-marker { display: none; }
+        }
+      </style>
+      <div class="rv-grid">
+        <!-- Left: copy + CTA -->
+        <div class="rv-left">
+          <p class="eyebrow">Details homeowners notice</p>
+          <h2>The finish details that change how a home feels.</h2>
+          <p>Scuffed corners, worn trim, loose hardware, and small wall marks can make a clean home feel unfinished. A good repair request starts by identifying the details that affect the overall impression of the room.</p>
+          <div class="rv-cta-group">
+            <a class="btn primary" href="request/#photo-checklist">Send Photos for Review</a>
+            <span class="rv-microcopy">Photos help clarify the room, surface, access, and scope.</span>
+          </div>
+          <div class="rv-process">
+            <span>Send photos</span>
+            <span class="rv-process-dot"></span>
+            <span>Describe the issue</span>
+            <span class="rv-process-dot"></span>
+            <span>Scope reviewed before next step</span>
           </div>
         </div>
-        <div class="detail-cards">
-          <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 12h20"/>
-                <path d="M2 12l5-5"/>
-                <path d="M2 12l5 5"/>
-                <path d="M22 12l-5-5"/>
-                <path d="M22 12l-5 5"/>
-              </svg>
+        <!-- Right: premium detail board -->
+        <div class="rv-board" aria-label="Detail types we review">
+          <!-- Featured card: 01 -->
+          <div class="rv-card-featured">
+            <div class="rv-marker" aria-hidden="true">01</div>
+            <div>
+              <h3>Cleaner edges</h3>
+              <p>Trim, casing, baseboards, and caulk lines that make rooms feel sharper and more complete.</p>
             </div>
-            <h3>Cleaner edges</h3>
-            <p>Door casing, baseboards, caulk lines, and finish details that affect the overall look of a room.</p>
           </div>
-          <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                <path d="M2 2l7.586 7.586"/>
-                <circle cx="11" cy="11" r="2"/>
-              </svg>
+          <!-- Supporting cards row: 02 + 03 -->
+          <div class="rv-cards-row">
+            <div class="rv-card-support">
+              <div class="rv-card-support-header">
+                <div class="rv-marker-sm forest" aria-hidden="true">02</div>
+                <h3>Better touch-ups</h3>
+              </div>
+              <p>Small wall marks, patch areas, and paint touch-ups reviewed for a cleaner finished look.</p>
             </div>
-            <h3>Better touch-ups</h3>
-            <p>Small scuffs, patch areas, and touch-ups that need a cleaner finished look.</p>
-          </div>
-          <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 11l3 3L22 4"/>
-                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-              </svg>
+            <div class="rv-card-support">
+              <div class="rv-card-support-header">
+                <div class="rv-marker-sm copper" aria-hidden="true">03</div>
+                <h3>Grouped punch-lists</h3>
+              </div>
+              <p>Several small home details can be reviewed together so the request feels organized.</p>
             </div>
-            <h3>Grouped punch-lists</h3>
-            <p>Group several small home maintenance details into one request for review.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2.5: Visual Scenarios -->
+    
+<!-- Section 2.5: Visual Scenarios -->
     <section class="scenarios-section reveal" id="scenarios" aria-label="Home details we help improve">
       <div class="scenarios-header">
         <p class="eyebrow">Common repair scenarios</p>
