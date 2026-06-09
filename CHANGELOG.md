@@ -47,6 +47,8 @@ It does not include every commit — only commits with documented, verified desc
 | `e1050ca` | Website | Fixed mobile landscape scenario-card sizing and added desktop rail edge fades for a more premium showcase feel |
 | `23d8325` | Assets | Added 8 web-ready handyman scenario image assets under assets/img/scenarios/ |
 | `acf2915` | Website | Replaced repeated scenario image usage with 8 distinct scenario assets and updated card titles/copy to match each image |
+| `d57be4a` | Website | Redesigned homepage Repair Value section into a premium detail-board bridge with stronger copy, unified right-side value panel, numbered detail cards, and photo-review CTA |
+| `843f4f0` | Website | Polished homepage Repair Value board with stronger right-side visual weight, larger internal cards, refined markers, deeper premium shadow, and chip-based process row |
 
 
 ---
