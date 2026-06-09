@@ -2478,39 +2478,39 @@
         <!-- 2-column card grid -->
         <div class="faq-premium__grid">
 
-          <div class="faq-premium__card">
+          <div class="faq-premium__card" data-faq-card>
             <div class="faq-premium__card-num" aria-hidden="true">01</div>
-            <h3 class="faq-premium__q">What should I include with a repair request?</h3>
+            <h3 class="faq-premium__q"><button class="faq-premium__toggle" aria-expanded="false">What should I include with a repair request?</button></h3>
             <p class="faq-premium__a">Send a few clear photos, a short description of the issue, and your general location. If the request involves access, materials, wall type, plumbing, electrical fixtures, or exterior work, include those details too.</p>
           </div>
 
-          <div class="faq-premium__card">
+          <div class="faq-premium__card" data-faq-card>
             <div class="faq-premium__card-num" aria-hidden="true">02</div>
-            <h3 class="faq-premium__q">Can I group several small items together?</h3>
+            <h3 class="faq-premium__q"><button class="faq-premium__toggle" aria-expanded="false">Can I group several small items together?</button></h3>
             <p class="faq-premium__a">Yes. Punch-list requests are often easier to review when related items are grouped together. Include photos for each item and note which repairs are most important.</p>
           </div>
 
-          <div class="faq-premium__card">
+          <div class="faq-premium__card" data-faq-card>
             <div class="faq-premium__card-num" aria-hidden="true">03</div>
-            <h3 class="faq-premium__q">Do you review requests around Vancouver and Portland?</h3>
+            <h3 class="faq-premium__q"><button class="faq-premium__toggle" aria-expanded="false">Do you review requests around Vancouver and Portland?</button></h3>
             <p class="faq-premium__a">Requests around Vancouver, Portland, nearby Clark County, and surrounding areas can be reviewed by location and scope. The next step may depend on access, travel, materials, project type, and scheduling fit.</p>
           </div>
 
-          <div class="faq-premium__card">
+          <div class="faq-premium__card" data-faq-card>
             <div class="faq-premium__card-num" aria-hidden="true">04</div>
-            <h3 class="faq-premium__q">Should I buy materials before sending photos?</h3>
+            <h3 class="faq-premium__q"><button class="faq-premium__toggle" aria-expanded="false">Should I buy materials before sending photos?</button></h3>
             <p class="faq-premium__a">Not necessarily. Some small items are easier to review after seeing the space first. If you already have parts, fixtures, paint, hardware, or assembly items, include a photo of the packaging or product label.</p>
           </div>
 
-          <div class="faq-premium__card">
+          <div class="faq-premium__card" data-faq-card>
             <div class="faq-premium__card-num" aria-hidden="true">05</div>
-            <h3 class="faq-premium__q">What types of work may need a specialist?</h3>
+            <h3 class="faq-premium__q"><button class="faq-premium__toggle" aria-expanded="false">What types of work may need a specialist?</button></h3>
             <p class="faq-premium__a">Larger electrical, plumbing, roofing, structural, or permit-heavy work may need a licensed trade specialist or contractor. Smaller repair, install, touch-up, and punch-list requests can still be reviewed first so the next step is clearer.</p>
           </div>
 
-          <div class="faq-premium__card">
+          <div class="faq-premium__card" data-faq-card>
             <div class="faq-premium__card-num" aria-hidden="true">06</div>
-            <h3 class="faq-premium__q">What happens after I send the request?</h3>
+            <h3 class="faq-premium__q"><button class="faq-premium__toggle" aria-expanded="false">What happens after I send the request?</button></h3>
             <p class="faq-premium__a">The photos and details are reviewed to understand the repair type, access, materials, and general scope. If the request looks like a fit, the next step can be clarified from there.</p>
           </div>
 
@@ -2704,6 +2704,35 @@
       updatePositions();
       updateSticky();
     })();
+  </script>
+
+  <script>
+  (function(){
+    function initFaq(){
+      var mq=window.matchMedia('(max-width:700px)');
+      var cards=document.querySelectorAll('[data-faq-card]');
+      cards.forEach(function(card){
+        var btn=card.querySelector('.faq-premium__toggle');
+        if(!btn)return;
+        btn.addEventListener('click',function(){
+          if(!mq.matches)return;
+          var open=card.getAttribute('data-open')==='true';
+          card.setAttribute('data-open',open?'false':'true');
+          btn.setAttribute('aria-expanded',open?'false':'true');
+        });
+      });
+      mq.addEventListener('change',function(e){
+        if(!e.matches){
+          cards.forEach(function(card){
+            card.removeAttribute('data-open');
+            var btn=card.querySelector('.faq-premium__toggle');
+            if(btn)btn.setAttribute('aria-expanded','false');
+          });
+        }
+      });
+    }
+    if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initFaq);}else{initFaq();}
+  })();
   </script>
 </body>
 </html>
