@@ -584,3 +584,58 @@ body.final-menu-open { overflow: hidden; }
   .local-area__board { border-radius: 22px; }
   .local-area__board::before { border-radius: 22px 22px 0 0; }
 }
+
+
+/* ============================================================
+   Polish pass — micro-points + scope chip additions
+   ============================================================ */
+.local-area__micro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 24px;
+  padding: 14px 16px;
+  background: rgba(36,61,50,0.07);
+  border: 1px solid rgba(36,61,50,0.12);
+  border-radius: 14px;
+}
+.local-area__micro-label {
+  font-size: .72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--secondary);
+}
+.local-area__micro-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.local-area__micro-point {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .82rem;
+  font-weight: 850;
+  color: var(--primary);
+  padding: 4px 10px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.local-area__micro-point::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--cta);
+  flex-shrink: 0;
+}
+/* Scope chip — italic muted style */
+.local-area__chip--scope {
+  background: transparent;
+  border-color: var(--divider);
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 800;
+}
