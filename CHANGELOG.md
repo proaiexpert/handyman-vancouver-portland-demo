@@ -41,6 +41,12 @@ It does not include every commit — only commits with documented, verified desc
 | `544e58a` | Website | Removed duplicate Request Review link in /services/ footer |
 | `84ea02c` | Website | Upgraded homepage hero visual layout to a cleaner hybrid immersive image treatment, removed the heavy image overlay card, and moved request-review cues into a subtle micro-row |
 | `3a3f49d` | Website | Refined homepage immersive hero layout so the image fills the right-side hero height, improves desktop above-the-fold CTA visibility, and preserves mobile hero stability |
+| `b673140` | Website | Added homepage visual scenario rail section with safe scenario wording, scroll-snap behavior, and request-oriented repair-detail cards |
+| `58010e0` | Website | Redesigned homepage scenario rail from an asymmetric grid into a uniform moving portrait-card showcase |
+| `ed8555f` | Website | Refined homepage scenario showcase scale with larger cards, 8 scenario items, compact captions, and removed section-level CTA buttons |
+| `e1050ca` | Website | Fixed mobile landscape scenario-card sizing and added desktop rail edge fades for a more premium showcase feel |
+| `23d8325` | Assets | Added 8 web-ready handyman scenario image assets under assets/img/scenarios/ |
+| `acf2915` | Website | Replaced repeated scenario image usage with 8 distinct scenario assets and updated card titles/copy to match each image |
 
 
 ---
