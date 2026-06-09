@@ -49,6 +49,9 @@ It does not include every commit — only commits with documented, verified desc
 | `acf2915` | Website | Replaced repeated scenario image usage with 8 distinct scenario assets and updated card titles/copy to match each image |
 | `d57be4a` | Website | Redesigned homepage Repair Value section into a premium detail-board bridge with stronger copy, unified right-side value panel, numbered detail cards, and photo-review CTA |
 | `843f4f0` | Website | Polished homepage Repair Value board with stronger right-side visual weight, larger internal cards, refined markers, deeper premium shadow, and chip-based process row |
+| `abe19cf` | Docs | Documented homepage Repair Value redesign in CHANGELOG |
+| `21bb43e` | Website | Redesigned homepage Services section into a premium Services Scope board with grouped repair categories, scope-review copy, photo-review CTA, secondary services link, and removed generic service-card grid/icons |
+| `f9c2093` | Website | Consolidated duplicated How It Works and Scope sections into a premium 3-step Request Review Flow with clearer process copy, conditional scope disclaimers, and request/photo-checklist CTAs |
 
 
 ---
