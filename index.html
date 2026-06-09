@@ -2390,60 +2390,103 @@
     <!-- Section 5: Scope -->
 
         <!-- Section 6: Service Area -->
-    <section class="area-section reveal" id="service-area" aria-label="Vancouver WA and nearby areas">
-      <div class="area-content">
-        <div class="area-split">
-          <div class="area-info">
-            <p class="eyebrow">Service Area</p>
-            <h2>Vancouver-first. Nearby requests reviewed by scope.</h2>
-            <p>Request review is centered around Vancouver, WA and nearby Clark County communities. Portland-area requests can be reviewed by location, project type, and service scope.</p>
-            <div class="area-chips">
-              <span class="area-chip primary">Vancouver, WA</span>
-              <span class="area-chip">Camas</span>
-              <span class="area-chip">Washougal</span>
-              <span class="area-chip">Battle Ground</span>
-              <span class="area-chip">Ridgefield</span>
-              <span class="area-chip">Nearby Clark County</span>
-              <span class="area-chip">Portland-area requests reviewed by scope</span>
-            </div>
-            <a class="btn primary" href="request/">Send Your City / ZIP</a>
-          </div>
-          <div class="area-region-card">
-            <div class="region-abstract">
-              <svg viewBox="0 0 400 220" preserveAspectRatio="none">
-                <!-- Columbia River / regional contour lines -->
-                <path d="M20,180 Q80,120 140,140 T260,100 T380,80" stroke="rgba(255,255,255,.18)" stroke-width="1.5" fill="none"/>
-                <path d="M40,200 Q100,150 160,170 T280,130 T360,110" stroke="rgba(255,255,255,.12)" stroke-width="1" fill="none"/>
-                <path d="M60,60 Q120,40 180,55 T300,35" stroke="rgba(255,255,255,.1)" stroke-width="1" fill="none"/>
-                <path d="M10,100 Q70,80 130,95 T250,75 T390,55" stroke="rgba(255,255,255,.08)" stroke-width="1" fill="none"/>
-                <!-- Vancouver copper dot -->
-                <circle cx="85" cy="145" r="5" fill="var(--cta)" opacity=".9"/>
-                <circle cx="85" cy="145" r="12" fill="var(--cta)" opacity=".2"/>
-                <!-- Portland muted zone -->
-                <circle cx="280" cy="95" r="4" fill="rgba(255,255,255,.25)"/>
-                <circle cx="280" cy="95" r="10" fill="rgba(255,255,255,.08)"/>
-                <!-- Route line suggestion -->
-                <line x1="85" y1="145" x2="280" y2="95" stroke="rgba(201,130,43,.2)" stroke-width="1" stroke-dasharray="4,4"/>
-              </svg>
-            </div>
-            <div class="region-legend">
-              <div class="region-legend-item">
-                <span class="region-dot copper"></span>
-                <span>Vancouver, WA</span>
-              </div>
-              <div class="region-legend-item">
-                <span class="region-dot muted"></span>
-                <span>Portland-area reviewed by scope</span>
-              </div>
-            </div>
-            <h3>Clark County &amp; Nearby Areas</h3>
-            <p>Service requests are reviewed based on location and project scope.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+          <!-- Section 7: Service Area — Premium Local Area Map Board -->
+      <section class="local-area reveal" id="service-area" aria-label="Vancouver and Portland-area request review">
+        <div class="local-area__container">
 
-    <!-- Section 8: FAQ -->
+          <!-- Left: copy + CTAs -->
+          <div class="local-area__content">
+            <p class="eyebrow local-area__eyebrow">LOCAL REQUEST REVIEW</p>
+            <h2 class="local-area__h2">Vancouver and Portland-area repair requests, reviewed by location and scope.</h2>
+            <p class="local-area__lead">Send the repair list, photos, and general location. Requests around Vancouver, nearby Clark County, Portland, and surrounding areas can be reviewed by project type, access, and scope.</p>
+
+            <div class="local-area__actions">
+              <a href="request/" class="btn primary local-area__cta-primary">Start a Local Request</a>
+              <a href="services/" class="btn secondary local-area__cta-secondary">View Service Categories</a>
+            </div>
+
+            <p class="local-area__note">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><circle cx="7" cy="7" r="6.5" stroke="#C9822B" stroke-width="1"/><path d="M7 4v3.5" stroke="#C9822B" stroke-width="1.4" stroke-linecap="round"/><circle cx="7" cy="10" r=".7" fill="#C9822B"/></svg>
+              Location, access, parking, materials, project type, and licensing requirements may affect the next step.
+            </p>
+          </div>
+
+          <!-- Right: map board -->
+          <div class="local-area__board" aria-label="Approximate request review area map">
+
+            <!-- Abstract map panel -->
+            <div class="local-area__map" role="img" aria-label="Abstract map showing Vancouver WA and Portland OR area">
+              <svg class="local-area__map-svg" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="420" height="300" fill="#102033" rx="0"/>
+                <line x1="0" y1="75" x2="420" y2="75" stroke="#1a3048" stroke-width="1"/>
+                <line x1="0" y1="150" x2="420" y2="150" stroke="#1a3048" stroke-width="1"/>
+                <line x1="0" y1="225" x2="420" y2="225" stroke="#1a3048" stroke-width="1"/>
+                <line x1="105" y1="0" x2="105" y2="300" stroke="#1a3048" stroke-width="1"/>
+                <line x1="210" y1="0" x2="210" y2="300" stroke="#1a3048" stroke-width="1"/>
+                <line x1="315" y1="0" x2="315" y2="300" stroke="#1a3048" stroke-width="1"/>
+                <path d="M 30 148 Q 90 140 150 145 Q 200 150 250 143 Q 300 136 380 140" stroke="#1e4060" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <path d="M 30 148 Q 90 140 150 145 Q 200 150 250 143 Q 300 136 380 140" stroke="#243D32" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M 210 20 L 210 280" stroke="#1e3a52" stroke-width="2" stroke-dasharray="6 4"/>
+                <ellipse cx="210" cy="165" rx="155" ry="110" fill="rgba(201,130,43,0.07)" stroke="rgba(201,130,43,0.22)" stroke-width="1.5" stroke-dasharray="5 4"/>
+                <circle cx="230" cy="128" r="10" fill="rgba(201,130,43,0.18)" stroke="#C9822B" stroke-width="1.5"/>
+                <circle cx="230" cy="128" r="5" fill="#C9822B"/>
+                <circle cx="195" cy="185" r="10" fill="rgba(201,130,43,0.18)" stroke="#C9822B" stroke-width="1.5"/>
+                <circle cx="195" cy="185" r="5" fill="#C9822B"/>
+                <circle cx="285" cy="112" r="3" fill="#CBD2D0" opacity="0.6"/>
+                <circle cx="310" cy="130" r="3" fill="#CBD2D0" opacity="0.6"/>
+                <circle cx="260" cy="95" r="3" fill="#CBD2D0" opacity="0.5"/>
+                <circle cx="240" cy="105" r="2.5" fill="#CBD2D0" opacity="0.5"/>
+                <circle cx="155" cy="200" r="3" fill="#CBD2D0" opacity="0.5"/>
+                <circle cx="170" cy="215" r="2.5" fill="#CBD2D0" opacity="0.45"/>
+                <circle cx="145" cy="185" r="2.5" fill="#CBD2D0" opacity="0.45"/>
+                <text x="248" y="124" fill="#F7F2EA" font-size="10" font-family="system-ui,sans-serif" font-weight="700">Vancouver, WA</text>
+                <text x="148" y="200" fill="#F7F2EA" font-size="10" font-family="system-ui,sans-serif" font-weight="700">Portland, OR</text>
+                <text x="210" y="272" fill="#CBD2D0" font-size="8" font-family="system-ui,sans-serif" text-anchor="middle" letter-spacing="0.08em">APPROX. REQUEST REVIEW AREA</text>
+              </svg>
+              <p class="local-area__map-disclaimer">General area shown for demo planning. Requests are reviewed by location and scope.</p>
+            </div>
+
+            <!-- Area groups / chips -->
+            <div class="local-area__groups">
+              <div class="local-area__group">
+                <span class="local-area__group-label">Primary area</span>
+                <div class="local-area__chips">
+                  <span class="local-area__chip local-area__chip--primary">Vancouver, WA</span>
+                  <span class="local-area__chip local-area__chip--primary">Portland, OR</span>
+                </div>
+              </div>
+              <div class="local-area__group">
+                <span class="local-area__group-label">Nearby Clark County</span>
+                <div class="local-area__chips">
+                  <span class="local-area__chip">Camas</span>
+                  <span class="local-area__chip">Washougal</span>
+                  <span class="local-area__chip">Battle Ground</span>
+                  <span class="local-area__chip">Ridgefield</span>
+                  <span class="local-area__chip">Salmon Creek</span>
+                  <span class="local-area__chip">Hazel Dell</span>
+                  <span class="local-area__chip">Orchards / Five Corners</span>
+                </div>
+              </div>
+              <div class="local-area__group">
+                <span class="local-area__group-label">Portland-area requests</span>
+                <div class="local-area__chips">
+                  <span class="local-area__chip">North Portland</span>
+                  <span class="local-area__chip">Northeast Portland</span>
+                  <span class="local-area__chip">Beaverton</span>
+                  <span class="local-area__chip">Gresham</span>
+                  <span class="local-area__chip">Tigard</span>
+                  <span class="local-area__chip">Milwaukie</span>
+                  <span class="local-area__chip">Oregon City</span>
+                </div>
+                <p class="local-area__group-note">Nearby-area requests are reviewed by location, access, and project scope.</p>
+              </div>
+            </div>
+
+          </div><!-- /.local-area__board -->
+        </div><!-- /.local-area__container -->
+      </section>
+      <!-- /Section 7: Service Area -->
+      <!-- Section 8: FAQ -->
     <section class="faq-section reveal" id="faq" aria-label="Questions before you send a request">
       <div class="faq-split">
         <div class="faq-info">
