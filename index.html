@@ -1565,18 +1565,19 @@
           padding: clamp(56px, 8vw, 96px) clamp(20px, 6vw, 80px);
           background: var(--background);
         }
+        /* Layout: 37/63 split, wider container */
         .rv-grid {
           display: grid;
-          grid-template-columns: 2fr 3fr;
-          gap: clamp(40px, 6vw, 72px);
+          grid-template-columns: 37fr 63fr;
+          gap: clamp(36px, 5vw, 64px);
           align-items: center;
-          max-width: 1200px;
+          max-width: 1320px;
           margin: 0 auto;
         }
         .rv-left {
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 22px;
         }
         .rv-left h2 {
           margin: 0;
@@ -1596,7 +1597,7 @@
         .rv-cta-group {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 10px;
           align-items: flex-start;
         }
         .rv-microcopy {
@@ -1605,36 +1606,46 @@
           font-weight: 700;
           line-height: 1.4;
         }
+        /* Premium micro-process chips */
         .rv-process {
-          margin-top: 4px;
-          color: var(--secondary);
-          font-size: .78rem;
-          font-weight: 850;
-          letter-spacing: .04em;
+          margin-top: 6px;
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 0;
           flex-wrap: wrap;
+          row-gap: 8px;
         }
-        .rv-process-dot {
-          width: 3px;
-          height: 3px;
+        .rv-process-chip {
+          display: inline-flex;
+          align-items: center;
+          background: rgba(36,61,50,.07);
+          border: 1px solid rgba(36,61,50,.14);
           border-radius: 999px;
-          background: var(--secondary);
-          opacity: .5;
-          display: inline-block;
+          padding: 5px 12px;
+          color: #243D32;
+          font-size: .74rem;
+          font-weight: 850;
+          letter-spacing: .03em;
+          white-space: nowrap;
+        }
+        .rv-process-arrow {
+          color: #9E5F10;
+          font-size: .72rem;
+          font-weight: 900;
+          padding: 0 6px;
+          opacity: .7;
           flex-shrink: 0;
         }
-        /* Right side: premium board */
+        /* Right side: premium board — stronger */
         .rv-board {
           background: #FDFAF6;
-          border: 1px solid var(--border);
-          border-radius: 28px;
-          box-shadow: 0 18px 52px rgba(16,32,51,.11);
-          padding: clamp(20px, 3vw, 32px);
+          border: 1px solid rgba(16,32,51,.12);
+          border-radius: 32px;
+          box-shadow: 0 24px 64px rgba(16,32,51,.15), 0 4px 16px rgba(16,32,51,.06);
+          padding: clamp(24px, 3.2vw, 40px);
           display: flex;
           flex-direction: column;
-          gap: 14px;
+          gap: 16px;
           position: relative;
           overflow: hidden;
         }
@@ -1642,71 +1653,67 @@
           content: "";
           position: absolute;
           inset: 0 0 auto;
-          height: 4px;
-          background: linear-gradient(90deg, #243D32, #9E5F10);
-          border-radius: 28px 28px 0 0;
+          height: 5px;
+          background: linear-gradient(90deg, #243D32 0%, #9E5F10 100%);
+          border-radius: 32px 32px 0 0;
         }
-        /* Featured card */
+        /* Featured card — larger, more dominant */
         .rv-card-featured {
           background: #FFFFFF;
-          border: 1px solid var(--border);
-          border-radius: 18px;
-          padding: clamp(18px, 2.5vw, 26px);
-          box-shadow: 0 6px 20px rgba(16,32,51,.07);
+          border: 1px solid rgba(16,32,51,.1);
+          border-radius: 20px;
+          padding: clamp(20px, 2.8vw, 32px);
+          box-shadow: 0 8px 28px rgba(16,32,51,.09);
           display: grid;
           grid-template-columns: auto 1fr;
-          gap: 14px 16px;
+          gap: 16px 20px;
           align-items: start;
         }
         .rv-marker {
-          width: 36px;
-          height: 36px;
-          border-radius: 10px;
+          width: 44px;
+          height: 44px;
+          border-radius: 12px;
           background: var(--primary);
           color: white;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: .72rem;
+          font-size: .76rem;
           font-weight: 950;
           letter-spacing: .06em;
           flex-shrink: 0;
           margin-top: 2px;
         }
-        .rv-marker.forest {
-          background: #243D32;
-        }
-        .rv-marker.copper {
-          background: #9E5F10;
-        }
+        .rv-marker.forest { background: #243D32; }
+        .rv-marker.copper { background: #9E5F10; }
         .rv-card-featured h3 {
-          margin: 0 0 6px;
+          margin: 0 0 8px;
           color: var(--primary);
-          font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+          font-size: clamp(1.12rem, 1.9vw, 1.32rem);
           font-weight: 900;
-          letter-spacing: -.02em;
-          line-height: 1.2;
+          letter-spacing: -.025em;
+          line-height: 1.18;
         }
         .rv-card-featured p {
           margin: 0;
           color: var(--muted);
-          font-size: .9rem;
-          line-height: 1.55;
+          font-size: clamp(.92rem, 1.3vw, 1rem);
+          line-height: 1.6;
         }
         /* Supporting cards row */
         .rv-cards-row {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 12px;
+          gap: 14px;
         }
         .rv-card-support {
           background: var(--soft);
           border: 1px solid var(--border);
-          border-radius: 14px;
-          padding: 16px 18px;
+          border-radius: 16px;
+          padding: 20px 22px;
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 10px;
         }
         .rv-card-support-header {
           display: flex;
@@ -1714,15 +1721,15 @@
           gap: 10px;
         }
         .rv-marker-sm {
-          width: 28px;
-          height: 28px;
-          border-radius: 8px;
+          width: 32px;
+          height: 32px;
+          border-radius: 9px;
           background: var(--primary);
           color: white;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: .65rem;
+          font-size: .68rem;
           font-weight: 950;
           letter-spacing: .04em;
           flex-shrink: 0;
@@ -1732,7 +1739,7 @@
         .rv-card-support h3 {
           margin: 0;
           color: var(--primary);
-          font-size: .95rem;
+          font-size: clamp(.95rem, 1.3vw, 1.05rem);
           font-weight: 900;
           letter-spacing: -.01em;
           line-height: 1.2;
@@ -1740,8 +1747,8 @@
         .rv-card-support p {
           margin: 0;
           color: var(--muted);
-          font-size: .82rem;
-          line-height: 1.5;
+          font-size: clamp(.84rem, 1.1vw, .92rem);
+          line-height: 1.55;
         }
         /* Mobile stacking */
         @media (max-width: 720px) {
@@ -1751,11 +1758,12 @@
           }
           .rv-left p { max-width: 100%; }
           .rv-cards-row { grid-template-columns: 1fr; }
-          .rv-board { border-radius: 20px; }
+          .rv-board { border-radius: 22px; }
         }
         @media (max-width: 400px) {
           .rv-card-featured { grid-template-columns: 1fr; }
           .rv-marker { display: none; }
+          .rv-process-chip { font-size: .7rem; padding: 4px 10px; }
         }
       </style>
       <div class="rv-grid">
@@ -1769,11 +1777,11 @@
             <span class="rv-microcopy">Photos help clarify the room, surface, access, and scope.</span>
           </div>
           <div class="rv-process">
-            <span>Send photos</span>
-            <span class="rv-process-dot"></span>
-            <span>Describe the issue</span>
-            <span class="rv-process-dot"></span>
-            <span>Scope reviewed before next step</span>
+            <span class="rv-process-chip">Send photos</span>
+            <span class="rv-process-arrow" aria-hidden="true">&#8594;</span>
+            <span class="rv-process-chip">Describe the issue</span>
+            <span class="rv-process-arrow" aria-hidden="true">&#8594;</span>
+            <span class="rv-process-chip">Scope reviewed</span>
           </div>
         </div>
         <!-- Right: premium detail board -->
