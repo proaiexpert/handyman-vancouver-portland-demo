@@ -2215,81 +2215,181 @@
 
     
 <!-- Section 4: Photo Request Flow -->
-    <section class="photo-flow-section reveal" id="how-it-works" aria-label="Send photos. We review the scope.">
-      <div class="photo-flow-content">
-        <div class="photo-flow-header">
-          <p class="eyebrow">How It Works</p>
-          <h2>Send photos. We review the scope.</h2>
-          <p>A few photos and clear details help make the request easier to review. The next step depends on project type, location, access, materials, and schedule.</p>
-        </div>
-        <div class="photo-steps">
-          <div class="photo-step">
-            <div class="step-number">1</div>
-            <h3>Tell us what needs attention</h3>
-            <p>Describe the repair area, where it is located, and what result you are hoping for.</p>
+    <section class="reveal" id="how-it-works" aria-label="How repair requests are reviewed">
+      <style>
+        .hiw-section {
+          background: #F7F2EA;
+          padding: 96px 24px 80px;
+        }
+        .hiw-inner {
+          max-width: 760px;
+          margin: 0 auto;
+        }
+        .hiw-header {
+          text-align: center;
+          margin-bottom: 56px;
+        }
+        .hiw-header .eyebrow {
+          color: #9E5F10;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: .12em;
+          text-transform: uppercase;
+          margin-bottom: 16px;
+        }
+        .hiw-header h2 {
+          font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+          font-weight: 700;
+          color: #102033;
+          line-height: 1.2;
+          margin: 0 0 20px;
+        }
+        .hiw-intro {
+          font-size: 1rem;
+          line-height: 1.65;
+          color: rgba(16,32,51,.7);
+          max-width: 580px;
+          margin: 0 auto;
+        }
+        .hiw-steps {
+          max-width: 680px;
+          margin: 0 auto;
+          position: relative;
+        }
+        .hiw-steps::before {
+          content: '';
+          position: absolute;
+          left: 22px;
+          top: 40px;
+          bottom: 40px;
+          width: 1px;
+          background: rgba(36,61,50,.15);
+        }
+        .hiw-step {
+          display: flex;
+          gap: 28px;
+          align-items: flex-start;
+          padding: 0 0 40px;
+        }
+        .hiw-step:last-child {
+          padding-bottom: 0;
+        }
+        .hiw-step-marker {
+          flex-shrink: 0;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: rgba(158,95,16,.1);
+          border: 1.5px solid rgba(158,95,16,.3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: .06em;
+          color: #9E5F10;
+          position: relative;
+          z-index: 1;
+        }
+        .hiw-step-body {
+          padding-top: 10px;
+        }
+        .hiw-step-body h3 {
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: #102033;
+          margin: 0 0 8px;
+          line-height: 1.3;
+        }
+        .hiw-step-body p {
+          font-size: .95rem;
+          line-height: 1.65;
+          color: rgba(16,32,51,.65);
+          margin: 0;
+        }
+        .hiw-note {
+          max-width: 680px;
+          margin: 40px auto 0;
+          font-size: .875rem;
+          font-style: italic;
+          color: rgba(16,32,51,.5);
+          text-align: center;
+          line-height: 1.6;
+        }
+        .hiw-cta-group {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+          margin-top: 36px;
+        }
+        .hiw-secondary-link {
+          font-size: .9rem;
+          color: #9E5F10;
+          text-decoration: none;
+          font-weight: 600;
+          letter-spacing: .01em;
+          transition: opacity .2s;
+        }
+        .hiw-secondary-link:hover {
+          opacity: .75;
+        }
+        @media (max-width: 720px) {
+          .hiw-section { padding: 64px 24px 56px; }
+          .hiw-header { margin-bottom: 40px; }
+          .hiw-steps::before { display: none; }
+          .hiw-step { gap: 20px; padding-bottom: 32px; }
+          .hiw-step-marker { width: 38px; height: 38px; font-size: 11px; }
+          .hiw-step-body { padding-top: 7px; }
+        }
+        @media (max-width: 400px) {
+          .hiw-step { gap: 14px; }
+          .hiw-step-marker { width: 34px; height: 34px; font-size: 10px; }
+          .hiw-step-body h3 { font-size: 1rem; }
+        }
+      </style>
+      <div class="hiw-section">
+        <div class="hiw-inner">
+          <div class="hiw-header">
+            <p class="eyebrow">HOW IT WORKS</p>
+            <h2>A calmer way to start a repair request.</h2>
+            <p class="hiw-intro">Send a short description and photos of what needs attention. The goal is to understand the scope before the next step is suggested &mdash; no pressure to know the exact category.</p>
           </div>
-          <div class="photo-step">
-            <div class="step-number">2</div>
-            <h3>Share a few photos</h3>
-            <p>Include one wide photo, one close-up photo, and any useful context about the area.</p>
+          <div class="hiw-steps" aria-label="Request review steps">
+            <article class="hiw-step">
+              <div class="hiw-step-marker" aria-hidden="true">01</div>
+              <div class="hiw-step-body">
+                <h3>Send photos and details</h3>
+                <p>Share what needs attention, where it is, and any photos that show the surface, access, or condition. A wide shot and a close-up are usually enough to start.</p>
+              </div>
+            </article>
+            <article class="hiw-step">
+              <div class="hiw-step-marker" aria-hidden="true">02</div>
+              <div class="hiw-step-body">
+                <h3>Scope gets reviewed</h3>
+                <p>The request is reviewed by repair type, access, materials, and whether a licensed trade or permit may be needed. Some requests may be referred to another provider if they fall outside scope.</p>
+              </div>
+            </article>
+            <article class="hiw-step">
+              <div class="hiw-step-marker" aria-hidden="true">03</div>
+              <div class="hiw-step-body">
+                <h3>Next step is clarified</h3>
+                <p>You get a clearer direction before anything is scheduled &mdash; whether that&rsquo;s a follow-up question, a grouping suggestion, or a note that another provider may be a better fit.</p>
+              </div>
+            </article>
           </div>
-          <div class="photo-step">
-            <div class="step-number">3</div>
-            <h3>We review the scope</h3>
-            <p>The request is reviewed for project type, access, materials, safety, and service area.</p>
-          </div>
-          <div class="photo-step">
-            <div class="step-number">4</div>
-            <h3>Confirm the next step</h3>
-            <p>The response may be a follow-up question, estimate path, scheduling discussion, or scope clarification.</p>
+          <p class="hiw-note">No pressure to know the exact category &mdash; a short list and photos are enough to start.</p>
+          <div class="hiw-cta-group">
+            <a class="btn primary" href="request/">Start a Repair Request</a>
+            <a class="hiw-secondary-link" href="request/#photo-checklist">Photo checklist &#8594;</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Section 5: Scope -->
-    <section class="scope-section reveal" id="scope" aria-label="Reviewed before the next step">
-      <div class="scope-content">
-        <div class="scope-text">
-          <p class="eyebrow">Scope-aware requests</p>
-          <h2>Reviewed before the next step</h2>
-          <p>Photos help clarify the request, but some details may still need review. Project type, access, materials, location, and safety all affect the best next step.</p>
-          <a class="btn primary" href="request/">Ask if Your Project Fits</a>
-        </div>
-        <div class="scope-cards">
-          <div class="scope-card">
-            <div class="scope-icon">1</div>
-            <div>
-              <h4>Photos help clarify</h4>
-              <p>Photos help clarify the request, but may not finalize scope.</p>
-            </div>
-          </div>
-          <div class="scope-card">
-            <div class="scope-icon">2</div>
-            <div>
-              <h4>Scope can change</h4>
-              <p>Some details may need review after the initial photos are received.</p>
-            </div>
-          </div>
-          <div class="scope-card">
-            <div class="scope-icon">3</div>
-            <div>
-              <h4>Trade-specific work</h4>
-              <p>Some requests may be referred to another provider if they are outside scope.</p>
-            </div>
-          </div>
-          <div class="scope-card">
-            <div class="scope-icon">4</div>
-            <div>
-              <h4>Scope reviewed carefully</h4>
-              <p>Every project is different. We review the details before confirming the next step.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Section 6: Service Area -->
+        <!-- Section 6: Service Area -->
     <section class="area-section reveal" id="service-area" aria-label="Vancouver WA and nearby areas">
       <div class="area-content">
         <div class="area-split">
