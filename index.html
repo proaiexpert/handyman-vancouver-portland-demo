@@ -2425,46 +2425,17 @@
           <!-- Right: map board -->
           <div class="local-area__board" aria-label="Approximate request review area map">
 
-            <!-- Abstract map panel -->
-            <div class="local-area__map" role="img" aria-label="Abstract map showing Vancouver WA and Portland OR corridor">
-              <svg class="local-area__map-svg" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- Deep navy background -->
-                <rect width="420" height="300" fill="#0d1c2e"/>
-                <!-- Subtle terrain depth — forest green region wash -->
-                <ellipse cx="210" cy="150" rx="200" ry="130" fill="rgba(36,61,50,0.28)"/>
-                <!-- Atmospheric warm glow center -->
-                <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="rgba(201,130,43,0.13)"/>
-                  <stop offset="100%" stop-color="rgba(201,130,43,0)"/>
-                </radialGradient>
-                <ellipse cx="212" cy="155" rx="170" ry="115" fill="url(#warmGlow)"/>
-                <!-- Columbia River — organic wide curve -->
-                <path d="M 10 152 C 60 138 110 148 160 146 C 200 144 230 150 270 142 C 310 134 360 138 415 136" stroke="#1a4a6e" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.7"/>
-                <path d="M 10 152 C 60 138 110 148 160 146 C 200 144 230 150 270 142 C 310 134 360 138 415 136" stroke="#2a6a8a" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
-                <!-- Soft coverage halo -->
-                <ellipse cx="212" cy="158" rx="148" ry="102" fill="none" stroke="rgba(201,130,43,0.18)" stroke-width="1.5"/>
-                <!-- Vancouver WA anchor marker -->
-                <circle cx="232" cy="122" r="14" fill="rgba(201,130,43,0.15)" stroke="rgba(201,130,43,0.35)" stroke-width="1"/>
-                <circle cx="232" cy="122" r="7" fill="#C9822B" opacity="0.9"/>
-                <circle cx="232" cy="122" r="3.5" fill="#F7F2EA"/>
-                <!-- Portland OR anchor marker -->
-                <circle cx="194" cy="182" r="14" fill="rgba(201,130,43,0.15)" stroke="rgba(201,130,43,0.35)" stroke-width="1"/>
-                <circle cx="194" cy="182" r="7" fill="#C9822B" opacity="0.9"/>
-                <circle cx="194" cy="182" r="3.5" fill="#F7F2EA"/>
-                <!-- Connector line between anchors -->
-                <line x1="232" y1="129" x2="194" y2="175" stroke="rgba(201,130,43,0.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
-                <!-- Subtle nearby region dots (reduced, softer) -->
-                <circle cx="288" cy="108" r="3.5" fill="#CBD2D0" opacity="0.35"/>
-                <circle cx="262" cy="92" r="3" fill="#CBD2D0" opacity="0.28"/>
-                <circle cx="158" cy="198" r="3.5" fill="#CBD2D0" opacity="0.32"/>
-                <circle cx="172" cy="212" r="3" fill="#CBD2D0" opacity="0.25"/>
-                <!-- Vancouver WA label — larger, readable -->
-                <text x="252" y="118" fill="#F7F2EA" font-size="12" font-family="system-ui,sans-serif" font-weight="700" opacity="0.95">Vancouver, WA</text>
-                <!-- Portland OR label — larger, readable -->
-                <text x="136" y="196" fill="#F7F2EA" font-size="12" font-family="system-ui,sans-serif" font-weight="700" opacity="0.95">Portland, OR</text>
-                <!-- Map caption -->
-                <text x="210" y="268" fill="rgba(203,210,208,0.7)" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle" letter-spacing="0.1em">VANCOUVER–PORTLAND AREA REQUESTS</text>
-              </svg>
+            <!-- Illustrated map image -->
+            <div class="local-area__map" role="img" aria-label="Illustrated map showing Vancouver WA and Portland OR corridor">
+              <img
+                src="assets/img/service-area-vancouver-portland-map.webp"
+                alt="Illustrated watercolor map of the Vancouver WA and Portland OR service area"
+                class="local-area__map-img"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
               <p class="local-area__map-disclaimer">Reviewed by location and scope before the next step.</p>
             </div>
 

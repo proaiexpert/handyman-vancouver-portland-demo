@@ -554,13 +554,17 @@ body.final-menu-open { overflow: hidden; }
   border-radius: 28px 28px 0 0;
 }
 .local-area__map {
-  border-radius: 18px; overflow: hidden; background: #102033;
+  border-radius: 18px; overflow: hidden; background: #f3ead8;
   margin-bottom: 18px; position: relative;
 }
 .local-area__map-svg { width: 100%; height: auto; display: block; }
+.local-area__map-img {
+  width: 100%; height: auto; display: block;
+  object-fit: cover; border-radius: 18px 18px 0 0;
+}
 .local-area__map-disclaimer {
   margin: 0; padding: 8px 12px;
-  background: rgba(16,32,51,.06); color: var(--muted);
+  background: rgba(180,150,90,.08); color: var(--muted);
   font-size: .76rem; text-align: center; border-top: 1px solid var(--border);
 }
 .local-area__groups { display: flex; flex-direction: column; gap: 14px; }
