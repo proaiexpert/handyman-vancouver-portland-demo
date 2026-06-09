@@ -834,3 +834,10 @@ body.final-menu-open { overflow: hidden; }
     padding-bottom: 20px;
   }
 }
+
+/* Hide FAQ card numbers on mobile only */
+@media (max-width: 700px) {
+  .faq-premium__card-num {
+    display: none;
+  }
+}
