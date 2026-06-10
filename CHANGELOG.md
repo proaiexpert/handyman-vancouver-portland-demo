@@ -21,6 +21,25 @@ It does not include every commit — only commits with documented, verified desc
 
 ## Selected Commit History
 
+### 2026-06-09 — Services, service area, and city-page baseline
+
+Latest baseline: `0c3ea36` — Add city page accessibility and meta polish
+
+| Commit | Type | Description |
+|---|---|---|
+| `1e8384c` | Website | Polished /services/ into a premium service-category page. |
+| `f42f433` | Website | Created /service-area/ as a premium Vancouver / Portland local request-review hub with 10 city request areas. |
+| `5a60035` | Website | Created 10 city landing pages under /service-area/. |
+| `68bc6b9` | Website | Polished city page copy to reduce template repetition. |
+| `2a3852b` | Website | Consolidated duplicated city-page inline CSS into assets/css/preview-styles.css. |
+| `2f85c1a` | Website | Added premium city-page visual treatment: hero improvements, map/reference card, breadcrumb, location-fit cards, improved cards/chips/CTA styling. |
+| `e678478` | Website | Polished /service-area/ city hub cards to match the city-page visual system. |
+| `0c3ea36` | Website | Added city-page accessibility/meta polish: OG title/description/url/type, skip-to-content links, and `<main id="main-content">`. Confirmed noindex/nofollow remains on all demo pages. Confirmed no fake claims, no radius claims, no phone/address/reviews/ratings, no Google Map, no schema, and no LocalBusiness markup were added. |
+
+---
+
+### Earlier commits
+
 | Commit | Type | Description |
 |---|---|---|
 | `83e63f4` | Website | Fixed mobile clipping and initial sticky CTA / service area polish |
@@ -64,7 +83,6 @@ It does not include every commit — only commits with documented, verified desc
 | `17fbd41` | Website | Refined Final CTA readability: left-aligned desktop text zone, improved mobile typography, cleaned body copy, replaced chips with clearer homeowner-oriented labels |
 | `1720619` | Website | Upgraded footer into a premium local-service footer with brand summary, request links, common request links, future-safe location chips, and demo-safe copy |
 
-
 ---
 
 ## Notes on Earlier Commits
@@ -81,4 +99,5 @@ If this description is confirmed, add it to the table above between `01c97ca` an
 
 The homepage is stable at commit `1cda438`. The /request/ page was added in `7b038cd` and refined through `9446655`.
 The /services/ page was added in `1153f7f` and cross-page chrome was fixed through `544e58a`.
+The /service-area/ hub was created in `f42f433`. Ten city pages were added in `5a60035` and polished through `0c3ea36`.
 Documentation commits do not change the live site.
