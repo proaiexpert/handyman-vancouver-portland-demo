@@ -4,154 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Service Area Request Review | Vancouver WA &amp; Portland OR | Local Repair Pro</title>
-  <meta name="description" content="Send repair photos and general location for request review around Vancouver, Portland, nearby Clark County, and surrounding areas. Requests are reviewed by project type, access, and scope.">
+  <meta name="description" content="Send repair photos and general location for request review around Vancouver, Portland, Hillsboro, Beaverton, Gresham, Tigard, Lake Oswego, Oregon City, Camas, and Battle Ground. Requests are reviewed by project type, access, and scope.">
   <link rel="canonical" href="https://proai-expert.com/handyman-vancouver-portland-demo/service-area/">
   <meta name="robots" content="noindex,nofollow">
   <meta property="og:title" content="Service Area Request Review | Vancouver WA &amp; Portland OR | Local Repair Pro">
-  <meta property="og:description" content="Send repair photos and general location for request review around Vancouver, Portland, nearby Clark County, and surrounding areas.">
+  <meta property="og:description" content="Send repair photos and general location for request review around Vancouver, Portland, and nearby city areas.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="../assets/css/preview-styles.css">
   <style>
-    /* ── Page shell ── */
-    .sa-page { background: var(--background); }
-
-    /* ── Site header (matches request/services pages) ── */
-    .sa-header { background: var(--primary); position: sticky; top: 0; z-index: 100; }
-    .sa-nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .sa-nav-brand { font-size: 1.0625rem; font-weight: 800; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 6px; }
-    .sa-nav-brand span { color: #E6B16C; }
-    .sa-nav-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 28px; }
-    .sa-nav-links a { font-size: .9375rem; font-weight: 600; color: rgba(255,255,255,.8); text-decoration: none; transition: color .15s; }
-    .sa-nav-links a:hover, .sa-nav-links a.active { color: #E6B16C; }
-    .sa-nav-cta { display: inline-flex; align-items: center; background: var(--cta); color: #241300; font-size: .9375rem; font-weight: 700; text-decoration: none; border-radius: 8px; padding: 10px 22px; transition: background .18s; }
-    .sa-nav-cta:hover { background: #b8711f; }
-    .sa-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-    .sa-hamburger span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; border-radius: 2px; transition: transform .2s, opacity .2s; }
-    .sa-mobile-menu { display: none; background: var(--primary); border-top: 1px solid rgba(255,255,255,.1); padding: 20px 24px 28px; }
-    .sa-mobile-menu.open { display: block; }
-    .sa-mobile-menu a { display: block; font-size: 1rem; font-weight: 600; color: rgba(255,255,255,.85); text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.07); }
-    .sa-mobile-menu a:last-child { border-bottom: none; }
-    .sa-mobile-cta { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
-    .sa-mobile-cta a { text-align: center; border-radius: 8px; padding: 13px; font-weight: 700; font-size: .9375rem; text-decoration: none; }
-    .sa-mobile-cta .sa-nav-cta { background: var(--cta); color: #241300; }
-    .sa-mobile-cta .sa-nav-cta-sec { background: rgba(255,255,255,.1); color: #fff; border: 1px solid rgba(255,255,255,.2); }
-
-    /* ── Section wrapper ── */
-    .sa-section { padding: 64px 0; }
-    .sa-section--surface { background: var(--surface); }
-    .sa-section--dark { background: var(--primary); }
-    .sa-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .sa-inner--narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-
-    /* ── Eyebrow ── */
-    .sa-eyebrow { display: block; font-size: .6875rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--cta); margin-bottom: 10px; }
-
-    /* ── Section headings ── */
-    .sa-h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; color: var(--primary); margin: 0 0 16px; line-height: 1.15; }
-    .sa-h2 { font-size: clamp(1.375rem, 2.5vw, 1.875rem); font-weight: 800; color: var(--primary); margin: 0 0 12px; line-height: 1.2; }
-    .sa-h2--white { color: #fff; }
-    .sa-lead { font-size: 1rem; color: var(--muted); line-height: 1.65; margin: 0 0 28px; }
-    .sa-intro { font-size: .9375rem; color: var(--muted); line-height: 1.65; margin: 0 0 32px; }
-
-    /* ── Hero layout ── */
-    .sa-hero { background: var(--primary); padding: 64px 0 0; }
-    .sa-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-    .sa-hero-content { padding-bottom: 64px; }
-    .sa-hero-h1 { font-size: clamp(1.75rem, 3.5vw, 2.625rem); font-weight: 800; color: #fff; margin: 0 0 16px; line-height: 1.15; }
-    .sa-hero-lead { font-size: 1rem; color: rgba(255,255,255,.78); line-height: 1.65; margin: 0 0 28px; }
-    .sa-hero-micro { font-size: .875rem; color: rgba(255,255,255,.55); margin: 16px 0 0; line-height: 1.5; }
-    .sa-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .sa-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--cta); color: #241300; font-size: 1rem; font-weight: 700; text-decoration: none; border-radius: 8px; padding: 14px 28px; transition: background .18s, transform .12s; }
-    .sa-btn-primary:hover { background: #b8711f; transform: translateY(-1px); }
-    .sa-btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); color: #fff; font-size: .9375rem; font-weight: 600; text-decoration: none; border-radius: 8px; padding: 13px 22px; border: 1px solid rgba(255,255,255,.2); transition: background .18s; }
-    .sa-btn-secondary:hover { background: rgba(255,255,255,.18); }
-    .sa-btn-navy { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; font-size: .9375rem; font-weight: 600; text-decoration: none; border-radius: 8px; padding: 13px 22px; border: 1px solid rgba(255,255,255,.15); transition: background .18s; }
-    .sa-btn-navy:hover { background: #1a3050; }
-
-    /* ── Map board ── */
-    .sa-map-board { background: rgba(255,255,255,.06); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.1); }
-    .sa-map-img { display: block; width: 100%; height: auto; }
-    .sa-map-caption { font-size: .8125rem; color: rgba(255,255,255,.45); line-height: 1.5; padding: 12px 16px; text-align: center; }
-
-    /* ── Area groups ── */
-    .sa-area-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .sa-area-card { background: #fff; border: 1.5px solid var(--soft); border-radius: 14px; padding: 24px 22px 20px; box-shadow: 0 2px 12px rgba(16,32,51,.05); }
-    .sa-area-card-label { font-size: .625rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cta); margin-bottom: 12px; display: block; }
-    .sa-area-card h3 { font-size: 1rem; font-weight: 800; color: var(--primary); margin: 0 0 14px; }
-    .sa-area-chips { display: flex; flex-wrap: wrap; gap: 7px; }
-    .sa-chip { font-size: .8125rem; font-weight: 600; color: var(--primary); background: var(--background); border: 1.5px solid var(--soft); border-radius: 20px; padding: 5px 13px; text-decoration: none; transition: border-color .15s, background .15s; }
-    .sa-chip:hover { border-color: var(--cta); background: #fff; }
-    .sa-chip--primary { background: rgba(16,32,51,.07); border-color: rgba(16,32,51,.15); }
-    .sa-area-note { font-size: .875rem; color: var(--muted); line-height: 1.55; margin: 20px 0 0; padding: 14px 18px; background: rgba(16,32,51,.03); border-radius: 8px; border-left: 3px solid var(--soft); }
-
-    /* ── Location factor cards ── */
-    .sa-factor-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .sa-factor-card { background: #fff; border: 1.5px solid var(--soft); border-radius: 14px; padding: 22px 20px 18px; box-shadow: 0 2px 10px rgba(16,32,51,.05); }
-    .sa-factor-num { font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cta); margin-bottom: 10px; }
-    .sa-factor-card h3 { font-size: .9375rem; font-weight: 700; color: var(--primary); margin: 0 0 6px; }
-    .sa-factor-card p { font-size: .875rem; color: var(--muted); margin: 0; line-height: 1.55; }
-
-    /* ── Request type chips ── */
-    .sa-type-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
-    .sa-type-chip { font-size: .9375rem; font-weight: 600; color: var(--primary); background: #fff; border: 1.5px solid var(--soft); border-radius: 10px; padding: 10px 18px; box-shadow: 0 1px 6px rgba(16,32,51,.05); }
-    .sa-type-link { font-size: .9375rem; color: var(--cta); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-    .sa-type-link:hover { text-decoration: underline; }
-
-    /* ── City anchor sections ── */
-    .sa-city-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .sa-city-card { background: #fff; border: 1.5px solid var(--soft); border-radius: 14px; padding: 28px 26px 24px; box-shadow: 0 2px 12px rgba(16,32,51,.05); scroll-margin-top: 80px; }
-    .sa-city-card h2 { font-size: 1.1875rem; font-weight: 800; color: var(--primary); margin: 0 0 6px; }
-    .sa-city-card-sub { font-size: .8125rem; font-weight: 600; color: var(--muted); margin: 0 0 14px; }
-    .sa-city-card p { font-size: .9375rem; color: var(--muted); line-height: 1.65; margin: 0 0 18px; }
-    .sa-city-cta { display: inline-flex; align-items: center; gap: 6px; font-size: .9375rem; font-weight: 700; color: var(--primary); text-decoration: none; border: 1.5px solid var(--soft); border-radius: 8px; padding: 10px 18px; transition: border-color .18s, background .18s; }
-    .sa-city-cta:hover { border-color: var(--cta); background: var(--background); }
-
-    /* ── FAQ ── */
-    .sa-faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .sa-faq-card { background: #fff; border: 1.5px solid var(--soft); border-radius: 12px; padding: 20px 22px; box-shadow: 0 2px 8px rgba(16,32,51,.04); }
-    .sa-faq-card h3 { font-size: .9375rem; font-weight: 700; color: var(--primary); margin: 0 0 8px; line-height: 1.4; }
-    .sa-faq-card p { font-size: .9375rem; color: var(--muted); margin: 0; line-height: 1.65; }
-
-    /* ── Final CTA ── */
-    .sa-final-cta { text-align: center; }
-    .sa-final-cta .sa-eyebrow { justify-content: center; display: block; }
-    .sa-final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; margin: 0 0 12px; }
-    .sa-final-cta p { color: rgba(255,255,255,.72); font-size: 1rem; line-height: 1.65; margin: 0 auto 28px; max-width: 520px; }
-    .sa-final-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-
-    /* ── Footer ── */
-    .sa-footer { background: var(--primary); border-top: 1px solid rgba(255,255,255,.08); padding: 40px 24px 32px; }
-    .sa-footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
-    .sa-footer-brand { font-size: 1.125rem; font-weight: 800; color: #fff; text-decoration: none; }
-    .sa-footer-brand span { color: #E6B16C; }
-    .sa-footer-tagline { font-size: .875rem; color: rgba(255,255,255,.6); margin: 0; }
-    .sa-footer-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
-    .sa-footer-nav a { font-size: .875rem; color: rgba(255,255,255,.7); text-decoration: none; transition: color .15s; }
-    .sa-footer-nav a:hover { color: #E6B16C; }
-    .sa-footer-nav a.active { color: #E6B16C; }
-    .sa-footer-copy { font-size: .8125rem; color: rgba(255,255,255,.4); margin: 0; }
-
-    /* ── Responsive ── */
-    @media (max-width: 900px) {
-      .sa-hero-grid { grid-template-columns: 1fr; gap: 32px; }
-      .sa-hero-content { padding-bottom: 0; }
-      .sa-area-groups { grid-template-columns: 1fr; }
-      .sa-factor-grid { grid-template-columns: 1fr 1fr; }
-      .sa-city-grid { grid-template-columns: 1fr; }
-      .sa-faq-grid { grid-template-columns: 1fr; }
+    .sa-page{background:var(--background)}
+    /* Header */
+    .sa-header{background:var(--primary);position:sticky;top:0;z-index:100}
+    .sa-nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .sa-nav-brand{font-size:1.0625rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:6px}
+    .sa-nav-brand span{color:#E6B16C}
+    .sa-nav-links{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+    .sa-nav-links a{font-size:.9375rem;font-weight:600;color:rgba(255,255,255,.8);text-decoration:none;transition:color .15s}
+    .sa-nav-links a:hover,.sa-nav-links a.active{color:#E6B16C}
+    .sa-nav-cta{display:inline-flex;align-items:center;background:var(--cta);color:#241300;font-size:.9375rem;font-weight:700;text-decoration:none;border-radius:8px;padding:10px 22px;transition:background .18s}
+    .sa-nav-cta:hover{background:#b8711f}
+    .sa-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+    .sa-hamburger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;border-radius:2px}
+    .sa-mobile-menu{display:none;background:var(--primary);border-top:1px solid rgba(255,255,255,.1);padding:20px 24px 28px}
+    .sa-mobile-menu.open{display:block}
+    .sa-mobile-menu a{display:block;font-size:1rem;font-weight:600;color:rgba(255,255,255,.85);text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+    .sa-mobile-cta{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+    .sa-mobile-cta a{text-align:center;border-radius:8px;padding:13px;font-weight:700;font-size:.9375rem;text-decoration:none}
+    .sa-mobile-cta .sa-nav-cta{background:var(--cta);color:#241300}
+    .sa-mobile-cta .sa-nav-cta-sec{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
+    /* Layout */
+    .sa-section{padding:64px 0}
+    .sa-section--surface{background:var(--surface)}
+    .sa-section--dark{background:var(--primary)}
+    .sa-section--tint{background:#F2EDE4}
+    .sa-inner{max-width:1100px;margin:0 auto;padding:0 24px}
+    .sa-inner--narrow{max-width:760px;margin:0 auto;padding:0 24px}
+    /* Typography */
+    .sa-eyebrow{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cta);margin-bottom:10px}
+    .sa-h2{font-size:clamp(1.375rem,2.5vw,1.875rem);font-weight:800;color:var(--primary);margin:0 0 12px;line-height:1.2}
+    .sa-intro{font-size:.9375rem;color:var(--muted);line-height:1.65;margin:0 0 32px}
+    /* Hero */
+    .sa-hero{background:var(--primary);padding:64px 0 0}
+    .sa-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .sa-hero-content{padding-bottom:64px}
+    .sa-hero-h1{font-size:clamp(1.75rem,3.5vw,2.625rem);font-weight:800;color:#fff;margin:0 0 16px;line-height:1.15}
+    .sa-hero-lead{font-size:1rem;color:rgba(255,255,255,.78);line-height:1.65;margin:0 0 28px}
+    .sa-hero-micro{font-size:.875rem;color:rgba(255,255,255,.5);margin:16px 0 0;line-height:1.5}
+    .sa-hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .sa-btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#241300;font-size:1rem;font-weight:700;text-decoration:none;border-radius:8px;padding:14px 28px;transition:background .18s,transform .12s}
+    .sa-btn-primary:hover{background:#b8711f;transform:translateY(-1px)}
+    .sa-btn-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);color:#fff;font-size:.9375rem;font-weight:600;text-decoration:none;border-radius:8px;padding:13px 22px;border:1px solid rgba(255,255,255,.2);transition:background .18s}
+    .sa-btn-secondary:hover{background:rgba(255,255,255,.18)}
+    .sa-btn-navy{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;font-size:.9375rem;font-weight:600;text-decoration:none;border-radius:8px;padding:13px 22px;border:1px solid rgba(255,255,255,.15);transition:background .18s}
+    .sa-btn-navy:hover{background:#1a3050}
+    /* Map */
+    .sa-map-board{background:rgba(255,255,255,.06);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+    .sa-map-img{display:block;width:100%;height:auto}
+    .sa-map-caption{font-size:.8125rem;color:rgba(255,255,255,.45);line-height:1.5;padding:12px 16px;text-align:center}
+    /* 10-city hub */
+    .sa-city-hub-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:12px}
+    .sa-hub-card{background:#fff;border:1.5px solid var(--soft);border-radius:12px;padding:18px 16px 16px;box-shadow:0 2px 8px rgba(16,32,51,.05);display:flex;flex-direction:column;gap:8px}
+    .sa-hub-card-state{font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cta);margin-bottom:2px}
+    .sa-hub-card h3{font-size:.9375rem;font-weight:800;color:var(--primary);margin:0;line-height:1.2}
+    .sa-hub-card p{font-size:.8125rem;color:var(--muted);margin:0;line-height:1.5;flex:1}
+    .sa-hub-card-link{font-size:.8125rem;font-weight:700;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center;gap:4px;border:1.5px solid var(--soft);border-radius:6px;padding:6px 12px;transition:border-color .15s,background .15s;align-self:flex-start;margin-top:4px}
+    .sa-hub-card-link:hover{border-color:var(--cta);background:var(--background)}
+    /* SEO text block */
+    .sa-prose{display:flex;flex-direction:column;gap:16px}
+    .sa-prose p{font-size:.9375rem;color:var(--muted);line-height:1.7;margin:0}
+    /* Factor cards */
+    .sa-factor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .sa-factor-card{background:#fff;border:1.5px solid var(--soft);border-radius:14px;padding:22px 20px 18px;box-shadow:0 2px 10px rgba(16,32,51,.05)}
+    .sa-factor-num{font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cta);margin-bottom:10px}
+    .sa-factor-card h3{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 6px}
+    .sa-factor-card p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.55}
+    /* Request types */
+    .sa-type-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+    .sa-type-chip{font-size:.9375rem;font-weight:600;color:var(--primary);background:#fff;border:1.5px solid var(--soft);border-radius:10px;padding:10px 18px;box-shadow:0 1px 6px rgba(16,32,51,.05)}
+    .sa-type-link{font-size:.9375rem;color:var(--cta);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+    .sa-type-link:hover{text-decoration:underline}
+    /* City anchor sections */
+    .sa-city-sections{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .sa-city-section{background:#fff;border:1.5px solid var(--soft);border-radius:14px;padding:28px 26px 24px;box-shadow:0 2px 12px rgba(16,32,51,.05);scroll-margin-top:80px}
+    .sa-city-section h2{font-size:1.125rem;font-weight:800;color:var(--primary);margin:0 0 4px}
+    .sa-city-section-state{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cta);margin:0 0 12px;display:block}
+    .sa-city-section p{font-size:.9375rem;color:var(--muted);line-height:1.65;margin:0 0 14px}
+    .sa-city-examples{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+    .sa-city-ex{font-size:.8125rem;color:var(--muted);background:var(--background);border:1px solid var(--soft);border-radius:6px;padding:4px 10px}
+    .sa-city-cta{display:inline-flex;align-items:center;gap:6px;font-size:.9375rem;font-weight:700;color:var(--primary);text-decoration:none;border:1.5px solid var(--soft);border-radius:8px;padding:10px 18px;transition:border-color .18s,background .18s}
+    .sa-city-cta:hover{border-color:var(--cta);background:var(--background)}
+    /* FAQ */
+    .sa-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .sa-faq-card{background:#fff;border:1.5px solid var(--soft);border-radius:12px;padding:20px 22px;box-shadow:0 2px 8px rgba(16,32,51,.04)}
+    .sa-faq-card h3{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 8px;line-height:1.4}
+    .sa-faq-card p{font-size:.9375rem;color:var(--muted);margin:0;line-height:1.65}
+    /* Final CTA */
+    .sa-final-cta{text-align:center}
+    .sa-final-cta h2{color:#fff;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;margin:0 0 12px}
+    .sa-final-cta p{color:rgba(255,255,255,.72);font-size:1rem;line-height:1.65;margin:0 auto 28px;max-width:520px}
+    .sa-final-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+    /* Footer */
+    .sa-footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.08);padding:40px 24px 32px}
+    .sa-footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+    .sa-footer-brand{font-size:1.125rem;font-weight:800;color:#fff;text-decoration:none}
+    .sa-footer-brand span{color:#E6B16C}
+    .sa-footer-tagline{font-size:.875rem;color:rgba(255,255,255,.6);margin:0}
+    .sa-footer-nav{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+    .sa-footer-nav a{font-size:.875rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .15s}
+    .sa-footer-nav a:hover{color:#E6B16C}
+    .sa-footer-nav a.active{color:#E6B16C}
+    .sa-footer-copy{font-size:.8125rem;color:rgba(255,255,255,.4);margin:0}
+    /* Responsive */
+    @media(max-width:1024px){
+      .sa-city-hub-grid{grid-template-columns:repeat(3,1fr)}
     }
-    @media (max-width: 768px) {
-      .sa-nav-links, .sa-nav-cta { display: none; }
-      .sa-hamburger { display: block; }
-      .sa-section { padding: 48px 0; }
-      .sa-hero { padding: 40px 0 0; }
+    @media(max-width:900px){
+      .sa-hero-grid{grid-template-columns:1fr;gap:32px}
+      .sa-hero-content{padding-bottom:0}
+      .sa-factor-grid{grid-template-columns:1fr 1fr}
+      .sa-city-sections{grid-template-columns:1fr}
+      .sa-faq-grid{grid-template-columns:1fr}
+      .sa-city-hub-grid{grid-template-columns:repeat(2,1fr)}
     }
-    @media (max-width: 480px) {
-      .sa-factor-grid { grid-template-columns: 1fr; }
-      .sa-hero-actions { flex-direction: column; }
-      .sa-btn-primary, .sa-btn-secondary { width: 100%; justify-content: center; }
-      .sa-final-actions { flex-direction: column; align-items: center; }
-      .sa-final-actions a { width: 100%; max-width: 320px; justify-content: center; }
+    @media(max-width:768px){
+      .sa-nav-links,.sa-nav-cta{display:none}
+      .sa-hamburger{display:block}
+      .sa-section{padding:48px 0}
+      .sa-hero{padding:40px 0 0}
+    }
+    @media(max-width:480px){
+      .sa-factor-grid{grid-template-columns:1fr}
+      .sa-city-hub-grid{grid-template-columns:1fr 1fr}
+      .sa-hero-actions{flex-direction:column}
+      .sa-btn-primary,.sa-btn-secondary{width:100%;justify-content:center}
+      .sa-final-actions{flex-direction:column;align-items:center}
+      .sa-final-actions a{width:100%;max-width:320px;justify-content:center}
+    }
+    @media(max-width:360px){
+      .sa-city-hub-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -194,18 +184,16 @@
     <section class="sa-hero" aria-labelledby="sa-hero-heading">
       <div class="sa-inner">
         <div class="sa-hero-grid">
-          <!-- Left: copy -->
           <div class="sa-hero-content">
             <span class="sa-eyebrow">LOCAL REQUEST REVIEW</span>
-            <h1 class="sa-hero-h1" id="sa-hero-heading">Vancouver, Portland, and nearby repair requests.</h1>
-            <p class="sa-hero-lead">Send photos, repair details, and your general location. Requests around Vancouver, Portland, nearby Clark County, and surrounding areas are reviewed by project type, access, materials, and scope.</p>
+            <h1 class="sa-hero-h1" id="sa-hero-heading">Vancouver, Portland, and nearby city repair requests.</h1>
+            <p class="sa-hero-lead">Send photos, repair details, and your general location. Requests around Vancouver, Portland, and nearby city areas are reviewed by project type, access, materials, location, and scope before the next step is clarified.</p>
             <div class="sa-hero-actions">
               <a href="../request/" class="sa-btn-primary">Start a Repair Request</a>
               <a href="../services/" class="sa-btn-secondary">See What Can Be Requested</a>
             </div>
             <p class="sa-hero-micro">Location helps clarify travel, access, materials, and the right next step.</p>
           </div>
-          <!-- Right: map board -->
           <div class="sa-map-board" role="img" aria-label="Illustrated map showing Vancouver WA and Portland OR corridor">
             <img
               src="../assets/img/service-area-vancouver-portland-map.webp"
@@ -221,57 +209,107 @@
       </div>
     </section>
 
-    <!-- 2. Area groups -->
-    <section class="sa-section sa-section--surface" aria-labelledby="sa-areas-heading">
+    <!-- 2. 10-city hub -->
+    <section class="sa-section sa-section--surface" aria-labelledby="sa-hub-heading">
       <div class="sa-inner">
-        <div class="sa-inner--narrow" style="padding:0">
-          <span class="sa-eyebrow">NEARBY AREAS</span>
-          <h2 class="sa-h2" id="sa-areas-heading">Areas that can be reviewed by location and scope</h2>
-          <p class="sa-intro">The areas below help organize request review, but they do not guarantee availability. Send your general location with photos so the request can be reviewed by project type, access, materials, and scope.</p>
+        <div class="sa-inner--narrow" style="padding:0;margin-bottom:32px">
+          <span class="sa-eyebrow">NEARBY CITY AREAS</span>
+          <h2 class="sa-h2" id="sa-hub-heading">Nearby city request areas</h2>
+          <p class="sa-intro">These city areas help organize local repair request review around the Vancouver / Portland region. Send your general location with photos so the request can be reviewed by access, materials, project type, and scope.</p>
         </div>
-        <div class="sa-area-groups">
-          <div class="sa-area-card">
-            <span class="sa-area-card-label">Primary area</span>
-            <h3>Vancouver &amp; Portland</h3>
-            <div class="sa-area-chips">
-              <a href="#vancouver-wa" class="sa-chip sa-chip--primary">Vancouver, WA</a>
-              <a href="#portland-or" class="sa-chip sa-chip--primary">Portland, OR</a>
-            </div>
+        <div class="sa-city-hub-grid">
+          <!-- Vancouver, WA -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Washington</span>
+            <h3>Vancouver, WA</h3>
+            <p>Small repairs, installs, touch-ups, and punch-list items reviewed by location and scope.</p>
+            <a href="#vancouver-wa" class="sa-hub-card-link">Review this area &#8594;</a>
           </div>
-          <div class="sa-area-card">
-            <span class="sa-area-card-label">Nearby Clark County</span>
-            <h3>Clark County areas</h3>
-            <div class="sa-area-chips">
-              <a href="#nearby-clark-county" class="sa-chip">Camas</a>
-              <a href="#nearby-clark-county" class="sa-chip">Washougal</a>
-              <a href="#nearby-clark-county" class="sa-chip">Battle Ground</a>
-              <a href="#nearby-clark-county" class="sa-chip">Ridgefield</a>
-              <a href="#nearby-clark-county" class="sa-chip">Salmon Creek</a>
-              <a href="#nearby-clark-county" class="sa-chip">Hazel Dell</a>
-            </div>
+          <!-- Portland, OR -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Oregon</span>
+            <h3>Portland, OR</h3>
+            <p>Portland-area homes vary by age, access, and project type. Photos help clarify the next step.</p>
+            <a href="#portland-or" class="sa-hub-card-link">Review this area &#8594;</a>
           </div>
-          <div class="sa-area-card">
-            <span class="sa-area-card-label">Portland-area requests</span>
-            <h3>Portland metro areas</h3>
-            <div class="sa-area-chips">
-              <a href="#portland-area-requests" class="sa-chip">North Portland</a>
-              <a href="#portland-area-requests" class="sa-chip">NE Portland</a>
-              <a href="#portland-area-requests" class="sa-chip">Beaverton</a>
-              <a href="#portland-area-requests" class="sa-chip">Gresham</a>
-              <a href="#portland-area-requests" class="sa-chip">Tigard</a>
-              <a href="#portland-area-requests" class="sa-chip">Milwaukie</a>
-              <a href="#portland-area-requests" class="sa-chip">Oregon City</a>
-            </div>
+          <!-- Hillsboro, OR -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Oregon</span>
+            <h3>Hillsboro, OR</h3>
+            <p>Hillsboro-area requests can be reviewed by location, access, materials, and project scope.</p>
+            <a href="#hillsboro-or" class="sa-hub-card-link">Review this area &#8594;</a>
+          </div>
+          <!-- Beaverton, OR -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Oregon</span>
+            <h3>Beaverton, OR</h3>
+            <p>Beaverton requests reviewed by photos, location, access, and repair type before the next step.</p>
+            <a href="#beaverton-or" class="sa-hub-card-link">Review this area &#8594;</a>
+          </div>
+          <!-- Gresham, OR -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Oregon</span>
+            <h3>Gresham, OR</h3>
+            <p>Gresham-area repair requests reviewed by location, access, materials, and project type.</p>
+            <a href="#gresham-or" class="sa-hub-card-link">Review this area &#8594;</a>
+          </div>
+          <!-- Tigard, OR -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Oregon</span>
+            <h3>Tigard, OR</h3>
+            <p>Tigard requests may be reviewed by location, scope, and access before the next step.</p>
+            <a href="#tigard-or" class="sa-hub-card-link">Review this area &#8594;</a>
+          </div>
+          <!-- Lake Oswego, OR -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Oregon</span>
+            <h3>Lake Oswego, OR</h3>
+            <p>Lake Oswego repair requests reviewed by photos, access, materials, and project type.</p>
+            <a href="#lake-oswego-or" class="sa-hub-card-link">Review this area &#8594;</a>
+          </div>
+          <!-- Oregon City, OR -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Oregon</span>
+            <h3>Oregon City, OR</h3>
+            <p>Oregon City requests reviewed by location, access, materials, and scope before the next step.</p>
+            <a href="#oregon-city-or" class="sa-hub-card-link">Review this area &#8594;</a>
+          </div>
+          <!-- Camas, WA -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Washington</span>
+            <h3>Camas, WA</h3>
+            <p>Camas-area requests reviewed by location, access, and scope. Photos help clarify the next step.</p>
+            <a href="#camas-wa" class="sa-hub-card-link">Review this area &#8594;</a>
+          </div>
+          <!-- Battle Ground, WA -->
+          <div class="sa-hub-card">
+            <span class="sa-hub-card-state">Washington</span>
+            <h3>Battle Ground, WA</h3>
+            <p>Battle Ground requests reviewed by location, access, materials, and project type.</p>
+            <a href="#battle-ground-wa" class="sa-hub-card-link">Review this area &#8594;</a>
           </div>
         </div>
-        <p class="sa-area-note">These areas are examples for request review. Availability and the next step may depend on location, project type, access, materials, and scope.</p>
+        <p style="font-size:.875rem;color:var(--muted);line-height:1.55;margin:20px 0 0;padding:14px 18px;background:rgba(16,32,51,.03);border-radius:8px;border-left:3px solid var(--soft)">These city areas are examples for request review. Availability and the next step may depend on location, project type, access, materials, and scope.</p>
       </div>
     </section>
 
-    <!-- 3. How location affects the next step -->
-    <section class="sa-section" aria-labelledby="sa-location-heading">
+    <!-- 3. How local repair request review works (SEO/support text) -->
+    <section class="sa-section" aria-labelledby="sa-how-heading">
+      <div class="sa-inner--narrow">
+        <span class="sa-eyebrow">HOW IT WORKS</span>
+        <h2 class="sa-h2" id="sa-how-heading">How local repair request review works</h2>
+        <div class="sa-prose">
+          <p>Vancouver and Portland area homes vary by building age, access, parking, materials, and project type. A repair request in a newer Vancouver suburb may look different from one in an older Portland neighborhood &mdash; access, stairs, parking, and material availability can all affect what details are needed before the next step is clarified.</p>
+          <p>Nearby city areas including Hillsboro, Beaverton, Gresham, Tigard, Lake Oswego, Oregon City, Camas, and Battle Ground may be reviewed by location and scope. The listed city areas are not a guaranteed service boundary. Availability depends on location, project type, access, materials, and scheduling fit.</p>
+          <p>Photos, close-ups, access notes, and material details help make the first review more useful. A few clear photos of the repair area, the surface or fixture, and any access details help clarify the project type and what the next step may be.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. How location affects the next step -->
+    <section class="sa-section sa-section--surface" aria-labelledby="sa-location-heading">
       <div class="sa-inner">
-        <div class="sa-inner--narrow" style="padding:0">
+        <div class="sa-inner--narrow" style="padding:0;margin-bottom:32px">
           <span class="sa-eyebrow">LOCATION &amp; SCOPE</span>
           <h2 class="sa-h2" id="sa-location-heading">How location affects the next step</h2>
           <p class="sa-intro">Location is one part of the review. It can affect access, parking, material planning, travel, project type, and whether another provider or licensed trade specialist may be needed.</p>
@@ -301,8 +339,8 @@
       </div>
     </section>
 
-    <!-- 4. Common request types -->
-    <section class="sa-section sa-section--surface" aria-labelledby="sa-types-heading">
+    <!-- 5. Common request types -->
+    <section class="sa-section sa-section--tint" aria-labelledby="sa-types-heading">
       <div class="sa-inner--narrow">
         <span class="sa-eyebrow">REQUEST TYPES</span>
         <h2 class="sa-h2" id="sa-types-heading">Common request types that may be reviewed</h2>
@@ -320,44 +358,163 @@
       </div>
     </section>
 
-    <!-- 5. City / area anchor sections -->
-    <section class="sa-section" aria-label="Area detail sections">
+    <!-- 6. 10 city anchor sections -->
+    <section class="sa-section sa-section--surface" aria-label="City area detail sections">
       <div class="sa-inner">
         <div class="sa-inner--narrow" style="padding:0;margin-bottom:32px">
           <span class="sa-eyebrow">AREA DETAILS</span>
-          <h2 class="sa-h2">Request review by area</h2>
+          <h2 class="sa-h2">Request review by city area</h2>
         </div>
-        <div class="sa-city-grid">
-          <div class="sa-city-card" id="vancouver-wa">
+        <div class="sa-city-sections">
+
+          <!-- Vancouver, WA -->
+          <!-- Future city page: /service-area/vancouver-wa/ -->
+          <div class="sa-city-section" id="vancouver-wa">
             <h2>Vancouver, WA</h2>
-            <p class="sa-city-card-sub">Primary request area</p>
+            <span class="sa-city-section-state">Washington</span>
             <p>Vancouver-area requests can include small repairs, installs, touch-ups, trim details, door hardware, and grouped punch-list items. Photos and a general location help clarify access, materials, and the right next step.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Wall repair</span>
+              <span class="sa-city-ex">Door &amp; trim</span>
+              <span class="sa-city-ex">Small installs</span>
+              <span class="sa-city-ex">Punch-list</span>
+            </div>
             <a href="../request/" class="sa-city-cta">Start a Repair Request &#8594;</a>
           </div>
-          <div class="sa-city-card" id="portland-or">
+
+          <!-- Portland, OR -->
+          <!-- Future city page: /service-area/portland-or/ -->
+          <div class="sa-city-section" id="portland-or">
             <h2>Portland, OR</h2>
-            <p class="sa-city-card-sub">Primary request area</p>
+            <span class="sa-city-section-state">Oregon</span>
             <p>Portland-area homes can vary by building age, parking, access, and project type. Sending photos and a general location helps review whether the request looks like a fit and what details may be needed next.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Touch-ups</span>
+              <span class="sa-city-ex">Hardware</span>
+              <span class="sa-city-ex">Assembly</span>
+              <span class="sa-city-ex">Fixtures</span>
+            </div>
             <a href="../request/" class="sa-city-cta">Start a Repair Request &#8594;</a>
           </div>
-          <div class="sa-city-card" id="nearby-clark-county">
-            <h2>Nearby Clark County</h2>
-            <p class="sa-city-card-sub">Camas, Washougal, Battle Ground, Ridgefield, Salmon Creek, Hazel Dell</p>
-            <p>Nearby Clark County requests can be reviewed by location and scope. Include photos, the general area, and any access or material details that may affect the next step.</p>
+
+          <!-- Hillsboro, OR -->
+          <!-- Future city page: /service-area/hillsboro-or/ -->
+          <div class="sa-city-section" id="hillsboro-or">
+            <h2>Hillsboro, OR</h2>
+            <span class="sa-city-section-state">Oregon</span>
+            <p>Hillsboro-area requests can be reviewed by location and scope. Include photos, the general area, and any access or material details that may affect the next step.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Wall repair</span>
+              <span class="sa-city-ex">Door &amp; trim</span>
+              <span class="sa-city-ex">TV mounting</span>
+            </div>
             <a href="../request/#photo-checklist" class="sa-city-cta">Send Photos for Review &#8594;</a>
           </div>
-          <div class="sa-city-card" id="portland-area-requests">
-            <h2>Portland-area requests</h2>
-            <p class="sa-city-card-sub">North Portland, NE Portland, Beaverton, Gresham, Tigard, Milwaukie, Oregon City</p>
-            <p>Portland-area requests may depend on travel, access, parking, materials, project type, and scope. A few clear photos and the general location help make the first review more useful.</p>
+
+          <!-- Beaverton, OR -->
+          <!-- Future city page: /service-area/beaverton-or/ -->
+          <div class="sa-city-section" id="beaverton-or">
+            <h2>Beaverton, OR</h2>
+            <span class="sa-city-section-state">Oregon</span>
+            <p>Beaverton-area requests may depend on travel, access, parking, materials, project type, and scope. A few clear photos and the general location help make the first review more useful.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Installs</span>
+              <span class="sa-city-ex">Punch-list</span>
+              <span class="sa-city-ex">Touch-ups</span>
+            </div>
             <a href="../request/#photo-checklist" class="sa-city-cta">Send Photos for Review &#8594;</a>
           </div>
+
+          <!-- Gresham, OR -->
+          <!-- Future city page: /service-area/gresham-or/ -->
+          <div class="sa-city-section" id="gresham-or">
+            <h2>Gresham, OR</h2>
+            <span class="sa-city-section-state">Oregon</span>
+            <p>Gresham-area repair requests can be reviewed by location, access, materials, and project type. Photos and a general location help clarify the next step.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Wall repair</span>
+              <span class="sa-city-ex">Hardware</span>
+              <span class="sa-city-ex">Assembly</span>
+            </div>
+            <a href="../request/#photo-checklist" class="sa-city-cta">Send Photos for Review &#8594;</a>
+          </div>
+
+          <!-- Tigard, OR -->
+          <!-- Future city page: /service-area/tigard-or/ -->
+          <div class="sa-city-section" id="tigard-or">
+            <h2>Tigard, OR</h2>
+            <span class="sa-city-section-state">Oregon</span>
+            <p>Tigard requests may be reviewed by location, scope, and access. Include photos and any access or material details that may affect the next step.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Door &amp; trim</span>
+              <span class="sa-city-ex">Fixtures</span>
+              <span class="sa-city-ex">Touch-ups</span>
+            </div>
+            <a href="../request/#photo-checklist" class="sa-city-cta">Send Photos for Review &#8594;</a>
+          </div>
+
+          <!-- Lake Oswego, OR -->
+          <!-- Future city page: /service-area/lake-oswego-or/ -->
+          <div class="sa-city-section" id="lake-oswego-or">
+            <h2>Lake Oswego, OR</h2>
+            <span class="sa-city-section-state">Oregon</span>
+            <p>Lake Oswego repair requests can be reviewed by photos, access, materials, and project type. A general location and close-up photos help clarify the next step.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Small installs</span>
+              <span class="sa-city-ex">Punch-list</span>
+              <span class="sa-city-ex">Hardware</span>
+            </div>
+            <a href="../request/#photo-checklist" class="sa-city-cta">Send Photos for Review &#8594;</a>
+          </div>
+
+          <!-- Oregon City, OR -->
+          <!-- Future city page: /service-area/oregon-city-or/ -->
+          <div class="sa-city-section" id="oregon-city-or">
+            <h2>Oregon City, OR</h2>
+            <span class="sa-city-section-state">Oregon</span>
+            <p>Oregon City requests can be reviewed by location, access, materials, and scope. Photos and a general location help clarify what details are needed before the next step.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Wall repair</span>
+              <span class="sa-city-ex">Door &amp; trim</span>
+              <span class="sa-city-ex">Assembly</span>
+            </div>
+            <a href="../request/#photo-checklist" class="sa-city-cta">Send Photos for Review &#8594;</a>
+          </div>
+
+          <!-- Camas, WA -->
+          <!-- Future city page: /service-area/camas-wa/ -->
+          <div class="sa-city-section" id="camas-wa">
+            <h2>Camas, WA</h2>
+            <span class="sa-city-section-state">Washington</span>
+            <p>Camas-area requests can be reviewed by location and scope. Include photos, the general area, and any access or material details that may affect the next step.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Touch-ups</span>
+              <span class="sa-city-ex">Installs</span>
+              <span class="sa-city-ex">Punch-list</span>
+            </div>
+            <a href="../request/#photo-checklist" class="sa-city-cta">Send Photos for Review &#8594;</a>
+          </div>
+
+          <!-- Battle Ground, WA -->
+          <!-- Future city page: /service-area/battle-ground-wa/ -->
+          <div class="sa-city-section" id="battle-ground-wa">
+            <h2>Battle Ground, WA</h2>
+            <span class="sa-city-section-state">Washington</span>
+            <p>Battle Ground requests can be reviewed by location, access, materials, and project type. A few clear photos and the general location help make the first review more useful.</p>
+            <div class="sa-city-examples">
+              <span class="sa-city-ex">Wall repair</span>
+              <span class="sa-city-ex">Hardware</span>
+              <span class="sa-city-ex">Assembly</span>
+            </div>
+            <a href="../request/#photo-checklist" class="sa-city-cta">Send Photos for Review &#8594;</a>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 6. FAQ -->
-    <section class="sa-section sa-section--surface" aria-labelledby="sa-faq-heading">
+    <!-- 7. FAQ -->
+    <section class="sa-section" aria-labelledby="sa-faq-heading">
       <div class="sa-inner">
         <div class="sa-inner--narrow" style="padding:0;margin-bottom:32px">
           <span class="sa-eyebrow">QUESTIONS</span>
@@ -369,8 +526,12 @@
             <p>Requests around Vancouver, Portland, and nearby areas can be reviewed by location, access, project type, materials, and scope.</p>
           </div>
           <div class="sa-faq-card">
-            <h3>Can I send a request if I am outside the listed areas?</h3>
-            <p>You can send your general location and photos. The next step depends on location, access, materials, project type, and scope.</p>
+            <h3>Can I send a request from Hillsboro, Beaverton, Gresham, or nearby cities?</h3>
+            <p>Requests from nearby city areas including Hillsboro, Beaverton, Gresham, Tigard, Lake Oswego, Oregon City, Camas, and Battle Ground can be reviewed by location and scope.</p>
+          </div>
+          <div class="sa-faq-card">
+            <h3>Are all listed city areas guaranteed?</h3>
+            <p>No. The listed city areas are examples for request review. Availability and the next step may depend on location, project type, access, materials, and scope.</p>
           </div>
           <div class="sa-faq-card">
             <h3>Why does location matter?</h3>
@@ -381,18 +542,14 @@
             <p>Yes. Photos help clarify the repair area, surface, fixture, materials, and condition before the next step is clarified.</p>
           </div>
           <div class="sa-faq-card">
-            <h3>Are all listed locations guaranteed?</h3>
-            <p>No. The listed areas are examples for request review. Availability and the next step may depend on location, project type, access, materials, and scope.</p>
-          </div>
-          <div class="sa-faq-card">
-            <h3>What if the work needs a licensed trade specialist?</h3>
-            <p>Some larger electrical, plumbing, roofing, structural, or permit-heavy work may require a licensed trade specialist or contractor.</p>
+            <h3>Will individual city pages be added later?</h3>
+            <p>Individual city pages for areas like Vancouver, Portland, Hillsboro, Beaverton, and others may be added in a future update. For now, each city area can be reviewed by sending photos and a general location.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7. Final CTA -->
+    <!-- 8. Final CTA -->
     <section class="sa-section sa-section--dark" aria-labelledby="sa-cta-heading">
       <div class="sa-inner sa-final-cta">
         <span class="sa-eyebrow" style="color:#E6B16C">READY TO CHECK YOUR AREA?</span>
@@ -419,8 +576,14 @@
           <li><a href="../service-area/" class="active">Service Area</a></li>
           <li><a href="#vancouver-wa">Vancouver, WA</a></li>
           <li><a href="#portland-or">Portland, OR</a></li>
-          <li><a href="#nearby-clark-county">Clark County</a></li>
-          <li><a href="#portland-area-requests">Portland Area</a></li>
+          <li><a href="#hillsboro-or">Hillsboro, OR</a></li>
+          <li><a href="#beaverton-or">Beaverton, OR</a></li>
+          <li><a href="#gresham-or">Gresham, OR</a></li>
+          <li><a href="#tigard-or">Tigard, OR</a></li>
+          <li><a href="#lake-oswego-or">Lake Oswego, OR</a></li>
+          <li><a href="#oregon-city-or">Oregon City, OR</a></li>
+          <li><a href="#camas-wa">Camas, WA</a></li>
+          <li><a href="#battle-ground-wa">Battle Ground, WA</a></li>
         </ul>
       </nav>
       <p class="sa-footer-copy">&copy; 2026 Local Repair Pro. Demo website concept.</p>
@@ -428,15 +591,14 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
-    (function() {
-      var btn = document.querySelector('.sa-hamburger');
-      var menu = document.getElementById('sa-mobile-nav');
-      if (!btn || !menu) return;
-      btn.addEventListener('click', function() {
-        var open = menu.hidden === false;
-        menu.hidden = open;
-        btn.setAttribute('aria-expanded', String(!open));
+    (function(){
+      var btn=document.querySelector('.sa-hamburger');
+      var menu=document.getElementById('sa-mobile-nav');
+      if(!btn||!menu)return;
+      btn.addEventListener('click',function(){
+        var open=menu.hidden===false;
+        menu.hidden=open;
+        btn.setAttribute('aria-expanded',String(!open));
       });
     })();
   </script>
