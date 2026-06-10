@@ -1437,3 +1437,88 @@ body.final-menu-open { overflow: hidden; }
 @media (max-width: 360px) {
   .sa-city-hub-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== FOOTER LANDSCAPE / TABLET COMPACT LAYOUT =====
+   Target: landscape phones (667-932px wide, ≤500px tall)
+   and mid-width tablets (500px–900px).
+   Goal: brand full-width top row, left col = nav link groups stacked,
+   right col = Request Areas / city list.
+   Avoids the city-list dropping as a full-width block below. */
+
+/* --- Premium footer (homepage / 4-col .footer-inner grid) --- */
+@media (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px 32px;
+    padding: 36px 20px 24px;
+  }
+  .footer-brand-col {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  /* Col 2 and 3 (Start here + Common requests) — stack in left cell */
+  .footer-inner > .footer-col:nth-child(2),
+  .footer-inner > .footer-col:nth-child(3) {
+    grid-column: 1;
+  }
+  .footer-inner > .footer-col:nth-child(2) { grid-row: 2; }
+  .footer-inner > .footer-col:nth-child(3) { grid-row: 3; }
+  /* Col 4 (Nearby request areas) — right cell, spans rows 2-3 */
+  .footer-inner > .footer-col:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2 / 4;
+  }
+}
+
+/* --- City/3-col footer (.footer-grid) --- */
+@media (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px 32px;
+  }
+  /* brand-col: full width top */
+  .footer-grid > .footer-brand-col {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  /* Pages col: left */
+  .footer-grid > .footer-col:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  /* Request Areas col: right */
+  .footer-grid > .footer-col:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+/* Tighten vertical padding and link spacing in landscape */
+@media (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
+  .footer-col h4 { margin-bottom: 10px; }
+  .footer-col a { margin-bottom: 5px; }
+  .footer-col li { margin-bottom: 5px; }
+  .footer-grid { margin-bottom: 24px; }
+  .footer-bottom { padding-top: 14px; }
+}
+
+/* City pages: also fix the mid-width tablet range (non-landscape)
+   where footer-grid currently keeps 1fr 1fr which already works,
+   but at 480px–768px portrait city pages should still collapse to 1-col
+   (already handled by existing max-width:480px rule). No change needed. */
+
+/* Ensure .footer-col--areas (homepage long city list) uses 2 columns
+   on landscape to avoid a tall single column */
+@media (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
+  .footer-col--areas {
+    column-count: 2;
+    column-gap: 12px;
+  }
+  .footer-col--areas a {
+    display: block;
+    margin-bottom: 4px;
+    break-inside: avoid;
+  }
+}
