@@ -21,6 +21,19 @@ It does not include every commit — only commits with documented, verified desc
 
 ## Selected Commit History
 
+### 2026-06-10 — Footer system polish and landscape refinement
+
+Latest baseline: `87fcce0` — Refine footer layout for landscape viewports
+
+| Commit | Type | Description |
+|---|---|---|
+| `35301dd` | Docs | Documented P1 accessibility and metadata cleanup (CHANGELOG and PROJECT-SNAPSHOT). |
+| `a3640e6` | Website | Standardized footer structure across /request/, /services/, /service-area/, and all 10 city pages. Homepage premium footer was already correct and was left unchanged. Footer now follows a shared .site-footer system: brand/description/safety note, pages nav, request-area city links, copyright bottom bar. Normalized city page footer relative paths and copyright year to © 2026. Removed page-scoped inline footer CSS (rq-footer, svc-footer, sa-footer). No sitemap, schema, backend, assets/img, or business claims changed. |
+| `87fcce0` | Website | Added CSS-only responsive footer layout for mobile landscape and small tablet widths. Breakpoint: @media (min-width: 500px) and (max-width: 900px) and (orientation: landscape). Brand/safety note spans full width at top. Navigation and request-type columns stack on the left. City/request-area links sit on the right. Homepage long city list uses 2-column CSS multi-column layout in landscape. Portrait mobile and desktop behavior unchanged. |
+
+---
+
+
 ### 2026-06-09 — P1 accessibility and metadata cleanup
 
 Latest baseline: `54d3a0f` — Add skip links and complete OG meta on main pages
@@ -111,4 +124,5 @@ If this description is confirmed, add it to the table above between `01c97ca` an
 The homepage is stable at commit `1cda438`. The /request/ page was added in `7b038cd` and refined through `9446655`.
 The /services/ page was added in `1153f7f` and cross-page chrome was fixed through `544e58a`.
 The /service-area/ hub was created in `f42f433`. Ten city pages were added in `5a60035` and polished through `0c3ea36`. P1 accessibility and metadata cleanup was completed in `54d3a0f`.
+Footer system was standardized across all pages in `a3640e6`. Landscape footer layout was refined in `87fcce0`.
 Documentation commits do not change the live site.

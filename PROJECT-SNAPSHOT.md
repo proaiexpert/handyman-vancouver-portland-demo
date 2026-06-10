@@ -10,9 +10,9 @@ https://proai-expert.com/handyman-vancouver-portland-demo/
 https://github.com/proaiexpert/handyman-vancouver-portland-demo
 
 ## Current Latest Baseline
-`54d3a0f` — Add skip links and complete OG meta on main pages
+`87fcce0` — Refine footer layout for landscape viewports
 
-**Previous homepage baseline:** `1720619` — Polish homepage footer
+**Previous code baseline:** `a3640e6` — Polish footer system across site
 
 ---
 
@@ -28,7 +28,9 @@ Production-like demo — stable. `noindex, nofollow` active on all pages. Not re
 - /services/ and /service-area/: full OG set (title/description/type/url/image/image:alt) + Twitter card
 - City pages: OG title/description/type/url present; no og:image (correct — no approved city OG image exists)
 - /service-area/ heading hierarchy corrected — city card titles are H3; main section headings remain H2
-- noindex/nofollow preserved on all 14 pages
+- noindex/nofollow preserved
+- Shared .site-footer structure used (consistent with all other pages)
+- Footer relative paths corrected, copyright year normalized to © 2026 on all 14 pages
 
 ---
 
@@ -147,10 +149,11 @@ The site avoids all of the following:
 
 ## Next Possible Work
 
-- Optional final browser/device spot-check
-- Optional production-readiness checklist
+- Final visual spot-check before client presentation
+- Client presentation / sales package
+- Real-business intake if client approves
 - Sitemap/schema/indexing only after real business facts and launch plan are confirmed
-- Optional real business contact/trust layer once actual business facts exist
+- Real business contact/trust layer only once actual business facts exist
 
 ---
 
@@ -164,7 +167,23 @@ The site avoids all of the following:
 6. **Service Area / Local Request Review** — Premium Vancouver / Portland local-area block. Approved map asset used.
 7. **FAQ** — Premium six-card FAQ block. Desktop: open card grid. Mobile: accordion.
 8. **Final CTA** — Premium dark-navy closing section with white rounded card.
-9. **Footer** — Premium local-service footer. Location items now link to real city pages.
+9. **Footer** — Premium local-service footer. Location items link to real city pages. All pages now use a consistent shared .site-footer system. Landscape-optimized layout added for 500–900px viewport widths in landscape orientation.
+
+---
+
+## Footer System State
+
+- All 14 pages use a consistent `.site-footer` structure
+- Homepage footer remains the premium reference (4 columns: brand, start here, common requests, nearby request areas)
+- /request/, /services/, /service-area/, and all 10 city pages use the normalized shared footer structure (3 columns: brand, pages nav, request areas)
+- City page footer relative paths corrected across all 10 pages
+- Copyright year normalized to © 2026 across all pages
+- Landscape breakpoint (`@media (min-width: 500px) and (max-width: 900px) and (orientation: landscape)`) added to `assets/css/preview-styles.css`:
+  - Brand/safety note spans full width at top
+  - Navigation/request columns stack on the left
+  - City/request-area links sit on the right
+  - Homepage long city list uses CSS `column-count: 2` in landscape
+- Portrait mobile and desktop footer behavior unchanged
 
 ---
 
@@ -221,7 +240,10 @@ Do not replace or crop without approval.
 | `e678478` | Polish service area city hub cards |
 | `0c3ea36` | Add city page accessibility and meta polish |
 | `6108350` | Document current site baseline (docs only) |
-| `54d3a0f` | **Add skip links and complete OG meta on main pages — current latest baseline** |
+| `54d3a0f` | Add skip links and complete OG meta on main pages |
+| `35301dd` | Document accessibility and meta cleanup (docs only) |
+| `a3640e6` | Polish footer system across site |
+| `87fcce0` | **Refine footer layout for landscape viewports — current latest baseline** |
 
 ---
 
