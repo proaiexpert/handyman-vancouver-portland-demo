@@ -54,15 +54,19 @@
     .rq-section{max-width:760px;margin:0 auto;padding:0 24px}
     .rq-section-title{font-size:clamp(1.25rem,2.5vw,1.625rem);font-weight:800;color:var(--primary);margin:0 0 10px;line-height:1.2}
     .rq-section-sub{font-size:1rem;color:var(--muted);line-height:1.6;margin:0 0 28px}
-    .path-selector-section{background:var(--surface);border-top:3px solid var(--cta);padding:48px 0 0}
-    .path-selector-wrap{display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap}
-    .path-btn{flex:1;min-width:160px;background:var(--background);border:2px solid var(--soft);border-radius:10px;padding:16px 20px;cursor:pointer;text-align:left;transition:border-color .18s,background .18s;font-family:inherit}
-    .path-btn[aria-pressed="true"]{border-color:var(--primary);background:#fff;box-shadow:0 2px 12px rgba(16,32,51,.1)}
-    .path-btn-label{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-    .path-btn-title{display:block;font-size:1rem;font-weight:700;color:var(--primary)}
-    .path-btn-desc{display:block;font-size:.875rem;color:var(--muted);margin-top:4px;line-height:1.4}
-    .path-selected-tag{display:none;font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);background:rgba(16,32,51,.07);border-radius:4px;padding:2px 7px;margin-left:6px;white-space:nowrap}
-    .path-btn[aria-pressed="true"] .path-selected-tag{display:inline}
+    .path-selector-section{background:var(--surface);border-top:3px solid var(--cta);padding:56px 0 0}
+    .path-selector-eyebrow{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cta);margin-bottom:10px}
+    .path-selector-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px}
+    .path-btn{background:#F7F8FA;border:2px solid #D4D8DC;border-radius:14px;padding:24px 22px 20px;cursor:pointer;text-align:left;transition:border-color .2s,background .2s,box-shadow .2s;font-family:inherit;position:relative;overflow:hidden}
+    .path-btn:hover{border-color:#9BAAB8;background:#fff;box-shadow:0 4px 16px rgba(16,32,51,.08)}
+    .path-btn[aria-pressed="true"]{border-color:var(--primary);background:#fff;box-shadow:0 6px 24px rgba(16,32,51,.13)}
+    .path-btn[aria-pressed="true"]::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cta);border-radius:14px 14px 0 0}
+    .path-btn-chip{display:inline-block;font-size:.625rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);background:#EAECEF;border-radius:20px;padding:3px 10px;margin-bottom:12px;transition:background .2s,color .2s}
+    .path-btn[aria-pressed="true"] .path-btn-chip{background:rgba(201,130,43,.13);color:#8A5A1A}
+    .path-btn-title{display:block;font-size:1.0625rem;font-weight:800;color:var(--primary);margin-bottom:6px;line-height:1.2}
+    .path-btn-desc{display:block;font-size:.875rem;color:var(--muted);line-height:1.5}
+    .path-selected-tag{display:none;position:absolute;top:14px;right:14px;font-size:.5625rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--primary);border-radius:20px;padding:3px 9px;white-space:nowrap}
+    .path-btn[aria-pressed="true"] .path-selected-tag{display:block}
     .form-section{background:var(--surface);border-top:1px solid var(--soft);padding:40px 0 48px}
     .form-card{background:#fff;border:1.5px solid var(--soft);border-radius:14px;padding:36px 36px 32px;box-shadow:0 4px 24px rgba(16,32,51,.07)}
     .form-card-heading{font-size:1.25rem;font-weight:800;color:var(--primary);margin:0 0 6px}
@@ -144,7 +148,7 @@
       .form-row{grid-template-columns:1fr}
       .form-submit-btn{width:100%}
       .form-card{padding:24px 20px 20px}
-      .path-selector-wrap{flex-direction:column}
+      .path-selector-wrap{grid-template-columns:1fr}
       .path-btn{min-width:unset}
       .scope-steps{grid-template-columns:1fr 1fr}
       .checklist-grid{grid-template-columns:1fr}
@@ -219,18 +223,21 @@
     <!-- 2. Path selector -->
     <section class="path-selector-section" id="request-form" aria-labelledby="form-heading">
       <div class="rq-section">
-        <h2 class="rq-section-title" id="form-heading">Choose Your Request Path</h2>
-        <p class="rq-section-sub">Use Repair Request when you are ready to share details. Use Quick Question if you are not sure yet.</p>
+        <span class="path-selector-eyebrow">Request Type</span>
+        <h2 class="rq-section-title" id="form-heading">Choose how you want to start.</h2>
+        <p class="rq-section-sub">Use Repair Request when you are ready to share photos and repair details. Use Quick Question if you want to ask a shorter question first.</p>
         <div class="path-selector-wrap" role="group" aria-label="Request path">
           <button class="path-btn" id="path-rr" aria-pressed="true">
-            <span class="path-btn-label">Most common <span class="path-selected-tag">Selected</span></span>
+            <span class="path-selected-tag">Selected</span>
+            <span class="path-btn-chip">Most common</span>
             <span class="path-btn-title">Repair Request</span>
-            <span class="path-btn-desc">Share location, repair type, and photo details for review.</span>
+            <span class="path-btn-desc">Best for photos, repair details, punch-list items, installs, or touch-ups.</span>
           </button>
           <button class="path-btn" id="path-qq" aria-pressed="false">
-            <span class="path-btn-label">Not sure yet <span class="path-selected-tag">Selected</span></span>
+            <span class="path-selected-tag">Selected</span>
+            <span class="path-btn-chip">Short question first</span>
             <span class="path-btn-title">Quick Question</span>
-            <span class="path-btn-desc">Ask about the repair, service area, or what details to send.</span>
+            <span class="path-btn-desc">Best for a short question about fit, service area, or what to send first.</span>
           </button>
         </div>
       </div>
