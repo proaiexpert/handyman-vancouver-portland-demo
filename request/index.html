@@ -104,10 +104,9 @@
     .scope-step h4{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 4px}
     .scope-step p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.5}
     .scope-note{font-size:.9375rem;color:var(--muted);line-height:1.6;padding:16px 20px;background:rgba(16,32,51,.04);border-radius:8px;border-left:3px solid var(--soft)}
-    .specialist-section{background:var(--background);padding:40px 0}
-    .specialist-card{background:#fff;border:1.5px solid var(--soft);border-radius:12px;padding:24px 28px;display:flex;gap:16px;align-items:flex-start;box-shadow:0 2px 8px rgba(16,32,51,.04)}
-    .specialist-icon{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:rgba(201,130,43,.12);display:flex;align-items:center;justify-content:center;color:var(--cta);font-size:1.125rem;margin-top:2px}
-    .specialist-card p{font-size:.9375rem;color:var(--muted);line-height:1.65;margin:0}
+    .specialist-inline-wrap{background:var(--surface);padding:12px 0 28px}
+    .specialist-inline-note{font-size:.875rem;color:var(--muted);line-height:1.6;margin:0;display:flex;gap:8px;align-items:flex-start}
+    .specialist-dot{color:var(--cta);font-size:.5rem;margin-top:6px;flex-shrink:0}
     .next-section{background:var(--surface);border-top:1px solid var(--soft);padding:56px 0}
     .next-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
     .next-step{display:flex;gap:14px;align-items:flex-start}
@@ -391,21 +390,15 @@
             <p>Whether the request looks like a fit and what the next step may be.</p>
           </div>
         </div>
-        <p class="scope-note">No instant estimate is provided from photos alone. Scope depends on project type, access, materials, location, and condition.</p>
       </div>
     </section>
 
-    <!-- 6. Specialist note -->
-    <section class="specialist-section" aria-label="Specialist and scope note">
+    <!-- 6. Specialist note (compact) -->
+    <div class="specialist-inline-wrap">
       <div class="rq-section">
-        <div class="specialist-card">
-          <div class="specialist-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <p>Some larger electrical, plumbing, roofing, structural, or permit-heavy work may require a licensed trade specialist or contractor. Smaller repair, install, touch-up, and punch-list requests can still be reviewed first so the next step is clearer.</p>
-        </div>
+        <p class="specialist-inline-note"><span class="specialist-dot" aria-hidden="true">&#9679;</span>Some larger electrical, plumbing, roofing, structural, or permit-heavy work may require a licensed trade specialist or contractor. Smaller repair, install, touch-up, and punch-list requests can still be reviewed first.</p>
       </div>
-    </section>
+    </div>
 
     <!-- 7. What happens next -->
     <section class="next-section" aria-labelledby="next-heading">
