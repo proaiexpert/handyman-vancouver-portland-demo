@@ -1268,3 +1268,172 @@ body.final-menu-open { overflow: hidden; }
   .footer-grid { grid-template-columns: 1fr; }
   .city-hero-inner { padding: 48px 20px; }
 }
+
+/* ============================================================
+   SERVICE-AREA HUB — Premium city card grid (added: hub polish)
+   ============================================================ */
+
+/* Hub section header explanation */
+.sa-hub-intro-note {
+  font-size: .9375rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0 0 28px;
+  max-width: 680px;
+}
+
+/* Premium card grid */
+.sa-city-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+/* Premium hub card */
+.sa-hub-card {
+  background: var(--surface);
+  border: 1.5px solid var(--soft);
+  border-radius: 14px;
+  padding: 0 0 18px;
+  box-shadow: 0 2px 12px rgba(16,32,51,.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  transition: box-shadow .18s, transform .14s;
+}
+.sa-hub-card:hover {
+  box-shadow: 0 6px 24px rgba(16,32,51,.12);
+  transform: translateY(-2px);
+}
+
+/* Copper accent bar at top of each card */
+.sa-hub-card-accent {
+  display: block;
+  height: 3px;
+  background: var(--cta);
+  width: 100%;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+/* Card body padding */
+.sa-hub-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  padding: 0 16px;
+}
+
+.sa-hub-card-state {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--cta);
+  margin-bottom: 2px;
+}
+
+.sa-hub-card h3 {
+  font-size: .9375rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sa-hub-card p {
+  font-size: .8125rem;
+  color: var(--muted);
+  margin: 0 0 12px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Premium link with arrow */
+.sa-hub-card-link {
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1.5px solid var(--soft);
+  border-radius: 8px;
+  padding: 7px 14px;
+  transition: border-color .15s, background .15s, color .15s;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-left: 16px;
+}
+.sa-hub-card-link:hover {
+  border-color: var(--cta);
+  background: var(--background);
+  color: var(--cta);
+}
+.sa-hub-card-link .sa-arrow {
+  font-size: .75rem;
+  transition: transform .15s;
+}
+.sa-hub-card-link:hover .sa-arrow {
+  transform: translateX(3px);
+}
+
+/* Hub disclaimer note */
+.sa-hub-note {
+  font-size: .875rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 20px 0 0;
+  padding: 14px 18px;
+  background: rgba(16,32,51,.03);
+  border-radius: 8px;
+  border-left: 3px solid var(--cta);
+}
+
+/* Hub mini feature note (Part 5) */
+.sa-hub-feature-note {
+  background: var(--surface);
+  border: 1.5px solid var(--soft);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 32px;
+  box-shadow: 0 1px 6px rgba(16,32,51,.04);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sa-hub-feature-note h4 {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--cta);
+  margin: 0;
+}
+.sa-hub-feature-note p {
+  font-size: .875rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive overrides */
+@media (max-width: 1200px) {
+  .sa-city-hub-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 1024px) {
+  .sa-city-hub-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .sa-city-hub-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .sa-city-hub-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 360px) {
+  .sa-city-hub-grid { grid-template-columns: 1fr; }
+}

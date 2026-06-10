@@ -61,14 +61,7 @@
     .sa-map-board{background:rgba(255,255,255,.06);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
     .sa-map-img{display:block;width:100%;height:auto}
     .sa-map-caption{font-size:.8125rem;color:rgba(255,255,255,.45);line-height:1.5;padding:12px 16px;text-align:center}
-    /* 10-city hub */
-    .sa-city-hub-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:12px}
-    .sa-hub-card{background:#fff;border:1.5px solid var(--soft);border-radius:12px;padding:18px 16px 16px;box-shadow:0 2px 8px rgba(16,32,51,.05);display:flex;flex-direction:column;gap:8px}
-    .sa-hub-card-state{font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cta);margin-bottom:2px}
-    .sa-hub-card h3{font-size:.9375rem;font-weight:800;color:var(--primary);margin:0;line-height:1.2}
-    .sa-hub-card p{font-size:.8125rem;color:var(--muted);margin:0;line-height:1.5;flex:1}
-    .sa-hub-card-link{font-size:.8125rem;font-weight:700;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center;gap:4px;border:1.5px solid var(--soft);border-radius:6px;padding:6px 12px;transition:border-color .15s,background .15s;align-self:flex-start;margin-top:4px}
-    .sa-hub-card-link:hover{border-color:var(--cta);background:var(--background)}
+    /* 10-city hub — see shared preview-styles.css */
     /* SEO text block */
     .sa-prose{display:flex;flex-direction:column;gap:16px}
     .sa-prose p{font-size:.9375rem;color:var(--muted);line-height:1.7;margin:0}
@@ -116,7 +109,6 @@
     .sa-footer-copy{font-size:.8125rem;color:rgba(255,255,255,.4);margin:0}
     /* Responsive */
     @media(max-width:1024px){
-      .sa-city-hub-grid{grid-template-columns:repeat(3,1fr)}
     }
     @media(max-width:900px){
       .sa-hero-grid{grid-template-columns:1fr;gap:32px}
@@ -124,7 +116,6 @@
       .sa-factor-grid{grid-template-columns:1fr 1fr}
       .sa-city-sections{grid-template-columns:1fr}
       .sa-faq-grid{grid-template-columns:1fr}
-      .sa-city-hub-grid{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:768px){
       .sa-nav-links,.sa-nav-cta{display:none}
@@ -134,14 +125,12 @@
     }
     @media(max-width:480px){
       .sa-factor-grid{grid-template-columns:1fr}
-      .sa-city-hub-grid{grid-template-columns:1fr 1fr}
       .sa-hero-actions{flex-direction:column}
       .sa-btn-primary,.sa-btn-secondary{width:100%;justify-content:center}
       .sa-final-actions{flex-direction:column;align-items:center}
       .sa-final-actions a{width:100%;max-width:320px;justify-content:center}
     }
     @media(max-width:360px){
-      .sa-city-hub-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -212,84 +201,118 @@
     <!-- 2. 10-city hub -->
     <section class="sa-section sa-section--surface" aria-labelledby="sa-hub-heading">
       <div class="sa-inner">
-        <div class="sa-inner--narrow" style="padding:0;margin-bottom:32px">
+        <div class="sa-inner--narrow" style="padding:0;margin-bottom:28px">
           <span class="sa-eyebrow">NEARBY CITY AREAS</span>
           <h2 class="sa-h2" id="sa-hub-heading">Nearby city request areas</h2>
-          <p class="sa-intro">These city areas help organize local repair request review around the Vancouver / Portland region. Send your general location with photos so the request can be reviewed by access, materials, project type, and scope.</p>
+          <p class="sa-intro">Choose a city page for more specific request-review guidance. Each page keeps the same safe review process while highlighting local access, materials, home details, and scope considerations.</p>
         </div>
         <div class="sa-city-hub-grid">
           <!-- Vancouver, WA -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Washington</span>
-            <h3>Vancouver, WA</h3>
-            <p>Small repairs, installs, touch-ups, and punch-list items reviewed by location and scope.</p>
-            <a href="vancouver-wa/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Washington</span>
+              <h3>Vancouver, WA</h3>
+              <p>Washington-side home details, trim, touch-ups, and grouped punch-list requests.</p>
+            </div>
+            <a href="vancouver-wa/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Portland, OR -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Oregon</span>
-            <h3>Portland, OR</h3>
-            <p>Portland-area homes vary by age, access, and project type. Photos help clarify the next step.</p>
-            <a href="portland-or/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Oregon</span>
+              <h3>Portland, OR</h3>
+              <p>Access, parking, building type, older-home details, and small repair requests.</p>
+            </div>
+            <a href="portland-or/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Hillsboro, OR -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Oregon</span>
-            <h3>Hillsboro, OR</h3>
-            <p>Hillsboro-area requests can be reviewed by location, access, materials, and project scope.</p>
-            <a href="hillsboro-or/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Oregon</span>
+              <h3>Hillsboro, OR</h3>
+              <p>West-side installs, shelving, TV mounting, assembly, and finish details.</p>
+            </div>
+            <a href="hillsboro-or/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Beaverton, OR -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Oregon</span>
-            <h3>Beaverton, OR</h3>
-            <p>Beaverton requests reviewed by photos, location, access, and repair type before the next step.</p>
-            <a href="beaverton-or/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Oregon</span>
+              <h3>Beaverton, OR</h3>
+              <p>Small installs, door hardware, wall marks, and clean finish details.</p>
+            </div>
+            <a href="beaverton-or/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Gresham, OR -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Oregon</span>
-            <h3>Gresham, OR</h3>
-            <p>Gresham-area repair requests reviewed by location, access, materials, and project type.</p>
-            <a href="gresham-or/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Oregon</span>
+              <h3>Gresham, OR</h3>
+              <p>Practical maintenance, access notes, wall repair, and hardware fixes.</p>
+            </div>
+            <a href="gresham-or/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Tigard, OR -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Oregon</span>
-            <h3>Tigard, OR</h3>
-            <p>Tigard requests may be reviewed by location, scope, and access before the next step.</p>
-            <a href="tigard-or/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Oregon</span>
+              <h3>Tigard, OR</h3>
+              <p>Trim, hardware, installs, utility-area requests, and home detail fixes.</p>
+            </div>
+            <a href="tigard-or/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Lake Oswego, OR -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Oregon</span>
-            <h3>Lake Oswego, OR</h3>
-            <p>Lake Oswego repair requests reviewed by photos, access, materials, and project type.</p>
-            <a href="lake-oswego-or/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Oregon</span>
+              <h3>Lake Oswego, OR</h3>
+              <p>Finish details, materials, trim, hardware, and careful photo review.</p>
+            </div>
+            <a href="lake-oswego-or/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Oregon City, OR -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Oregon</span>
-            <h3>Oregon City, OR</h3>
-            <p>Oregon City requests reviewed by location, access, materials, and scope before the next step.</p>
-            <a href="oregon-city-or/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Oregon</span>
+              <h3>Oregon City, OR</h3>
+              <p>Older-home details, access, wall repair, and grouped punch-list items.</p>
+            </div>
+            <a href="oregon-city-or/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Camas, WA -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Washington</span>
-            <h3>Camas, WA</h3>
-            <p>Camas-area requests reviewed by location, access, and scope. Photos help clarify the next step.</p>
-            <a href="camas-wa/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Washington</span>
+              <h3>Camas, WA</h3>
+              <p>East Clark County home details, entryways, trim, and small installs.</p>
+            </div>
+            <a href="camas-wa/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
           <!-- Battle Ground, WA -->
           <div class="sa-hub-card">
-            <span class="sa-hub-card-state">Washington</span>
-            <h3>Battle Ground, WA</h3>
-            <p>Battle Ground requests reviewed by location, access, materials, and project type.</p>
-            <a href="battle-ground-wa/" class="sa-hub-card-link">Review this area &#8594;</a>
+            <span class="sa-hub-card-accent" aria-hidden="true"></span>
+            <div class="sa-hub-card-body">
+              <span class="sa-hub-card-state">Washington</span>
+              <h3>Battle Ground, WA</h3>
+              <p>North Clark County access, material planning, grouped maintenance, and home detail fixes.</p>
+            </div>
+            <a href="battle-ground-wa/" class="sa-hub-card-link">View city page <span class="sa-arrow" aria-hidden="true">&#8594;</span></a>
           </div>
         </div>
-        <p style="font-size:.875rem;color:var(--muted);line-height:1.55;margin:20px 0 0;padding:14px 18px;background:rgba(16,32,51,.03);border-radius:8px;border-left:3px solid var(--soft)">These city areas are examples for request review. Availability and the next step may depend on location, project type, access, materials, and scope.</p>
+        <p class="sa-hub-note">City pages help organize local request details. They do not guarantee availability in every location. Photos, access notes, materials, and scope still determine the next step.</p>
+        <div class="sa-hub-feature-note" role="note">
+          <h4>City pages are request-review pages</h4>
+          <p>These pages help organize local request details. They do not guarantee availability in every location. Photos, access notes, materials, and scope still determine the next step.</p>
+        </div>
       </div>
     </section>
 
