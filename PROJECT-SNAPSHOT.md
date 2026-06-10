@@ -96,17 +96,18 @@ Do not replace or crop without approval.
 
 ## Homepage Sections (in DOM order)
 
-1. Header / mobile hamburger nav
-2. Hero — "Thoughtful repairs. Noticeably better."
-3. Repair Value — "Small fixes that change how a home feels."
-4. Visual Scenarios — horizontal swipe card gallery
-5. Services — full service list with card CTAs
-6. Photo-Based Request Flow — 4-step process
-7. Scope / Reviewed Carefully — scope-aware request section
-8. Service Area — Vancouver-first, Clark County, Portland-area reviewed by scope
-9. FAQ — details/summary accordion
-10. Final CTA — "Have a repair list?"
-11. Footer
+See **Current Homepage Section Stack** above for the authoritative section list.
+Current approved stack (as of baseline `1720619`):
+
+1. Hero
+2. Repair Value / Details section
+3. Scenario Showcase
+4. Services Scope Board
+5. Request Review Flow
+6. Service Area / Local Request Review
+7. FAQ
+8. Final CTA
+9. Footer
 
 ---
 
@@ -147,6 +148,8 @@ Do not replace or crop without approval.
 | `01c97ca` | Promoted final homepage to root, removed preview routes |
 | `fa445e4` | Fixed sticky CTA Call button visibility and overlap behavior |
 | `1cda438` | Added canonical, OG, Twitter, favicon, noindex; contrast-safe CTA text |
+| `1720619` | **Polish homepage footer — current approved website baseline** |
+| `3ff5aeff` | Document approved homepage baseline (docs only) |
 
 ---
 
@@ -182,35 +185,29 @@ Do not replace or crop without approval.
 
 ## Commit State Summary
 
-- **Production website stable state:** `1cda438` — live homepage unchanged by documentation commits.
-- **Documentation snapshot:** `4a85815` — README + PROJECT-SNAPSHOT.md created.
-- **Website Production Factory extraction:** `ac85850` — factory docs extracted to `docs/website-production-factory/`.
+- **Production website stable state:** `1720619` — Polish homepage footer. Full homepage section-by-section polish completed.
+- **Documentation baseline:** `3ff5aeff` — Document approved homepage baseline (docs only, no implementation changes).
+- **Documentation snapshot (historical):** `4a85815` — README + PROJECT-SNAPSHOT.md created.
+- **Website Production Factory extraction (historical):** `ac85850` — factory docs extracted to `docs/website-production-factory/`.
 
 ---
 
 ## Next Recommended Steps
 
-1. **Final optional real-device iPhone Safari screenshot** — confirm sticky CTA Call button
-   visibility on actual device after commit `1cda438`.
+1. **Optional final visual review** — confirm homepage at:
+   https://proai-expert.com/handyman-vancouver-portland-demo/?v=1720619
 
-2. **Real contact flow** — when real business data is available, wire up a form endpoint
-   and replace the phone placeholder.
+2. **Polish request/index.html** — refine the request review page to match the premium homepage baseline.
 
-3. **Remove noindex + add sitemap entry** — only when the business is ready for real
-   public indexing and all placeholder data has been replaced.
+3. **Polish services/index.html** — refine the services page if needed.
 
-4. ~~**Website Production Factory extraction**~~ — **COMPLETED in `ac85850`.** Factory docs
-   are in `docs/website-production-factory/`. See INDEX.md for reading order.
+4. **Future /service-area/ or city pages** — create only when content strategy is approved. Do not create placeholder pages.
 
-5. **Factory documentation consistency patch** — patch factory docs for consistency and
-   handoff rules (Prompt 19 placeholders, Template 4 JS rule, ask-vs-assume rules, INDEX.md,
-   CHANGELOG.md). Commit: this patch task.
+5. **Keep noindex active** — do not remove `noindex, nofollow` until real launch readiness is confirmed and all placeholder data is replaced.
 
-6. **Optional: Package factory into portable skill** — after consistency patch, extract
-   factory docs into a portable SKILL.md or Coworker skill for use in future chats.
+6. **Real contact flow** — when real business data is available, wire up a form endpoint and replace the phone placeholder.
 
-7. **Next vertical startup** — use the factory workflow to build the next local-service
-   demo site (plumber, electrician, landscaper, etc.).
+7. **Remove noindex + add sitemap entry** — only when the business is ready for real public indexing.
 
 ---
 
@@ -238,6 +235,22 @@ Do not replace or crop without approval.
 | No forbidden claims | PASS |
 | Console clean | PASS |
 | Required assets 200 | PASS |
+
+## Approved Baseline Sign-Off (commit 1720619)
+
+Accepted project baseline based on section-by-section visual/implementation reports.
+
+| Check | Result |
+|---|---|
+| Homepage lower-section polish completed | PASS |
+| Service Area block redesigned with approved map asset | PASS |
+| FAQ desktop open-card grid / mobile accordion | PASS |
+| FAQ numbers hidden on mobile | PASS |
+| Final CTA dark-navy premium section | PASS |
+| Footer premium local-service layout | PASS |
+| noindex, nofollow demo state preserved | PASS |
+| No fake claims, radius, address, Google Map, or schema added | PASS |
+| No implementation files changed in documentation commit | PASS |
 
 ## Production Factory Documentation
 
