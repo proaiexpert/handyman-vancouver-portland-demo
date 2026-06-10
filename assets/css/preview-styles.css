@@ -970,3 +970,25 @@ body.final-menu-open { overflow: hidden; }
     padding: 40px 32px 40px 32px;
   }
 }
+
+/* ===== FINAL CTA READABILITY REFINEMENTS ===== */
+/* Desktop: left-align left zone content */
+@media (min-width: 701px) {
+  .final-cta__left {
+    text-align: left;
+  }
+  .final-cta__eyebrow.final-cta__eyebrow {
+    text-align: left;
+  }
+}
+/* Mobile: reduce H2 and body size for readability */
+@media (max-width: 700px) {
+  .final-cta__h2 {
+    font-size: 1.45rem;
+    line-height: 1.28;
+  }
+  .final-cta__body {
+    font-size: 0.93rem;
+    line-height: 1.60;
+  }
+}
