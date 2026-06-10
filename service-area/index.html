@@ -104,16 +104,6 @@
     .sa-final-cta p{color:rgba(255,255,255,.72);font-size:1rem;line-height:1.65;margin:0 auto 28px;max-width:520px}
     .sa-final-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
     /* Footer */
-    .sa-footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.08);padding:40px 24px 32px}
-    .sa-footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
-    .sa-footer-brand{font-size:1.125rem;font-weight:800;color:#fff;text-decoration:none}
-    .sa-footer-brand span{color:#E6B16C}
-    .sa-footer-tagline{font-size:.875rem;color:rgba(255,255,255,.6);margin:0}
-    .sa-footer-nav{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
-    .sa-footer-nav a{font-size:.875rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .15s}
-    .sa-footer-nav a:hover{color:#E6B16C}
-    .sa-footer-nav a.active{color:#E6B16C}
-    .sa-footer-copy{font-size:.8125rem;color:rgba(255,255,255,.4);margin:0}
     /* Responsive */
     @media(max-width:1024px){
     }
@@ -585,28 +575,42 @@
   </main>
 
   <!-- Footer -->
-  <footer class="sa-footer" role="contentinfo">
-    <div class="sa-footer-inner">
-      <a href="../" class="sa-footer-brand">LR<span> Local Repair Pro</span></a>
-      <p class="sa-footer-tagline">Premium-style repair request review for homeowners around Vancouver, Portland, and nearby areas.</p>
-      <nav aria-label="Footer navigation">
-        <ul class="sa-footer-nav">
-          <li><a href="../request/">Start a Request</a></li>
-          <li><a href="../services/">Services</a></li>
-          <li><a href="../service-area/" class="active">Service Area</a></li>
-          <li><a href="vancouver-wa/">Vancouver, WA</a></li>
-          <li><a href="portland-or/">Portland, OR</a></li>
-          <li><a href="hillsboro-or/">Hillsboro, OR</a></li>
-          <li><a href="beaverton-or/">Beaverton, OR</a></li>
-          <li><a href="gresham-or/">Gresham, OR</a></li>
-          <li><a href="tigard-or/">Tigard, OR</a></li>
-          <li><a href="lake-oswego-or/">Lake Oswego, OR</a></li>
-          <li><a href="oregon-city-or/">Oregon City, OR</a></li>
-          <li><a href="camas-wa/">Camas, WA</a></li>
-          <li><a href="battle-ground-wa/">Battle Ground, WA</a></li>
-        </ul>
-      </nav>
-      <p class="sa-footer-copy">&copy; 2026 Local Repair Pro. Demo website concept.</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><span>LR</span> Local Repair Pro</div>
+          <p class="footer-desc">Repair request review for homeowners around Vancouver, Portland, and nearby areas.</p>
+          <p class="footer-safety">Demo site. Requests reviewed by location, access, materials, and scope.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../request/">Request Review</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="./">Service Area</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Request Areas</h4>
+          <ul>
+            <li><a href="vancouver-wa/">Vancouver, WA</a></li>
+            <li><a href="portland-or/">Portland, OR</a></li>
+            <li><a href="hillsboro-or/">Hillsboro, OR</a></li>
+            <li><a href="beaverton-or/">Beaverton, OR</a></li>
+            <li><a href="gresham-or/">Gresham, OR</a></li>
+            <li><a href="tigard-or/">Tigard, OR</a></li>
+            <li><a href="lake-oswego-or/">Lake Oswego, OR</a></li>
+            <li><a href="oregon-city-or/">Oregon City, OR</a></li>
+            <li><a href="camas-wa/">Camas, WA</a></li>
+            <li><a href="battle-ground-wa/">Battle Ground, WA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Local Repair Pro. Demo website concept.</p>
+      </div>
     </div>
   </footer>
 
