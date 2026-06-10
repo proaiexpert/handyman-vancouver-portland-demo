@@ -10,7 +10,7 @@ https://proai-expert.com/handyman-vancouver-portland-demo/
 https://github.com/proaiexpert/handyman-vancouver-portland-demo
 
 ## Current Latest Baseline
-`0c3ea36` — Add city page accessibility and meta polish
+`54d3a0f` — Add skip links and complete OG meta on main pages
 
 **Previous homepage baseline:** `1720619` — Polish homepage footer
 
@@ -20,6 +20,15 @@ https://github.com/proaiexpert/handyman-vancouver-portland-demo
 Production-like demo — stable. `noindex, nofollow` active on all pages. Not ready for real public launch.
 
 **Demo state:** All pages remain noindex,nofollow. Sitemap/schema/indexing should wait until real business facts and launch plan are confirmed.
+
+## Current Accessibility and Meta State
+
+- All 14 pages (4 main + 10 city) use `<main id="main-content">` and skip-to-content links
+- Homepage and /request/: full OG + Twitter card set
+- /services/ and /service-area/: full OG set (title/description/type/url/image/image:alt) + Twitter card
+- City pages: OG title/description/type/url present; no og:image (correct — no approved city OG image exists)
+- /service-area/ heading hierarchy corrected — city card titles are H3; main section headings remain H2
+- noindex/nofollow preserved on all 14 pages
 
 ---
 
@@ -138,9 +147,9 @@ The site avoids all of the following:
 
 ## Next Possible Work
 
-- Final visual spot-check after GitHub Pages propagation
+- Optional final browser/device spot-check
 - Optional production-readiness checklist
-- Optional sitemap/schema only after real launch facts are verified
+- Sitemap/schema/indexing only after real business facts and launch plan are confirmed
 - Optional real business contact/trust layer once actual business facts exist
 
 ---
@@ -210,7 +219,9 @@ Do not replace or crop without approval.
 | `2a3852b` | Consolidate city-page CSS |
 | `2f85c1a` | Add premium city-page visual treatment |
 | `e678478` | Polish service area city hub cards |
-| `0c3ea36` | **Add city page accessibility and meta polish — current latest baseline** |
+| `0c3ea36` | Add city page accessibility and meta polish |
+| `6108350` | Document current site baseline (docs only) |
+| `54d3a0f` | **Add skip links and complete OG meta on main pages — current latest baseline** |
 
 ---
 

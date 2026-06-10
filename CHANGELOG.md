@@ -21,6 +21,17 @@ It does not include every commit — only commits with documented, verified desc
 
 ## Selected Commit History
 
+### 2026-06-09 — P1 accessibility and metadata cleanup
+
+Latest baseline: `54d3a0f` — Add skip links and complete OG meta on main pages
+
+| Commit | Type | Description |
+|---|---|---|
+| `6108350` | Docs | Documented current site baseline (CHANGELOG and PROJECT-SNAPSHOT). |
+| `54d3a0f` | Website | Normalized skip-to-content links across all 4 main pages; standardized main page landmarks to `<main id="main-content">`; completed OG/Twitter metadata on /services/ and /service-area/; fixed /service-area/ heading hierarchy by changing city card titles from H2 to H3. Preserved noindex/nofollow demo state. No site copy, layout, sitemap, schema, backend, or asset changes were made. |
+
+---
+
 ### 2026-06-09 — Services, service area, and city-page baseline
 
 Latest baseline: `0c3ea36` — Add city page accessibility and meta polish
@@ -99,5 +110,5 @@ If this description is confirmed, add it to the table above between `01c97ca` an
 
 The homepage is stable at commit `1cda438`. The /request/ page was added in `7b038cd` and refined through `9446655`.
 The /services/ page was added in `1153f7f` and cross-page chrome was fixed through `544e58a`.
-The /service-area/ hub was created in `f42f433`. Ten city pages were added in `5a60035` and polished through `0c3ea36`.
+The /service-area/ hub was created in `f42f433`. Ten city pages were added in `5a60035` and polished through `0c3ea36`. P1 accessibility and metadata cleanup was completed in `54d3a0f`.
 Documentation commits do not change the live site.
