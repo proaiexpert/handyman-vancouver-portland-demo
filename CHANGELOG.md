@@ -52,6 +52,17 @@ It does not include every commit — only commits with documented, verified desc
 | `abe19cf` | Docs | Documented homepage Repair Value redesign in CHANGELOG |
 | `21bb43e` | Website | Redesigned homepage Services section into a premium Services Scope board with grouped repair categories, scope-review copy, photo-review CTA, secondary services link, and removed generic service-card grid/icons |
 | `f9c2093` | Website | Consolidated duplicated How It Works and Scope sections into a premium 3-step Request Review Flow with clearer process copy, conditional scope disclaimers, and request/photo-checklist CTAs |
+| `1bbdc4f` | Website | Redesigned homepage Service Area section into a premium local-area review block with Vancouver / Portland positioning, grouped area chips, safer location/scope copy, and request/services CTAs |
+| `e41a183` | Website | Refined Service Area block art direction: simplified heading, added location clarification micro-points, reduced city-chip density, improved Vancouver / Portland visual hierarchy |
+| `cbc790b` | Website | Replaced inline SVG service-area map with a WebP image asset; preserved existing homepage img path (generated map, later replaced by approved asset) |
+| `b21c244` | Assets | Added user-approved Service Area map source asset at assets/img/service-area-vancouver-portland-map-approved-source.webp without changing live markup |
+| `d1c1423` | Website | Replaced live Service Area map image with approved user-supplied WebP asset; existing homepage img path unchanged |
+| `af13bd8` | Website | Reworked homepage FAQ into a premium six-card reassurance section with centered heading, two-column desktop grid, homeowner-oriented answers, and compact photo-review CTA |
+| `5cd5f2d` | Website | Added mobile-only FAQ accordion behavior while keeping desktop FAQ as open premium cards |
+| `4e0bce6` | Website | Hid FAQ card numbers on mobile only; desktop card numbering and mobile accordion behavior preserved |
+| `fc2b1d5` | Website | Rebuilt Final CTA into a premium two-zone closing panel with dark navy background, white rounded card, copper accent, request-focused copy, reassurance chips, and request/photo-checklist CTAs |
+| `17fbd41` | Website | Refined Final CTA readability: left-aligned desktop text zone, improved mobile typography, cleaned body copy, replaced chips with clearer homeowner-oriented labels |
+| `1720619` | Website | Upgraded footer into a premium local-service footer with brand summary, request links, common request links, future-safe location chips, and demo-safe copy |
 
 
 ---

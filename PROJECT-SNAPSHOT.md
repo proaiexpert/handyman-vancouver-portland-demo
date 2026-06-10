@@ -9,16 +9,68 @@ https://proai-expert.com/handyman-vancouver-portland-demo/
 ## Repository
 https://github.com/proaiexpert/handyman-vancouver-portland-demo
 
-## Current Stable Commit
-`9446655` — Polish request form state and submit label (latest)
+## Current Approved Homepage Baseline
+`1720619` — Polish homepage footer
 
-**Homepage stable commit:** `1cda438` — Add head metadata and contrast-safe amber text
+**Live review URL:** https://proai-expert.com/handyman-vancouver-portland-demo/?v=1720619
+
+**Homepage status:** Approved premium homepage baseline after full section-by-section polish.
 
 ## Current Status
 Production-like demo — stable. `noindex, nofollow` active. Not ready for real public launch.
 
-**Pages:** Homepage (`/`) and Request Review page (`/request/`) are both active and client-demo ready.
+**Pages:** Homepage (`/`), Request Review page (`/request/`), and Services page (`/services/`) are active and client-demo ready.
 **Request form:** Demo-safe only. No real endpoint connected. No real upload. No fake delivery claim.
+
+---
+
+## Current Homepage Section Stack
+
+1. **Hero** — Premium homeowner-oriented hero. H1: Thoughtful repairs. Noticeably better. Primary CTA → request/. Secondary CTA → request/#photo-checklist. Mobile sticky CTA preserved.
+2. **Repair Value / Details** — Premium detail-board section. Cards: Cleaner edges, Better touch-ups, Grouped punch-lists. CTA → request/#photo-checklist.
+3. **Scenario Showcase** — Common repair scenario rail with 8 approved WebP images. Desktop auto-scroll / mobile swipe. Images: 01-trim-baseboard-refresh.webp, 02-kitchen-faucet-detail.webp, 03-door-hardware-details.webp, 04-bathroom-detail-touchup.webp, 05-entry-door-exterior-trim.webp, 06-washer-dryer-connection.webp, 07-tv-wall-mount-install.webp, 08-ceiling-light-fixture-install.webp.
+4. **Services Scope Board** — Premium service scope board. CTA → request/#photo-checklist. Secondary → services/.
+5. **Request Review Flow** — Three-step review section: Send photos → Scope reviewed → Next step clarified. CTA → request/. Secondary → request/#photo-checklist.
+6. **Service Area / Local Request Review** — Premium Vancouver / Portland local-area block. H2: Vancouver, Portland, and nearby repair requests. Approved map: assets/img/service-area-vancouver-portland-map.webp (1400×1050px, 113,388 bytes). Approved source: assets/img/service-area-vancouver-portland-map-approved-source.webp. No exact radius, address, Google Map, or guaranteed coverage.
+7. **FAQ** — Premium six-card FAQ block. Desktop: open card grid. Mobile: accordion. Mobile FAQ numbers hidden. CTA → request/#photo-checklist. No fake claims.
+8. **Final CTA** — Premium dark-navy closing section with white rounded card. Eyebrow: READY TO SEND A REQUEST? H2: Start with photos, details, and your repair list. Primary CTA: Start a Repair Request → request/. Secondary CTA: Photo Checklist → request/#photo-checklist. Claim-safe copy.
+9. **Footer** — Premium local-service footer. Brand: Local Repair Pro. Request links: request/, request/#photo-checklist, services/, #faq. Common request items → services/. Nearby request area items → #service-area. Location items: Vancouver WA, Portland OR, Camas, Washougal, Battle Ground, Ridgefield, Salmon Creek, Hazel Dell, Beaverton, Gresham. Future city-page links intentionally not active yet.
+
+---
+
+## Current Safety / Claim Guardrails
+
+- No real address, phone, or email.
+- No licensed/bonded/insured business self-claim.
+- No guaranteed service radius or exact coverage area.
+- No same-day / emergency / 24/7 claim.
+- No fake reviews, star ratings, or completed project counts.
+- No Google Map embed.
+- No LocalBusiness schema until real business facts exist.
+- No city SEO pages until pages are actually created.
+- No broken future city links.
+- Footer location items link to #service-area (future city pages may replace these).
+- noindex,nofollow remains active for demo state.
+
+---
+
+## Active Pages
+
+-  — Homepage
+-  — Request Review page
+-  — Services page
+
+## Old Preview Routes (should remain 404)
+
+- /homepage-v2-premium.html
+- /homepage-v2-premium/
+- /estimate-os.html
+- /pnw-craft-board.html
+- /hybrid-rotating-preview.html
+- /hybrid-transformation.html
+- /repairscope-transformation.html
+- /final-hero-reference.html
+- /final-hero-reference/
 
 ---
 
