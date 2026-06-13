@@ -1528,8 +1528,14 @@ body.final-menu-open { overflow: hidden; }
    Scope: homepage .footer-col--areas (bare <a> links)
           city pages .footer-grid > .footer-col:nth-child(3) ul (<ul><li> list)
    Goal: 2-column city list → shorter, more balanced footer.
-   Does NOT affect landscape (500–900px) or mobile rules. */
+   Does NOT affect landscape (500–900px) or mobile rules.
+   Note: .footer-grid 3rd col is widened to 1.5fr (from 1fr) so 2 sub-columns
+         each get ~159px — enough for longest names (Oregon City, OR). */
 @media (min-width: 1180px) {
+  /* Widen 3rd col on city-page footer grid to give city 2-col enough room */
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1.5fr;
+  }
   /* Homepage footer: .footer-col--areas with bare <a> links */
   .footer-col--areas {
     display: grid;
