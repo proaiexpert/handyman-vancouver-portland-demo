@@ -1522,3 +1522,34 @@ body.final-menu-open { overflow: hidden; }
     break-inside: avoid;
   }
 }
+
+/* ===== DESKTOP FOOTER — Compact city/request-area list into 2 columns =====
+   Target: large desktop screens (≥1180px) only.
+   Scope: homepage .footer-col--areas (bare <a> links)
+          city pages .footer-grid > .footer-col:nth-child(3) ul (<ul><li> list)
+   Goal: 2-column city list → shorter, more balanced footer.
+   Does NOT affect landscape (500–900px) or mobile rules. */
+@media (min-width: 1180px) {
+  /* Homepage footer: .footer-col--areas with bare <a> links */
+  .footer-col--areas {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 16px;
+    row-gap: 6px;
+    align-items: start;
+  }
+  /* Keep the heading spanning both columns */
+  .footer-col--areas h4 {
+    grid-column: 1 / -1;
+  }
+  /* City pages footer: .footer-grid 3rd col ul list */
+  .footer-grid > .footer-col:nth-child(3) ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 6px;
+  }
+  .footer-grid > .footer-col:nth-child(3) li {
+    margin-bottom: 0;
+  }
+}
