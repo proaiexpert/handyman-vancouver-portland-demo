@@ -136,31 +136,30 @@
 
 
   <!-- Header -->
-  <header class="sa-header" role="banner">
-    <div class="sa-nav-inner">
-      <a href="../" class="sa-nav-brand" aria-label="Local Repair Pro home">LR<span>Local Repair Pro</span></a>
-      <nav aria-label="Main navigation">
-        <ul class="sa-nav-links">
+    <header class="site-header" role="banner">
+    <div class="nav-inner">
+      <a href="../" class="nav-brand" aria-label="Local Repair Pro home"><span aria-hidden="true">LR</span><strong>Local Repair Pro</strong></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-links">
           <li><a href="../">Home</a></li>
           <li><a href="../services/">Services</a></li>
-          <li><a href="../service-area/" class="active">Service Area</a></li>
+          <li><a href="../service-area/">Service Area</a></li>
           <li><a href="../#faq">FAQ</a></li>
         </ul>
       </nav>
-      <a href="../request/" class="sa-nav-cta">Request Estimate</a>
-      <button class="sa-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sa-mobile-nav" type="button">
+      <a href="../request/" class="nav-cta">Request Estimate</a>
+      <button class="hamburger-btn" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <nav id="sa-mobile-nav" class="sa-mobile-menu" aria-label="Mobile navigation" hidden>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
       <a href="../">Home</a>
       <a href="../services/">Services</a>
-      <a href="../service-area/" class="active">Service Area</a>
+      <a href="../service-area/">Service Area</a>
       <a href="../#faq">FAQ</a>
-      <a href="tel:+17777777777" class="sa-mobile-phone">Call or text: (777) 777-7777</a>
-      <div class="sa-mobile-cta">
-        <a href="../request/" class="sa-nav-cta">Request Estimate</a>
-        <a href="../request/" class="sa-nav-cta-sec">Request Estimate</a>
+      <a href="tel:+17777777777" class="mobile-nav-phone">Call or text: (777) 777-7777</a>
+      <div class="mobile-nav-cta">
+        <a href="../request/" class="nav-cta">Request Estimate</a>
       </div>
     </nav>
   </header>
@@ -173,7 +172,7 @@
         <div class="sa-hero-grid">
           <div class="sa-hero-content">
             <span class="sa-eyebrow">SERVICE AREA</span>
-            <h1 class="sa-hero-h1" id="sa-hero-heading">Vancouver, Portland, and nearby city repair requests.</h1>
+            <h1 class="sa-hero-h1" id="sa-hero-heading">Vancouver WA, Clark County, and nearby Portland-area requests.</h1>
             <p class="sa-hero-lead">Send photos, repair details, and your general location. Requests around Vancouver, Portland, and nearby city areas are reviewed by project type, access, materials, location, and scope before the next step is clarified.</p>
             <div class="sa-hero-actions">
               <a href="../request/" class="sa-btn-primary">Request Estimate</a>
@@ -592,7 +591,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand-col">
@@ -610,21 +609,21 @@
           </p>
           <p class="footer-safety">Service availability depends on location, scope, access, and scheduling.</p>
         </div>
-                <div class="footer-col">
+        <div class="footer-col">
           <h4>Pages</h4>
           <ul>
             <li><a href="../">Home</a></li>
             <li><a href="../services/">Services</a></li>
             <li><a href="../service-area/">Service Area</a></li>
             <li><a href="../request/">Request Estimate</a></li>
-            <li><a href="../faq/">FAQ</a></li>
+            <li><a href="../#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Common Services</h4>
           <ul>
-            <li><a href="../services/#wall-repair">Wall repair</a></li>
-            <li><a href="../services/#door-trim">Door &amp; trim</a></li>
+            <li><a href="../services/#wall-repair">Wall repair &amp; touch-ups</a></li>
+            <li><a href="../services/#door-trim">Door, trim &amp; hardware</a></li>
             <li><a href="../services/#tv-mounting">TV mounting</a></li>
             <li><a href="../services/#small-installs">Small installs</a></li>
             <li><a href="../services/#punch-list">Punch-list fixes</a></li>
@@ -635,10 +634,10 @@
           <ul>
             <li><a href="../service-area/vancouver-wa/">Vancouver, WA</a></li>
             <li><a href="../service-area/portland-or/">Portland, OR</a></li>
-            <li><a href="../service-area/hillsboro-or/">Hillsboro, OR</a></li>
-            <li><a href="../service-area/beaverton-or/">Beaverton, OR</a></li>
-            <li><a href="../service-area/gresham-or/">Gresham, OR</a></li>
             <li><a href="../service-area/camas-wa/">Camas, WA</a></li>
+            <li><a href="../service-area/battle-ground-wa/">Battle Ground, WA</a></li>
+            <li><a href="../service-area/beaverton-or/">Beaverton, OR</a></li>
+            <li><a href="../service-area/hillsboro-or/">Hillsboro, OR</a></li>
             <li class="footer-view-all"><a href="../service-area/">View all service areas &rarr;</a></li>
           </ul>
         </div>
@@ -662,5 +661,28 @@
     })();
   </script>
 
+
+  <script>
+  (function(){
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.hasAttribute('hidden') === false && nav.classList.contains('open');
+      if (open) {
+        nav.classList.remove('open');
+        nav.hidden = true;
+        btn.setAttribute('aria-expanded','false');
+      } else {
+        nav.hidden = false;
+        nav.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') { nav.classList.remove('open'); nav.hidden = true; btn.setAttribute('aria-expanded','false'); }
+    });
+  })();
+  </script>
 </body>
 </html>

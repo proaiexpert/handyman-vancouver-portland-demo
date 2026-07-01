@@ -21,147 +21,37 @@
   <style>
     /* ── Page shell ── */
     .svc-page{background:var(--background)}
-    /* ── Header ── */
-    .svc-header{background:var(--primary);position:sticky;top:0;z-index:100}
-    .svc-nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .svc-nav-brand{font-size:1.0625rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:6px}
-    .svc-nav-brand span{color:#E6B16C}
-    .svc-nav-links{list-style:none;margin:0;padding:0;display:flex;gap:28px}
-    .svc-nav-links a{font-size:.9375rem;font-weight:600;color:rgba(255,255,255,.8);text-decoration:none;transition:color .15s}
-    .svc-nav-links a:hover,.svc-nav-links a.active{color:#E6B16C}
-    .svc-nav-cta{display:inline-flex;align-items:center;background:var(--cta);color:#241300;font-size:.9375rem;font-weight:700;text-decoration:none;border-radius:8px;padding:10px 22px;transition:background .18s}
-    .svc-nav-cta:hover{background:#b8711f}
-    .svc-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
-    .svc-hamburger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;border-radius:2px}
-    .svc-mobile-menu{display:none;background:var(--primary);border-top:1px solid rgba(255,255,255,.1);padding:20px 24px 28px}
-    .svc-mobile-menu.open{display:block}
-    .svc-mobile-menu a{display:block;font-size:1rem;font-weight:600;color:rgba(255,255,255,.85);text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07)}
-    .svc-mobile-cta{margin-top:16px;display:flex;flex-direction:column;gap:10px}
-    .svc-mobile-cta a{text-align:center;border-radius:8px;padding:13px;font-weight:700;font-size:.9375rem;text-decoration:none}
-    .svc-mobile-cta .svc-nav-cta{background:var(--cta);color:#241300}
-    .svc-mobile-cta .svc-nav-cta-sec{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
-    /* ── Layout ── */
-    .svc-section{padding:64px 0}
-    .svc-section--surface{background:var(--surface)}
-    .svc-section--dark{background:var(--primary)}
-    .svc-section--tint{background:#F2EDE4}
-    .svc-inner{max-width:1100px;margin:0 auto;padding:0 24px}
-    .svc-inner--narrow{max-width:760px;margin:0 auto;padding:0 24px}
-    /* ── Typography ── */
-    .svc-eyebrow{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cta);margin-bottom:10px}
-    .svc-h2{font-size:clamp(1.375rem,2.5vw,1.875rem);font-weight:800;color:var(--primary);margin:0 0 12px;line-height:1.2}
-    .svc-intro{font-size:.9375rem;color:var(--muted);line-height:1.65;margin:0 0 32px}
-    /* ── Hero ── */
-    .svc-hero{background:var(--background);border-bottom:1px solid var(--soft);padding:72px 0 64px}
-    .svc-hero-inner{max-width:760px}
-    .svc-hero-h1{font-size:clamp(1.875rem,4vw,2.875rem);font-weight:800;color:var(--primary);margin:0 0 16px;line-height:1.1}
-    .svc-hero-lead{font-size:1rem;color:var(--muted);line-height:1.65;margin:0 0 28px}
-    .svc-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
-    .svc-btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#241300;font-size:1rem;font-weight:700;text-decoration:none;border-radius:8px;padding:14px 28px;transition:background .18s,transform .12s}
-    .svc-btn-primary:hover{background:#b8711f;transform:translateY(-1px)}
-    .svc-btn-secondary{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--primary);font-size:.9375rem;font-weight:600;text-decoration:none;border-radius:8px;padding:13px 22px;border:1.5px solid var(--soft);transition:border-color .18s,background .18s}
-    .svc-btn-secondary:hover{border-color:var(--cta);background:var(--background)}
-    .svc-btn-navy{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;font-size:.9375rem;font-weight:600;text-decoration:none;border-radius:8px;padding:13px 22px;border:1px solid rgba(255,255,255,.15);transition:background .18s}
-    .svc-btn-navy:hover{background:#1a3050}
-    .svc-micro-row{display:flex;flex-wrap:wrap;gap:8px}
-    .svc-micro-chip{font-size:.8125rem;font-weight:600;color:var(--muted);background:#fff;border:1.5px solid var(--soft);border-radius:20px;padding:5px 14px}
-    /* ── Service category cards ── */
-    .svc-cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .svc-cat-card{background:#fff;border:1.5px solid var(--soft);border-radius:14px;padding:22px 20px 18px;box-shadow:0 2px 10px rgba(16,32,51,.05);position:relative;overflow:hidden}
-    .svc-cat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cta);border-radius:14px 14px 0 0;opacity:0;transition:opacity .2s}
-    .svc-cat-card:hover::before{opacity:1}
-    .svc-cat-num{font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cta);margin-bottom:10px;display:block}
-    .svc-cat-card h3{font-size:1rem;font-weight:800;color:var(--primary);margin:0 0 8px;line-height:1.2}
-    .svc-cat-card p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.55}
-    /* ── Review helper cards ── */
-    .svc-review-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .svc-review-card{background:#fff;border:1.5px solid var(--soft);border-radius:14px;padding:22px 20px 18px;box-shadow:0 2px 10px rgba(16,32,51,.05)}
-    .svc-review-num{font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cta);margin-bottom:10px}
-    .svc-review-card h3{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 6px}
-    .svc-review-card p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.55}
-    /* ── Examples section ── */
-    .svc-examples-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px}
-    .svc-example-group{background:#fff;border:1.5px solid var(--soft);border-radius:12px;padding:20px 20px 18px;box-shadow:0 2px 8px rgba(16,32,51,.04)}
-    .svc-example-group h3{font-size:.875rem;font-weight:700;color:var(--primary);margin:0 0 12px;text-transform:uppercase;letter-spacing:.06em;font-size:.75rem}
-    .svc-example-chips{display:flex;flex-wrap:wrap;gap:7px}
-    .svc-ex-chip{font-size:.8125rem;color:var(--muted);background:var(--background);border:1px solid var(--soft);border-radius:6px;padding:4px 10px}
-    .svc-examples-note{font-size:.875rem;color:var(--muted);line-height:1.55;margin:0}
-    /* ── Specialist note ── */
-    .svc-specialist-wrap{padding:28px 0}
-    .svc-specialist-note{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1.5px solid var(--soft);border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(16,32,51,.04)}
-    .svc-specialist-dot{width:8px;height:8px;border-radius:50%;background:var(--cta);flex-shrink:0;margin-top:7px}
-    .svc-specialist-note p{font-size:.9375rem;color:var(--muted);line-height:1.65;margin:0}
-    .svc-specialist-note strong{color:var(--primary);font-weight:700}
-    /* ── Steps ── */
-    .svc-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:28px}
-    .svc-step{display:flex;gap:16px;align-items:flex-start}
-    .svc-step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;font-size:.875rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
-    .svc-step-body h3{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 4px}
-    .svc-step-body p{font-size:.875rem;color:var(--muted);margin:0;line-height:1.55}
-    /* ── FAQ ── */
-    .svc-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .svc-faq-card{background:#fff;border:1.5px solid var(--soft);border-radius:12px;padding:20px 22px;box-shadow:0 2px 8px rgba(16,32,51,.04)}
-    .svc-faq-card h3{font-size:.9375rem;font-weight:700;color:var(--primary);margin:0 0 8px;line-height:1.4}
-    .svc-faq-card p{font-size:.9375rem;color:var(--muted);margin:0;line-height:1.65}
-    /* ── Final CTA ── */
-    .svc-final-cta{text-align:center}
-    .svc-final-cta h2{color:#fff;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;margin:0 0 12px}
-    .svc-final-cta p{color:rgba(255,255,255,.72);font-size:1rem;line-height:1.65;margin:0 auto 28px;max-width:520px}
-    .svc-final-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-    /* ── Footer ── */
-    /* ── Responsive ── */
-    @media(max-width:900px){
-      .svc-cat-grid{grid-template-columns:1fr 1fr}
-      .svc-review-grid{grid-template-columns:1fr 1fr}
-      .svc-examples-grid{grid-template-columns:1fr}
-      .svc-steps{grid-template-columns:1fr}
-      .svc-faq-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:768px){
-      .svc-nav-links,.svc-nav-cta{display:none}
-      .svc-hamburger{display:block}
-      .svc-section{padding:48px 0}
-      .svc-hero{padding:48px 0 40px}
-    }
-    @media(max-width:480px){
-      .svc-review-grid{grid-template-columns:1fr}
-      .svc-hero-actions{flex-direction:column}
-      .svc-btn-primary,.svc-btn-secondary{width:100%;justify-content:center}
-      .svc-final-actions{flex-direction:column;align-items:center}
-      .svc-final-actions a{width:100%;max-width:320px;justify-content:center}
-    }
-  </style>
+    /* ── Header ── */</style>
 </head>
 <body class="svc-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
 
   <!-- Header -->
-  <header class="svc-header" role="banner">
-    <div class="svc-nav-inner">
-      <a href="../" class="svc-nav-brand" aria-label="Local Repair Pro home">LR<span>Local Repair Pro</span></a>
-      <nav aria-label="Main navigation">
-        <ul class="svc-nav-links">
+    <header class="site-header" role="banner">
+    <div class="nav-inner">
+      <a href="../" class="nav-brand" aria-label="Local Repair Pro home"><span aria-hidden="true">LR</span><strong>Local Repair Pro</strong></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-links">
           <li><a href="../">Home</a></li>
-          <li><a href="./" class="active" aria-current="page">Services</a></li>
+          <li><a href="../services/">Services</a></li>
           <li><a href="../service-area/">Service Area</a></li>
           <li><a href="../#faq">FAQ</a></li>
         </ul>
       </nav>
-      <a href="../request/" class="svc-nav-cta">Request Estimate</a>
-      <button class="svc-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="svc-mobile-nav" type="button">
+      <a href="../request/" class="nav-cta">Request Estimate</a>
+      <button class="hamburger-btn" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <nav id="svc-mobile-nav" class="svc-mobile-menu" aria-label="Mobile navigation" hidden>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
       <a href="../">Home</a>
-      <a href="./" class="active" aria-current="page">Services</a>
+      <a href="../services/">Services</a>
       <a href="../service-area/">Service Area</a>
       <a href="../#faq">FAQ</a>
-      <a href="tel:+17777777777" class="svc-mobile-phone">Call or text: (777) 777-7777</a>
-      <div class="svc-mobile-cta">
-        <a href="../request/" class="svc-nav-cta">Request Estimate</a>
-        <a href="../request/" class="svc-nav-cta-sec">Request Estimate</a>
+      <a href="tel:+17777777777" class="mobile-nav-phone">Call or text: (777) 777-7777</a>
+      <div class="mobile-nav-cta">
+        <a href="../request/" class="nav-cta">Request Estimate</a>
       </div>
     </nav>
   </header>
@@ -413,7 +303,7 @@
 
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand-col">
@@ -431,21 +321,21 @@
           </p>
           <p class="footer-safety">Service availability depends on location, scope, access, and scheduling.</p>
         </div>
-                <div class="footer-col">
+        <div class="footer-col">
           <h4>Pages</h4>
           <ul>
             <li><a href="../">Home</a></li>
             <li><a href="../services/">Services</a></li>
             <li><a href="../service-area/">Service Area</a></li>
             <li><a href="../request/">Request Estimate</a></li>
-            <li><a href="../faq/">FAQ</a></li>
+            <li><a href="../#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Common Services</h4>
           <ul>
-            <li><a href="../services/#wall-repair">Wall repair</a></li>
-            <li><a href="../services/#door-trim">Door &amp; trim</a></li>
+            <li><a href="../services/#wall-repair">Wall repair &amp; touch-ups</a></li>
+            <li><a href="../services/#door-trim">Door, trim &amp; hardware</a></li>
             <li><a href="../services/#tv-mounting">TV mounting</a></li>
             <li><a href="../services/#small-installs">Small installs</a></li>
             <li><a href="../services/#punch-list">Punch-list fixes</a></li>
@@ -456,10 +346,10 @@
           <ul>
             <li><a href="../service-area/vancouver-wa/">Vancouver, WA</a></li>
             <li><a href="../service-area/portland-or/">Portland, OR</a></li>
-            <li><a href="../service-area/hillsboro-or/">Hillsboro, OR</a></li>
-            <li><a href="../service-area/beaverton-or/">Beaverton, OR</a></li>
-            <li><a href="../service-area/gresham-or/">Gresham, OR</a></li>
             <li><a href="../service-area/camas-wa/">Camas, WA</a></li>
+            <li><a href="../service-area/battle-ground-wa/">Battle Ground, WA</a></li>
+            <li><a href="../service-area/beaverton-or/">Beaverton, OR</a></li>
+            <li><a href="../service-area/hillsboro-or/">Hillsboro, OR</a></li>
             <li class="footer-view-all"><a href="../service-area/">View all service areas &rarr;</a></li>
           </ul>
         </div>
@@ -472,16 +362,32 @@
 
   <script>
     (function(){
-      var btn=document.querySelector('.svc-hamburger');
-      var menu=document.getElementById('svc-mobile-nav');
-      if(!btn||!menu)return;
-      btn.addEventListener('click',function(){
-        var open=menu.hidden===false;
-        menu.hidden=open;
-        btn.setAttribute('aria-expanded',String(!open));
-      });
+      
     })();
   </script>
 
+
+  <script>
+  (function(){
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.hasAttribute('hidden') === false && nav.classList.contains('open');
+      if (open) {
+        nav.classList.remove('open');
+        nav.hidden = true;
+        btn.setAttribute('aria-expanded','false');
+      } else {
+        nav.hidden = false;
+        nav.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') { nav.classList.remove('open'); nav.hidden = true; btn.setAttribute('aria-expanded','false'); }
+    });
+  })();
+  </script>
 </body>
 </html>

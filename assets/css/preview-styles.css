@@ -15,7 +15,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; min-height: 100vh; overflow-x: hidden; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--text); background: var(--background); }
+body { overflow-x: hidden; margin: 0; min-height: 100vh; overflow-x: hidden; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--text); background: var(--background); }
 a { color: inherit; }
 .skip-link { position: absolute; left: -999px; top: 10px; z-index: 20; background: var(--primary); color: white; padding: 10px; }
 .skip-link:focus { left: 10px; }
@@ -1314,7 +1314,7 @@ body.final-menu-open { overflow: hidden; }
 /* City footer */
 .site-footer { background: var(--primary); color: rgba(255,255,255,.7); padding: 48px 24px 32px; }
 .footer-inner { max-width: 1080px; margin: 0 auto; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 40px; }
 .footer-brand { font-size: .95rem; line-height: 1.6; }
 .footer-brand strong { color: #fff; font-size: 1rem; display: block; margin-bottom: 8px; }
 .footer-col h4 { color: #fff; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px; }
@@ -1639,3 +1639,49 @@ body.final-menu-open { overflow: hidden; }
     margin-bottom: 0;
   }
 }
+
+/* ── Canonical site-header (all inner pages) ── */
+.site-header{background:var(--primary);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{max-width:1160px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-brand{font-size:1.0625rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.nav-brand span{color:var(--cta);font-style:italic}
+.nav-brand strong{font-weight:800;color:#fff}
+.desktop-nav .nav-links{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+.desktop-nav .nav-links a{font-size:.9375rem;font-weight:600;color:rgba(255,255,255,.82);text-decoration:none;transition:color .15s}
+.desktop-nav .nav-links a:hover{color:var(--cta)}
+.nav-cta{display:inline-flex;align-items:center;background:var(--cta);color:#241300;font-size:.9375rem;font-weight:700;text-decoration:none;border-radius:8px;padding:10px 22px;white-space:nowrap;transition:background .18s,transform .12s}
+.nav-cta:hover{background:#b8711f;transform:translateY(-1px)}
+.hamburger-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0}
+.hamburger-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;border-radius:2px}
+.mobile-nav{display:none;position:fixed;top:0;right:0;bottom:0;width:min(320px,92vw);background:var(--primary);padding:32px 24px;flex-direction:column;gap:8px;z-index:200;overflow-y:auto;box-shadow:-4px 0 24px rgba(0,0,0,.35)}
+.mobile-nav.open,.mobile-nav[open]{display:flex!important}
+.mobile-nav a{color:rgba(255,255,255,.88);font-size:1.0625rem;font-weight:600;text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-nav a:hover{color:var(--cta)}
+.mobile-nav-phone{color:rgba(255,255,255,.7)!important;font-size:.9375rem!important;font-weight:400!important}
+.mobile-nav-cta{margin-top:16px}
+.mobile-nav-cta .nav-cta{width:100%;justify-content:center;font-size:1rem;padding:14px 24px}
+@media(max-width:767px){
+  .desktop-nav,.nav-cta:not(.mobile-nav .nav-cta){display:none}
+  .hamburger-btn{display:flex;align-items:center}
+}
+@media(min-width:768px){
+  .hamburger-btn{display:none!important}
+  .mobile-nav{display:none!important}
+  .desktop-nav{display:block}
+}
+
+/* ── Canonical button styles (shared) ── */
+.btn-primary, a.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--cta); color: #241300; font-size: 1rem; font-weight: 700;
+  text-decoration: none; border-radius: 8px; padding: 14px 28px;
+  transition: background .18s, transform .12s;
+}
+.btn-primary:hover, a.btn-primary:hover { background: #b8711f; transform: translateY(-1px); }
+.btn-secondary, a.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--primary); font-size: 1rem; font-weight: 600;
+  text-decoration: none; border: 1.5px solid var(--primary); border-radius: 8px; padding: 13px 26px;
+  transition: background .18s, color .18s;
+}
+.btn-secondary:hover, a.btn-secondary:hover { background: var(--primary); color: #fff; }
