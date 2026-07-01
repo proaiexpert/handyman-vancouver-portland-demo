@@ -1528,7 +1528,7 @@
     <nav class="final-desktop-nav" aria-label="Main navigation">
       <a href="services/">Services</a>
       <a href="#how-it-works">How It Works</a>
-      <a href="#service-area">Service Area</a>
+      <a href="service-area/">Service Area</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="final-header-actions final-desktop-actions">
@@ -1542,11 +1542,12 @@
       <button class="final-menu-close" type="button" aria-label="Close menu" data-final-menu-close></button>
       <a href="./">Home</a>
       <a href="services/">Services</a>
-      <a href="#service-area">Service Area</a>
+      <a href="service-area/">Service Area</a>
       <a href="#faq">FAQ</a>
+      <a href="tel:+17777777777" class="final-mobile-phone">Call or text: (777) 777-7777</a>
       <div class="final-mobile-actions">
         <a class="btn primary" href="request/">Request Estimate</a>
-        <a class="btn secondary final-secondary" href="request/#photo-checklist">Send Photos</a>
+        <a class="btn secondary final-secondary" href="request/">Send Photos</a>
       </div>
     </nav>
   </header>
@@ -1561,7 +1562,7 @@
         <p class="lead">Small repairs, installs, trim fixes, touch-ups, and punch-list projects for homeowners around Vancouver, WA, Clark County, and nearby Portland-area neighborhoods.</p>
         <div class="cta-row final-cta-row">
           <a class="btn primary" href="request/">Request Estimate</a>
-          <a class="btn secondary final-secondary" href="request/#photo-checklist" >Send Photos</a>
+          <a class="btn secondary final-secondary" href="request/" >Send Photos</a>
         </div>
         <p class="microcopy">Photos help clarify the repair scope before scheduling.</p>
         <div class="final-safe-proof">Scope reviewed before scheduling.</div>
@@ -1861,7 +1862,7 @@
           <h2>The finish details that change how a home feels.</h2>
           <p>Scuffed corners, worn trim, loose hardware, and small wall marks can make a clean home feel unfinished. A good repair request starts by identifying the details that affect the overall impression of the room.</p>
           <div class="rv-cta-group">
-            <a class="btn primary" href="request/#photo-checklist">Send Photos for Review</a>
+            <a class="btn primary" href="request/">Request Estimate</a>
             <span class="rv-microcopy">Photos help clarify the room, surface, access, and scope.</span>
           </div>
           <div class="rv-process">
@@ -2243,7 +2244,7 @@
             <p>Send photos and a short description of the items you want handled. Wall touch-ups, trim details, small installs, and grouped maintenance requests can be reviewed together when the scope is clear.</p>
             <p class="svc-disclaimer">Some work may require a licensed trade, permit, or another provider &mdash; that can be flagged during review.</p>
             <div class="svc-cta-group">
-              <a class="btn primary" href="request/#photo-checklist">Send Photos for Review</a>
+              <a class="btn primary" href="request/">Request Estimate</a>
               <a class="svc-secondary-link" href="services/">See all service categories &#8594;</a>
             </div>
           </div>
@@ -2577,7 +2578,7 @@
           <p class="hiw-note">No pressure to know the exact category &mdash; a short list and photos are enough to start.</p>
           <div class="hiw-cta-group">
             <a class="btn primary" href="request/">Request an Estimate</a>
-            <a class="hiw-secondary-link" href="request/#photo-checklist">Photo checklist &#8594;</a>
+            <a class="hiw-secondary-link" href="request/">Photo checklist &#8594;</a>
           </div>
         </div>
       </div>
@@ -2716,11 +2717,133 @@
         <!-- Compact reassurance CTA -->
         <div class="faq-premium__cta">
           <span class="faq-premium__cta-label">Still unsure what to send?</span>
-          <a href="request/#photo-checklist" class="faq-premium__cta-link">Send photos for review &#8594;</a>
+          <a href="request/" class="faq-premium__cta-link">Send photos for review &#8594;</a>
         </div>
 
       </div><!-- /.faq-premium -->
     </section>
+
+        <!-- Section 8.5: Explore the Site -->
+        <section class="explore-site-section reveal" aria-label="Explore Local Repair Pro">
+          <style>
+            .explore-site-section {
+              padding: clamp(48px, 6vw, 80px) clamp(20px, 6vw, 80px);
+              background: var(--surface, #f6f2eb);
+              border-top: 1px solid rgba(0,0,0,.07);
+            }
+            .explore-site-inner {
+              max-width: 1200px;
+              margin: 0 auto;
+            }
+            .explore-site-header {
+              margin: 0 0 32px;
+            }
+            .explore-site-header h2 {
+              font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+              font-weight: 900;
+              letter-spacing: -0.03em;
+              color: var(--primary, #102033);
+              margin: 0 0 8px;
+              line-height: 1.15;
+            }
+            .explore-site-header p {
+              font-size: 0.95rem;
+              color: var(--muted, #4a5568);
+              margin: 0;
+              line-height: 1.55;
+            }
+            .explore-cards {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 16px;
+            }
+            .explore-card {
+              background: white;
+              border: 1.5px solid rgba(0,0,0,.08);
+              border-radius: 14px;
+              padding: 24px 22px;
+              text-decoration: none;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+            .explore-card:hover {
+              border-color: var(--accent, #C9822B);
+              box-shadow: 0 4px 20px rgba(0,0,0,.08);
+            }
+            .explore-card-label {
+              font-size: 0.72rem;
+              font-weight: 800;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: var(--accent, #C9822B);
+              margin: 0;
+            }
+            .explore-card h3 {
+              font-size: 1.05rem;
+              font-weight: 800;
+              color: var(--primary, #102033);
+              margin: 0;
+              line-height: 1.2;
+            }
+            .explore-card p {
+              font-size: 0.88rem;
+              color: var(--muted, #4a5568);
+              margin: 0;
+              line-height: 1.55;
+              flex: 1;
+            }
+            .explore-card-arrow {
+              font-size: 1rem;
+              color: var(--accent, #C9822B);
+              margin-top: 4px;
+              font-weight: 700;
+            }
+            @media (max-width: 900px) {
+              .explore-cards {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+            @media (max-width: 480px) {
+              .explore-cards {
+                grid-template-columns: 1fr;
+              }
+            }
+          </style>
+          <div class="explore-site-inner">
+            <div class="explore-site-header">
+              <h2>Explore the site</h2>
+              <p>A complete local-service website should make services, service areas, and estimate requests easy to find.</p>
+            </div>
+            <div class="explore-cards">
+              <a href="services/" class="explore-card">
+                <p class="explore-card-label">What we do</p>
+                <h3>Services</h3>
+                <p>See common repair, install, touch-up, and punch-list categories.</p>
+                <span class="explore-card-arrow" aria-hidden="true">&#8594;</span>
+              </a>
+              <a href="service-area/" class="explore-card">
+                <p class="explore-card-label">Where we work</p>
+                <h3>Service Area</h3>
+                <p>Check Vancouver WA, Clark County, and nearby Portland-area request areas.</p>
+                <span class="explore-card-arrow" aria-hidden="true">&#8594;</span>
+              </a>
+              <a href="request/" class="explore-card">
+                <p class="explore-card-label">Get started</p>
+                <h3>Request Estimate</h3>
+                <p>Send project details and photos to start the estimate process.</p>
+                <span class="explore-card-arrow" aria-hidden="true">&#8594;</span>
+              </a>
+              <a href="#faq" class="explore-card">
+                <p class="explore-card-label">Learn more</p>
+                <h3>Common Questions</h3>
+                <p>Review what to send, how scope is clarified, and what may need a specialist.</p>
+                <span class="explore-card-arrow" aria-hidden="true">&#8594;</span>
+              </a>
+            </div>
+          </div>
+        </section>
 
         <!-- Section 9: Final CTA -->
     <section class="final-cta-section reveal" id="final-cta" aria-label="Start a repair request">
@@ -2745,7 +2868,7 @@
             </div>
             <div class="final-cta__actions">
               <a href="request/" class="btn primary final-cta__btn-primary">Request an Estimate</a>
-              <a href="request/#photo-checklist" class="btn secondary final-cta__btn-secondary">Photo Checklist</a>
+              <a href="request/" class="btn secondary final-cta__btn-secondary">Request Estimate</a>
             </div>
           </div>
         </div>
@@ -2774,50 +2897,42 @@
           <p class="footer-safety">Service availability depends on location, scope, access, and scheduling.</p>
         </div>
 
-        <!-- Col 2: Start here -->
+        <!-- Col 2: Pages -->
         <div class="footer-col">
-          <h4>Start here</h4>
-          <a href="request/">Request an Estimate</a>
-          <a href="request/#photo-checklist">Photo Checklist</a>
-          <a href="services/">Service Categories</a>
-          <a href="#faq">Common Questions</a>
+          <h4>Pages</h4>
+          <a href="./">Home</a>
+          <a href="services/">Services</a>
+          <a href="service-area/">Service Area</a>
+          <a href="request/">Request Estimate</a>
+          <a href="#faq">FAQ</a>
         </div>
 
-        <!-- Col 3: Common requests -->
+        <!-- Col 3: Common services -->
         <div class="footer-col">
-          <h4>Common requests</h4>
+          <h4>Common services</h4>
           <a href="services/">Wall repair &amp; touch-ups</a>
           <a href="services/">Door, trim &amp; hardware</a>
-          <a href="services/">Assembly &amp; small installs</a>
-          <a href="services/">Punch-list maintenance</a>
-          <a href="services/">Minor exterior touch-ups</a>
+          <a href="services/">TV mounting</a>
+          <a href="services/">Small installs</a>
+          <a href="services/">Punch-list fixes</a>
         </div>
 
-        <!-- Col 4: Nearby areas -->
-        <!-- Updated: footer location links now point to service-area/ anchors -->
+        <!-- Col 4: Service areas -->
         <div class="footer-col footer-col--areas">
-          <h4>Nearby request areas</h4>
+          <h4>Service areas</h4>
           <a href="service-area/vancouver-wa/">Vancouver, WA</a>
           <a href="service-area/portland-or/">Portland, OR</a>
-          <a href="service-area/camas-wa/">Camas</a>
-          <a href="service-area/camas-wa/">Washougal</a>
-          <a href="service-area/battle-ground-wa/">Battle Ground</a>
-          <a href="service-area/vancouver-wa/">Ridgefield</a>
-          <a href="service-area/vancouver-wa/">Salmon Creek</a>
-          <a href="service-area/vancouver-wa/">Hazel Dell</a>
-          <a href="service-area/beaverton-or/">Beaverton</a>
-          <a href="service-area/gresham-or/">Gresham</a>
-          <a href="service-area/hillsboro-or/">Hillsboro</a>
-          <a href="service-area/tigard-or/">Tigard</a>
-          <a href="service-area/lake-oswego-or/">Lake Oswego</a>
-          <a href="service-area/oregon-city-or/">Oregon City</a>
+          <a href="service-area/camas-wa/">Camas, WA</a>
+          <a href="service-area/battle-ground-wa/">Battle Ground, WA</a>
+          <a href="service-area/beaverton-or/">Beaverton, OR</a>
+          <a href="service-area/hillsboro-or/">Hillsboro, OR</a>
+          <a href="service-area/" class="footer-view-all">View all service areas &#8594;</a>
         </div>
 
       </div><!-- /.footer-inner -->
 
       <div class="footer-bottom">
         <p>&copy; 2026 Local Repair Pro. All rights reserved.</p>
-        <p class="footer-bottom-note">Local Repair Pro helps homeowners with small repairs, installs, touch-ups, and punch-list projects around Vancouver, WA and nearby areas.</p>
       </div>
     </footer>
   </main>
