@@ -941,7 +941,42 @@
       color: rgba(255,255,255,.55);
       font-size: .92rem;
       line-height: 1.5;
-      margin: 0 0 20px;
+      margin: 0 0 12px;
+    }
+    .footer-contact {
+      margin: 0 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .9rem;
+      line-height: 1.4;
+    }
+    .footer-contact-item a {
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-contact-item a:hover {
+      color: white;
+    }
+    .footer-icon {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      opacity: 0.7;
+      color: rgba(255,255,255,.7);
+      vertical-align: middle;
+    }
+    .footer-safety {
+      color: rgba(255,255,255,.38);
+      font-size: .78rem;
+      line-height: 1.45;
+      margin: 0;
     }
     .footer-col h4 {
       color: white;
@@ -1555,6 +1590,59 @@
             decoding="async">
         </div>
 
+      </div>
+    </section>
+
+    <!-- Section 1.5: Trust/Service Pills -->
+    <section class="trust-bar-section" aria-label="How Local Repair Pro works">
+      <style>
+        .trust-bar-section {
+          background: var(--surface, #f6f2eb);
+          border-top: 1px solid rgba(0,0,0,.07);
+          border-bottom: 1px solid rgba(0,0,0,.07);
+          padding: 28px clamp(20px, 6vw, 80px);
+        }
+        .trust-bar-inner {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 24px;
+          align-items: center;
+          justify-content: center;
+        }
+        .trust-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          font-size: 0.82rem;
+          font-weight: 600;
+          color: var(--primary, #1a2332);
+          letter-spacing: 0.01em;
+          white-space: nowrap;
+        }
+        .trust-pill-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--accent, #C9822B);
+          flex-shrink: 0;
+        }
+        @media (max-width: 480px) {
+          .trust-bar-inner {
+            gap: 8px 16px;
+          }
+          .trust-pill {
+            font-size: 0.78rem;
+          }
+        }
+      </style>
+      <div class="trust-bar-inner" role="list">
+        <span class="trust-pill" role="listitem"><span class="trust-pill-dot" aria-hidden="true"></span>Photo-based estimates</span>
+        <span class="trust-pill" role="listitem"><span class="trust-pill-dot" aria-hidden="true"></span>Small repairs &amp; punch-lists</span>
+        <span class="trust-pill" role="listitem"><span class="trust-pill-dot" aria-hidden="true"></span>Clear scope before scheduling</span>
+        <span class="trust-pill" role="listitem"><span class="trust-pill-dot" aria-hidden="true"></span>Homeowner-focused service</span>
+        <span class="trust-pill" role="listitem"><span class="trust-pill-dot" aria-hidden="true"></span>Vancouver WA &amp; nearby areas</span>
       </div>
     </section>
 
@@ -2214,7 +2302,115 @@
     </section>
 
     
-<!-- Section 4: Photo Request Flow -->
+<!-- Section 3.5: What we help with + Specialist note -->
+    <section class="what-we-help-section reveal" aria-label="What Local Repair Pro helps with">
+      <style>
+        .what-we-help-section {
+          padding: clamp(56px, 7vw, 88px) clamp(20px, 6vw, 80px);
+          background: var(--background, #f6f2eb);
+        }
+        .wwh-inner {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: clamp(40px, 6vw, 80px);
+          align-items: start;
+        }
+        .wwh-col h2 {
+          font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+          font-weight: 900;
+          letter-spacing: -0.03em;
+          color: var(--primary, #102033);
+          margin: 0 0 24px;
+          line-height: 1.15;
+        }
+        .wwh-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .wwh-list li {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          font-size: 0.95rem;
+          color: var(--muted, #4a5568);
+          line-height: 1.5;
+        }
+        .wwh-dot {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: var(--accent, #C9822B);
+          flex-shrink: 0;
+          margin-top: 7px;
+        }
+        .wwh-specialist-col h2 {
+          color: var(--primary, #102033);
+        }
+        .wwh-specialist-note {
+          background: white;
+          border: 1.5px solid rgba(0,0,0,.08);
+          border-radius: 12px;
+          padding: 24px 28px;
+          margin-bottom: 16px;
+        }
+        .wwh-specialist-note p {
+          font-size: 0.9rem;
+          color: var(--muted, #4a5568);
+          line-height: 1.65;
+          margin: 0 0 16px;
+        }
+        .wwh-specialist-note p:last-child {
+          margin: 0;
+        }
+        @media (max-width: 768px) {
+          .wwh-inner {
+            grid-template-columns: 1fr;
+            gap: 40px;
+          }
+        }
+      </style>
+      <div class="wwh-inner">
+
+        <!-- Col 1: What we help with -->
+        <div class="wwh-col">
+          <h2>What we help with</h2>
+          <ul class="wwh-list">
+            <li><span class="wwh-dot" aria-hidden="true"></span>Wall touch-ups and small drywall repairs</li>
+            <li><span class="wwh-dot" aria-hidden="true"></span>Trim, baseboards, doors, and hardware</li>
+            <li><span class="wwh-dot" aria-hidden="true"></span>TV mounting and small installs</li>
+            <li><span class="wwh-dot" aria-hidden="true"></span>Washer/dryer hookup details</li>
+            <li><span class="wwh-dot" aria-hidden="true"></span>Light fixture replacement when scope is appropriate</li>
+            <li><span class="wwh-dot" aria-hidden="true"></span>Punch-list and home detail fixes</li>
+          </ul>
+        </div>
+
+        <!-- Col 2: What may need a specialist -->
+        <div class="wwh-col wwh-specialist-col">
+          <h2>Some projects may need a licensed specialist</h2>
+          <div class="wwh-specialist-note">
+            <p>A few categories typically fall outside of handyman scope and require a licensed trade contractor:</p>
+            <ul class="wwh-list">
+              <li><span class="wwh-dot" aria-hidden="true"></span>Major electrical</li>
+              <li><span class="wwh-dot" aria-hidden="true"></span>Major plumbing</li>
+              <li><span class="wwh-dot" aria-hidden="true"></span>Roofing</li>
+              <li><span class="wwh-dot" aria-hidden="true"></span>Structural work</li>
+              <li><span class="wwh-dot" aria-hidden="true"></span>Permit-heavy work</li>
+              <li><span class="wwh-dot" aria-hidden="true"></span>Emergency or hazardous work</li>
+            </ul>
+            <p>Not sure which category your project falls into? Send it over. Local Repair Pro can help clarify the scope and next steps.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 4: Photo Request Flow -->
     <section class="reveal" id="how-it-works" aria-label="How repair requests are reviewed">
       <style>
         .hiw-section {
@@ -2564,7 +2760,17 @@
         <!-- Col 1: Brand -->
         <div class="footer-brand-col">
           <div class="footer-brand"><span>LR</span> Local Repair Pro</div>
-          <p class="footer-desc">Small repairs, installs, touch-ups, and punch-list projects for homeowners around Vancouver, WA, Clark County, and nearby Portland-area neighborhoods.</p>
+          <p class="footer-desc">Small repairs, installs, touch-ups, and punch-list projects around Vancouver, WA and nearby areas.</p>
+          <p class="footer-contact">
+            <span class="footer-contact-item">
+              <svg class="footer-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+17777777777">Call or text: (777) 777-7777</a>
+            </span>
+            <span class="footer-contact-item">
+              <svg class="footer-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:hello@localrepairpro.com">hello@localrepairpro.com</a>
+            </span>
+          </p>
           <p class="footer-safety">Service availability depends on location, scope, access, and scheduling.</p>
         </div>
 
@@ -2617,8 +2823,9 @@
   </main>
 
   <div class="premium-sticky-cta" id="sticky-cta-bar" data-sticky-cta>
-    <a class="sticky-primary" href="request/">Request Estimate</a>
-    <a class="sticky-secondary" href="request/#photo-checklist">Send Photos</a>
+    <a class="sticky-call" href="tel:+17777777777" aria-label="Call Local Repair Pro">Call</a>
+    <a class="sticky-text" href="sms:+17777777777" aria-label="Text Local Repair Pro">Text</a>
+    <a class="sticky-primary" href="request/">Estimate</a>
   </div>
   
   <script src="assets/js/preview-main.js"></script>
