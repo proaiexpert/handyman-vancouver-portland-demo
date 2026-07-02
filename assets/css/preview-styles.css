@@ -1874,17 +1874,32 @@ body.final-menu-open { overflow: hidden; }
    If user prefers reduced motion, they appear immediately.
    ═══════════════════════════════════════════════════════════════ */
 .reveal {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.reveal.is-visible {
+/* Only hide when JS has confirmed it can reveal (html.js set by preview-main.js).
+   Fail-open: without JS, content stays visible. */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+html.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
+/* Disable reveal hiding entirely on mobile — never risk blank content on phones. */
+@media (max-width: 768px) {
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  html.js .reveal {
     opacity: 1;
     transform: none;
     transition: none;

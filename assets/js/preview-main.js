@@ -192,20 +192,21 @@ window.addEventListener('scroll', () => {
 document.documentElement.classList.add('js-ready');
 
 
-// ── Scroll reveal (prefers-reduced-motion safe) ──────────────────────────────
+// ── Scroll reveal (prefers-reduced-motion safe, fail-open) ───────────────────
 (function () {
+  // Mark html as JS-capable so reveal CSS can safely hide-then-reveal.
+  document.documentElement.classList.add('js');
+
+  var revealAll = function () {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  };
+
   var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (mq.matches) {
-    // Immediately show all reveal elements
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      el.classList.add('is-visible');
-    });
-    return;
-  }
-  if (!('IntersectionObserver' in window)) {
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      el.classList.add('is-visible');
-    });
+  // Reduced motion, no IntersectionObserver, or mobile → show everything now.
+  if (mq.matches || !('IntersectionObserver' in window) || window.innerWidth <= 768) {
+    revealAll();
     return;
   }
   var observer = new IntersectionObserver(function (entries) {
@@ -220,4 +221,7 @@ document.documentElement.classList.add('js-ready');
   document.querySelectorAll('.reveal').forEach(function (el) {
     observer.observe(el);
   });
+
+  // Hard safety fallback: reveal everything after 1200ms no matter what.
+  setTimeout(revealAll, 1200);
 })();

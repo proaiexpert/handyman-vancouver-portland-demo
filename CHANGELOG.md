@@ -487,3 +487,11 @@ Documentation commits do not change the live site.
 - feat: update homepage explore section to 6-card layout including Pricing and Guides
 - fix: consistent header/footer width and visual scale across all pages
 - qa: link, header, footer, search, and mobile QA all pass
+
+## 2026-07-02 — Fix: reveal animations fail-safe on mobile
+- fix: root cause — .reveal defaulted to opacity:0 in shared CSS, but most pages (service-area, services, faq, request, all city pages) do not load preview-main.js, so their content stayed permanently invisible
+- fix: .reveal now defaults to opacity:1 (visible); hiding only applies under html.js (JS-confirmed) selector
+- fix: reveal hiding disabled entirely on mobile (max-width:768px)
+- fix: added html.js class toggle + 1200ms failsafe revealAll() in preview-main.js and index.html inline JS
+- fix: prefers-reduced-motion and no-IntersectionObserver both reveal all content immediately
+- result: content is visible by default on every device even if JS fails, loads late, or errors

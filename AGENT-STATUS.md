@@ -46,3 +46,10 @@
 
 ## Remaining
 - None. Phase 4 complete.
+
+## Update 2026-07-02 — Mobile blank-content (reveal) fix
+- Bug: mobile showed header + partial hero + footer, blank middle content
+- Root cause: shared .reveal { opacity:0 } fail-closed; subpages don't load preview-main.js so content never revealed
+- Fix: .reveal fail-open (visible by default); hide only under html.js; disabled on mobile; 1200ms JS failsafe
+- Files: assets/css/preview-styles.css, assets/js/preview-main.js, index.html
+- Reveal: made fail-safe (kept subtle on desktop, disabled on mobile)
