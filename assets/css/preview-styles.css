@@ -1056,6 +1056,13 @@ body.final-menu-open { overflow: hidden; }
   grid-template-columns: 1.6fr 1fr 1fr 1fr;
   gap: 40px;
 }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+}
 .footer-brand-col {
   display: flex;
   flex-direction: column;
@@ -1305,7 +1312,7 @@ body.final-menu-open { overflow: hidden; }
   .city-hero-card { max-width: 480px; }
   .city-intro-grid { grid-template-columns: 1fr; }
   .city-cat-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 40px; }
+  /* footer-grid inherits 4-col from base styles */
 }
 @media (max-width: 768px) {
   .site-nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--primary); flex-direction: column; padding: 16px 24px; gap: 16px; z-index: 100; }
@@ -1587,9 +1594,9 @@ body.final-menu-open { overflow: hidden; }
    Note: .footer-grid 3rd col is widened to 1.5fr (from 1fr) so 2 sub-columns
          each get ~159px — enough for longest names (Oregon City, OR). */
 @media (min-width: 1180px) {
-  /* Widen 3rd col on city-page footer grid to give city 2-col enough room */
+  /* Keep 4-col layout on footer-grid at wide desktop */
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1.5fr;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
   }
   /* Homepage footer: .footer-col--areas with bare <a> links */
   .footer-col--areas {
@@ -1660,3 +1667,34 @@ body.final-menu-open { overflow: hidden; }
   transition: background .18s, color .18s;
 }
 .btn-secondary:hover, a.btn-secondary:hover { background: var(--primary); color: #fff; }
+
+/* ── Footer grid fix: inner pages use .footer-grid inside .footer-inner ── */
+/* Make .footer-inner work as either grid-container OR just wrapper */
+.footer-inner:has(.footer-grid) {
+  display: block;
+  padding: 56px 24px 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .footer-grid .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-grid .footer-brand-col {
+    grid-column: auto;
+  }
+}

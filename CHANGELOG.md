@@ -1,3 +1,34 @@
+## 2026-07-02 — Task 9/10: Visual polish, footer fix, Work Examples rebuild
+
+### Fixed
+- **Services page** (`/services/`): Full `svc-*` CSS block added — hero gradient, styled
+  primary/secondary buttons, category card grid, review card grid, example chips,
+  responsive mobile breakpoints. Page no longer renders as unstyled HTML.
+- **Footer CSS** (`preview-styles.css`): Fixed conflicting `.footer-grid` rules that
+  caused 3-column override at desktop widths. Added `:has(.footer-grid)` rule so
+  inner pages (services, FAQ, city pages) get proper 4-column desktop layout.
+  Removed erroneous `@media(min-width:1180px)` override that was collapsing to 3 cols.
+- **FAQ page** (`/faq/`): Hero redesigned to match site design system — dark navy
+  gradient (`#0d1c2e → #1a3a5c`), amber eyebrow (`#C9822B`), warm cream text.
+  H1 updated to: "Common questions before requesting an estimate".
+  Lead updated: "Photos, location, access, and project details help clarify scope."
+- **Homepage**: Fixed aria-label `Start a repair request` → `Request an estimate`.
+  Fixed explore card to use safe wording (removed `completed project examples`).
+
+### Added / Rebuilt
+- **Work Examples page** (`/work-examples/`): Rebuilt with all 8 real scenario images
+  from `assets/img/scenarios/`. Each card now has actual photo (220px height),
+  title, description, category label. Removed emoji placeholders entirely.
+  Updated wording: "Sample repair and install scenarios" (no `completed projects`).
+  Safe note retained: "Images and scenarios are used as sample project examples..."
+
+### QA
+- Search QA: All forbidden strings cleared (Request Review, completed projects,
+  Start a Repair Request, insured, warranty, 5-star, Google reviews).
+- `demo site` allowed only in work-examples safe note (acceptable per spec).
+- All 15+ pages updated with Work Examples nav link.
+
+
 ## [2026-07-02] TASK 8 — Final Wording Cleanup
 
 ### Changed

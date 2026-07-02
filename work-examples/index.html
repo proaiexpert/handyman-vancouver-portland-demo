@@ -3,50 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Work Examples | Local Repair Pro | Vancouver WA &amp; Portland OR</title>
-  <meta name="description" content="Browse completed project examples from Local Repair Pro: wall repair, trim work, TV mounting, door hardware, ceiling fixtures, punch-list projects, and more around Vancouver WA and Portland OR.">
+  <title>Work Examples | Local Repair Pro</title>
+  <meta name="description" content="Sample repair, install, touch-up, and home detail project examples for a local handyman website. Visual examples of common request types around Vancouver WA and Portland OR.">
   <link rel="canonical" href="https://proai-expert.com/handyman-vancouver-portland-demo/work-examples/">
   <meta name="robots" content="noindex,nofollow">
   <meta property="og:title" content="Work Examples | Local Repair Pro">
-  <meta property="og:description" content="Completed project examples: wall repair, trim, TV mounting, door hardware, ceiling fixtures, and punch-list work around Vancouver WA and Portland OR.">
+  <meta property="og:description" content="Sample repair, install, touch-up, and home detail project type examples for a local handyman estimate website.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://proai-expert.com/handyman-vancouver-portland-demo/work-examples/">
   <meta property="og:image" content="https://proai-expert.com/handyman-vancouver-portland-demo/assets/img/hero-finished-pnw-1536.webp">
   <link rel="stylesheet" href="../assets/css/preview-styles.css">
   <style>
-    /* ── Work Examples Page ── */
-    .we-page { background: #f8fafc; }
-
+    /* Work Examples page styles */
     .we-hero {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
-      color: #fff;
-      padding: 64px 24px 56px;
+      background: linear-gradient(135deg, #0d1c2e 0%, #1a3a5c 60%, #C9822B22 100%);
+      color: #f0ebe0;
+      padding: clamp(56px,8vw,96px) clamp(20px,5vw,80px) clamp(48px,7vw,80px);
     }
-    .we-hero-inner { max-width: 720px; }
-    .we-eyebrow {
+    .we-hero-inner { max-width: 760px; }
+    .we-hero .eyebrow {
       display: block;
       font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .12em;
+      font-weight: 800;
+      letter-spacing: .14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.75);
-      margin-bottom: .75rem;
+      color: #C9822B;
+      margin-bottom: .8rem;
     }
     .we-hero h1 {
-      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
       font-weight: 800;
-      line-height: 1.15;
+      line-height: 1.12;
       margin: 0 0 1rem;
-      color: #fff;
+      color: #f0ebe0;
     }
     .we-hero p {
-      font-size: 1.05rem;
+      font-size: 1.0625rem;
       line-height: 1.65;
-      color: rgba(255,255,255,.88);
-      max-width: 600px;
-      margin: 0 0 1.75rem;
+      color: rgba(240,235,224,.82);
+      max-width: 580px;
+      margin: 0 0 2rem;
     }
-    .we-hero-ctas {
+    .we-hero-btns {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -54,59 +52,60 @@
     .we-btn-primary {
       display: inline-flex;
       align-items: center;
-      background: #facc15;
-      color: #1a1a1a;
+      background: #C9822B;
+      color: #fff;
       font-weight: 700;
-      font-size: .95rem;
-      padding: 13px 28px;
+      font-size: .9375rem;
+      padding: 12px 28px;
       border-radius: 8px;
       text-decoration: none;
-      transition: background .2s, transform .15s;
+      transition: background .18s, transform .12s;
     }
-    .we-btn-primary:hover { background: #eab308; transform: translateY(-1px); }
+    .we-btn-primary:hover { background: #b8711f; transform: translateY(-1px); }
     .we-btn-secondary {
       display: inline-flex;
       align-items: center;
-      background: rgba(255,255,255,.15);
-      color: #fff;
+      background: transparent;
+      color: rgba(240,235,224,.88);
       font-weight: 600;
-      font-size: .95rem;
-      padding: 13px 24px;
+      font-size: .9375rem;
+      padding: 11px 24px;
       border-radius: 8px;
       text-decoration: none;
-      border: 1px solid rgba(255,255,255,.35);
-      transition: background .2s;
+      border: 1.5px solid rgba(240,235,224,.35);
+      transition: background .18s, border-color .18s;
     }
-    .we-btn-secondary:hover { background: rgba(255,255,255,.25); }
+    .we-btn-secondary:hover { background: rgba(255,255,255,.08); border-color: rgba(240,235,224,.65); }
 
-    /* ── Grid ── */
+    /* Gallery section */
     .we-section {
-      max-width: 1080px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 56px 24px 72px;
+      padding: clamp(48px,6vw,80px) clamp(20px,4vw,48px) clamp(56px,7vw,96px);
     }
     .we-section-header {
-      margin-bottom: 36px;
+      margin-bottom: 40px;
     }
-    .we-section-eyebrow {
+    .we-section-header .eyebrow {
       display: block;
       font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .12em;
+      font-weight: 800;
+      letter-spacing: .14em;
       text-transform: uppercase;
-      color: #2563eb;
-      margin-bottom: .5rem;
+      color: #C9822B;
+      margin-bottom: .6rem;
     }
     .we-section-header h2 {
-      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
       font-weight: 800;
-      color: #1e293b;
-      margin: 0 0 .5rem;
+      color: #0d1c2e;
+      margin: 0 0 .6rem;
     }
     .we-section-header p {
       font-size: 1rem;
-      color: #475569;
+      color: #556;
       margin: 0;
+      max-width: 600px;
     }
     .we-grid {
       display: grid;
@@ -115,25 +114,34 @@
     }
     .we-card {
       background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      box-shadow: 0 2px 12px rgba(13,28,46,.08);
+      border: 1px solid rgba(13,28,46,.08);
       transition: box-shadow .2s, transform .2s;
       display: flex;
       flex-direction: column;
     }
     .we-card:hover {
-      box-shadow: 0 6px 24px rgba(37,99,235,.12);
+      box-shadow: 0 6px 28px rgba(13,28,46,.14);
       transform: translateY(-3px);
     }
-    .we-card-visual {
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
+    .we-card-img {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
       flex-shrink: 0;
+      background: #e8e4dc;
+    }
+    .we-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s;
+    }
+    .we-card:hover .we-card-img img {
+      transform: scale(1.03);
     }
     .we-card-body {
       padding: 20px 22px 24px;
@@ -141,80 +149,80 @@
       display: flex;
       flex-direction: column;
     }
-    .we-card-tag {
+    .we-card-label {
       display: inline-block;
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .08em;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .1em;
       text-transform: uppercase;
-      color: #2563eb;
-      background: #eff6ff;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-bottom: 10px;
-      width: fit-content;
+      color: #C9822B;
+      margin-bottom: 8px;
     }
     .we-card h3 {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #1e293b;
+      color: #0d1c2e;
       margin: 0 0 8px;
       line-height: 1.3;
     }
     .we-card p {
-      font-size: .88rem;
-      color: #64748b;
+      font-size: .875rem;
+      color: #556;
       line-height: 1.6;
-      margin: 0 0 16px;
+      margin: 0;
       flex: 1;
     }
-    .we-card-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+
+    /* Safe note */
+    .we-note {
+      background: #f5f0e8;
+      border-left: 3px solid #C9822B;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 0 clamp(20px,4vw,48px);
+      max-width: 720px;
     }
-    .we-card-chip {
-      font-size: .72rem;
-      background: #f1f5f9;
-      color: #475569;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-weight: 500;
+    .we-note p {
+      font-size: .82rem;
+      color: #7a6a52;
+      margin: 0;
+      line-height: 1.6;
     }
 
-    /* ── CTA strip ── */
+    /* CTA strip */
     .we-cta {
-      background: #1e3a5f;
-      color: #fff;
-      padding: 56px 24px;
+      background: #0d1c2e;
+      color: #f0ebe0;
       text-align: center;
+      padding: clamp(48px,6vw,80px) 24px;
+      margin-top: clamp(40px,5vw,64px);
     }
     .we-cta h2 {
-      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
       font-weight: 800;
       margin: 0 0 .75rem;
     }
     .we-cta p {
       font-size: 1rem;
-      opacity: .88;
-      margin: 0 0 1.5rem;
-      max-width: 540px;
+      color: rgba(240,235,224,.78);
+      margin: 0 0 1.75rem;
+      max-width: 520px;
       margin-left: auto;
       margin-right: auto;
     }
 
     @media (max-width: 600px) {
-      .we-hero { padding: 48px 20px 40px; }
-      .we-hero-ctas { flex-direction: column; }
+      .we-hero-btns { flex-direction: column; }
       .we-btn-primary, .we-btn-secondary { justify-content: center; }
-      .we-grid { grid-template-columns: 1fr; }
+      .we-grid { grid-template-columns: 1fr; gap: 20px; }
+      .we-card-img { height: 180px; }
+      .we-note { margin: 0 16px; }
     }
   </style>
 </head>
-<body class="we-page">
+<body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="nav-inner">
       <a href="../" class="nav-brand" aria-label="Local Repair Pro home"><span aria-hidden="true">LR</span><strong>Local Repair Pro</strong></a>
@@ -222,7 +230,7 @@
         <ul class="nav-links">
           <li><a href="../">Home</a></li>
           <li><a href="../services/">Services</a></li>
-          <li><a href="../work-examples/" aria-current="page">Work Examples</a></li>
+          <li><a href="../work-examples/">Work Examples</a></li>
           <li><a href="../service-area/">Service Area</a></li>
           <li><a href="../faq/">FAQ</a></li>
         </ul>
@@ -235,10 +243,9 @@
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
       <a href="../">Home</a>
       <a href="../services/">Services</a>
-      <a href="../work-examples/">Work Examples</a>
       <a href="../service-area/">Service Area</a>
       <a href="../faq/">FAQ</a>
-      <a href="tel:+17777777777" class="mobile-nav-phone">Call or text: (777) 777-7777</a>
+      <a href="tel:+17777777777" class="mobile-nav-phone">Call or text: (777) 777-7777</a>
       <div class="mobile-nav-cta">
         <a href="../request/" class="nav-cta">Request Estimate</a>
       </div>
@@ -248,160 +255,147 @@
   <main id="main-content">
 
     <!-- Hero -->
-    <section class="we-hero">
+    <section class="we-hero" aria-labelledby="we-heading">
       <div class="we-hero-inner">
-        <span class="we-eyebrow">COMPLETED PROJECTS</span>
-        <h1>Work examples from around Vancouver and Portland.</h1>
-        <p>A sample of the repair, install, and punch-list projects completed for homeowners in the Vancouver WA and Portland OR area. Send photos to start your own estimate.</p>
-        <div class="we-hero-ctas">
+        <span class="eyebrow">WORK EXAMPLES</span>
+        <h1 id="we-heading">Example project types for a cleaner, better-kept home.</h1>
+        <p>Visual examples of common repair, install, touch-up, and punch-list requests this kind of local-service site can organize. Each type starts with photos and project details.</p>
+        <div class="we-hero-btns">
           <a href="../request/" class="we-btn-primary">Request Estimate &rarr;</a>
           <a href="../services/" class="we-btn-secondary">View Services</a>
         </div>
       </div>
     </section>
 
-    <!-- Project Grid -->
-    <section class="we-section" aria-labelledby="we-grid-heading">
+    <!-- Gallery -->
+    <section class="we-section" aria-labelledby="we-gallery-heading">
       <div class="we-section-header">
-        <span class="we-section-eyebrow">PROJECT GALLERY</span>
-        <h2 id="we-grid-heading">Recent completed projects</h2>
-        <p>Each project started with photos and a description. Results vary by location, access, materials, and scope.</p>
+        <span class="eyebrow">SAMPLE SCENARIOS</span>
+        <h2 id="we-gallery-heading">Sample repair and install scenarios</h2>
+        <p>These example project types show how a local handyman site can organize and present common repair and install requests.</p>
       </div>
       <div class="we-grid">
-
-        <!-- Card 1 -->
         <article class="we-card">
-          <div class="we-card-visual" style="background:#f0f7ff;">&#x1F6E0;</div>
+          <div class="we-card-img">
+            <img src="../assets/img/scenarios/01-trim-baseboard-refresh.webp" 
+                 alt="Trim &amp; Baseboard Refresh" 
+                 loading="lazy"
+                 style="object-position:50% 40%">
+          </div>
           <div class="we-card-body">
-            <span class="we-card-tag">Wall Repair</span>
-            <h3>Drywall patch and texture match &mdash; Vancouver, WA</h3>
-            <p>Small drywall hole from a door handle. Patched, textured to match the surrounding wall, and primed. Homeowner painted over after cure.</p>
-            <div class="we-card-meta">
-              <span class="we-card-chip">Drywall patch</span>
-              <span class="we-card-chip">Texture match</span>
-              <span class="we-card-chip">Vancouver WA</span>
-            </div>
+            <span class="we-card-label">Trim &amp; Trim Detail</span>
+            <h3>Trim &amp; Baseboard Refresh</h3>
+            <p>Cleaner edges and finish details around walls, trim, and baseboards. Gaps, caulk lines, and paint-edge details reviewed by photos and scope.</p>
           </div>
         </article>
-
-        <!-- Card 2 -->
         <article class="we-card">
-          <div class="we-card-visual" style="background:#fefce8;">&#x1F4FA;</div>
+          <div class="we-card-img">
+            <img src="../assets/img/scenarios/02-kitchen-faucet-detail.webp" 
+                 alt="Kitchen Faucet Detail" 
+                 loading="lazy"
+                 style="object-position:50% 50%">
+          </div>
           <div class="we-card-body">
-            <span class="we-card-tag">TV Mounting</span>
-            <h3>65&Prime; TV mounted on brick fireplace &mdash; Portland, OR</h3>
-            <p>Mounted a 65-inch TV to a brick fireplace wall. Anchors drilled into mortar joints. Cable management routed to nearby outlet.</p>
-            <div class="we-card-meta">
-              <span class="we-card-chip">TV mount</span>
-              <span class="we-card-chip">Brick anchor</span>
-              <span class="we-card-chip">Portland OR</span>
-            </div>
+            <span class="we-card-label">Fixture Detail</span>
+            <h3>Kitchen Faucet Detail</h3>
+            <p>Small sink and fixture details reviewed by access, fit, and finish. Includes faucet swap, supply-line connection, and under-sink access.</p>
           </div>
         </article>
-
-        <!-- Card 3 -->
         <article class="we-card">
-          <div class="we-card-visual" style="background:#f0fdf4;">&#x1FA9F;</div>
+          <div class="we-card-img">
+            <img src="../assets/img/scenarios/03-door-hardware-details.webp" 
+                 alt="Door &amp; Hardware Details" 
+                 loading="lazy"
+                 style="object-position:50% 40%">
+          </div>
           <div class="we-card-body">
-            <span class="we-card-tag">Door &amp; Trim</span>
-            <h3>Interior door rehang and hardware swap &mdash; Camas, WA</h3>
-            <p>Door had dropped off the hinge and wouldn&rsquo;t latch. Re-hung, shimmed, and replaced dated brass hardware with brushed nickel set.</p>
-            <div class="we-card-meta">
-              <span class="we-card-chip">Door rehang</span>
-              <span class="we-card-chip">Hardware</span>
-              <span class="we-card-chip">Camas WA</span>
-            </div>
+            <span class="we-card-label">Door &amp; Hardware</span>
+            <h3>Door &amp; Hardware Details</h3>
+            <p>Handles, hinges, alignment, and visible door details reviewed together. Latches, strikes, and hardware finish all covered in one request.</p>
           </div>
         </article>
-
-        <!-- Card 4 -->
         <article class="we-card">
-          <div class="we-card-visual" style="background:#fdf4ff;">&#x1F4A1;</div>
+          <div class="we-card-img">
+            <img src="../assets/img/scenarios/04-bathroom-detail-touchup.webp" 
+                 alt="Bathroom Detail Touch-Up" 
+                 loading="lazy"
+                 style="object-position:50% 50%">
+          </div>
           <div class="we-card-body">
-            <span class="we-card-tag">Ceiling Fixture</span>
-            <h3>Ceiling fan swap and light kit install &mdash; Beaverton, OR</h3>
-            <p>Removed an old flush-mount light and installed a new ceiling fan with light kit. Existing junction box was rated for fan weight.</p>
-            <div class="we-card-meta">
-              <span class="we-card-chip">Ceiling fan</span>
-              <span class="we-card-chip">Light kit</span>
-              <span class="we-card-chip">Beaverton OR</span>
-            </div>
+            <span class="we-card-label">Bath Detail</span>
+            <h3>Bathroom Detail Touch-Up</h3>
+            <p>Vanity, fixture, and finish details reviewed for a cleaner bathroom feel. Caulk lines, hardware, and visible surface details covered.</p>
           </div>
         </article>
-
-        <!-- Card 5 -->
         <article class="we-card">
-          <div class="we-card-visual" style="background:#fff7ed;">&#x1F9FA;</div>
+          <div class="we-card-img">
+            <img src="../assets/img/scenarios/05-entry-door-exterior-trim.webp" 
+                 alt="Entry Door &amp; Exterior Trim" 
+                 loading="lazy"
+                 style="object-position:50% 35%">
+          </div>
           <div class="we-card-body">
-            <span class="we-card-tag">Small Install</span>
-            <h3>Washer pedestal assembly and connection &mdash; Lake Oswego, OR</h3>
-            <p>Assembled a manufacturer washer/dryer pedestal set and reconnected supply lines and drain. Leveled on the pedestal risers.</p>
-            <div class="we-card-meta">
-              <span class="we-card-chip">Assembly</span>
-              <span class="we-card-chip">Connections</span>
-              <span class="we-card-chip">Lake Oswego OR</span>
-            </div>
+            <span class="we-card-label">Entry &amp; Exterior</span>
+            <h3>Entry Door &amp; Exterior Trim</h3>
+            <p>Visible entry details reviewed by access, material, and exterior condition. Includes door alignment, exterior trim gaps, and paint-edge detail.</p>
           </div>
         </article>
-
-        <!-- Card 6 -->
         <article class="we-card">
-          <div class="we-card-visual" style="background:#eff6ff;">&#x1F4CB;</div>
+          <div class="we-card-img">
+            <img src="../assets/img/scenarios/06-washer-dryer-connection.webp" 
+                 alt="Washer &amp; Dryer Connection" 
+                 loading="lazy"
+                 style="object-position:50% 50%">
+          </div>
           <div class="we-card-body">
-            <span class="we-card-tag">Punch-List</span>
-            <h3>Pre-listing punch-list &mdash; 9 items &mdash; Hillsboro, OR</h3>
-            <p>Nine-item punch-list before a home listing: two cabinet hinges, a sticking door, baseboard reattachment, two outlet cover swaps, caulk touch-up, and closet rod reseat.</p>
-            <div class="we-card-meta">
-              <span class="we-card-chip">Multi-item</span>
-              <span class="we-card-chip">Pre-listing</span>
-              <span class="we-card-chip">Hillsboro OR</span>
-            </div>
+            <span class="we-card-label">Appliance Install</span>
+            <h3>Washer &amp; Dryer Connection</h3>
+            <p>Laundry setup details reviewed by space, access, and connection needs. Supply lines, drain hose, and level-on-pedestal details included.</p>
           </div>
         </article>
-
-        <!-- Card 7 -->
         <article class="we-card">
-          <div class="we-card-visual" style="background:#f0fdf4;">&#x1FAB5;</div>
+          <div class="we-card-img">
+            <img src="../assets/img/scenarios/07-tv-wall-mount-install.webp" 
+                 alt="TV Wall Mount Install" 
+                 loading="lazy"
+                 style="object-position:50% 40%">
+          </div>
           <div class="we-card-body">
-            <span class="we-card-tag">Touch-Up</span>
-            <h3>Baseboard and trim caulk refresh &mdash; Tigard, OR</h3>
-            <p>Re-caulked baseboard seams in three rooms where old caulk had shrunk and cracked. Smooth lines matched existing paint sheen.</p>
-            <div class="we-card-meta">
-              <span class="we-card-chip">Caulk</span>
-              <span class="we-card-chip">Baseboard trim</span>
-              <span class="we-card-chip">Tigard OR</span>
-            </div>
+            <span class="we-card-label">TV Mounting</span>
+            <h3>TV Wall Mount Install</h3>
+            <p>Mounting requests reviewed by wall type, stud placement, and room layout. Bracket selection and cable management noted in the request.</p>
           </div>
         </article>
-
-        <!-- Card 8 -->
         <article class="we-card">
-          <div class="we-card-visual" style="background:#fef9c3;">&#x1F6AA;</div>
+          <div class="we-card-img">
+            <img src="../assets/img/scenarios/08-ceiling-light-fixture-install.webp" 
+                 alt="Ceiling Light Fixture Install" 
+                 loading="lazy"
+                 style="object-position:50% 50%">
+          </div>
           <div class="we-card-body">
-            <span class="we-card-tag">Door &amp; Trim</span>
-            <h3>Exterior screen door install &mdash; Battle Ground, WA</h3>
-            <p>Installed a new full-view aluminum screen door on an existing wood door frame. Adjusted strike plate and spring tension for smooth operation.</p>
-            <div class="we-card-meta">
-              <span class="we-card-chip">Screen door</span>
-              <span class="we-card-chip">Frame fit</span>
-              <span class="we-card-chip">Battle Ground WA</span>
-            </div>
+            <span class="we-card-label">Ceiling Fixture</span>
+            <h3>Ceiling Light Fixture Install</h3>
+            <p>Light fixture requests reviewed by ceiling access, existing junction box, and placement. Includes flush-mounts, pendants, and fan installs.</p>
           </div>
         </article>
-
       </div>
     </section>
+
+    <!-- Safe note -->
+    <div class="we-note">
+      <p>Images and scenarios are used as sample project examples for this demo site. A real client version would use the contractor&#8217;s actual project photos, reviews, and service details.</p>
+    </div>
 
     <!-- CTA -->
     <section class="we-cta" aria-labelledby="we-cta-heading">
       <h2 id="we-cta-heading">Have a similar project?</h2>
-      <p>Send photos and details. Requests are reviewed by project type, location, access, materials, and scope before the next step is clarified.</p>
+      <p>Send photos and details to start the estimate process. Requests are reviewed by project type, location, access, materials, and scope.</p>
       <a href="../request/" class="we-btn-primary">Request Estimate &rarr;</a>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -425,7 +419,7 @@
           <ul>
             <li><a href="../">Home</a></li>
             <li><a href="../services/">Services</a></li>
-            <li><a href="../work-examples/">Work Examples</a></li>
+          <li><a href="../work-examples/">Work Examples</a></li>
             <li><a href="../service-area/">Service Area</a></li>
             <li><a href="../request/">Request Estimate</a></li>
             <li><a href="../faq/">FAQ</a></li>
@@ -460,27 +454,6 @@
     </div>
   </footer>
 
-  <script>
-  (function(){
-    var btn = document.getElementById('hamburger');
-    var nav = document.getElementById('mobile-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function(){
-      var open = nav.hasAttribute('hidden') === false && nav.classList.contains('open');
-      if (open) {
-        nav.classList.remove('open');
-        nav.hidden = true;
-        btn.setAttribute('aria-expanded','false');
-      } else {
-        nav.hidden = false;
-        nav.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
-      }
-    });
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape') { nav.classList.remove('open'); nav.hidden = true; btn.setAttribute('aria-expanded','false'); }
-    });
-  })();
-  </script>
+  <script src="../assets/js/preview-main.js"></script>
 </body>
 </html>
