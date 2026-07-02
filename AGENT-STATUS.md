@@ -1,21 +1,21 @@
 ## Current Status
 
-**Last completed task:** Footer Service Areas pattern correction — compact vertical list restored globally  
-**HEAD commit:** (pending — fix: restore compact footer service-area list)  
+**Last completed task:** Homepage Explore section balanced 6-card 3x2 grid  
+**HEAD commit:** (pending — fix: balance homepage explore section)  
 **Date:** 2026-07-02  
-**Overall site health:** GOOD — all 16 public HTML files pass noindex and forbidden-string QA
+**Overall site health:** GOOD
 
 ### What was done in this pass
-- Identified that shared CSS (`assets/css/preview-styles.css`) contained two rules causing footer Service Areas to render as a 2-column staggered/chessboard grid:
-  1. `@media (min-width:500px) and (max-width:900px) and (orientation:landscape)` — set `column-count:2` on `.footer-col--areas`
-  2. `@media (min-width:1180px)` — set `display:grid; grid-template-columns: max-content 1fr` on `.footer-col--areas` and `repeat(2,minmax(0,1fr))` on city pages footer ul
-- Both rules removed; footer-col--areas now always renders as a clean single-column vertical list
-- Homepage body city-card grid (local-area__city-grid) untouched and kept separate from footer
-- FAQ premium rebuild, 12 items, amber icons, support cards, dark CTA strip all preserved
-- Canonical 6-city footer list (Vancouver WA, Portland OR, Camas WA, Battle Ground WA, Beaverton OR, Lake Oswego OR + View all) confirmed across all 16 pages
+- Homepage Explore section: changed from 5-card 4-col orphan layout (4+1) to balanced 6-card 3x2 grid
+- Added 6th card: "Estimate Process" (HOW IT WORKS eyebrow, links to request/)
+- Desktop: 3 columns x 2 rows; Tablet (≤900px): 2 columns x 3 rows; Mobile (≤480px): 1 column
+- Card style upgraded: amber top border, larger padding (28px), min-height 170px, lift-on-hover transform
+- Section heading improved: "Explore the local-service website structure"
+- Subtext updated to mention all 6 sections
+- No forbidden strings, noindex preserved on all 16 public HTML files
 
 ### Open items
-- None — site is ready for client review
+- None
 ## Audit Date: 2026-07-02
 
 ## Page-by-Page Classification (Rendered Screenshots)

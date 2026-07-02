@@ -2790,7 +2790,7 @@
         <section class="explore-site-section reveal" aria-label="Explore Local Repair Pro">
           <style>
             .explore-site-section {
-              padding: clamp(48px, 6vw, 80px) clamp(20px, 6vw, 80px);
+              padding: clamp(56px, 7vw, 96px) clamp(20px, 6vw, 80px);
               background: var(--surface, #f6f2eb);
               border-top: 1px solid rgba(0,0,0,.07);
             }
@@ -2799,59 +2799,63 @@
               margin: 0 auto;
             }
             .explore-site-header {
-              margin: 0 0 32px;
+              margin: 0 0 36px;
             }
             .explore-site-header h2 {
-              font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+              font-size: clamp(1.5rem, 2.8vw, 2.1rem);
               font-weight: 900;
               letter-spacing: -0.03em;
               color: var(--primary, #102033);
-              margin: 0 0 8px;
+              margin: 0 0 10px;
               line-height: 1.15;
             }
             .explore-site-header p {
-              font-size: 0.95rem;
+              font-size: 1rem;
               color: var(--muted, #4a5568);
               margin: 0;
-              line-height: 1.55;
+              line-height: 1.6;
+              max-width: 640px;
             }
             .explore-cards {
               display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              gap: 16px;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 20px;
             }
             .explore-card {
               background: white;
               border: 1.5px solid rgba(0,0,0,.08);
               border-radius: 14px;
-              padding: 24px 22px;
+              border-top: 3px solid #C9822B;
+              padding: 28px 26px 24px;
               text-decoration: none;
               display: flex;
               flex-direction: column;
-              gap: 8px;
-              transition: border-color 0.2s ease, box-shadow 0.2s ease;
+              gap: 10px;
+              min-height: 170px;
+              transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
             }
             .explore-card:hover {
-              border-color: var(--accent, #C9822B);
-              box-shadow: 0 4px 20px rgba(0,0,0,.08);
+              border-color: #C9822B;
+              box-shadow: 0 6px 28px rgba(0,0,0,.10);
+              transform: translateY(-2px);
             }
             .explore-card-label {
-              font-size: 0.72rem;
+              font-size: 0.71rem;
               font-weight: 800;
               letter-spacing: 0.1em;
               text-transform: uppercase;
-              color: var(--accent, #C9822B);
+              color: #C9822B;
               margin: 0;
             }
             .explore-card h3 {
-              font-size: 1.05rem;
+              font-size: 1.1rem;
               font-weight: 800;
               color: var(--primary, #102033);
               margin: 0;
               line-height: 1.2;
             }
             .explore-card p {
-              font-size: 0.88rem;
+              font-size: 0.9rem;
               color: var(--muted, #4a5568);
               margin: 0;
               line-height: 1.55;
@@ -2859,8 +2863,8 @@
             }
             .explore-card-arrow {
               font-size: 1rem;
-              color: var(--accent, #C9822B);
-              margin-top: 4px;
+              color: #C9822B;
+              margin-top: 6px;
               font-weight: 700;
             }
             @media (max-width: 900px) {
@@ -2876,38 +2880,44 @@
           </style>
           <div class="explore-site-inner">
             <div class="explore-site-header">
-              <h2>Explore the site</h2>
-              <p>A complete local-service website should make services, service areas, and estimate requests easy to find.</p>
+              <h2>Explore the local-service website structure</h2>
+              <p>A complete local-service website makes services, work examples, service areas, estimate requests, and common questions easy to find.</p>
             </div>
             <div class="explore-cards">
               <a href="services/" class="explore-card">
-                <p class="explore-card-label">What we do</p>
+                <p class="explore-card-label">WHAT WE DO</p>
                 <h3>Services</h3>
                 <p>See common repair, install, touch-up, and punch-list categories.</p>
                 <span class="explore-card-arrow" aria-hidden="true">&rarr;</span>
               </a>
               <a href="work-examples/" class="explore-card">
-                <p class="explore-card-label">See finished work</p>
+                <p class="explore-card-label">SEE FINISHED DETAILS</p>
                 <h3>Work Examples</h3>
                 <p>See sample repair, install, touch-up, and home detail scenarios.</p>
                 <span class="explore-card-arrow" aria-hidden="true">&rarr;</span>
               </a>
               <a href="service-area/" class="explore-card">
-                <p class="explore-card-label">Where we work</p>
+                <p class="explore-card-label">WHERE WE WORK</p>
                 <h3>Service Area</h3>
                 <p>Check Vancouver WA, Clark County, and nearby Portland-area request areas.</p>
                 <span class="explore-card-arrow" aria-hidden="true">&rarr;</span>
               </a>
               <a href="request/" class="explore-card">
-                <p class="explore-card-label">Get started</p>
+                <p class="explore-card-label">GET STARTED</p>
                 <h3>Request Estimate</h3>
                 <p>Send project details and photos to start the estimate process.</p>
                 <span class="explore-card-arrow" aria-hidden="true">&rarr;</span>
               </a>
               <a href="faq/" class="explore-card">
-                <p class="explore-card-label">Learn more</p>
+                <p class="explore-card-label">LEARN MORE</p>
                 <h3>Common Questions</h3>
                 <p>Review what to send, how scope is clarified, and what may need a specialist.</p>
+                <span class="explore-card-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <a href="request/" class="explore-card">
+                <p class="explore-card-label">HOW IT WORKS</p>
+                <h3>Estimate Process</h3>
+                <p>See how photos, location, access, timing, and scope help clarify the next step.</p>
                 <span class="explore-card-arrow" aria-hidden="true">&rarr;</span>
               </a>
             </div>

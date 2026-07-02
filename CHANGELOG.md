@@ -1,5 +1,17 @@
 ## [Unreleased] — 2026-07-02
 
+### fix: balance homepage explore section
+
+- **Old:** 5-card Explore block with `repeat(4,1fr)` grid — 4 cards row 1 + 1 lonely card row 2 (visually broken)
+- **New:** 6-card balanced grid `repeat(3,1fr)` — clean 3×2 on desktop, 2×3 on tablet (≤900px), 1×6 on mobile (≤480px)
+- **6th card added:** Estimate Process (HOW IT WORKS / links to request/)
+- **Card style:** amber top border `3px solid #C9822B`, padding 28px 26px, min-height 170px, `translateY(-2px)` hover lift
+- **Section heading:** "Explore the local-service website structure"
+- **Only file changed:** `index.html`
+
+---
+## [Unreleased] — 2026-07-02
+
 ### fix: restore compact footer service-area list
 
 **Root cause identified:** `assets/css/preview-styles.css` had two CSS rules that made `.footer-col--areas` render as a 2-column staggered/chessboard grid:
