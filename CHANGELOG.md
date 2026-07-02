@@ -1,3 +1,28 @@
+## [Unreleased] — 2026-07 — Premium Visual Cohesion Pass
+
+### Added
+- **Scroll reveal animation** — `IntersectionObserver` JS in `preview-main.js`; elements with
+  `class="reveal"` fade+slide up on scroll entry (0.55s cubic-bezier, 28px translateY)
+- **prefers-reduced-motion safety** — reveal elements appear immediately when motion is reduced;
+  all card hover transforms also disabled
+- **Micro-interaction CSS in shared stylesheet:**
+  - `.faq-premium__card` hover lift (`translateY(-2px)`, `box-shadow`)
+  - `.local-area__city-card` hover lift
+  - `.explore-card` hover reinforced in shared CSS (was inline-only)
+- **Reveal class coverage** across all 16 HTML pages (sections, body blocks)
+
+### Changed
+- Explore section heading: "Explore the local-service website structure" →
+  "Explore everything on this site"
+- Explore body copy shortened to one concise line
+- Trust bar section on homepage now participates in scroll reveal
+
+### Fixed
+- City pages (all 10) now have reveal on all body sections
+- Request page sections fully covered by reveal
+
+---
+
 ## [Unreleased] — 2026-07-02
 
 ### fix: balance homepage explore section

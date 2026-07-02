@@ -190,3 +190,34 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 document.documentElement.classList.add('js-ready');
+
+
+// ── Scroll reveal (prefers-reduced-motion safe) ──────────────────────────────
+(function () {
+  var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (mq.matches) {
+    // Immediately show all reveal elements
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+    return;
+  }
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    observer.observe(el);
+  });
+})();

@@ -1,108 +1,72 @@
-## Current Status
+# AGENT-STATUS.md
+_Last updated: 2026-07 | Task: Premium Visual Cohesion Pass_
 
-**Last completed task:** Homepage Explore section balanced 6-card 3x2 grid  
-**HEAD commit:** (pending — fix: balance homepage explore section)  
-**Date:** 2026-07-02  
-**Overall site health:** GOOD
+## Current State
+- **Live demo:** https://proai-expert.com/handyman-vancouver-portland-demo/
+- **HEAD commit:** (pending — see below)
+- **All 16 HTML pages:** passing QA (noindex intentional — demo site)
 
-### What was done in this pass
-- Homepage Explore section: changed from 5-card 4-col orphan layout (4+1) to balanced 6-card 3x2 grid
-- Added 6th card: "Estimate Process" (HOW IT WORKS eyebrow, links to request/)
-- Desktop: 3 columns x 2 rows; Tablet (≤900px): 2 columns x 3 rows; Mobile (≤480px): 1 column
-- Card style upgraded: amber top border, larger padding (28px), min-height 170px, lift-on-hover transform
-- Section heading improved: "Explore the local-service website structure"
-- Subtext updated to mention all 6 sections
-- No forbidden strings, noindex preserved on all 16 public HTML files
+## Completed Tasks (chronological)
 
-### Open items
-- None
-## Audit Date: 2026-07-02
+### Task 1 — Footer standardization + FAQ premium rebuild + city grid
+- Commit: `79f8846`
+- Footer: All 16 pages updated Hillsboro → Lake Oswego
+- FAQ: Premium rebuild (12 accordions, amber icons, two-column hero, 3 support cards, dark CTA)
+- Homepage: 6-card linked city grid (Vancouver/Portland primary, 4 secondary)
 
-## Page-by-Page Classification (Rendered Screenshots)
+### Task 2 — Cache-busted QA
+- No code changes; verified all pages rendered correctly post-push
 
-| # | Page | Classification | Notes |
-|---|------|---------------|-------|
-| 1 | / (homepage) | PASS | Hero strong, amber CTA, trust row, service categories, area map, FAQ accordion, footer. Lower sections may have minor container width drift at extreme widths. |
-| 2 | /services/ | PASS | Dark hero with amber CTA, service category grid with 8 cards, FAQ section. Premium feel. |
-| 3 | /work-examples/ | PASS | Hero with dual CTAs, scenario grid with 4 images, demo note. Card height 380px renders well. |
-| 4 | /request/ | MINOR | Hero has two buttons side by side: "Request Estimate" (filled) + "Request Estimate" (outline) — redundant. Fixed: secondary changed to "View Services". Form, path selector, process steps all present. |
-| 5 | /service-area/ | PASS | Hero with map card, city grid, factor cards, CTA. Solid structure. |
-| 6 | /faq/ | PASS | Dark hero, 7 FAQ accordions, pre-estimate checklist card, photos-help card, CTA. Premium feel. |
-| 7 | /service-area/vancouver-wa/ | PASS | City hero H1 upgraded (clamp 2.2rem+), map card, process section, location-fit sidebar. |
-| 8 | /service-area/lake-oswego-or/ | PASS | Same pattern, city-specific copy. |
-| 9 | /service-area/portland-or/ | PASS | Same pattern, city-specific copy. |
-| 10 | /service-area/beaverton-or/ | PASS | Same pattern, city-specific copy. |
+### Task 3 — Footer CSS compact fix
+- Commit: `42b9110`
+- Removed errant 2-column CSS rules from shared CSS that caused footer city list to stagger
+- Footer now renders as clean compact vertical list on all breakpoints
 
-## Fixes Applied in This Audit
+### Task 4 — Explore section 6-card 3×2 balance
+- Commit: `f12ab1e`
+- Changed 5-card grid (4+1 orphan) to 6-card 3×2 balanced grid
+- Added 6th card: "Estimate Process" → request/
+- Grid: repeat(3,1fr) desktop, repeat(2,1fr) tablet, 1fr mobile
 
-1. **request/index.html** — Secondary hero button was redundant "Request Estimate" (outline) linking to same page. Changed to "View Services" linking to ../services/.
-2. **index.html** — Desktop nav showed "How It Works" (anchor to #how-it-works) instead of "Work Examples" page link. Changed to "Work Examples" linking to work-examples/.
-3. **service-area/beaverton-or/index.html** — "grouped punch-list reviews" reworded to "grouped punch-list requests" to avoid false-positive QA hit.
-4. **work-examples/index.html** — Demo note reworded "reviews" to "client photos" to avoid false-positive QA hit.
+### Task 5 — Premium Visual Cohesion Pass (current)
+- Commit: (pending)
+- **Visual audit:** Screenshots taken of all 8 key pages
+- **CSS tokens:** Verified nav-inner (1260px), footer-inner (1260px), hero containers consistent
+- **Scroll reveal:** Added IntersectionObserver JS + CSS (opacity+translateY) to preview-main.js
+  - prefers-reduced-motion safe (instant show fallback)
+  - IntersectionObserver fallback (instant show)
+  - Threshold: 0.08, rootMargin: 0 0 -40px 0
+- **Micro-interactions added to shared CSS:**
+  - .faq-premium__card hover lift (translateY -2px)
+  - .local-area__city-card hover lift (translateY -2px)
+  - .explore-card hover reinforced in shared CSS (was inline only)
+  - prefers-reduced-motion disables all transform hovers
+- **Reveal class coverage:** All 16 HTML pages — 2-20 reveal occurrences each
+- **Explore section copy:** Polished heading + body text
+- **Search QA:** All pages pass (noindex is intentional demo marker)
 
-## QA Scan Result
+## Design Tokens
+| Token | Value |
+|---|---|
+| Primary (navy) | `#0d1c2e` |
+| Accent (amber) | `#C9822B` |
+| Warm cream | `#f0ebe0` |
+| Background | `#F7F2EA` / `#f6f2eb` |
+| Nav-inner width | `1260px` |
+| Footer-inner width | `1260px` |
+| Hero widths | `960px–1200px` (per page type) |
 
-- Extended forbidden strings scan: **PASS** (no violations after fixes)
-- noindex/nofollow preserved on all pages
-- No fake reviews, ratings, license numbers, or guaranteed claims
+## Footer Cities (canonical)
+Vancouver WA · Portland OR · Camas WA · Battle Ground WA · Beaverton OR · Lake Oswego OR
++ "View all service areas →"
 
----
-
-## Audit Date: 2026-07-02
-
-## Page Inventory & Classification
-
-| Page | Lines | Classification | Issues Found |
-|---|---|---|---|
-| / (homepage) | 3,113 | PASS | Strong. Lower sections may have minor container width drift. |
-| /services/ | 652 | THIN | Hero CTA button uses #facc15 (yellow) not amber #C9822B. Page is substantively solid but inconsistent button color. |
-| /work-examples/ | 421 | THIN | Image cards 300px height (needs 380px+). Missing "how a real client uses this" explanation block. Gallery needs more visual weight. |
-| /request/ | 638 | PASS | Hero, path selector, form, process steps, backup CTAs all present. |
-| /service-area/ | 690 | PASS | Hero with map card, city grid, factor cards, CTA. Solid. |
-| /faq/ | 380 | THIN | Hero minimal (no lead para body content shown). FAQ CTA button uses blue #1d4ed8 (should be amber). Footer says "Licensed · Background-checked" (needs review). CTA says "Request a Free Estimate" ("Free" is a claim — should say "Request Estimate"). No pre-estimate checklist or photos-help card. |
-| /service-area/vancouver-wa/ | 322 | THIN | City hero H1 small: clamp(1.7rem, 3.5vw, 2.5rem) vs homepage 3.8rem. Solid structure but visual scale too small. |
-| /service-area/portland-or/ | 317 | THIN | Same structural pattern as vancouver-wa. Smaller-scale hero. |
-| /service-area/beaverton-or/ | 312 | THIN | Same. |
-| /service-area/lake-oswego-or/ | 317 | THIN | Same. |
-| /service-area/camas-wa/ | 317 | THIN | Same. |
-| /service-area/gresham-or/ | 317 | THIN | Same. |
-| /service-area/hillsboro-or/ | 317 | THIN | Same. |
-| /service-area/oregon-city-or/ | 312 | THIN | Same. |
-| /service-area/tigard-or/ | 312 | THIN | Same. |
-| /service-area/battle-ground-wa/ | 312 | THIN | Same. |
-
-## Issues to Fix
-
-### Priority 1 — Incorrect claim
-- faq/index.html footer: "Licensed · Background-checked" — should be removed or changed to scope disclaimer
-- faq/index.html CTA: "Request a Free Estimate" — remove "Free"
-
-### Priority 2 — Button color inconsistency
-- services/index.html: `.svc-btn-primary` uses `#facc15` (yellow) — should be amber `#C9822B`
-- faq/index.html: `.faq-cta .btn-primary:hover` uses `#1d4ed8` (blue) — should be amber
-
-### Priority 3 — Visual scale thin
-- work-examples: image card height 300px → upgrade to 380px
-- work-examples: missing "how a real client uses this page" explanation block before CTA
-- faq: hero needs lead paragraph in the visible hero section
-- faq: missing pre-estimate checklist card
-- faq: missing photos-help card
-- city pages: hero H1 `clamp(1.7rem, 3.5vw, 2.5rem)` — upgrade to match city pages task spec
-
-### Priority 4 — CTA text consistency
-- "Request a Free Estimate" → "Request Estimate" (one instance in faq)
-
-## Images Available
-- assets/img/hero-finished-pnw-1536.webp (hero)
-- assets/img/service-area-vancouver-portland-map.webp (map)
-- assets/img/scenarios/01-08 (8 scenario images, all present)
-
-## Status: PHASE 2 COMPLETE
-
-### Fixes Applied
-- faq: claims, button color, CTA wording, checklist cards
-- services: button color yellow → amber
-- work-examples: card height 380px, explanation block added
-- shared CSS: city hero H1 upgraded, padding improved
-- Search QA: PASS (all 16 HTML files clean)
-
+## Files Changed in Task 5
+- `assets/css/preview-styles.css` — +~80 lines (reveal + micro-interaction CSS)
+- `assets/js/preview-main.js` — +~35 lines (IntersectionObserver reveal JS)
+- `index.html` — trust-bar-section reveal class, explore copy polish
+- `request/index.html` — reveal classes added to 8 sections
+- `services/index.html` — reveal classes added to 7 sections
+- `work-examples/index.html` — reveal classes added to 2 sections
+- `service-area/index.html` — reveal classes added to 8 sections
+- `faq/index.html` — reveal classes added to 3 sections
+- All 10 city pages — reveal classes added to 8 sections each

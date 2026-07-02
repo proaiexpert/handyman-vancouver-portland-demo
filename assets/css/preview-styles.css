@@ -1867,3 +1867,82 @@ body.final-menu-open { overflow: hidden; }
 @media (max-width: 480px) {
   .we-card-img { height: 200px !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL REVEAL — prefers-reduced-motion safe
+   Elements with class="reveal" fade+slide up on scroll.
+   If user prefers reduced motion, they appear immediately.
+   ═══════════════════════════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MICRO-INTERACTIONS — card hover lift (restrained)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Generic card lift — apply to any .card-lift element */
+.card-lift {
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+.card-lift:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,.11);
+  transform: translateY(-3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-lift:hover {
+    transform: none;
+  }
+}
+
+/* FAQ premium card lift */
+.faq-premium__card {
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+.faq-premium__card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,.09);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-premium__card:hover {
+    transform: none;
+  }
+}
+
+/* City card lift on homepage */
+.local-area__city-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.local-area__city-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.10);
+}
+@media (prefers-reduced-motion: reduce) {
+  .local-area__city-card:hover {
+    transform: none;
+  }
+}
+
+/* Explore cards already have transform in inline styles — reinforce via shared */
+.explore-card {
+  transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .explore-card:hover {
+    transform: none !important;
+  }
+}
