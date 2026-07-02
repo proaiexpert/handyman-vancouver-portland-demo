@@ -628,28 +628,7 @@
   </script>
 
 
-  <script>
-  (function(){
-    var btn = document.getElementById('hamburger');
-    var nav = document.getElementById('mobile-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function(){
-      var open = nav.hasAttribute('hidden') === false && nav.classList.contains('open');
-      if (open) {
-        nav.classList.remove('open');
-        nav.hidden = true;
-        btn.setAttribute('aria-expanded','false');
-      } else {
-        nav.hidden = false;
-        nav.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
-      }
-    });
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape') { nav.classList.remove('open'); nav.hidden = true; btn.setAttribute('aria-expanded','false'); }
-    });
-  })();
-  </script>
+  
   <script src="../assets/js/menu-toggle.js"></script>
 </body>
 </html>

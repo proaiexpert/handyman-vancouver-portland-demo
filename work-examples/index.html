@@ -445,16 +445,4 @@
   </footer>
 
   <script>
-    var btn = document.getElementById('hamburger');
-    var nav = document.getElementById('mobile-nav');
-    if (btn && nav) {
-      btn.addEventListener('click', function() {
-        var open = nav.hasAttribute('hidden') === false;
-        if (open) { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
-        else { nav.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); }
-      });
-    }
-  </script>
-  <script src="../assets/js/menu-toggle.js"></script>
-</body>
 </html>

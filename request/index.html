@@ -524,16 +524,6 @@
   </footer>
 
   <script>
-    var hamburger = document.getElementById('hamburger');
-    var mobileNav = document.getElementById('mobile-nav');
-    var mobileClose = document.getElementById('mobile-nav-close');
-    function openNav() { mobileNav.removeAttribute('hidden'); hamburger.setAttribute('aria-expanded','true'); mobileClose.focus(); document.body.style.overflow='hidden'; }
-    function closeNav() { mobileNav.setAttribute('hidden',''); hamburger.setAttribute('aria-expanded','false'); hamburger.focus(); document.body.style.overflow=''; }
-    hamburger.addEventListener('click', openNav);
-    mobileClose.addEventListener('click', closeNav);
-    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !mobileNav.hasAttribute('hidden')) closeNav(); });
-
-    var pathQQ = document.getElementById('path-qq');
     var pathRR = document.getElementById('path-rr');
     var formTitle = document.getElementById('form-fields-heading');
     var formSub = document.getElementById('form-sub');

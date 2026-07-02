@@ -631,33 +631,7 @@
     </div>
   </footer>
 
-  <script>
-    (function(){
-      var btn = document.getElementById("hamburger");
-      var nav = document.getElementById("mobile-nav");
-      if (!btn || !nav) return;
-      btn.addEventListener("click", function(){
-        var open = !nav.hasAttribute("hidden");
-        if (open) {
-          nav.setAttribute("hidden", "");
-          btn.setAttribute("aria-expanded", "false");
-          btn.classList.remove("open");
-        } else {
-          nav.removeAttribute("hidden");
-          btn.setAttribute("aria-expanded", "true");
-          btn.classList.add("open");
-        }
-      });
-      document.addEventListener("keydown", function(e){
-        if (e.key === "Escape" && !nav.hasAttribute("hidden")){
-          nav.setAttribute("hidden", "");
-          btn.setAttribute("aria-expanded", "false");
-          btn.classList.remove("open");
-          btn.focus();
-        }
-      });
-    })();
-  </script>
+  
 
   <script src="../assets/js/menu-toggle.js"></script>
 </body>
