@@ -1575,17 +1575,10 @@ body.final-menu-open { overflow: hidden; }
    but at 480px–768px portrait city pages should still collapse to 1-col
    (already handled by existing max-width:480px rule). No change needed. */
 
-/* Ensure .footer-col--areas (homepage long city list) uses 2 columns
-   on landscape to avoid a tall single column */
+/* footer-col--areas: always single column on mobile/landscape */
 @media (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
   .footer-col--areas {
-    column-count: 2;
-    column-gap: 12px;
-  }
-  .footer-col--areas a {
-    display: block;
-    margin-bottom: 4px;
-    break-inside: avoid;
+    column-count: 1;
   }
 }
 
@@ -1602,24 +1595,16 @@ body.final-menu-open { overflow: hidden; }
   .footer-grid {
     grid-template-columns: 1.6fr 1fr 1fr 1fr;
   }
-  /* Homepage footer: .footer-col--areas with bare <a> links */
+  /* Homepage footer: .footer-col--areas — single column vertical list */
   .footer-col--areas {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    column-gap: 16px;
-    row-gap: 6px;
-    align-items: start;
+    display: block;
   }
-  /* Keep the heading spanning both columns */
   .footer-col--areas h4 {
-    grid-column: 1 / -1;
+    display: block;
   }
-  /* City pages footer: .footer-grid 3rd col ul list */
+  /* City pages footer: single column list */
   .footer-grid > .footer-col:nth-child(3) ul {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 16px;
-    row-gap: 6px;
+    display: block;
   }
   .footer-grid > .footer-col:nth-child(3) li {
     margin-bottom: 0;

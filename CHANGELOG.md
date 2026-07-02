@@ -1,5 +1,22 @@
 ## [Unreleased] — 2026-07-02
 
+### fix: restore compact footer service-area list
+
+**Root cause identified:** `assets/css/preview-styles.css` had two CSS rules that made `.footer-col--areas` render as a 2-column staggered/chessboard grid:
+1. `@media (min-width:500px) and (max-width:900px) and (orientation:landscape)` → `column-count:2` on `.footer-col--areas`
+2. `@media (min-width:1180px)` → `display:grid; grid-template-columns: max-content 1fr` on `.footer-col--areas`; and `repeat(2,minmax(0,1fr))` on city pages footer `ul`
+
+**Fix:** Both rules replaced with `display:block` / `column-count:1` so footer Service Areas always renders as a clean single-column vertical list on all devices and all pages.
+
+**Homepage body city section:** `local-area__city-grid` 3×2 card grid preserved — not affected by footer CSS change.
+
+**Pages affected:** Only `assets/css/preview-styles.css` (shared); all HTML files unchanged.
+
+**QA:** Forbidden-string PASS, noindex OK on all 16 public HTML files.
+
+---
+## [Unreleased] — 2026-07-02
+
 ### fix: polish homepage areas and FAQ premium layout
 
 **Homepage city block**
