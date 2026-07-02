@@ -53,3 +53,10 @@
 - Fix: .reveal fail-open (visible by default); hide only under html.js; disabled on mobile; 1200ms JS failsafe
 - Files: assets/css/preview-styles.css, assets/js/preview-main.js, index.html
 - Reveal: made fail-safe (kept subtle on desktop, disabled on mobile)
+
+## Update 2026-07-02 — Cache-proof mobile reveal failsafe
+- Live preview-styles.css was still edge-cached (last-modified 22:00, pre-fix)
+- Added unique-filename override reveal-mobile-failsafe-93c4241.css linked on all 19 pages
+- Override forces .reveal visible on mobile (≤768px) and reduced-motion with !important
+- Selector confirmed html.js .reveal (correct, has space)
+- Live HTML confirmed current (Phase 4 nav present, zero old terms)

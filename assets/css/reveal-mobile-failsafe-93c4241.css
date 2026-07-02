@@ -1,0 +1,23 @@
+/* Cache-proof mobile reveal failsafe (unique filename bypasses stale CDN cache).
+   Guarantees .reveal content is visible on mobile and reduced-motion regardless
+   of whether the older preview-styles.css is still being served from cache. */
+@media (max-width: 768px) {
+  .reveal,
+  html.js .reveal,
+  html.js .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    transition: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  html.js .reveal,
+  html.js .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    transition: none !important;
+  }
+}

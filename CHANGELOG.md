@@ -495,3 +495,10 @@ Documentation commits do not change the live site.
 - fix: added html.js class toggle + 1200ms failsafe revealAll() in preview-main.js and index.html inline JS
 - fix: prefers-reduced-motion and no-IntersectionObserver both reveal all content immediately
 - result: content is visible by default on every device even if JS fails, loads late, or errors
+
+## 2026-07-02 — Fix: cache-proof mobile reveal failsafe
+- add: assets/css/reveal-mobile-failsafe-93c4241.css (unique filename bypasses stale CDN cache)
+- add: linked failsafe CSS after preview-styles.css on all 19 public pages
+- purpose: guarantees .reveal content is visible on mobile + reduced-motion even if the older preview-styles.css is still served from edge cache
+- selector verified correct: html.js .reveal (with space)
+- triggers fresh GitHub Pages redeploy so live assets pick up the fail-open reveal rules
