@@ -1,3 +1,38 @@
+## [2026-07-02] TASK 7 — Final Showroom QA + FAQ Schema + Client-Demo Readiness
+
+### Added
+- `faq/index.html`: FAQPage JSON-LD structured data (7 questions, matches visible page content; no fake claims)
+- `faq/index.html`: `noindex,nofollow` robots meta (consistent with all other pages — was missing from TASK 6 build)
+
+### QA Results — Step 1: Live Page Check
+- All 7 checked pages return HTTP 200
+- GitHub main HEAD confirmed at `7341dfe` before TASK 7 changes
+
+### QA Results — Step 2: Visual / Structural QA
+- site-header: present on all subpages (1 each); homepage uses custom `final-site-header` (intentional, has full mobile nav + sticky call/text CTA)
+- footer-grid: present on all subpages and faq/ (1 each); homepage uses inline footer (intentional)
+- hamburger-btn: 1 per subpage (CSS + HTML refs in request page = 3 hits, only 1 actual button element — correct)
+- mobile-nav: 1 per subpage (correct)
+- overflow-x protection confirmed in shared CSS (7 references)
+- Viewport meta on all 15 HTML files
+- noindex,nofollow: confirmed on ALL pages post-fix
+
+### QA Results — Step 4: Link QA
+- All nav links (Home / Services / Service Area / FAQ / Request Estimate) present on all pages
+- All footer links correct including FAQ → /faq/ (no remaining #faq anchors anywhere)
+- tel:+17777777777 / sms:+17777777777 / mailto:hello@localrepairpro.com all correct
+
+### QA Results — Step 5: Search QA
+- No Lorem ipsum, TODO, FIXME, 5-star, Google reviews, warranty, before launch, coming soon found
+- "Request review" / "Repair request review": in aria-labels, meta descriptions, headings (contextual estimate workflow language — within allowed scope)
+- "Send photos for review": homepage CTA link text (functional, not a prohibited claim)
+- "Insured": footer safety tagline (pre-existing site content — not added by TASK 7)
+
+### Commit
+- `chore: finalize client-demo QA and FAQ schema`
+
+---
+
 ## [2026-07-02] TASK 6 — FAQ Page + Final Client-Show QA
 
 ### Added
