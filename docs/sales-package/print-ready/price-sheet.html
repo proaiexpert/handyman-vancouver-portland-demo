@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Price Sheet — Local-Service Website Packages — ProAI Expert</title>
+  <style>
+  /* Reset & base */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #f0ebe0;
+    color: #0d1c2e;
+    line-height: 1.6;
+  }
+
+  /* Layout */
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 40px;
+  }
+
+  /* Hero */
+  .hero {
+    background: #0d1c2e;
+    color: #f0ebe0;
+    border-radius: 12px;
+    padding: 52px 48px 44px;
+    margin-bottom: 40px;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C9822B;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #f0ebe0;
+    margin-bottom: 16px;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    color: #c8bfb0;
+    margin-bottom: 28px;
+    max-width: 600px;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: #C9822B;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 12px 24px;
+    border-radius: 6px;
+    letter-spacing: 0.02em;
+  }
+  .hero-cta:hover { background: #b37025; }
+
+  /* Section */
+  .section { margin-bottom: 40px; }
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #C9822B;
+    margin-bottom: 10px;
+  }
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0d1c2e;
+    margin-bottom: 18px;
+  }
+  .section p { color: #2a3e52; margin-bottom: 12px; font-size: 0.96rem; }
+
+  /* Cards grid */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #ddd6cc;
+    border-radius: 8px;
+    padding: 20px 18px;
+  }
+  .card-icon { font-size: 1.4rem; margin-bottom: 8px; }
+  .card h3 { font-size: 0.95rem; font-weight: 700; color: #0d1c2e; margin-bottom: 6px; }
+  .card p { font-size: 0.86rem; color: #4a5e6e; margin: 0; }
+
+  /* Checklist */
+  .checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #ddd6cc;
+    border-radius: 7px;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    color: #0d1c2e;
+  }
+  .check-item .tick {
+    color: #C9822B;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* Compare block */
+  .compare {
+    background: #fff;
+    border: 1px solid #ddd6cc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #eee;
+  }
+  .compare-row:last-child { border-bottom: none; }
+  .compare-cell {
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    color: #2a3e52;
+  }
+  .compare-cell.head {
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: #f7f2ea;
+    color: #0d1c2e;
+  }
+  .compare-cell.neg { color: #7a5a3a; }
+  .compare-cell.pos { color: #1a4a2a; }
+
+  /* Lead system list */
+  .lead-list {
+    list-style: none;
+    margin-top: 8px;
+  }
+  .lead-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd6cc;
+    font-size: 0.92rem;
+    color: #2a3e52;
+  }
+  .lead-list li:last-child { border-bottom: none; }
+  .lead-list .dot {
+    width: 8px;
+    height: 8px;
+    background: #C9822B;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  /* CTA block */
+  .cta-block {
+    background: #0d1c2e;
+    color: #f0ebe0;
+    border-radius: 10px;
+    padding: 36px 40px;
+    margin-bottom: 40px;
+  }
+  .cta-block h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: #f0ebe0; }
+  .cta-block p { font-size: 0.95rem; color: #c8bfb0; margin-bottom: 0; }
+
+  /* Footer */
+  .page-footer {
+    border-top: 1px solid #ccc6bc;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-brand { font-weight: 700; font-size: 0.95rem; color: #0d1c2e; }
+  .footer-tagline { font-size: 0.82rem; color: #6a7e8e; margin-top: 2px; }
+  .footer-link { font-size: 0.82rem; color: #C9822B; text-decoration: none; }
+  .footer-link:hover { text-decoration: underline; }
+
+  /* Price table */
+  .price-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .price-table th {
+    background: #0d1c2e;
+    color: #f0ebe0;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .price-table td {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: #2a3e52;
+    border-bottom: 1px solid #ddd6cc;
+    background: #fff;
+    vertical-align: top;
+  }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table .price-cell {
+    font-weight: 700;
+    color: #0d1c2e;
+    white-space: nowrap;
+  }
+  .pkg-name { font-weight: 700; color: #0d1c2e; font-size: 0.95rem; }
+  .pkg-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: #C9822B;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin-left: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  /* Add-ons */
+  .addon-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .addon-table th {
+    text-align: left;
+    background: #f7f2ea;
+    color: #0d1c2e;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    border-bottom: 2px solid #C9822B;
+  }
+  .addon-table td {
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: #2a3e52;
+    border-bottom: 1px solid #ddd6cc;
+    background: #fff;
+  }
+  .addon-table tr:last-child td { border-bottom: none; }
+  .addon-table .price-cell { font-weight: 700; color: #0d1c2e; white-space: nowrap; }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: #f7f2ea;
+    border-left: 3px solid #C9822B;
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #4a5e6e;
+    line-height: 1.6;
+  }
+
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .page-wrap { padding: 24px 0; max-width: 100%; }
+    .hero { border-radius: 0; }
+    .hero-cta { display: none; }
+    .card, .check-item, .compare, .price-table td, .addon-table td { break-inside: avoid; }
+    a { color: inherit; text-decoration: none; }
+    a[href]::after { content: " (" attr(href) ")"; font-size: 0.75em; color: #6a7e8e; }
+    .hero a[href]::after, .cta-block a[href]::after, .footer-link[href]::after { content: ""; }
+  }
+
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">ProAI Expert &mdash; Price Sheet &mdash; Internal Use</div>
+    <h1>Local-Service Website Packages</h1>
+    <p class="hero-sub">
+      Starting ranges for professional websites built for handyman, painting, remodeling,
+      flooring, cleaning, landscaping, and small contractor businesses.
+    </p>
+  </div>
+
+  <!-- PACKAGES -->
+  <div class="section">
+    <div class="section-label">Packages</div>
+    <h2>Starting ranges</h2>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th style="width:32%">Package</th>
+          <th style="width:22%">Starting Range</th>
+          <th>Best for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="pkg-name">Starter Local Website</span></td>
+          <td class="price-cell">$1,500&ndash;$2,500</td>
+          <td>First website, small footprint, quick professional launch</td>
+        </tr>
+        <tr>
+          <td><span class="pkg-name">Trust Website</span><span class="pkg-badge">Recommended</span></td>
+          <td class="price-cell">$3,500&ndash;$5,500</td>
+          <td>Professional presence, local SEO structure, proper estimate flow</td>
+        </tr>
+        <tr>
+          <td><span class="pkg-name">Website + Lead System</span></td>
+          <td class="price-cell">$6,500&ndash;$10,000+</td>
+          <td>Full site plus automation, lead logging, and follow-up workflow</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PACKAGE DETAILS -->
+  <div class="section">
+    <div class="section-label">What's included</div>
+    <h2>Package details</h2>
+
+    <div style="margin-bottom:24px">
+      <p style="font-weight:700;font-size:1rem;color:#0d1c2e;margin-bottom:8px">
+        Package 1 &mdash; Starter Local Website
+        <span style="font-weight:400;color:#6a7e8e;font-size:0.88rem;margin-left:8px">$1,500&ndash;$2,500</span>
+      </p>
+      <div class="checklist">
+        <div class="check-item"><span class="tick">&#10003;</span> Homepage with service summary and CTA</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Services section or dedicated page</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Contact / Request page</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Mobile-friendly layout</div>
+        <div class="check-item"><span class="tick">&#10003;</span> SEO titles and meta descriptions</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Google Business Profile link</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:24px">
+      <p style="font-weight:700;font-size:1rem;color:#0d1c2e;margin-bottom:8px">
+        Package 2 &mdash; Trust Website
+        <span style="font-weight:400;color:#6a7e8e;font-size:0.88rem;margin-left:8px">$3,500&ndash;$5,500</span>
+      </p>
+      <div class="checklist">
+        <div class="check-item"><span class="tick">&#10003;</span> Everything in Package 1</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Dedicated Services page</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Work Examples / Project Gallery</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Service Area hub page</div>
+        <div class="check-item"><span class="tick">&#10003;</span> 3&ndash;5 City / Location pages</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Structured Request Estimate page</div>
+        <div class="check-item"><span class="tick">&#10003;</span> FAQ page</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Mobile sticky CTA</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Footer with full sitemap</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Stronger local SEO page structure</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:24px">
+      <p style="font-weight:700;font-size:1rem;color:#0d1c2e;margin-bottom:8px">
+        Package 3 &mdash; Website + Lead System
+        <span style="font-weight:400;color:#6a7e8e;font-size:0.88rem;margin-left:8px">$6,500&ndash;$10,000+</span>
+      </p>
+      <div class="checklist">
+        <div class="check-item"><span class="tick">&#10003;</span> Everything in Package 2</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Estimate form with email notifications</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Lead logging (Google Sheet or CRM)</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Missed-call SMS follow-up</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Optional AI assistant (draft replies)</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Optional chatbot / site assistant</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Review request workflow</div>
+        <div class="check-item"><span class="tick">&#10003;</span> Basic lead reporting</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOT INCLUDED -->
+  <div class="section">
+    <div class="section-label">Scope boundary</div>
+    <h2>Not included unless specifically added</h2>
+    <ul class="lead-list">
+      <li><span class="dot"></span>Paid advertising setup or management</li>
+      <li><span class="dot"></span>Guaranteed search engine rankings</li>
+      <li><span class="dot"></span>Logo design (unless agreed separately)</li>
+      <li><span class="dot"></span>Professional photography</li>
+      <li><span class="dot"></span>Ongoing SEO content creation</li>
+      <li><span class="dot"></span>CRM or SMS tool subscription costs (third-party)</li>
+      <li><span class="dot"></span>Hosting or domain registration fees</li>
+      <li><span class="dot"></span>Major structural redesign after launch</li>
+    </ul>
+  </div>
+
+  <!-- ADD-ONS -->
+  <div class="section">
+    <div class="section-label">Optional extras</div>
+    <h2>Add-ons</h2>
+    <table class="addon-table">
+      <thead>
+        <tr>
+          <th>Add-On</th>
+          <th>Starting Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Extra city page</td>
+          <td class="price-cell">$150&ndash;$350/page</td>
+        </tr>
+        <tr>
+          <td>Extra service page</td>
+          <td class="price-cell">$250&ndash;$600/page</td>
+        </tr>
+        <tr>
+          <td>Google Business Profile optimization</td>
+          <td class="price-cell">$500&ndash;$1,500</td>
+        </tr>
+        <tr>
+          <td>Basic automation workflow</td>
+          <td class="price-cell">$750&ndash;$2,500</td>
+        </tr>
+        <tr>
+          <td>Chatbot / AI intake assistant</td>
+          <td class="price-cell">$1,500&ndash;$5,000+</td>
+        </tr>
+        <tr>
+          <td>Content / article package</td>
+          <td class="price-cell">$500&ndash;$2,000/month</td>
+        </tr>
+        <tr>
+          <td>Monthly support &amp; maintenance</td>
+          <td class="price-cell">$150&ndash;$500/month</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="section">
+    <div class="section-label">Important</div>
+    <h2>Pricing disclaimer</h2>
+    <div class="disclaimer">
+      <strong>Prices shown are starting ranges, not guaranteed fixed quotes.</strong><br>
+      Final pricing depends on scope, number of pages, content, client-provided materials,
+      automation requirements, integrations, and launch support. A final price is confirmed
+      after scope review and discovery.
+    </div>
+    <div class="disclaimer" style="margin-top:12px">
+      <strong>No performance guarantee.</strong><br>
+      Website structure and local SEO foundations can support better presentation
+      and discoverability, but no Google ranking, lead volume, revenue, or sales
+      result is guaranteed.
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-footer">
+    <div>
+      <div class="footer-brand">ProAI Expert</div>
+      <div class="footer-tagline">Website + AI systems for service businesses</div>
+    </div>
+    <a class="footer-link" href="https://proai-expert.com/ru/websites-branding/"
+       target="_blank" rel="noopener noreferrer">
+      proai-expert.com/ru/websites-branding/
+    </a>
+  </div>
+
+</div>
+</body>
+</html>

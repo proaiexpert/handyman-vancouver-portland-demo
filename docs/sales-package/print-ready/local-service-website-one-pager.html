@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Premium Local-Service Website + Estimate Flow — ProAI Expert</title>
+  <style>
+  /* Reset & base */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #f0ebe0;
+    color: #0d1c2e;
+    line-height: 1.6;
+  }
+
+  /* Layout */
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 40px;
+  }
+
+  /* Hero */
+  .hero {
+    background: #0d1c2e;
+    color: #f0ebe0;
+    border-radius: 12px;
+    padding: 52px 48px 44px;
+    margin-bottom: 40px;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C9822B;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #f0ebe0;
+    margin-bottom: 16px;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    color: #c8bfb0;
+    margin-bottom: 28px;
+    max-width: 600px;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: #C9822B;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 12px 24px;
+    border-radius: 6px;
+    letter-spacing: 0.02em;
+  }
+  .hero-cta:hover { background: #b37025; }
+
+  /* Section */
+  .section { margin-bottom: 40px; }
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #C9822B;
+    margin-bottom: 10px;
+  }
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0d1c2e;
+    margin-bottom: 18px;
+  }
+  .section p { color: #2a3e52; margin-bottom: 12px; font-size: 0.96rem; }
+
+  /* Cards grid */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #ddd6cc;
+    border-radius: 8px;
+    padding: 20px 18px;
+  }
+  .card-icon { font-size: 1.4rem; margin-bottom: 8px; }
+  .card h3 { font-size: 0.95rem; font-weight: 700; color: #0d1c2e; margin-bottom: 6px; }
+  .card p { font-size: 0.86rem; color: #4a5e6e; margin: 0; }
+
+  /* Checklist */
+  .checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #ddd6cc;
+    border-radius: 7px;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    color: #0d1c2e;
+  }
+  .check-item .tick {
+    color: #C9822B;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* Compare block */
+  .compare {
+    background: #fff;
+    border: 1px solid #ddd6cc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #eee;
+  }
+  .compare-row:last-child { border-bottom: none; }
+  .compare-cell {
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    color: #2a3e52;
+  }
+  .compare-cell.head {
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: #f7f2ea;
+    color: #0d1c2e;
+  }
+  .compare-cell.neg { color: #7a5a3a; }
+  .compare-cell.pos { color: #1a4a2a; }
+
+  /* Lead system list */
+  .lead-list {
+    list-style: none;
+    margin-top: 8px;
+  }
+  .lead-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd6cc;
+    font-size: 0.92rem;
+    color: #2a3e52;
+  }
+  .lead-list li:last-child { border-bottom: none; }
+  .lead-list .dot {
+    width: 8px;
+    height: 8px;
+    background: #C9822B;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  /* CTA block */
+  .cta-block {
+    background: #0d1c2e;
+    color: #f0ebe0;
+    border-radius: 10px;
+    padding: 36px 40px;
+    margin-bottom: 40px;
+  }
+  .cta-block h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: #f0ebe0; }
+  .cta-block p { font-size: 0.95rem; color: #c8bfb0; margin-bottom: 0; }
+
+  /* Footer */
+  .page-footer {
+    border-top: 1px solid #ccc6bc;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-brand { font-weight: 700; font-size: 0.95rem; color: #0d1c2e; }
+  .footer-tagline { font-size: 0.82rem; color: #6a7e8e; margin-top: 2px; }
+  .footer-link { font-size: 0.82rem; color: #C9822B; text-decoration: none; }
+  .footer-link:hover { text-decoration: underline; }
+
+  /* Price table */
+  .price-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .price-table th {
+    background: #0d1c2e;
+    color: #f0ebe0;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .price-table td {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: #2a3e52;
+    border-bottom: 1px solid #ddd6cc;
+    background: #fff;
+    vertical-align: top;
+  }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table .price-cell {
+    font-weight: 700;
+    color: #0d1c2e;
+    white-space: nowrap;
+  }
+  .pkg-name { font-weight: 700; color: #0d1c2e; font-size: 0.95rem; }
+  .pkg-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: #C9822B;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin-left: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  /* Add-ons */
+  .addon-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .addon-table th {
+    text-align: left;
+    background: #f7f2ea;
+    color: #0d1c2e;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    border-bottom: 2px solid #C9822B;
+  }
+  .addon-table td {
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: #2a3e52;
+    border-bottom: 1px solid #ddd6cc;
+    background: #fff;
+  }
+  .addon-table tr:last-child td { border-bottom: none; }
+  .addon-table .price-cell { font-weight: 700; color: #0d1c2e; white-space: nowrap; }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: #f7f2ea;
+    border-left: 3px solid #C9822B;
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #4a5e6e;
+    line-height: 1.6;
+  }
+
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .page-wrap { padding: 24px 0; max-width: 100%; }
+    .hero { border-radius: 0; }
+    .hero-cta { display: none; }
+    .card, .check-item, .compare, .price-table td, .addon-table td { break-inside: avoid; }
+    a { color: inherit; text-decoration: none; }
+    a[href]::after { content: " (" attr(href) ")"; font-size: 0.75em; color: #6a7e8e; }
+    .hero a[href]::after, .cta-block a[href]::after, .footer-link[href]::after { content: ""; }
+  }
+
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">ProAI Expert &mdash; Sales Asset &mdash; Internal Use</div>
+    <h1>Premium Local-Service Website + Estimate Flow</h1>
+    <p class="hero-sub">
+      A professional website structure for handyman, painting, remodeling, flooring,
+      drywall, cleaning, landscaping, and small contractor businesses.
+    </p>
+    <a class="hero-cta" href="https://proai-expert.com/handyman-vancouver-portland-demo/"
+       target="_blank" rel="noopener noreferrer">
+      View Live Demo &rarr;
+    </a>
+  </div>
+
+  <!-- WHAT THIS HELPS FIX -->
+  <div class="section">
+    <div class="section-label">The problem</div>
+    <h2>What this helps fix</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">&#128683;</div>
+        <h3>Weak first impression</h3>
+        <p>A generic template or outdated site loses the customer before they read a single word.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128300;</div>
+        <h3>Confusing services</h3>
+        <p>Visitors cannot tell quickly what you do, where you work, or how to reach you.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128203;</div>
+        <h3>Poor estimate flow</h3>
+        <p>A plain contact form wastes everyone's time. Customers don't know what info to send.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128205;</div>
+        <h3>No local structure</h3>
+        <p>No city pages, no service area clarity &mdash; invisible to customers searching by location.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT IS INCLUDED -->
+  <div class="section">
+    <div class="section-label">What you get</div>
+    <h2>What the website includes</h2>
+    <div class="checklist">
+      <div class="check-item"><span class="tick">&#10003;</span> Homepage with service summary and trust sections</div>
+      <div class="check-item"><span class="tick">&#10003;</span> Dedicated Services page</div>
+      <div class="check-item"><span class="tick">&#10003;</span> Work Examples / Project Gallery</div>
+      <div class="check-item"><span class="tick">&#10003;</span> Service Area hub page</div>
+      <div class="check-item"><span class="tick">&#10003;</span> City / location pages</div>
+      <div class="check-item"><span class="tick">&#10003;</span> Request Estimate page (structured intake)</div>
+      <div class="check-item"><span class="tick">&#10003;</span> FAQ page</div>
+      <div class="check-item"><span class="tick">&#10003;</span> Mobile sticky CTA</div>
+      <div class="check-item"><span class="tick">&#10003;</span> Footer with full sitemap</div>
+      <div class="check-item"><span class="tick">&#10003;</span> Optional automation layer</div>
+    </div>
+  </div>
+
+  <!-- VS BUILDERS -->
+  <div class="section">
+    <div class="section-label">Why not just use a website builder</div>
+    <h2>Structure vs. tools</h2>
+    <p>
+      DIY builders give you drag-and-drop tools. They do not give you a proven page structure,
+      local-service positioning, a proper estimate intake flow, or done-for-you content.
+    </p>
+    <div class="compare">
+      <div class="compare-row">
+        <div class="compare-cell head">Generic website builder</div>
+        <div class="compare-cell head">This structure</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell neg">Template pages with no local focus</div>
+        <div class="compare-cell pos">City-specific pages built for local search</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell neg">Generic contact form</div>
+        <div class="compare-cell pos">Structured estimate intake with service type, photos, location, timing</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell neg">You figure out what pages to make</div>
+        <div class="compare-cell pos">Purpose-built page set for service businesses</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell neg">You write all the copy</div>
+        <div class="compare-cell pos">Content written for you, adapted to your business</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell neg">No lead system</div>
+        <div class="compare-cell pos">Optional: logging, notifications, follow-up automation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTIONAL LEAD SYSTEM -->
+  <div class="section">
+    <div class="section-label">Optional upgrade</div>
+    <h2>Lead system add-on</h2>
+    <p>
+      For business owners who want more than a website &mdash; a structured way to handle
+      every incoming request so nothing gets lost.
+    </p>
+    <ul class="lead-list">
+      <li><span class="dot"></span><div><strong>Structured estimate form</strong> &mdash; service type, description, city, photos, timing</div></li>
+      <li><span class="dot"></span><div><strong>Lead logging</strong> &mdash; every submission recorded automatically in Google Sheets or a simple CRM</div></li>
+      <li><span class="dot"></span><div><strong>Email notifications</strong> &mdash; instant alert when a new estimate request arrives</div></li>
+      <li><span class="dot"></span><div><strong>Missed-call SMS</strong> &mdash; automatic text sent when a call is not answered</div></li>
+      <li><span class="dot"></span><div><strong>AI assistant (optional)</strong> &mdash; helps draft replies, classify requests, and collect missing info</div></li>
+    </ul>
+  </div>
+
+  <!-- NEXT STEP -->
+  <div class="cta-block">
+    <h2>Ready to see how this looks for your business?</h2>
+    <p>
+      Send your current website (or let me know if you don&rsquo;t have one), your business name,
+      the services you offer, the cities you cover, and any photos of your work.
+      I can show you how this structure would be adapted for your specific situation.
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-footer">
+    <div>
+      <div class="footer-brand">ProAI Expert</div>
+      <div class="footer-tagline">Website + AI systems for service businesses</div>
+    </div>
+    <a class="footer-link" href="https://proai-expert.com/ru/websites-branding/"
+       target="_blank" rel="noopener noreferrer">
+      proai-expert.com/ru/websites-branding/
+    </a>
+  </div>
+
+</div>
+</body>
+</html>
