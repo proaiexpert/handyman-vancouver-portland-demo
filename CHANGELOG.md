@@ -1,3 +1,26 @@
+## [2026-07-02] TASK 6 — FAQ Page + Final Client-Show QA
+
+### Added
+- `faq/index.html`: full FAQ page with canonical `site-header`, 7 `<details>` FAQ items, CTA strip, and canonical `site-footer`
+- FAQ page includes: doctype, lang, charset, viewport, canonical meta, shared CSS link, hamburger JS, phone, email, all footer columns
+
+### Changed
+- Replaced all `#faq` anchor href fragments with real `/faq/` page links across 14 files:
+  - `index.html`: nav (desktop + mobile), explore card, footer Pages column
+  - `services/index.html`, `request/index.html`, `service-area/index.html`: nav + footer
+  - `service-area/*/index.html` (10 city pages): nav + footer
+
+### QA Results
+- Visual QA: canonical `site-header` present on all 6 key pages; `footer-grid` and shared CSS confirmed on all subpages
+- Technical QA on `faq/index.html`: doctype ✓, lang ✓, charset ✓, viewport ✓, canonical ✓, CSS link ✓, header ✓, mobile-nav ✓, hamburger JS ✓, footer-grid ✓, 7 FAQ items ✓, CTA ✓, phone ✓, email ✓
+- Prohibited phrase search: no Lorem ipsum, TODO, FIXME, placeholder, coming soon, or under construction found
+- Broken link check: zero `#faq` anchor fragments remain in any HTML file
+
+### Commit
+- `feat: add FAQ page and final client-show QA`
+
+---
+
 # Key Project Changelog — Local Repair Pro Vancouver WA Demo
 
 This is a selected changelog of meaningful commits for this project.

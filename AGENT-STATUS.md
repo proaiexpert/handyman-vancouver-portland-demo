@@ -1,15 +1,28 @@
 # Agent Status
 
-## Restore Info
-- **Restore date/time:** 2026-07-01 22:16 UTC
-- **Branch:** main
-- **HEAD before task:** 44f9868 — Fix desktop footer city col width — widen 3rd col to 1.5fr at 1180px+
-- **Live site URL:** https://proai-expert.com/handyman-vancouver-portland-demo/
+## Current Task
+- **TASK 6**: Add FAQ page and final client-show QA — COMPLETE
 
-## Notes
-- This is a fresh sandbox restore. Previous sandbox session had expired and could not be recovered.
-- File editing, commit, and push were tested and confirmed working in this session.
-- The previous broken sandbox / PR-draft workflow was NOT used. All changes go directly via git clone → edit → commit → push on main.
-- Known prior HEAD per task spec: 87fcce0 — "Refine footer layout for landscape viewports" (repo had 3 newer commits on top at time of restore).
-- GitHub write access verified through the connected GitHub account.
-- Task 1 (demo markers removed) and Task 2 (CTA/contact copy improvements) commits applied.
+## Last Commit
+- Pending push: `feat: add FAQ page and final client-show QA`
+- Previous: `9947d41` — fix: unify sitewide templates and visual consistency
+
+## Site Health
+- All 13 subpages: canonical header + footer confirmed
+- FAQ page: `/faq/index.html` created (7 FAQ items, CTA, canonical nav/footer)
+- All `#faq` anchor links replaced with real `/faq/` page links (14 files)
+- No prohibited phrases found
+- No broken internal links
+- Phone: (777) 777-7777 | Email: hello@localrepairpro.com
+
+## Files Changed in TASK 6
+- `faq/index.html` — NEW: full FAQ page with canonical header/footer
+- `index.html` — FAQ nav/footer/explore-card links updated
+- `services/index.html` — FAQ links updated
+- `request/index.html` — FAQ links updated
+- `service-area/index.html` — FAQ links updated
+- `service-area/*/index.html` (×10) — FAQ links updated
+
+## Next Steps
+- Client demo ready
+- No pending agent tasks
