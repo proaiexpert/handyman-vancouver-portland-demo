@@ -115,12 +115,12 @@ Please provide the following before work begins:
 
 | Phase | Duration |
 |---|---|
-| Discovery and materials collection | [TBD — typically 2–3 days] |
-| Homepage draft | [TBD — typically 2–3 days] |
-| Full site build | [TBD — typically 5–7 days] |
-| Client review and revisions | [TBD — 1–2 rounds] |
-| Launch preparation | [TBD — 1–2 days] |
-| **Total estimated timeline** | **[TBD — typically 2–3 weeks]** |
+| Discovery and materials collection | Typically 2–3 days |
+| Homepage draft | Typically 2–3 days |
+| Full site build | Typically 5–7 days |
+| Client review and revisions | 1–2 rounds |
+| Launch preparation | 1–2 days |
+| **Total estimated timeline** | **Typically 2–3 weeks** |
 
 *Timeline depends on how quickly client materials are provided.*
 
@@ -128,14 +128,31 @@ Please provide the following before work begins:
 
 ## 8. Investment
 
-| Item | Detail |
-|---|---|
-| Package selected | [Starter / Trust Website / Website + Lead System] |
-| Project price | **[Price TBD]** |
-| Optional add-ons | [TBD — list if applicable] |
-| Monthly support | [TBD — optional ongoing] |
+> All prices are starting ranges. Final price is confirmed after scope review.
+> Final pricing depends on scope, content, number of pages, automation
+> requirements, and client-provided materials.
 
-*Prices are placeholders and will be confirmed based on final scope.*
+| Item | Starting Range |
+|---|---|
+| Starter Local Website | $1,500–$2,500 |
+| Trust Website *(recommended)* | $3,500–$5,500 |
+| Website + Lead System | $6,500–$10,000+ |
+| Monthly support & maintenance | $150–$500/month (optional) |
+
+**Selected package for this proposal:** [Starter / Trust Website / Website + Lead System]
+
+**Estimated investment for this scope:** [Confirm after scope review]
+
+**Optional add-ons (if applicable):**
+
+| Add-On | Starting Range |
+|---|---|
+| Extra city page | $150–$350/page |
+| Extra service page | $250–$600/page |
+| Google Business Profile optimization | $500–$1,500 |
+| Basic automation workflow | $750–$2,500 |
+| Chatbot / AI intake assistant | $1,500–$5,000+ |
+| Content / article package | $500–$2,000/month |
 
 ---
 
@@ -177,6 +194,7 @@ will be confirmed based on client materials and requirements.*
 > **Notes for Ihor / Примітки для Іхора:**
 > - Заповни секції 1 і 2 перед відправкою — персоналізація важлива.
 > - Секція 3 — це стандартний текст. Змінюй пакет залежно від клієнта.
-> - Ніколи не пиши конкретну ціну, поки не підтвердив обсяг роботи.
+> - Завжди зазначай, що ціни — стартові діапазони. Фінальна сума після
+>   підтвердження обсягу.
 > - "Not included" секція — важлива. Клієнти часто очікують більше, ніж обговорювалось.
 > - Після відправки пропозиції — запитай: "Є питання?" Не чекай.

@@ -1,12 +1,16 @@
 # Offer Packages
 
 Three clear packages for local-service website clients.
-Prices below are placeholders only — adjust based on market, client,
-scope, and your own costs.
+
+> **Pricing note:** All prices are starting ranges, not fixed quotes.
+> Final pricing depends on scope, content, number of pages, automation
+> requirements, and client-provided materials.
 
 ---
 
 ## Package 1 — Starter Local Website
+
+**Starting range: $1,500–$2,500**
 
 **Best for:** A small local business that needs a clean, professional
 online presence quickly. Good for businesses that are getting started
@@ -48,14 +52,10 @@ or that currently have no website at all.
 
 ### Optional add-ons
 
-- Work examples page +[price placeholder]
-- 3 city pages +[price placeholder]
-- Basic FAQ page +[price placeholder]
-- Google Forms estimate intake +[price placeholder]
-
-### Suggested price placeholder
-
-**[Price TBD]** — Set based on your market and scope.
+- Work examples page — starting at $250–$600
+- 3 city pages — starting at $150–$350/page
+- Basic FAQ page — included in Package 2 upgrade
+- Google Forms estimate intake — starting at $150–$350
 
 ### Positioning
 
@@ -65,6 +65,8 @@ or that currently have no website at all.
 ---
 
 ## Package 2 — Trust Website *(recommended default)*
+
+**Starting range: $3,500–$5,500**
 
 **Best for:** A business that wants to look more premium, convert
 better, and be found by local customers searching by city or service.
@@ -118,14 +120,10 @@ This is the recommended starting point for most clients.
 
 ### Optional add-ons
 
-- Additional city pages (beyond 5) +[price placeholder per page]
-- Google Forms or Tally estimate form integration +[price placeholder]
-- Google Review request workflow +[price placeholder]
-- Basic automation setup (see Package 3) +[price placeholder]
-
-### Suggested price placeholder
-
-**[Price TBD]** — Set based on your market and scope.
+- Additional city pages (beyond 5) — $150–$350/page
+- Google Forms or Tally estimate form integration — $150–$350
+- Google Review request workflow — $500–$1,500
+- Basic automation setup (see Package 3) — starting at $750–$2,500
 
 ### Positioning
 
@@ -136,6 +134,8 @@ This is the recommended starting point for most clients.
 ---
 
 ## Package 3 — Website + Lead System
+
+**Starting range: $6,500–$10,000+**
 
 **Best for:** A business that wants a website AND a better system for
 handling incoming leads — so inquiries are tracked, follow-ups happen
@@ -170,13 +170,13 @@ automatically, and nothing falls through the cracks.
 - Asks clarifying questions if needed
 - Does not make pricing commitments automatically
 
-**Chatbot / site assistant (optional)**
+**Chatbot / site assistant (optional) — starting at $1,500–$5,000+**
 - Answers common FAQ questions
 - Collects basic intake (name, city, project type)
 - Routes to estimate form
 - Does not give prices or make guarantees
 
-**Review request workflow**
+**Review request workflow — starting at $500–$1,500**
 - After project completion, sends a message asking for a Google review
 - No fake reviews. Only real requests to real clients.
 
@@ -202,14 +202,11 @@ automatically, and nothing falls through the cracks.
 
 ### Optional add-ons
 
-- Full CRM setup (HubSpot, Go High Level, etc.) +[price placeholder]
-- Paid ads integration +[price placeholder]
-- Ongoing monthly maintenance +[price placeholder/month]
-- Ongoing AI reply drafting +[price placeholder/month]
-
-### Suggested price placeholder
-
-**[Price TBD]** — Set based on your market and scope.
+- Full CRM setup (HubSpot, Go High Level, etc.) — pricing on request
+- Paid ads integration — pricing on request
+- Ongoing monthly maintenance — $150–$500/month
+- Ongoing AI reply drafting — pricing on request
+- Content / article package — $500–$2,000/month depending on scope
 
 ### Positioning
 
@@ -221,26 +218,31 @@ automatically, and nothing falls through the cracks.
 
 ## General notes
 
-- Prices above are placeholders. Set real prices based on your cost,
-  time, market rates, and client budget.
+- All prices are starting ranges. Final pricing depends on scope, content,
+  number of pages, automation requirements, and client-provided materials.
 - Do not promise guaranteed Google rankings. SEO takes time and
   depends on competition, reviews, links, and content.
 - Do not promise guaranteed lead volume or conversion rates.
 - All automation is presented as a tool to support the business owner,
   not a replacement for their judgment.
+- Third-party tool costs (SMS platform, CRM subscription, domain,
+  hosting) are separate unless stated otherwise.
 
 ---
 
 ## Notes for Ihor / Примітки для Іхора
 
-> - **Пакет 1** — для тих, хто тільки починає або хоче мінімум.
+> - **Пакет 1** ($1,500–$2,500) — для тих, хто тільки починає або хоче мінімум.
 >   Добре як вхідна точка. Можна потім апгрейдити.
 >
-> - **Пакет 2** — це демо, яке ти вже показуєш. Рекомендований за
+> - **Пакет 2** ($3,500–$5,500) — це демо, яке ти вже показуєш. Рекомендований за
 >   замовчуванням для більшості клієнтів.
 >
-> - **Пакет 3** — якщо клієнт каже "хочу автоматизацію" або
+> - **Пакет 3** ($6,500–$10,000+) — якщо клієнт каже "хочу автоматизацію" або
 >   "гублю заявки". Це вже вища маржа.
 >
 > - Ніколи не обіцяй конкретних результатів по Google або
 >   кількості заявок. Тільки "сильніша основа".
+>
+> - Діапазони — це СТАРТОВІ ціни. Фінальна ціна завжди після обговорення
+>   обсягу. Не відправляй прайс без цього пояснення.
