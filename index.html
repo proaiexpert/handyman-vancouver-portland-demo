@@ -1517,7 +1517,63 @@
     
     /* Smooth scroll offset for fixed header */
     html { scroll-padding-top: 80px; }
-  </style>
+      /* ── City grid in local-area section ── */
+    .local-area__city-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0 16px;
+    }
+    .local-area__city-card {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(240,235,224,0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      text-decoration: none;
+      transition: background .18s, border-color .18s;
+    }
+    .local-area__city-card:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(201,130,43,0.5);
+    }
+    .local-area__city-card--primary {
+      background: rgba(201,130,43,0.12);
+      border-color: rgba(201,130,43,0.35);
+    }
+    .local-area__city-card--primary:hover {
+      background: rgba(201,130,43,0.2);
+    }
+    .city-card-name {
+      font-size: .9rem;
+      font-weight: 700;
+      color: #f0ebe0;
+      line-height: 1.2;
+    }
+    .city-card-label {
+      font-size: .72rem;
+      color: rgba(240,235,224,0.55);
+      font-weight: 500;
+    }
+    .local-area__view-all {
+      display: inline-block;
+      font-size: .84rem;
+      font-weight: 600;
+      color: #C9822B;
+      text-decoration: none;
+      margin-top: 4px;
+      letter-spacing: .01em;
+    }
+    .local-area__view-all:hover { text-decoration: underline; }
+    @media (max-width: 680px) {
+      .local-area__city-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 400px) {
+      .local-area__city-grid { grid-template-columns: 1fr; }
+    }
+</style>
 </head>
 <body class="homepage-v2-premium">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -2636,27 +2692,34 @@
               />
               <p class="local-area__map-disclaimer">Reviewed by location and scope before the next step.</p>
             </div>
-
-            <!-- Simplified area chips -->
-            <div class="local-area__groups">
-              <div class="local-area__group">
-                <span class="local-area__group-label">Primary area</span>
-                <div class="local-area__chips">
-                  <span class="local-area__chip local-area__chip--primary">Vancouver, WA</span>
-                  <span class="local-area__chip local-area__chip--primary">Portland, OR</span>
-                </div>
-              </div>
-              <div class="local-area__group">
-                <span class="local-area__group-label">Nearby request areas</span>
-                <div class="local-area__chips">
-                  <span class="local-area__chip">Clark County nearby</span>
-                  <span class="local-area__chip">Camas / Washougal</span>
-                  <span class="local-area__chip">Battle Ground / Ridgefield</span>
-                  <span class="local-area__chip">Salmon Creek / Hazel Dell</span>
-                  <span class="local-area__chip local-area__chip--scope">Reviewed by location and scope</span>
-                </div>
-              </div>
+            <!-- City grid: 3×2 linked cards -->
+            <div class="local-area__city-grid">
+              <a href="service-area/vancouver-wa/" class="local-area__city-card local-area__city-card--primary">
+                <span class="city-card-name">Vancouver, WA</span>
+                <span class="city-card-label">Primary area</span>
+              </a>
+              <a href="service-area/portland-or/" class="local-area__city-card local-area__city-card--primary">
+                <span class="city-card-name">Portland, OR</span>
+                <span class="city-card-label">Primary area</span>
+              </a>
+              <a href="service-area/camas-wa/" class="local-area__city-card">
+                <span class="city-card-name">Camas, WA</span>
+                <span class="city-card-label">Clark County</span>
+              </a>
+              <a href="service-area/battle-ground-wa/" class="local-area__city-card">
+                <span class="city-card-name">Battle Ground, WA</span>
+                <span class="city-card-label">North Clark County</span>
+              </a>
+              <a href="service-area/beaverton-or/" class="local-area__city-card">
+                <span class="city-card-name">Beaverton, OR</span>
+                <span class="city-card-label">West Portland metro</span>
+              </a>
+              <a href="service-area/lake-oswego-or/" class="local-area__city-card">
+                <span class="city-card-name">Lake Oswego, OR</span>
+                <span class="city-card-label">South metro</span>
+              </a>
             </div>
+            <a href="service-area/" class="local-area__view-all">View all service areas &rarr;</a>
 
           </div><!-- /.local-area__board -->
         </div><!-- /.local-area__container -->
@@ -2931,7 +2994,7 @@
           <a href="service-area/camas-wa/">Camas, WA</a>
           <a href="service-area/battle-ground-wa/">Battle Ground, WA</a>
           <a href="service-area/beaverton-or/">Beaverton, OR</a>
-          <a href="service-area/hillsboro-or/">Hillsboro, OR</a>
+          <a href="service-area/lake-oswego-or/">Lake Oswego, OR</a>
           <a href="service-area/" class="footer-view-all">View all service areas &rarr;</a>
         </div>
 

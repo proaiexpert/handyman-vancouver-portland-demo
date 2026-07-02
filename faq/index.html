@@ -5,17 +5,30 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ – Local Repair Pro | Vancouver &amp; Portland Handyman</title>
-  <meta name="description" content="Answers to common questions about Local Repair Pro: how to request an estimate, what we handle, response time, and service areas around Vancouver, WA and Portland, OR.">
+  <meta name="description" content="Common questions about requesting an estimate, what projects are handled, response times, and service areas around Vancouver, WA and Portland, OR.">
   <link rel="canonical" href="https://proai-expert.com/handyman-vancouver-portland-demo/faq/">
   <link rel="stylesheet" href="../assets/css/preview-styles.css">
   <style>
-    /* ===== FAQ PAGE STYLES ===== */
-    .faq-page-hero {
-      background: linear-gradient(135deg, #0d1c2e 0%, #1a3a5c 65%, rgba(201,130,43,.1) 100%);
+    /* ===== FAQ PAGE — PREMIUM UPGRADE ===== */
+
+    /* Hero: two-column layout matching service-area pattern */
+    .faq-hero {
+      background: linear-gradient(135deg, #0d1c2e 0%, #1a3a5c 65%, rgba(201,130,43,.08) 100%);
       color: #f0ebe0;
-      padding: clamp(56px,8vw,96px) clamp(24px,5vw,80px) clamp(48px,6vw,72px);
+      padding: clamp(64px,8vw,100px) clamp(24px,5vw,80px) clamp(56px,7vw,80px);
     }
-    .faq-page-hero .eyebrow {
+    .faq-hero__inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .faq-hero__inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+    .faq-hero__eyebrow {
       display: block;
       font-size: .72rem;
       font-weight: 800;
@@ -24,37 +37,127 @@
       color: #C9822B;
       margin-bottom: .9rem;
     }
-    .faq-page-hero h1 {
-      font-size: clamp(2rem, 4.5vw, 3rem);
+    .faq-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
       font-weight: 800;
-      line-height: 1.1;
-      margin: 0 0 1rem;
+      line-height: 1.08;
+      margin: 0 0 1.1rem;
       color: #f0ebe0;
-      max-width: 760px;
     }
-    .faq-page-hero p {
-      font-size: 1.0625rem;
+    .faq-hero__lead {
+      font-size: 1.07rem;
       color: rgba(240,235,224,.82);
       max-width: 560px;
-      margin: 0;
+      margin: 0 0 2rem;
       line-height: 1.65;
     }
-    /* placeholder to avoid empty block*/
-    .faq-page-hero-placeholder {
+    .faq-hero__ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .faq-hero__cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #C9822B;
+      color: #fff;
+      font-weight: 700;
+      font-size: .95rem;
+      padding: 13px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .18s;
+    }
+    .faq-hero__cta-primary:hover { background: #b8711f; }
+    .faq-hero__cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255,255,255,.1);
+      color: #f0ebe0;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 13px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.2);
+      transition: background .18s;
+    }
+    .faq-hero__cta-secondary:hover { background: rgba(255,255,255,.16); }
+
+    /* Hero info card */
+    .faq-hero__card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(240,235,224,.18);
+      border-radius: 14px;
+      padding: 28px 24px;
+    }
+    .faq-hero__card-eyebrow {
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #C9822B;
+      margin-bottom: 14px;
+    }
+    .faq-hero__card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f0ebe0;
+      margin: 0 0 16px;
+    }
+    .faq-hero__card-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .faq-hero__card-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: .88rem;
+      color: rgba(240,235,224,.78);
+      line-height: 1.4;
+    }
+    .faq-hero__card-list li::before {
+      content: "→";
+      color: #C9822B;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
     }
 
-    .faq-page-body {
-      max-width: 780px;
+    /* Body */
+    .faq-body {
+      max-width: 860px;
       margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
+      padding: 3.5rem clamp(20px,4vw,40px) 2rem;
     }
 
+    .faq-section-label {
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #C9822B;
+      margin-bottom: .8rem;
+    }
+    .faq-section-h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0d1c2e;
+      margin: 0 0 1.5rem;
+    }
+
+    /* Accordion */
     .faq-list {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: .85rem;
     }
-
     .faq-item {
       border: 1px solid #e2e8f0;
       border-radius: 10px;
@@ -63,9 +166,7 @@
       box-shadow: 0 1px 4px rgba(0,0,0,.06);
       transition: box-shadow .2s;
     }
-    .faq-item:hover {
-      box-shadow: 0 3px 12px rgba(37,99,235,.12);
-    }
+    .faq-item:hover { box-shadow: 0 3px 12px rgba(13,28,46,.1); }
     .faq-item summary {
       display: flex;
       justify-content: space-between;
@@ -74,7 +175,7 @@
       cursor: pointer;
       font-weight: 700;
       font-size: 1rem;
-      color: #1a3a5c;
+      color: #0d1c2e;
       list-style: none;
       gap: 1rem;
       user-select: none;
@@ -85,52 +186,144 @@
       flex-shrink: 0;
       font-size: 1.3rem;
       font-weight: 400;
-      color: #2563eb;
+      color: #C9822B;
       transition: transform .2s;
     }
-    .faq-item[open] summary::after {
-      content: "−";
-    }
-    .faq-item p {
-      padding: 0 1.4rem 1.2rem;
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item p, .faq-item ul {
+      padding: 0 1.4rem 1.25rem;
       margin: 0;
       color: #374151;
       font-size: .97rem;
       line-height: 1.65;
     }
+    .faq-item ul {
+      padding-left: 2.5rem;
+      padding-bottom: 1.25rem;
+    }
+
+    /* Support blocks */
+    .faq-support {
+      background: #F7F2EA;
+      padding: 56px clamp(20px,4vw,40px);
+      margin-top: 0;
+    }
+    .faq-support__inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .faq-support__inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 500px) {
+      .faq-support__inner { grid-template-columns: 1fr; }
+    }
+    .faq-support__card {
+      background: #fff;
+      border: 1.5px solid #ddd6cc;
+      border-radius: 12px;
+      padding: 24px 22px;
+    }
+    .faq-support__card--dark {
+      background: #0d1c2e;
+      border-color: transparent;
+    }
+    .faq-support__eyebrow {
+      font-size: .67rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #C9822B;
+      margin-bottom: 10px;
+    }
+    .faq-support__card h3 {
+      font-size: .97rem;
+      font-weight: 700;
+      color: #0d1c2e;
+      margin: 0 0 12px;
+    }
+    .faq-support__card--dark h3 { color: #f0ebe0; }
+    .faq-support__card p, .faq-support__card ul {
+      font-size: .87rem;
+      color: #374151;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .faq-support__card--dark p { color: rgba(240,235,224,.78); }
+    .faq-support__card ul { display: flex; flex-direction: column; gap: 7px; }
+    .faq-support__card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: .87rem;
+      color: #374151;
+    }
+    .faq-support__card--dark li { color: rgba(240,235,224,.78); }
+    .faq-support__card li::before {
+      content: "✓";
+      color: #C9822B;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
 
     /* CTA strip */
-    .faq-cta {
-      margin-top: 3rem;
-      background: #f0f7ff;
-      border: 1px solid #bfdbfe;
-      border-radius: 12px;
-      padding: 2rem 1.5rem;
+    .faq-cta-strip {
+      background: #0d1c2e;
+      padding: 64px clamp(20px,4vw,40px);
       text-align: center;
     }
-    .faq-cta h2 {
-      font-size: 1.3rem;
+    .faq-cta-strip__inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .faq-cta-strip h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 800;
-      color: #1a3a5c;
-      margin: 0 0 .5rem;
+      color: #f0ebe0;
+      margin: 0 0 .75rem;
     }
-    .faq-cta p {
-      color: #374151;
-      margin: 0 0 1.2rem;
-      font-size: .97rem;
+    .faq-cta-strip p {
+      color: rgba(240,235,224,.78);
+      font-size: 1rem;
+      margin: 0 0 1.75rem;
+      line-height: 1.6;
     }
-    .faq-cta .btn-primary {
+    .faq-cta-strip__buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .faq-cta-strip .btn-amber {
       display: inline-block;
       background: #C9822B;
       color: #fff;
       font-weight: 700;
       font-size: .95rem;
-      padding: .8rem 1.8rem;
+      padding: 13px 26px;
       border-radius: 8px;
       text-decoration: none;
-      transition: background .2s;
+      transition: background .18s;
     }
-    .faq-cta .btn-primary:hover { background: #b8711f; }
+    .faq-cta-strip .btn-amber:hover { background: #b8711f; }
+    .faq-cta-strip .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #f0ebe0;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 13px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.25);
+      transition: background .18s;
+    }
+    .faq-cta-strip .btn-outline:hover { background: rgba(255,255,255,.08); }
   </style>
 
   <script type="application/ld+json">
@@ -141,58 +334,62 @@
       {
         "@type": "Question",
         "name": "How do I request an estimate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Use our Request Estimate page to describe your project, share a few photos, and provide your preferred timeline. We review every submission and respond within one business day with a clear, no-surprise quote."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Use the Request Estimate page to describe your project, share photos, and include your city or ZIP code. Requests are reviewed by project type, access, materials, and scope before the next step is clarified." }
       },
       {
         "@type": "Question",
         "name": "What kinds of projects do you handle?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We specialize in interior repairs and maintenance: drywall patching, door and trim adjustments, TV and shelf mounting, furniture assembly, minor plumbing fixes (like faucet swaps), and punch-list items."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Small repairs, installs, trim fixes, touch-ups, and punch-list projects. Common requests include wall repair and patching, door and trim adjustments, TV mounting, small fixture installs, washer/dryer connections, and grouped punch-list items." }
       },
       {
         "@type": "Question",
         "name": "What areas do you serve?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We serve Vancouver, WA and Portland, OR plus surrounding communities including Camas, Battle Ground, Beaverton, Hillsboro, Gresham, Tigard, Lake Oswego, and Oregon City."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Vancouver, WA and Portland, OR plus surrounding areas including Camas, Battle Ground, Beaverton, Hillsboro, Gresham, Tigard, Lake Oswego, and Oregon City. Availability depends on location, project type, access, and scope." }
       },
       {
         "@type": "Question",
-        "name": "How long does it take to get a response?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We respond to all estimate requests within one business day. During busy seasons or for larger scopes, we may need an additional day to provide an accurate quote."
-        }
+        "name": "Can I send photos before scheduling?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sending photos before scheduling helps clarify the scope, materials, and access situation before any next step is confirmed." }
       },
       {
         "@type": "Question",
-        "name": "Do you provide written estimates?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Every project gets a written estimate before work begins. We outline the scope, materials (if any), estimated time, and total cost. No work starts until you approve the estimate in writing."
-        }
+        "name": "Do you handle small punch-list projects?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Grouped punch-list items — multiple small repairs or installs submitted together — are common request types. Listing all items together with photos helps the review." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can multiple small tasks be grouped into one request?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Grouping several small tasks into one request is encouraged. Include photos of each area and a brief note about each item." }
+      },
+      {
+        "@type": "Question",
+        "name": "What details should I include in my request?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Photos of the area (wide + close-up), city or ZIP code, service type, rough timing, and any access or material notes. The more detail, the clearer the next step." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after I send a request?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Requests are reviewed by project type, access, materials, location, and scope. A follow-up will clarify whether the request is a fit and what the next step looks like." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is every request accepted?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Not every request is a fit. Availability depends on location, project type, scope, materials, and scheduling. A follow-up will clarify the next step after the request is reviewed." }
       },
       {
         "@type": "Question",
         "name": "What should I send with my estimate request?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Photos are the single most helpful thing you can share. Clear photos of the area to be repaired or improved let us give you an accurate quote without a preliminary site visit in most cases. Include a short description of what you want done and your preferred scheduling window."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Photos are the most helpful thing to send. A wide shot of the room and a close-up of the repair or install area help clarify scope, materials, and access before the next step." }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of jobs may need a licensed trade specialist or contractor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Some requests — including major electrical panel work, structural modifications, load-bearing changes, or certain plumbing work — may require a licensed trade specialist or contractor depending on scope, local rules, and permit requirements." }
       },
       {
         "@type": "Question",
         "name": "Are there projects you don't take on?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We focus on handyman-scale work rather than full remodels, major electrical, or structural changes. If your project turns out to need a licensed specialist, we'll tell you upfront and can often point you to a trusted referral."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Full remodels, major electrical or structural work, and projects that require a licensed contractor are outside the scope of typical requests. If a project requires a specialist, the review will note that." }
       }
     ]
   }
@@ -200,7 +397,7 @@
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="nav-inner">
       <a href="../" class="nav-brand">
@@ -224,7 +421,7 @@
       <ul>
         <li><a href="../">Home</a></li>
         <li><a href="../services/">Services</a></li>
-          <li><a href="../work-examples/">Work Examples</a></li>
+        <li><a href="../work-examples/">Work Examples</a></li>
         <li><a href="../service-area/">Service Area</a></li>
         <li><a href="../faq/" aria-current="page">FAQ</a></li>
         <li><a href="../request/" class="mobile-cta">Request Estimate</a></li>
@@ -232,96 +429,160 @@
     </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="faq-page-hero" aria-labelledby="faq-heading">
-    <span class="eyebrow">COMMON QUESTIONS</span>
-    <h1 id="faq-heading">Common questions before requesting an estimate</h1>
-    <p>Photos, location, access, and project details help clarify scope and next steps.</p>
+  <!-- HERO -->
+  <section class="faq-hero" aria-labelledby="faq-heading">
+    <div class="faq-hero__inner">
+      <div class="faq-hero__content">
+        <span class="faq-hero__eyebrow">COMMON QUESTIONS</span>
+        <h1 id="faq-heading">Questions before requesting an estimate</h1>
+        <p class="faq-hero__lead">Photos, location, access, timing, and project details help clarify whether the request is a good fit and what the next step should be.</p>
+        <div class="faq-hero__ctas">
+          <a href="../request/" class="faq-hero__cta-primary">Request Estimate &rarr;</a>
+          <a href="../services/" class="faq-hero__cta-secondary">View Services</a>
+        </div>
+      </div>
+      <div class="faq-hero__card">
+        <div class="faq-hero__card-eyebrow">WHAT HELPS THE REVIEW</div>
+        <h3>Details that clarify scope</h3>
+        <ul class="faq-hero__card-list">
+          <li>Photos of the area (wide + close-up)</li>
+          <li>City or ZIP code</li>
+          <li>Service type or project description</li>
+          <li>Rough timing or access notes</li>
+          <li>Any material or finish constraints</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <!-- ===== FAQ BODY ===== -->
-  <main class="faq-page-body" id="main-content">
-    <div class="faq-list">
+  <!-- FAQ BODY -->
+  <main id="main-content">
+    <div class="faq-body">
+      <p class="faq-section-label">FREQUENTLY ASKED</p>
+      <h2 class="faq-section-h2">Common questions</h2>
 
-      <details class="faq-item">
-        <summary>How do I request an estimate?</summary>
-        <p>Use our <a href="../request/">Request Estimate</a> page to describe your project, share a few photos, and provide your preferred timeline. We review every submission and respond within one business day with a clear, no-surprise quote.</p>
-      </details>
+      <div class="faq-list">
 
-      <details class="faq-item">
-        <summary>What kinds of projects do you handle?</summary>
-        <p>We specialize in interior repairs and maintenance: drywall patching, door and trim adjustments, TV and shelf mounting, furniture assembly, minor plumbing fixes (like faucet swaps), and punch-list items. See our full <a href="../services/">Services page</a> for the complete list.</p>
-      </details>
+        <details class="faq-item">
+          <summary>How do I request an estimate?</summary>
+          <p>Use the <a href="../request/">Request Estimate</a> page to describe your project, share photos, and include your city or ZIP code. Requests are reviewed by project type, access, materials, and scope before the next step is clarified.</p>
+        </details>
 
-      <details class="faq-item">
-        <summary>What areas do you serve?</summary>
-        <p>We serve Vancouver, WA and Portland, OR plus surrounding communities including Camas, Battle Ground, Beaverton, Hillsboro, Gresham, Tigard, Lake Oswego, and Oregon City. Visit our <a href="../service-area/">Service Area page</a> for the full coverage map.</p>
-      </details>
+        <details class="faq-item">
+          <summary>What kinds of projects do you handle?</summary>
+          <p>Small repairs, installs, trim fixes, touch-ups, and punch-list projects. Common requests include wall repair and patching, door and trim adjustments, TV mounting, small fixture installs, washer/dryer connections, and grouped punch-list items. See the full <a href="../services/">Services page</a> for categories.</p>
+        </details>
 
-      <details class="faq-item">
-        <summary>How long does it take to get a response?</summary>
-        <p>We respond to all estimate requests within one business day. During busy seasons or for larger scopes, we may need an additional day to provide an accurate quote — but we always keep you informed.</p>
-      </details>
+        <details class="faq-item">
+          <summary>Can I send photos before scheduling?</summary>
+          <p>Yes. Sending photos before any scheduling helps clarify the scope, materials, and access situation before the next step is confirmed. Photos can be included with the estimate request form or sent directly.</p>
+        </details>
 
-      <details class="faq-item">
-        <summary>Do you provide written estimates?</summary>
-        <p>Yes. Every project gets a written estimate before work begins. We outline the scope, materials (if any), estimated time, and total cost. No work starts until you approve the estimate in writing.</p>
-      </details>
+        <details class="faq-item">
+          <summary>Do you handle small punch-list projects?</summary>
+          <p>Yes. Grouped punch-list items — multiple small repairs or installs submitted together — are one of the most common request types. Listing all items together with photos helps the review process.</p>
+        </details>
 
-      <details class="faq-item">
-        <summary>What should I send with my estimate request?</summary>
-        <p>Photos are the single most helpful thing you can share. Clear photos of the area to be repaired or improved let us give you an accurate quote without a preliminary site visit in most cases. Include a short description of what you want done and your preferred scheduling window.</p>
-      </details>
+        <details class="faq-item">
+          <summary>Can multiple small tasks be grouped into one request?</summary>
+          <p>Yes. Grouping several small tasks into one request is encouraged. Include photos of each area, a brief note about each item, and any relevant access or material details.</p>
+        </details>
 
-      <details class="faq-item">
-        <summary>Are there projects you don't take on?</summary>
-        <p>We focus on handyman-scale work rather than full remodels, major electrical, or structural changes. If your project turns out to need a licensed specialist (e.g., panel upgrades or load-bearing modifications), we'll tell you upfront and can often point you to a trusted referral.</p>
-      </details>
+        <details class="faq-item">
+          <summary>What details should I include in my request?</summary>
+          <p>The most useful details are: photos of the repair or install area (wide shot + close-up), city or ZIP code, service type or description, rough timing, and any access or material notes. The more context provided, the clearer the next step will be.</p>
+        </details>
 
+        <details class="faq-item">
+          <summary>What areas do you serve?</summary>
+          <p>Vancouver, WA and Portland, OR plus surrounding communities including Camas, Battle Ground, Beaverton, Hillsboro, Gresham, Tigard, Lake Oswego, and Oregon City. Visit the <a href="../service-area/">Service Area page</a> for the full coverage map. Availability depends on location, project type, access, and scope.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens after I send a request?</summary>
+          <p>Requests are reviewed by project type, access, materials, location, and scope. A follow-up will clarify whether the request is a fit, what additional information may help, and what the next step looks like.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is every request accepted?</summary>
+          <p>Not every request is a fit. Availability depends on location, project type, scope, materials, and scheduling. The review process exists to clarify fit before any next step is confirmed — not every request will move forward.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How long does it take to get a response?</summary>
+          <p>Most requests receive a follow-up within one business day. During busy periods or for more complex scope reviews, it may take an additional day to provide useful detail. Requests are not confirmed until reviewed.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What types of jobs may need a licensed trade specialist or contractor?</summary>
+          <p>Some requests — including major electrical panel work, structural modifications, load-bearing changes, or certain plumbing work — may require a licensed trade specialist or contractor depending on scope, local rules, and permit requirements. If a project requires a specialist, the review will note that.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are there projects you don&rsquo;t take on?</summary>
+          <p>Full remodels, major electrical or structural work, and projects that require a licensed contractor are outside the typical request scope. If a project requires a specialist, the review follow-up will clarify that and may point toward other options.</p>
+        </details>
+
+      </div>
     </div>
 
-    <!-- CTA strip -->
-    
-    <section class="faq-presection" style="background:#F2EDE4;padding:48px 0">
-      <div style="max-width:780px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
-        <div style="background:#fff;border:1.5px solid #ddd6cc;border-radius:12px;padding:28px 24px">
-          <div style="font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C9822B;margin-bottom:12px">Before you request</div>
-          <h3 style="font-size:1rem;font-weight:700;color:#0d1c2e;margin:0 0 14px">Pre-estimate checklist</h3>
-          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px">
-            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:#2a3e52"><span style="color:#C9822B;font-weight:700;flex-shrink:0">✓</span>Know the general service type (trim, wall, install, etc.)</li>
-            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:#2a3e52"><span style="color:#C9822B;font-weight:700;flex-shrink:0">✓</span>Have photos of the area ready (wide + close-up)</li>
-            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:#2a3e52"><span style="color:#C9822B;font-weight:700;flex-shrink:0">✓</span>Know your city or general area</li>
-            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:#2a3e52"><span style="color:#C9822B;font-weight:700;flex-shrink:0">✓</span>Note any access, entry, or parking details</li>
-            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:#2a3e52"><span style="color:#C9822B;font-weight:700;flex-shrink:0">✓</span>Group multiple small items into one request if possible</li>
+    <!-- Support blocks: 3 cards -->
+    <section class="faq-support" aria-label="Request preparation tips">
+      <div class="faq-support__inner">
+
+        <div class="faq-support__card">
+          <div class="faq-support__eyebrow">BEFORE YOU REQUEST</div>
+          <h3>Pre-estimate checklist</h3>
+          <ul>
+            <li>Know the general service type</li>
+            <li>Have photos ready (wide + close-up)</li>
+            <li>Know your city or ZIP code</li>
+            <li>Note access, entry, or parking details</li>
+            <li>Group multiple items into one request</li>
+            <li>Note any material or timing constraints</li>
           </ul>
         </div>
-        <div style="background:#0d1c2e;border-radius:12px;padding:28px 24px">
-          <div style="font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C9822B;margin-bottom:12px">Why photos matter</div>
-          <h3 style="font-size:1rem;font-weight:700;color:#f0ebe0;margin:0 0 10px">Photos help clarify scope</h3>
-          <p style="font-size:.88rem;color:rgba(240,235,224,.78);line-height:1.6;margin:0 0 16px">A wide photo of the room and a close-up of the repair area help determine if the scope, materials, and access are a match before the next step is clarified.</p>
-          <p style="font-size:.82rem;color:rgba(240,235,224,.55);margin:0">Tip: text or email photos directly if the form upload is easier that way.</p>
+
+        <div class="faq-support__card">
+          <div class="faq-support__eyebrow">WHY PHOTOS MATTER</div>
+          <h3>Photos help clarify scope</h3>
+          <p>A wide photo of the room and a close-up of the repair or install area help determine if scope, materials, and access are a fit before the next step is confirmed. Include both views when possible.</p>
+        </div>
+
+        <div class="faq-support__card faq-support__card--dark">
+          <div class="faq-support__eyebrow">WHEN A SPECIALIST MAY BE NEEDED</div>
+          <h3>Licensed trade work</h3>
+          <p>Some requests may require a licensed trade specialist or contractor depending on scope, structure, electrical or plumbing requirements, or local rules. The review will flag this if relevant.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <section class="faq-cta-strip" aria-label="Ready to request">
+      <div class="faq-cta-strip__inner">
+        <h2>Ready to send details?</h2>
+        <p>Share photos, your city, and a brief project description. Requests are reviewed by scope and location before the next step is clarified.</p>
+        <div class="faq-cta-strip__buttons">
+          <a href="../request/" class="btn-amber">Request Estimate</a>
+          <a href="../services/" class="btn-outline">View Services</a>
         </div>
       </div>
     </section>
-<div class="faq-cta">
-      <h2>Ready to get started?</h2>
-      <p>Share your project details and a few photos — we'll send a written estimate within one business day.</p>
-      <a href="../request/" class="btn-primary">Request Estimate &rarr;</a>
-    </div>
+
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
 
-        <!-- Col 1: Brand -->
         <div class="footer-col footer-brand-col">
           <a href="../" class="footer-brand">
             <span class="footer-brand-icon">LR</span>
             <strong>Local Repair Pro</strong>
           </a>
-          <p class="footer-tagline">Reliable handyman service in Vancouver, WA &amp; Portland, OR.</p>
+          <p class="footer-tagline">Handyman repair, install, and punch-list service in Vancouver, WA &amp; Portland, OR.</p>
           <p class="footer-contact">
             <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
             <a href="tel:+17777777777">(777) 777-7777</a>
@@ -330,68 +591,68 @@
             <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
             <a href="mailto:hello@localrepairpro.com">hello@localrepairpro.com</a>
           </p>
-          <p class="footer-safety">Requests reviewed by scope, location, and access before next steps.</p>
+          <p class="footer-safety">Service availability depends on location, project type, access, and scope.</p>
         </div>
 
-        <!-- Col 2: Pages -->
         <div class="footer-col">
           <h4>Pages</h4>
           <a href="../">Home</a>
           <a href="../services/">Services</a>
+          <a href="../work-examples/">Work Examples</a>
           <a href="../service-area/">Service Area</a>
           <a href="../request/">Request Estimate</a>
           <a href="../faq/" aria-current="page">FAQ</a>
         </div>
 
-        <!-- Col 3: Common services -->
         <div class="footer-col">
           <h4>Common services</h4>
-          <a href="../services/">Wall repair &amp; patching</a>
-          <a href="../services/">Door &amp; trim fixes</a>
+          <a href="../services/">Wall repair &amp; touch-ups</a>
+          <a href="../services/">Door, trim &amp; hardware</a>
           <a href="../services/">TV mounting</a>
           <a href="../services/">Small installs</a>
-          <a href="../services/">Punch-list projects</a>
+          <a href="../services/">Punch-list fixes</a>
         </div>
 
-        <!-- Col 4: Service areas -->
-        <div class="footer-col">
+        <div class="footer-col footer-col--areas">
           <h4>Service areas</h4>
           <a href="../service-area/vancouver-wa/">Vancouver, WA</a>
           <a href="../service-area/portland-or/">Portland, OR</a>
-          <a href="../service-area/camas-wa/">Camas</a>
-          <a href="../service-area/battle-ground-wa/">Battle Ground</a>
-          <a href="../service-area/beaverton-or/">Beaverton</a>
-          <a href="../service-area/hillsboro-or/">Hillsboro</a>
-          <a href="../service-area/">View all &rarr;</a>
+          <a href="../service-area/camas-wa/">Camas, WA</a>
+          <a href="../service-area/battle-ground-wa/">Battle Ground, WA</a>
+          <a href="../service-area/beaverton-or/">Beaverton, OR</a>
+          <a href="../service-area/lake-oswego-or/">Lake Oswego, OR</a>
+          <a href="../service-area/" class="footer-view-all">View all service areas &rarr;</a>
         </div>
 
       </div>
-      <p class="footer-copy">&copy; 2025 Local Repair Pro. All rights reserved.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Local Repair Pro. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
     (function(){
-      var btn = document.getElementById('hamburger');
-      var nav = document.getElementById('mobile-nav');
+      var btn = document.getElementById("hamburger");
+      var nav = document.getElementById("mobile-nav");
       if (!btn || !nav) return;
-      btn.addEventListener('click', function(){
-        var open = nav.hasAttribute('hidden') === false;
+      btn.addEventListener("click", function(){
+        var open = !nav.hasAttribute("hidden");
         if (open) {
-          nav.setAttribute('hidden', '');
-          btn.setAttribute('aria-expanded', 'false');
-          btn.classList.remove('open');
+          nav.setAttribute("hidden", "");
+          btn.setAttribute("aria-expanded", "false");
+          btn.classList.remove("open");
         } else {
-          nav.removeAttribute('hidden');
-          btn.setAttribute('aria-expanded', 'true');
-          btn.classList.add('open');
+          nav.removeAttribute("hidden");
+          btn.setAttribute("aria-expanded", "true");
+          btn.classList.add("open");
         }
       });
-      document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && !nav.hasAttribute('hidden')){
-          nav.setAttribute('hidden', '');
-          btn.setAttribute('aria-expanded', 'false');
-          btn.classList.remove('open');
+      document.addEventListener("keydown", function(e){
+        if (e.key === "Escape" && !nav.hasAttribute("hidden")){
+          nav.setAttribute("hidden", "");
+          btn.setAttribute("aria-expanded", "false");
+          btn.classList.remove("open");
           btn.focus();
         }
       });

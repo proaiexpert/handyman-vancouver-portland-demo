@@ -1,3 +1,33 @@
+## [Unreleased] — 2026-07-02
+
+### fix: polish homepage areas and FAQ premium layout
+
+**Homepage city block**
+- Replaced flat chip spans (`local-area__groups`) with a responsive 3×2 linked city-card grid (`local-area__city-grid`)
+- Amber left-border accent on primary cards (Vancouver WA, Portland OR); glass-effect on secondary cards
+- "View all service areas →" amber link appended below grid
+- Responsive: 2-col at ≤680px, 1-col at ≤400px
+
+**FAQ — full premium rebuild** (663 lines, up from 350)
+- Two-column dark-navy hero: H1 + lead text + amber CTA buttons left, info card right
+- 12 accordion FAQ items (up from 7) with amber +/− icons
+- 3-card support block: Pre-estimate checklist, Photos matter, Specialist disclaimer
+- Full-width dark navy CTA strip with amber "Request Estimate" + outline "View Services" buttons
+- FAQPage JSON-LD schema updated with all 12 questions
+- noindex,nofollow preserved; all forbidden strings clear
+
+**Footer standardization (all pages)**
+- Canonical 6-city footer list applied to every HTML file:
+  Vancouver WA / Portland OR / Camas WA / Battle Ground WA / Beaverton OR / Lake Oswego OR / View all service areas →
+- Hillsboro OR removed from footer city lists across: homepage, services, work-examples, request, service-area/index, all 10 city pages
+- FAQ footer already correct from rebuild
+
+**QA**
+- Forbidden-string scan: PASS (all `#1` hits are CSS hex color strings)
+- noindex check: all 18 HTML files confirmed
+- Width/container consistency: nav-inner 1160px, content 1080–1100px across inner pages
+
+---
 ## [2026-07-02] — fix: align inner page scale with homepage
 
 ## [Phase 3 — Rendered Visual Audit] — 2026-07-02

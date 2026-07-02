@@ -1,3 +1,21 @@
+## Current Status
+
+**Last completed task:** Final premium consistency pass — homepage city grid, FAQ premium rebuild, footer standardization  
+**HEAD commit:** (pending — fix: polish homepage areas and FAQ premium layout)  
+**Date:** 2026-07-02  
+**Overall site health:** GOOD — all 18 HTML files pass noindex check and forbidden-string QA
+
+### What was done in this pass
+- Homepage: replaced messy chip spans with clean 3×2 linked city-card grid (`local-area__city-grid`), amber border on primary cards
+- FAQ: fully rebuilt to premium standard — two-column dark-navy hero, 12 accordion items (up from 7), amber icons, 3-card support block, full-width dark navy CTA strip, FAQPage JSON-LD schema updated
+- Footer: standardized canonical 6-city list (Vancouver WA, Portland OR, Camas WA, Battle Ground WA, Beaverton OR, Lake Oswego OR + View all) across ALL 16 site HTML files — replaced Hillsboro OR everywhere
+- Width/container check: nav-inner 1160px, footer-inner responsive, inner pages use 1080–1100px content containers — consistent
+- Search QA: PASS across all pages (all `#1` hits confirmed CSS hex color strings, not copy text)
+- noindex: PRESENT on all 18 HTML files
+
+### Open items
+- None — site is ready for client review
+
 # AGENT STATUS — Phase 2 Premium Demo Upgrade
 # AGENT STATUS — Phase 3 Rendered Visual Audit
 
