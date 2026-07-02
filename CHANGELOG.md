@@ -1,3 +1,44 @@
+## [2026-07-02] TASK 8 — Final Wording Cleanup
+
+### Changed
+- `index.html`: 3 aria-labels updated; visible CTA "Send photos for review →" → "Send Project Photos →"
+- `service-area/*/index.html` (10 city pages):
+  - h2 "Repair request review in [City]" → "Repair estimate process in [City]"
+  - h2 "How request review works" → "How the estimate process works"
+  - img alt "request review map" → "service area map"
+  - meta/og descriptions: "handyman request review" → "handyman estimate process"
+  - footer safety tagline: removed "Insured" (unsupported claim)
+- `service-area/index.html`:
+  - meta, og:description, twitter:description updated
+  - img alt updated
+  - Map caption: "General area shown for request review" → "General area shown for estimate requests"
+  - h2 "How local repair request review works" → "How the local estimate process works"
+  - h2 "Request review by city area" → "Estimate requests by city area"
+  - FAQ answer updated
+  - Footer: Insured removed
+- `faq/index.html`: footer safety tagline: removed "Insured"
+
+### Search QA Results
+- "Request review": ZERO remaining
+- "Repair request review": ZERO remaining
+- "Send photos for review": ZERO remaining
+- "Insured": ZERO remaining
+- "warranty", "5-star", "Google reviews", "Demo site", "before launch": all ZERO
+- "licensed trade specialist or contractor": 3 instances RETAINED (scope disclaimer — correct)
+
+### Files Changed: 13
+`index.html`, `faq/index.html`, `service-area/index.html`,
+`service-area/battle-ground-wa/index.html`, `service-area/beaverton-or/index.html`,
+`service-area/camas-wa/index.html`, `service-area/gresham-or/index.html`,
+`service-area/hillsboro-or/index.html`, `service-area/lake-oswego-or/index.html`,
+`service-area/oregon-city-or/index.html`, `service-area/portland-or/index.html`,
+`service-area/tigard-or/index.html`, `service-area/vancouver-wa/index.html`
+
+### Commit
+- `fix: clean final client-demo wording`
+
+---
+
 ## [2026-07-02] TASK 7 — Final Showroom QA + FAQ Schema + Client-Demo Readiness
 
 ### Added
