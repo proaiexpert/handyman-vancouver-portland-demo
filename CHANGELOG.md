@@ -1,3 +1,28 @@
+## [2026-07-02] — fix: align inner page scale with homepage
+
+### Changes
+- **Shared CSS (preview-styles.css):** Added SCALE ALIGNMENT TOKENS section
+  - Nav and footer inner: max-width → 1260px
+  - Services hero-inner: max-width → 960px, H1 font-size → clamp(2.6rem,5vw,4rem)
+  - Services content inner: max-width → 1260px
+  - Work Examples hero: max-width → 960px, H1 font-size → clamp(2.6rem,5vw,4rem)
+  - Work Examples gallery: max-width → 1260px
+  - Work Examples card images: height → 340px
+  - FAQ hero H1: font-size → clamp(2.6rem,5vw,4rem), max-width → 900px
+  - FAQ accordion: max-width → 960px
+  - Service Area hub H1: font-size → clamp(2.4rem,4.5vw,3.8rem)
+  - Service Area hub inner: max-width → 1200px
+  - City hero inner: max-width → 1200px
+  - City hero H1: font-size → clamp(2.4rem,4.5vw,3.8rem)
+  - Request page H1: font-size → clamp(2.4rem,4.5vw,3.8rem)
+  - Request section inner: max-width → 900px
+- **Services/Work-Examples/Request pages (inline HTML):** Hero padding upgraded to
+  clamp(80px,10vw,130px) for premium breathing room
+- **Service Area page:** Dark navy gradient hero + larger padding applied inline
+- **All pages QA:** Search QA passed, visual scale QA passed
+
+---
+
 ## [Unreleased] — fix: unify premium visual system across all pages
 ### Date: 2026-07-01
 ### Previous HEAD: 36fe188

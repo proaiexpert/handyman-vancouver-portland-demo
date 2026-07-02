@@ -1,31 +1,52 @@
 # Agent Status
 
-## Current HEAD
-Pending commit — fix: unify premium visual system across all pages
-(Previous: 36fe188)
+**Last updated:** 2026-07-02
+**Status:** READY FOR CLIENT DEMO
 
-## Last Task Completed
-Task: Final premium visual system alignment across all pages
-Date: 2026-07-01
+## Completed Tasks
 
-## What Was Done
-- Confirmed HEAD 36fe188 as starting point
-- Services page hero: replaced bright blue gradient (#1e3a5f → #2563eb) with dark navy design system (#0d1c2e → #1a3a5c + amber accent)
-- Services page: fixed eyebrow color (was blue fallback), H1 size increased to clamp(2rem,4.5vw,3.2rem)
-- FAQ page: removed duplicate conflicting CSS rules, fixed gradient end stop (#2a4a7a → amber accent tint)
-- City pages (all 10): fixed malformed nav (Work Examples appeared twice, once inside Services li)
-- City pages (all 10): injected dark navy hero override (was warm beige/cream)
-- City pages (all 10): added Work Examples to mobile nav
-- Work Examples: fully rebuilt with 2-col x 4-row premium layout, 300px image cards, dark navy hero
-- CSS: footer grid fix (:has selector), city-breadcrumb styles already present
-- Search QA: fixed 'demo site' in Work Examples note → 'this demo'
-- All 16 HTML files passed forbidden-string check
+### TASK — Final scale and proportion alignment
+- **Commit:** fix: align inner page scale with homepage
+- **Status:** COMPLETE ✅
 
-## Known Remaining Issues
-None identified
+### What was done:
+- Added SCALE ALIGNMENT TOKENS block to shared preview-styles.css
+- Upgraded all inner page H1 sizes to clamp(2.4–2.6rem, 4.5–5vw, 3.8–4rem)
+- Expanded hero max-widths: svc/we hero-inner 720→960px
+- Expanded content containers: services/work-examples gallery 1080→1260px
+- Expanded FAQ accordion 780→960px
+- Expanded service-area hub 1100→1200px
+- Expanded nav-inner and footer-inner to 1260px
+- City page hero-inner and H1 upgraded to match service-area scale
+- Request page H1 upgraded, section container 760→900px
+- All changes via shared CSS (no per-page inline hacks)
+
+### TASK — Final premium visual system alignment
+- **Commit:** 2cd0d4f — fix: unify premium visual system across all pages
+- **Status:** COMPLETE ✅
+
+## Site Pages (16 HTML files)
+- index.html — Homepage ✅
+- services/index.html — Services ✅
+- work-examples/index.html — Work Examples ✅
+- faq/index.html — FAQ ✅
+- request/index.html — Request ✅
+- service-area/index.html — Service Area Hub ✅
+- service-area/vancouver-wa/ — City Page ✅
+- service-area/portland-or/ — City Page ✅
+- service-area/lake-oswego-or/ — City Page ✅
+- service-area/beaverton-or/ — City Page ✅
+- service-area/tigard-or/ — City Page ✅
+- service-area/gresham-or/ — City Page ✅
+- service-area/hillsboro-or/ — City Page ✅
+- service-area/camas-wa/ — City Page ✅
+- service-area/battle-ground-wa/ — City Page ✅
+- service-area/oregon-city-or/ — City Page ✅
 
 ## Live Site
 https://proai-expert.com/handyman-vancouver-portland-demo/
 
-## Repository
-https://github.com/proaiexpert/handyman-vancouver-portland-demo
+## QA Status
+- Search QA (20 forbidden strings): PASSED
+- Visual QA (browser screenshots): PASSED
+- Scale alignment: VERIFIED

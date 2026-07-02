@@ -1211,12 +1211,16 @@ body.final-menu-open { overflow: hidden; }
 .city-breadcrumb-current { color: var(--primary); font-weight: 600; }
 
 /* Hero */
-.city-hero { background: var(--background); border-top: 3px solid var(--cta); }
+.city-hero {
+  background: linear-gradient(135deg, #0d1c2e 0%, #1a3a5c 55%, rgba(201,130,43,.10) 100%);
+  border-top: none;
+  border-bottom: none;
+}
 .city-hero-inner { max-width: 1080px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: center; }
 .city-hero-text { }
-.city-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: var(--cta); text-transform: uppercase; margin-bottom: 16px; }
-.city-hero-text h1 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 800; color: var(--primary); margin: 0 0 20px; line-height: 1.15; }
-.city-hero-body { font-size: 1.02rem; color: var(--muted); max-width: 560px; margin: 0 0 28px; line-height: 1.65; }
+.city-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: #C9822B; text-transform: uppercase; margin-bottom: 16px; }
+.city-hero-text h1 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 800; color: #f0ebe0; margin: 0 0 20px; line-height: 1.15; }
+.city-hero-body { font-size: 1.02rem; color: rgba(240,235,224,.82); max-width: 560px; margin: 0 0 28px; line-height: 1.65; }
 .city-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
 .city-btn-primary { background: var(--cta); color: #fff; padding: 13px 28px; border-radius: 4px; font-weight: 700; font-size: .95rem; text-decoration: none; display: inline-block; }
 .city-btn-primary:hover { background: #b0711e; }
@@ -1697,4 +1701,184 @@ body.final-menu-open { overflow: hidden; }
   .footer-grid .footer-brand-col {
     grid-column: auto;
   }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SCALE ALIGNMENT TOKENS
+   Make inner pages match homepage scale and visual weight.
+   Applied globally via canonical class names — no per-page hacks.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Shared layout containers ── */
+/* All inner pages use .site-container or .site-container-wide */
+
+/* Services hero inner — was max-width 720px, widen to 960px */
+.svc-hero-inner {
+  max-width: 960px !important;
+}
+.svc-hero-h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem) !important;
+  line-height: 1.08 !important;
+}
+.svc-hero-lead {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem) !important;
+  max-width: 700px;
+}
+
+/* Work Examples — hero inner wider, larger H1 */
+.we-hero-inner {
+  max-width: 960px !important;
+}
+.we-hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem) !important;
+  line-height: 1.08 !important;
+}
+.we-hero p {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem) !important;
+  max-width: 680px !important;
+}
+
+/* Work Examples gallery — wider container */
+.we-gallery-inner {
+  max-width: 1260px !important;
+}
+
+/* Work Examples card images — larger on desktop */
+.we-card-img {
+  height: 340px !important;
+}
+
+/* Work Examples card body — more generous padding */
+.we-card-body {
+  padding: 26px 28px 32px !important;
+}
+
+/* Work Examples grid gap — more generous */
+.we-grid {
+  gap: clamp(24px, 3vw, 40px) !important;
+}
+
+/* Services inner content — widen containers */
+.svc-inner {
+  max-width: 1260px !important;
+}
+.svc-inner--narrow {
+  max-width: 860px !important;
+}
+
+/* Services cat cards — more generous padding */
+.svc-cat-card {
+  padding: clamp(24px, 3vw, 36px) !important;
+}
+
+/* Services cat grid — wider gap */
+.svc-cat-grid {
+  gap: clamp(20px, 2.5vw, 30px) !important;
+}
+
+/* FAQ hero — wider content area */
+.faq-page-hero {
+  padding: clamp(72px, 10vw, 130px) clamp(24px, 5vw, 80px) clamp(56px, 8vw, 96px) !important;
+}
+.faq-page-hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem) !important;
+  max-width: 900px !important;
+  line-height: 1.08 !important;
+}
+.faq-page-hero p {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem) !important;
+  max-width: 680px !important;
+}
+
+/* FAQ accordion — wider */
+.faq-premium__items,
+.faq-premium__list {
+  max-width: 960px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.faq-premium__header {
+  max-width: 960px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Service area hero — larger H1 and wider content */
+.sa-hero-h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem) !important;
+  line-height: 1.1 !important;
+}
+.sa-hero-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sa-inner {
+  max-width: 1200px !important;
+}
+.sa-inner--narrow {
+  max-width: 860px !important;
+}
+.sa-h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem) !important;
+}
+
+/* City hero — much larger H1 to match site scale */
+.city-hero-inner {
+  max-width: 1200px !important;
+  padding: clamp(56px, 8vw, 96px) 24px !important;
+}
+.city-hero-text h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem) !important;
+  line-height: 1.1 !important;
+}
+.city-hero-body {
+  font-size: clamp(1.0rem, 1.6vw, 1.15rem) !important;
+  max-width: 620px;
+}
+
+/* Request page — wider hero and form sections */
+.rq-hero h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem) !important;
+  max-width: 760px !important;
+  line-height: 1.1 !important;
+}
+.rq-hero .hero-body {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem) !important;
+  max-width: 640px !important;
+}
+.rq-section {
+  max-width: 900px !important;
+}
+
+/* Nav inner — ensure canonical width matches footer */
+.nav-inner {
+  max-width: 1260px !important;
+}
+
+/* Footer inner — ensure consistent max-width everywhere */
+.footer-inner {
+  max-width: 1260px !important;
+}
+
+/* Section vertical rhythm — more generous across inner pages */
+.svc-cat-section,
+.we-gallery-section,
+.sa-section {
+  padding-top: clamp(72px, 9vw, 120px);
+  padding-bottom: clamp(72px, 9vw, 120px);
+}
+
+/* Mobile responsive — don't break card images on small screens */
+@media (max-width: 768px) {
+  .we-card-img { height: 240px !important; }
+  .city-hero-text h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+  .sa-hero-h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+  .rq-hero h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+  .we-hero h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+  .svc-hero-h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+  .faq-page-hero h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+}
+@media (max-width: 480px) {
+  .we-card-img { height: 200px !important; }
 }
