@@ -20,8 +20,265 @@
   <link rel="stylesheet" href="../assets/css/preview-styles.css">
   <style>
     /* ── Page shell ── */
-    .svc-page{background:var(--background)}
-    /* ── Header ── */</style>
+    .svc-page { background: var(--background, #f8fafc); }
+
+    /* ── Layout containers ── */
+    .svc-inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .svc-inner--narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Eyebrow ── */
+    .svc-eyebrow {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--cta, #2563eb);
+      margin-bottom: .75rem;
+    }
+
+    /* ── Hero section ── */
+    .svc-hero {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      color: #fff;
+      padding: 64px 24px 56px;
+    }
+    .svc-hero-inner {
+      max-width: 720px;
+    }
+    .svc-hero .svc-eyebrow {
+      color: rgba(255,255,255,.75);
+    }
+    .svc-hero-h1 {
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      color: #fff;
+    }
+    .svc-hero-lead {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,.88);
+      max-width: 600px;
+      margin: 0 0 1.75rem;
+    }
+    .svc-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 1.5rem;
+    }
+    .svc-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #facc15;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: .95rem;
+      padding: 13px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .svc-btn-primary:hover {
+      background: #eab308;
+      transform: translateY(-1px);
+    }
+    .svc-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.15);
+      color: #fff;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 13px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.35);
+      transition: background .2s;
+    }
+    .svc-btn-secondary:hover {
+      background: rgba(255,255,255,.25);
+    }
+    .svc-micro-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .svc-micro-chip {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      color: rgba(255,255,255,.9);
+      font-size: .75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.25);
+    }
+
+    /* ── Section wrappers ── */
+    .svc-section {
+      padding: 64px 0;
+    }
+    .svc-section--surface {
+      background: #fff;
+    }
+    .svc-section--tint {
+      background: #f0f7ff;
+    }
+    .svc-h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #1e293b;
+      margin: 0 0 .75rem;
+    }
+    .svc-intro {
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Category card grid ── */
+    .svc-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 12px;
+    }
+    .svc-cat-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px 20px 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .svc-cat-card:hover {
+      box-shadow: 0 4px 16px rgba(37,99,235,.1);
+      transform: translateY(-2px);
+    }
+    .svc-cat-num {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: #2563eb;
+      background: #eff6ff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .svc-cat-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 0 0 6px;
+    }
+    .svc-cat-card p {
+      font-size: .875rem;
+      color: #64748b;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── Review card grid ── */
+    .svc-review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 12px;
+    }
+    .svc-review-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px 20px;
+    }
+    .svc-review-num {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: #2563eb;
+      margin: 0 0 8px;
+    }
+    .svc-review-card h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 0 0 6px;
+    }
+    .svc-review-card p {
+      font-size: .85rem;
+      color: #64748b;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── Examples grid ── */
+    .svc-examples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 12px;
+    }
+    .svc-example-group {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .svc-example-group h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 0 0 12px;
+    }
+    .svc-example-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .svc-example-chip {
+      font-size: .78rem;
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* ── Final CTA section ── */
+    .svc-cta-section {
+      background: var(--primary, #1e3a5f);
+      color: #fff;
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .svc-cta-section h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      margin: 0 0 .75rem;
+    }
+    .svc-cta-section p {
+      font-size: 1rem;
+      opacity: .88;
+      margin: 0 0 1.5rem;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .svc-hero { padding: 48px 20px 40px; }
+      .svc-hero-actions { flex-direction: column; }
+      .svc-btn-primary, .svc-btn-secondary { justify-content: center; }
+      .svc-cat-grid { grid-template-columns: 1fr; }
+      .svc-review-grid { grid-template-columns: 1fr; }
+      .svc-examples-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body class="svc-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -35,6 +292,7 @@
         <ul class="nav-links">
           <li><a href="../">Home</a></li>
           <li><a href="../services/">Services</a></li>
+          <li><a href="../work-examples/">Work Examples</a></li>
           <li><a href="../service-area/">Service Area</a></li>
           <li><a href="../faq/">FAQ</a></li>
         </ul>
@@ -326,6 +584,7 @@
           <ul>
             <li><a href="../">Home</a></li>
             <li><a href="../services/">Services</a></li>
+          <li><a href="../work-examples/">Work Examples</a></li>
             <li><a href="../service-area/">Service Area</a></li>
             <li><a href="../request/">Request Estimate</a></li>
             <li><a href="../faq/">FAQ</a></li>

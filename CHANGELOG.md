@@ -39,6 +39,34 @@
 
 ---
 
+## 2026-07-02 — Task 9: Visual polish + Work Examples page
+
+### Added
+- **Work Examples page** (`/work-examples/`) with 8 completed project cards
+  - Drywall patch, TV mounting, door rehang, ceiling fan, washer pedestal,
+    punch-list, baseboard caulk, screen door install
+  - Each card: emoji visual, tag, title, description, location chips
+  - Hero section + CTA strip matching site design system
+- **Work Examples nav link** added to all 15+ pages (desktop + mobile + footer)
+- **Homepage explore card** for Work Examples in the explore grid
+
+### Fixed
+- **Services page** (`/services/`) — injected full `svc-*` CSS: hero gradient,
+  styled buttons (primary/secondary), category card grid, review card grid,
+  example chips, mobile breakpoints
+- **Footer CSS** — removed duplicate "City footer" block in `preview-styles.css`,
+  consolidated `.footer-grid` to `2fr 1fr 1fr 1fr` and `.footer-bottom` to
+  flex row with proper spacing
+- **FAQ page** — aligned hero gradient to site palette (`#1e3a5f` to `#2563eb`)
+- **City pages** — all 10 city pages now include Work Examples in nav/footer
+
+### QA
+- All 15+ pages verified: Work Examples link present in nav, mobile nav, footer
+- Services page: `svc-hero`, `svc-btn-primary`, `svc-cat-card`, `svc-review-card`
+  CSS all present and scoped
+- Work Examples page: 8 cards, hero, footer, nav all present
+- Shared CSS: no duplicate footer blocks, `.footer-grid` uses 4-col layout
+
 ## [2026-07-02] TASK 7 — Final Showroom QA + FAQ Schema + Client-Demo Readiness
 
 ### Added
