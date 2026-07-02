@@ -136,7 +136,7 @@
     }
     .we-card-img {
       width: 100%;
-      height: 300px;
+      height: 380px;
       object-fit: cover;
       display: block;
       background: #e8e0d4;
@@ -345,7 +345,38 @@
     </section>
 
     <!-- CTA STRIP -->
-    <section class="we-cta-strip">
+    
+    <section style="background:#F2EDE4;padding:56px 0">
+      <div style="max-width:1080px;margin:0 auto;padding:0 24px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="we-explain-grid">
+          <div>
+            <span style="display:block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C9822B;margin-bottom:10px">For real client builds</span>
+            <h2 style="font-size:clamp(1.25rem,2.5vw,1.75rem);font-weight:800;color:#0d1c2e;margin:0 0 14px;line-height:1.2">How a real client version uses this page</h2>
+            <p style="font-size:.9375rem;color:#4a5e6e;line-height:1.7;margin:0">When built for an actual service business, this page is replaced with real project photos — grouped by service type, showing the kind of work the client actually does. Before-and-after pairs can be added if available. Each image links directly to the Request Estimate page to keep the next step clear.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="background:#fff;border:1.5px solid #ddd6cc;border-radius:10px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px">
+              <span style="display:block;width:28px;height:28px;background:#C9822B;border-radius:50%;color:#fff;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</span>
+              <span style="font-size:.9rem;color:#0d1c2e">Replace sample visuals with real photos of actual completed work</span>
+            </div>
+            <div style="background:#fff;border:1.5px solid #ddd6cc;border-radius:10px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px">
+              <span style="display:block;width:28px;height:28px;background:#C9822B;border-radius:50%;color:#fff;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</span>
+              <span style="font-size:.9rem;color:#0d1c2e">Group photos by service type: trim, installs, wall work, TV mounting</span>
+            </div>
+            <div style="background:#fff;border:1.5px solid #ddd6cc;border-radius:10px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px">
+              <span style="display:block;width:28px;height:28px;background:#C9822B;border-radius:50%;color:#fff;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</span>
+              <span style="font-size:.9rem;color:#0d1c2e">Add before/after pairs where available for stronger impact</span>
+            </div>
+            <div style="background:#fff;border:1.5px solid #ddd6cc;border-radius:10px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px">
+              <span style="display:block;width:28px;height:28px;background:#C9822B;border-radius:50%;color:#fff;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</span>
+              <span style="font-size:.9rem;color:#0d1c2e">Connect each card to the Request Estimate page to capture interest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>@media(max-width:640px){.we-explain-grid{grid-template-columns:1fr!important}}</style>
+<section class="we-cta-strip">
       <h2>Ready to request an estimate?</h2>
       <p>Send photos, repair details, and your general location. Requests are reviewed by project type, access, materials, and scope.</p>
       <a href="../request/" class="we-btn-primary">Request Estimate &rarr;</a>

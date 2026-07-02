@@ -23,6 +23,38 @@
 
 ---
 
+## Phase 2 Premium Demo Upgrade — 2026-07-02
+
+### Pages Audited (16 HTML files)
+| Page | Pre-upgrade Status | Action |
+|---|---|---|
+| / (homepage) | PASS | Lower-section container audit; no yellow buttons found |
+| /services/ | THIN | Fixed: hero CTA button #facc15 yellow → #C9822B amber |
+| /work-examples/ | THIN | Fixed: image card height 300px → 380px; added "How a real client uses this page" explanation block |
+| /request/ | PASS | No changes needed |
+| /service-area/ | PASS | No changes needed |
+| /faq/ | THIN | Fixed: removed "Licensed · Background-checked" footer claim; fixed blue CTA button → amber; removed "free" from "Request a Free Estimate"; added pre-estimate checklist card and photos-help card |
+| All 10 city pages | THIN | Fixed via shared CSS: city hero H1 upgraded from clamp(1.7rem, 3.5vw, 2.5rem) → clamp(2.2rem, 4vw, 3.2rem); hero padding 64px → 80px |
+
+### Fixes Applied
+- **faq/index.html**: Removed unsupported "Licensed · Background-checked" footer claim → replaced with scope disclaimer. Fixed CTA button blue → amber. Fixed "Request a Free Estimate" → "Request Estimate". Added pre-estimate checklist card + photos-help card section.
+- **services/index.html**: Fixed `.svc-btn-primary` background from #facc15 (yellow) to #C9822B (amber), text color #1a1a1a → #fff. Hover state corrected.
+- **work-examples/index.html**: Image card height increased from 300px to 380px. Added 4-step "How a real client uses this page" explanation block before CTA strip.
+- **assets/css/preview-styles.css**: City hero H1 font-size upgraded. Hero padding increased. Blue hover states removed.
+
+### Search QA (Step 16) — PASS
+- No forbidden strings found across all 16 HTML files
+- No fake reviews, ratings, guarantees, warranty, or insured claims
+- No "free estimate", "Portfolio", "Lorem ipsum", "TODO", "coming soon"
+- "licensed" appears only in correct context: "licensed trade specialist or contractor"
+- "guaranteed" appears only in negative FAQ context
+- noindex/nofollow preserved on all pages
+
+### Remaining Minor Items
+- Homepage narrow inner blocks (max-width 520–640px on some text sections) — these are intentional narrow prose containers, not layout bugs
+- City hero H1 scale now upgraded via shared CSS; visual QA on live server recommended
+
+
 ## [Unreleased] — fix: unify premium visual system across all pages
 ### Date: 2026-07-01
 ### Previous HEAD: 36fe188

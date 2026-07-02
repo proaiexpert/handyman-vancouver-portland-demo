@@ -1216,10 +1216,10 @@ body.final-menu-open { overflow: hidden; }
   border-top: none;
   border-bottom: none;
 }
-.city-hero-inner { max-width: 1080px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: center; }
+.city-hero-inner { max-width: 1080px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: center; }
 .city-hero-text { }
 .city-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: #C9822B; text-transform: uppercase; margin-bottom: 16px; }
-.city-hero-text h1 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 800; color: #f0ebe0; margin: 0 0 20px; line-height: 1.15; }
+.city-hero-text h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; color: #f0ebe0; margin: 0 0 20px; line-height: 1.15; }
 .city-hero-body { font-size: 1.02rem; color: rgba(240,235,224,.82); max-width: 560px; margin: 0 0 28px; line-height: 1.65; }
 .city-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
 .city-btn-primary { background: var(--cta); color: #fff; padding: 13px 28px; border-radius: 4px; font-weight: 700; font-size: .95rem; text-decoration: none; display: inline-block; }
