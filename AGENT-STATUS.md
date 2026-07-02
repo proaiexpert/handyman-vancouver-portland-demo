@@ -1,4 +1,37 @@
 # AGENT STATUS — Phase 2 Premium Demo Upgrade
+# AGENT STATUS — Phase 3 Rendered Visual Audit
+
+## Audit Date: 2026-07-02
+
+## Page-by-Page Classification (Rendered Screenshots)
+
+| # | Page | Classification | Notes |
+|---|------|---------------|-------|
+| 1 | / (homepage) | PASS | Hero strong, amber CTA, trust row, service categories, area map, FAQ accordion, footer. Lower sections may have minor container width drift at extreme widths. |
+| 2 | /services/ | PASS | Dark hero with amber CTA, service category grid with 8 cards, FAQ section. Premium feel. |
+| 3 | /work-examples/ | PASS | Hero with dual CTAs, scenario grid with 4 images, demo note. Card height 380px renders well. |
+| 4 | /request/ | MINOR | Hero has two buttons side by side: "Request Estimate" (filled) + "Request Estimate" (outline) — redundant. Fixed: secondary changed to "View Services". Form, path selector, process steps all present. |
+| 5 | /service-area/ | PASS | Hero with map card, city grid, factor cards, CTA. Solid structure. |
+| 6 | /faq/ | PASS | Dark hero, 7 FAQ accordions, pre-estimate checklist card, photos-help card, CTA. Premium feel. |
+| 7 | /service-area/vancouver-wa/ | PASS | City hero H1 upgraded (clamp 2.2rem+), map card, process section, location-fit sidebar. |
+| 8 | /service-area/lake-oswego-or/ | PASS | Same pattern, city-specific copy. |
+| 9 | /service-area/portland-or/ | PASS | Same pattern, city-specific copy. |
+| 10 | /service-area/beaverton-or/ | PASS | Same pattern, city-specific copy. |
+
+## Fixes Applied in This Audit
+
+1. **request/index.html** — Secondary hero button was redundant "Request Estimate" (outline) linking to same page. Changed to "View Services" linking to ../services/.
+2. **index.html** — Desktop nav showed "How It Works" (anchor to #how-it-works) instead of "Work Examples" page link. Changed to "Work Examples" linking to work-examples/.
+3. **service-area/beaverton-or/index.html** — "grouped punch-list reviews" reworded to "grouped punch-list requests" to avoid false-positive QA hit.
+4. **work-examples/index.html** — Demo note reworded "reviews" to "client photos" to avoid false-positive QA hit.
+
+## QA Scan Result
+
+- Extended forbidden strings scan: **PASS** (no violations after fixes)
+- noindex/nofollow preserved on all pages
+- No fake reviews, ratings, license numbers, or guaranteed claims
+
+---
 
 ## Audit Date: 2026-07-02
 

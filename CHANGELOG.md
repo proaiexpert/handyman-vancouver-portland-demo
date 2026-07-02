@@ -1,5 +1,38 @@
 ## [2026-07-02] — fix: align inner page scale with homepage
 
+## [Phase 3 — Rendered Visual Audit] — 2026-07-02
+
+### Audit Method
+- Live rendered screenshots via headless browser of all 10 audited pages
+- Full page classification: PASS / MINOR / THIN / BROKEN / INCONSISTENT
+- Extended forbidden-strings QA scan across 16 HTML files
+
+### Page Classification Results
+| Page | Result |
+|------|--------|
+| / (homepage) | PASS |
+| /services/ | PASS |
+| /work-examples/ | PASS |
+| /request/ | MINOR → fixed |
+| /service-area/ | PASS |
+| /faq/ | PASS |
+| /service-area/vancouver-wa/ | PASS |
+| /service-area/portland-or/ | PASS |
+| /service-area/lake-oswego-or/ | PASS |
+| /service-area/beaverton-or/ | PASS |
+
+### Fixes
+- `request/index.html` — Redundant secondary hero button "Request Estimate" changed to "View Services" (links to /services/)
+- `index.html` — Desktop nav "How It Works" anchor changed to "Work Examples" page link (work-examples/)
+- `service-area/beaverton-or/index.html` — "punch-list reviews" → "punch-list requests" (QA wording)
+- `work-examples/index.html` — Demo note "reviews" → "client photos" (QA wording)
+
+### QA
+- Extended forbidden strings: **PASS** across all 16 HTML files
+- noindex/nofollow: preserved
+- No fake claims, ratings, or warranty language
+
+
 ### Changes
 - **Shared CSS (preview-styles.css):** Added SCALE ALIGNMENT TOKENS section
   - Nav and footer inner: max-width → 1260px
