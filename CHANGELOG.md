@@ -1,3 +1,20 @@
+## [Unreleased] — fix: unify premium visual system across all pages
+### Date: 2026-07-01
+### Previous HEAD: 36fe188
+
+### Changes
+- **Services hero**: replaced bright blue gradient with dark navy (#0d1c2e → #1a3a5c + amber) to match homepage palette
+- **Services eyebrow**: fixed color (was #2563eb blue fallback, now #C9822B amber)
+- **Services H1**: increased size to clamp(2rem,4.5vw,3.2rem) for stronger hierarchy
+- **FAQ hero**: removed duplicate/conflicting CSS rules; fixed gradient end stop
+- **City pages (×10)**: fixed malformed desktop nav (WE link was nested inside Services li)
+- **City pages (×10)**: added Work Examples to mobile nav (was missing from all 10)
+- **City pages (×10)**: injected dark navy hero override (background was var(--background) warm cream)
+- **Work Examples**: fully rebuilt — 2-column × 4-row premium layout, 300px image height, dark navy hero, canonical nav/footer, no emoji, no forbidden strings
+- **Search QA**: all 16 HTML files clean — no forbidden strings
+
+---
+
 ## 2026-07-02 — Task 9/10: Visual polish, footer fix, Work Examples rebuild
 
 ### Fixed

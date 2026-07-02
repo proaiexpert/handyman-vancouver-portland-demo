@@ -1,43 +1,31 @@
 # Agent Status
 
-## Last Updated
-2026-07-02
+## Current HEAD
+Pending commit — fix: unify premium visual system across all pages
+(Previous: 36fe188)
 
-## Current Task
-Task 9/10: Visual polish, footer fix, Work Examples rebuild — COMPLETE
+## Last Task Completed
+Task: Final premium visual system alignment across all pages
+Date: 2026-07-01
 
-## Completed Tasks
-- Task 4: Nav standardization, footer sitemap, internal links
-- Task 5: Unified sitewide header/footer templates  
-- Task 6: FAQ page + sitewide FAQ link update
-- Task 7: Showroom QA + FAQPage JSON-LD schema + noindex fix on FAQ
-- Task 8: Final wording cleanup (remove request-review language)
-- Task 9/10: Visual polish across all pages + Work Examples page
-
-## Task 9/10 Summary
-
-### Visual Defects Fixed
-- **Services page**: was unstyled HTML — now has full CSS hero, styled buttons, card grids
-- **Footer**: was cramped/broken on inner pages — fixed via :has(.footer-grid) CSS selector
-  ensuring 4-column desktop layout on all pages
-- **FAQ page**: hero redesigned to match site design system (dark navy, amber eyebrow)
-- **Homepage**: aria-label and explore card wording fixed
-
-### Work Examples Page
-- Rebuilt at `/work-examples/` with all 8 real scenario images
-- Uses safe wording ("Sample repair and install scenarios")
-- No emoji placeholders — actual photos from `assets/img/scenarios/`
-- Safe note included per spec
-
-### QA Status
-- Search QA: PASS (all forbidden strings cleared)
-- Visual: Services, FAQ, footer all aligned to homepage design system
-- Work Examples: real images, safe wording, proper card layout
+## What Was Done
+- Confirmed HEAD 36fe188 as starting point
+- Services page hero: replaced bright blue gradient (#1e3a5f → #2563eb) with dark navy design system (#0d1c2e → #1a3a5c + amber accent)
+- Services page: fixed eyebrow color (was blue fallback), H1 size increased to clamp(2rem,4.5vw,3.2rem)
+- FAQ page: removed duplicate conflicting CSS rules, fixed gradient end stop (#2a4a7a → amber accent tint)
+- City pages (all 10): fixed malformed nav (Work Examples appeared twice, once inside Services li)
+- City pages (all 10): injected dark navy hero override (was warm beige/cream)
+- City pages (all 10): added Work Examples to mobile nav
+- Work Examples: fully rebuilt with 2-col x 4-row premium layout, 300px image cards, dark navy hero
+- CSS: footer grid fix (:has selector), city-breadcrumb styles already present
+- Search QA: fixed 'demo site' in Work Examples note → 'this demo'
+- All 16 HTML files passed forbidden-string check
 
 ## Known Remaining Issues
-- None identified at time of commit
+None identified
 
-## Git History (recent)
-- 1e88add: fix: polish visual consistency and add work examples
-- 4ef7154: fix: clean final client-demo wording
-- 76acfd2: chore: finalize client-demo QA and FAQ schema
+## Live Site
+https://proai-expert.com/handyman-vancouver-portland-demo/
+
+## Repository
+https://github.com/proaiexpert/handyman-vancouver-portland-demo

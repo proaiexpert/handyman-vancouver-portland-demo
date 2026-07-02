@@ -14,26 +14,29 @@
   <meta property="og:image" content="https://proai-expert.com/handyman-vancouver-portland-demo/assets/img/hero-finished-pnw-1536.webp">
   <link rel="stylesheet" href="../assets/css/preview-styles.css">
   <style>
-    /* Work Examples page styles */
+    /* ── Page shell ── */
+    .we-page { background: var(--background); min-height: 100vh; }
+
+    /* ── Hero ── */
     .we-hero {
-      background: linear-gradient(135deg, #0d1c2e 0%, #1a3a5c 60%, #C9822B22 100%);
+      background: linear-gradient(135deg, #0d1c2e 0%, #1a3a5c 55%, rgba(201,130,43,.12) 100%);
       color: #f0ebe0;
       padding: clamp(56px,8vw,96px) clamp(20px,5vw,80px) clamp(48px,7vw,80px);
     }
     .we-hero-inner { max-width: 760px; }
-    .we-hero .eyebrow {
+    .we-eyebrow {
       display: block;
       font-size: .72rem;
       font-weight: 800;
       letter-spacing: .14em;
       text-transform: uppercase;
       color: #C9822B;
-      margin-bottom: .8rem;
+      margin-bottom: .9rem;
     }
     .we-hero h1 {
-      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
       font-weight: 800;
-      line-height: 1.12;
+      line-height: 1.1;
       margin: 0 0 1rem;
       color: #f0ebe0;
     }
@@ -53,7 +56,7 @@
       display: inline-flex;
       align-items: center;
       background: #C9822B;
-      color: #fff;
+      color: #241300;
       font-weight: 700;
       font-size: .9375rem;
       padding: 12px 28px;
@@ -65,164 +68,149 @@
     .we-btn-secondary {
       display: inline-flex;
       align-items: center;
-      background: transparent;
-      color: rgba(240,235,224,.88);
+      background: rgba(255,255,255,.1);
+      color: #f0ebe0;
       font-weight: 600;
       font-size: .9375rem;
       padding: 11px 24px;
       border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.22);
       text-decoration: none;
-      border: 1.5px solid rgba(240,235,224,.35);
-      transition: background .18s, border-color .18s;
+      transition: background .18s;
     }
-    .we-btn-secondary:hover { background: rgba(255,255,255,.08); border-color: rgba(240,235,224,.65); }
+    .we-btn-secondary:hover { background: rgba(255,255,255,.18); }
 
-    /* Gallery section */
-    .we-section {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: clamp(48px,6vw,80px) clamp(20px,4vw,48px) clamp(56px,7vw,96px);
+    /* ── Gallery section ── */
+    .we-gallery-section {
+      padding: clamp(56px,8vw,96px) clamp(20px,5vw,80px);
     }
-    .we-section-header {
-      margin-bottom: 40px;
-    }
-    .we-section-header .eyebrow {
+    .we-gallery-inner { max-width: 1080px; margin: 0 auto; }
+    .we-section-eyebrow {
       display: block;
       font-size: .72rem;
       font-weight: 800;
       letter-spacing: .14em;
       text-transform: uppercase;
       color: #C9822B;
-      margin-bottom: .6rem;
+      margin-bottom: .75rem;
     }
-    .we-section-header h2 {
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
+    .we-gallery-section h2 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
       font-weight: 800;
-      color: #0d1c2e;
+      color: var(--primary);
       margin: 0 0 .6rem;
+      line-height: 1.15;
     }
-    .we-section-header p {
+    .we-gallery-section .we-lead {
       font-size: 1rem;
-      color: #556;
-      margin: 0;
-      max-width: 600px;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 640px;
+      margin: 0 0 2.5rem;
     }
+
+    /* ── 2-column grid ── */
     .we-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 28px;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(20px, 3vw, 36px);
     }
+    @media (max-width: 680px) {
+      .we-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Cards ── */
     .we-card {
       background: #fff;
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 2px 12px rgba(13,28,46,.08);
-      border: 1px solid rgba(13,28,46,.08);
-      transition: box-shadow .2s, transform .2s;
+      box-shadow: 0 4px 24px rgba(16,32,51,.10);
+      border: 1px solid rgba(16,32,51,.07);
+      transition: transform .2s ease, box-shadow .2s ease;
       display: flex;
       flex-direction: column;
     }
     .we-card:hover {
-      box-shadow: 0 6px 28px rgba(13,28,46,.14);
-      transform: translateY(-3px);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(16,32,51,.16);
     }
     .we-card-img {
       width: 100%;
-      height: 220px;
-      overflow: hidden;
-      flex-shrink: 0;
-      background: #e8e4dc;
-    }
-    .we-card-img img {
-      width: 100%;
-      height: 100%;
+      height: 300px;
       object-fit: cover;
       display: block;
-      transition: transform .35s;
-    }
-    .we-card:hover .we-card-img img {
-      transform: scale(1.03);
+      background: #e8e0d4;
     }
     .we-card-body {
-      padding: 20px 22px 24px;
+      padding: 22px 24px 26px;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
-    .we-card-label {
+    .we-card-cat {
       display: inline-block;
       font-size: .68rem;
       font-weight: 800;
-      letter-spacing: .1em;
+      letter-spacing: .12em;
       text-transform: uppercase;
       color: #C9822B;
-      margin-bottom: 8px;
+      margin-bottom: .55rem;
     }
     .we-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #0d1c2e;
-      margin: 0 0 8px;
-      line-height: 1.3;
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0 0 .5rem;
+      line-height: 1.25;
     }
     .we-card p {
-      font-size: .875rem;
-      color: #556;
+      font-size: .9rem;
+      color: var(--muted);
       line-height: 1.6;
       margin: 0;
       flex: 1;
     }
 
-    /* Safe note */
-    .we-note {
-      background: #f5f0e8;
-      border-left: 3px solid #C9822B;
-      border-radius: 0 8px 8px 0;
-      padding: 14px 18px;
-      margin: 0 clamp(20px,4vw,48px);
-      max-width: 720px;
-    }
-    .we-note p {
-      font-size: .82rem;
-      color: #7a6a52;
-      margin: 0;
-      line-height: 1.6;
+    /* ── Demo note ── */
+    .we-demo-note {
+      max-width: 1080px;
+      margin: 2rem auto 0;
+      padding: 16px 20px;
+      background: rgba(201,130,43,.07);
+      border: 1px solid rgba(201,130,43,.18);
+      border-radius: 10px;
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.55;
     }
 
-    /* CTA strip */
-    .we-cta {
-      background: #0d1c2e;
-      color: #f0ebe0;
+    /* ── CTA strip ── */
+    .we-cta-strip {
+      background: var(--primary);
+      padding: clamp(40px,6vw,72px) clamp(20px,5vw,80px);
       text-align: center;
-      padding: clamp(48px,6vw,80px) 24px;
-      margin-top: clamp(40px,5vw,64px);
     }
-    .we-cta h2 {
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
+    .we-cta-strip h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 800;
+      color: #f0ebe0;
       margin: 0 0 .75rem;
     }
-    .we-cta p {
+    .we-cta-strip p {
       font-size: 1rem;
-      color: rgba(240,235,224,.78);
+      color: rgba(240,235,224,.75);
       margin: 0 0 1.75rem;
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    @media (max-width: 600px) {
-      .we-hero-btns { flex-direction: column; }
-      .we-btn-primary, .we-btn-secondary { justify-content: center; }
-      .we-grid { grid-template-columns: 1fr; gap: 20px; }
-      .we-card-img { height: 180px; }
-      .we-note { margin: 0 16px; }
+      line-height: 1.6;
     }
   </style>
 </head>
-<body>
+<body class="we-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <!-- NAV -->
   <header class="site-header" role="banner">
     <div class="nav-inner">
       <a href="../" class="nav-brand" aria-label="Local Repair Pro home"><span aria-hidden="true">LR</span><strong>Local Repair Pro</strong></a>
@@ -230,7 +218,7 @@
         <ul class="nav-links">
           <li><a href="../">Home</a></li>
           <li><a href="../services/">Services</a></li>
-          <li><a href="../work-examples/">Work Examples</a></li>
+          <li><a href="../work-examples/" aria-current="page">Work Examples</a></li>
           <li><a href="../service-area/">Service Area</a></li>
           <li><a href="../faq/">FAQ</a></li>
         </ul>
@@ -243,9 +231,10 @@
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
       <a href="../">Home</a>
       <a href="../services/">Services</a>
+      <a href="../work-examples/">Work Examples</a>
       <a href="../service-area/">Service Area</a>
       <a href="../faq/">FAQ</a>
-      <a href="tel:+17777777777" class="mobile-nav-phone">Call or text: (777) 777-7777</a>
+      <a href="tel:+17777777777" class="mobile-nav-phone">Call or text: (777) 777-7777</a>
       <div class="mobile-nav-cta">
         <a href="../request/" class="nav-cta">Request Estimate</a>
       </div>
@@ -254,11 +243,11 @@
 
   <main id="main-content">
 
-    <!-- Hero -->
-    <section class="we-hero" aria-labelledby="we-heading">
+    <!-- HERO -->
+    <section class="we-hero">
       <div class="we-hero-inner">
-        <span class="eyebrow">WORK EXAMPLES</span>
-        <h1 id="we-heading">Example project types for a cleaner, better-kept home.</h1>
+        <span class="we-eyebrow">Work Examples</span>
+        <h1>Example project types for a cleaner, better-kept home.</h1>
         <p>Visual examples of common repair, install, touch-up, and punch-list requests this kind of local-service site can organize. Each type starts with photos and project details.</p>
         <div class="we-hero-btns">
           <a href="../request/" class="we-btn-primary">Request Estimate &rarr;</a>
@@ -267,193 +256,167 @@
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="we-section" aria-labelledby="we-gallery-heading">
-      <div class="we-section-header">
-        <span class="eyebrow">SAMPLE SCENARIOS</span>
-        <h2 id="we-gallery-heading">Sample repair and install scenarios</h2>
-        <p>These example project types show how a local handyman site can organize and present common repair and install requests.</p>
-      </div>
-      <div class="we-grid">
-        <article class="we-card">
-          <div class="we-card-img">
-            <img src="../assets/img/scenarios/01-trim-baseboard-refresh.webp" 
-                 alt="Trim &amp; Baseboard Refresh" 
-                 loading="lazy"
-                 style="object-position:50% 40%">
+    <!-- GALLERY -->
+    <section class="we-gallery-section">
+      <div class="we-gallery-inner">
+        <span class="we-section-eyebrow">Sample Scenarios</span>
+        <h2>Sample repair and install scenarios</h2>
+        <p class="we-lead">These example project types show how a local handyman site can organize and present common repair and install requests.</p>
+
+        <div class="we-grid">
+
+          <div class="we-card">
+            <img class="we-card-img" src="../assets/img/scenarios/01-trim-baseboard-refresh.webp" alt="Trim and baseboard refresh detail" loading="lazy">
+            <div class="we-card-body">
+              <span class="we-card-cat">Trim &amp; Trim Detail</span>
+              <h3>Trim &amp; Baseboard Refresh</h3>
+              <p>Cleaner edges and finish details around walls, trim, and baseboards. Gaps, caulk lines, and paint-edge details reviewed by photos and scope.</p>
+            </div>
           </div>
-          <div class="we-card-body">
-            <span class="we-card-label">Trim &amp; Trim Detail</span>
-            <h3>Trim &amp; Baseboard Refresh</h3>
-            <p>Cleaner edges and finish details around walls, trim, and baseboards. Gaps, caulk lines, and paint-edge details reviewed by photos and scope.</p>
+
+          <div class="we-card">
+            <img class="we-card-img" src="../assets/img/scenarios/02-kitchen-faucet-detail.webp" alt="Kitchen faucet fixture detail" loading="lazy">
+            <div class="we-card-body">
+              <span class="we-card-cat">Fixture Detail</span>
+              <h3>Kitchen Faucet Detail</h3>
+              <p>Small sink and fixture details reviewed by access, fit, and finish. Includes faucet swap, supply-line connection, and under-sink access.</p>
+            </div>
           </div>
-        </article>
-        <article class="we-card">
-          <div class="we-card-img">
-            <img src="../assets/img/scenarios/02-kitchen-faucet-detail.webp" 
-                 alt="Kitchen Faucet Detail" 
-                 loading="lazy"
-                 style="object-position:50% 50%">
+
+          <div class="we-card">
+            <img class="we-card-img" src="../assets/img/scenarios/03-door-hardware-details.webp" alt="Door hardware and handle details" loading="lazy">
+            <div class="we-card-body">
+              <span class="we-card-cat">Door &amp; Hardware</span>
+              <h3>Door &amp; Hardware Details</h3>
+              <p>Handles, hinges, alignment, and visible door details reviewed together. Latches, strikes, and hardware finish all covered in one request.</p>
+            </div>
           </div>
-          <div class="we-card-body">
-            <span class="we-card-label">Fixture Detail</span>
-            <h3>Kitchen Faucet Detail</h3>
-            <p>Small sink and fixture details reviewed by access, fit, and finish. Includes faucet swap, supply-line connection, and under-sink access.</p>
+
+          <div class="we-card">
+            <img class="we-card-img" src="../assets/img/scenarios/04-bathroom-detail-touchup.webp" alt="Bathroom detail and touch-up" loading="lazy">
+            <div class="we-card-body">
+              <span class="we-card-cat">Bathroom Detail</span>
+              <h3>Bathroom Detail Touch-Up</h3>
+              <p>Caulk lines, grout detail, fixture alignment, and surface touch-ups in bathrooms. Photos of the full area and close-up details help clarify scope.</p>
+            </div>
           </div>
-        </article>
-        <article class="we-card">
-          <div class="we-card-img">
-            <img src="../assets/img/scenarios/03-door-hardware-details.webp" 
-                 alt="Door &amp; Hardware Details" 
-                 loading="lazy"
-                 style="object-position:50% 40%">
+
+          <div class="we-card">
+            <img class="we-card-img" src="../assets/img/scenarios/05-entry-door-exterior-trim.webp" alt="Entry door and exterior trim" loading="lazy">
+            <div class="we-card-body">
+              <span class="we-card-cat">Entry &amp; Exterior</span>
+              <h3>Entry Door &amp; Exterior Trim</h3>
+              <p>Front door hardware, exterior trim alignment, weatherstrip condition, and threshold detail. Access and door swing direction noted in request.</p>
+            </div>
           </div>
-          <div class="we-card-body">
-            <span class="we-card-label">Door &amp; Hardware</span>
-            <h3>Door &amp; Hardware Details</h3>
-            <p>Handles, hinges, alignment, and visible door details reviewed together. Latches, strikes, and hardware finish all covered in one request.</p>
+
+          <div class="we-card">
+            <img class="we-card-img" src="../assets/img/scenarios/06-washer-dryer-connection.webp" alt="Washer and dryer connection detail" loading="lazy">
+            <div class="we-card-body">
+              <span class="we-card-cat">Appliance Connection</span>
+              <h3>Washer &amp; Dryer Connection</h3>
+              <p>Connection review, access, spacing, vent or hose visibility. Photos of the laundry area, connections, and available clearance help scope the request.</p>
+            </div>
           </div>
-        </article>
-        <article class="we-card">
-          <div class="we-card-img">
-            <img src="../assets/img/scenarios/04-bathroom-detail-touchup.webp" 
-                 alt="Bathroom Detail Touch-Up" 
-                 loading="lazy"
-                 style="object-position:50% 50%">
+
+          <div class="we-card">
+            <img class="we-card-img" src="../assets/img/scenarios/07-tv-wall-mount-install.webp" alt="TV wall mount installation" loading="lazy">
+            <div class="we-card-body">
+              <span class="we-card-cat">TV &amp; Wall Mount</span>
+              <h3>TV Wall Mount Install</h3>
+              <p>TV bracket mounting, basic placement review, wall type and access check. Stud location, cable routing preference, and wall finish all noted in request.</p>
+            </div>
           </div>
-          <div class="we-card-body">
-            <span class="we-card-label">Bath Detail</span>
-            <h3>Bathroom Detail Touch-Up</h3>
-            <p>Vanity, fixture, and finish details reviewed for a cleaner bathroom feel. Caulk lines, hardware, and visible surface details covered.</p>
+
+          <div class="we-card">
+            <img class="we-card-img" src="../assets/img/scenarios/08-ceiling-light-fixture-install.webp" alt="Ceiling light fixture installation" loading="lazy">
+            <div class="we-card-body">
+              <span class="we-card-cat">Fixture Install</span>
+              <h3>Ceiling Light Fixture Install</h3>
+              <p>Fixture replacement review, ceiling access, existing box and wiring visibility. Photos of the fixture, junction box, and ceiling area help clarify scope.</p>
+            </div>
           </div>
-        </article>
-        <article class="we-card">
-          <div class="we-card-img">
-            <img src="../assets/img/scenarios/05-entry-door-exterior-trim.webp" 
-                 alt="Entry Door &amp; Exterior Trim" 
-                 loading="lazy"
-                 style="object-position:50% 35%">
-          </div>
-          <div class="we-card-body">
-            <span class="we-card-label">Entry &amp; Exterior</span>
-            <h3>Entry Door &amp; Exterior Trim</h3>
-            <p>Visible entry details reviewed by access, material, and exterior condition. Includes door alignment, exterior trim gaps, and paint-edge detail.</p>
-          </div>
-        </article>
-        <article class="we-card">
-          <div class="we-card-img">
-            <img src="../assets/img/scenarios/06-washer-dryer-connection.webp" 
-                 alt="Washer &amp; Dryer Connection" 
-                 loading="lazy"
-                 style="object-position:50% 50%">
-          </div>
-          <div class="we-card-body">
-            <span class="we-card-label">Appliance Install</span>
-            <h3>Washer &amp; Dryer Connection</h3>
-            <p>Laundry setup details reviewed by space, access, and connection needs. Supply lines, drain hose, and level-on-pedestal details included.</p>
-          </div>
-        </article>
-        <article class="we-card">
-          <div class="we-card-img">
-            <img src="../assets/img/scenarios/07-tv-wall-mount-install.webp" 
-                 alt="TV Wall Mount Install" 
-                 loading="lazy"
-                 style="object-position:50% 40%">
-          </div>
-          <div class="we-card-body">
-            <span class="we-card-label">TV Mounting</span>
-            <h3>TV Wall Mount Install</h3>
-            <p>Mounting requests reviewed by wall type, stud placement, and room layout. Bracket selection and cable management noted in the request.</p>
-          </div>
-        </article>
-        <article class="we-card">
-          <div class="we-card-img">
-            <img src="../assets/img/scenarios/08-ceiling-light-fixture-install.webp" 
-                 alt="Ceiling Light Fixture Install" 
-                 loading="lazy"
-                 style="object-position:50% 50%">
-          </div>
-          <div class="we-card-body">
-            <span class="we-card-label">Ceiling Fixture</span>
-            <h3>Ceiling Light Fixture Install</h3>
-            <p>Light fixture requests reviewed by ceiling access, existing junction box, and placement. Includes flush-mounts, pendants, and fan installs.</p>
-          </div>
-        </article>
+
+        </div><!-- /we-grid -->
+
+        <p class="we-demo-note">Images and scenarios are sample project examples for this demo. A real client version would use the contractor&#39;s actual project photos, reviews, and service details.</p>
+
       </div>
     </section>
 
-    <!-- Safe note -->
-    <div class="we-note">
-      <p>Images and scenarios are used as sample project examples for this demo site. A real client version would use the contractor&#8217;s actual project photos, reviews, and service details.</p>
-    </div>
-
-    <!-- CTA -->
-    <section class="we-cta" aria-labelledby="we-cta-heading">
-      <h2 id="we-cta-heading">Have a similar project?</h2>
-      <p>Send photos and details to start the estimate process. Requests are reviewed by project type, location, access, materials, and scope.</p>
+    <!-- CTA STRIP -->
+    <section class="we-cta-strip">
+      <h2>Ready to request an estimate?</h2>
+      <p>Send photos, repair details, and your general location. Requests are reviewed by project type, access, materials, and scope.</p>
       <a href="../request/" class="we-btn-primary">Request Estimate &rarr;</a>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand-col">
           <div class="footer-brand"><span>LR</span> Local Repair Pro</div>
-          <p class="footer-desc">Small repairs, installs, touch-ups, and punch-list projects around Vancouver, WA and nearby areas.</p>
-          <p class="footer-contact">
-            <span class="footer-contact-item">
-              <svg class="footer-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+17777777777">Call or text: (777) 777-7777</a>
-            </span>
-            <span class="footer-contact-item">
-              <svg class="footer-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <p class="footer-desc">Repair, install, touch-up, and punch-list requests for homeowners around Vancouver, WA and nearby Portland-area neighborhoods.</p>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:+17777777777">(777) 777-7777</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <a href="mailto:hello@localrepairpro.com">hello@localrepairpro.com</a>
-            </span>
-          </p>
-          <p class="footer-safety">Service availability depends on location, scope, access, and scheduling.</p>
+            </div>
+          </div>
+          <p class="footer-safety">Requests reviewed by project type, access, materials, and scope before next steps.</p>
         </div>
         <div class="footer-col">
           <h4>Pages</h4>
-          <ul>
-            <li><a href="../">Home</a></li>
-            <li><a href="../services/">Services</a></li>
-          <li><a href="../work-examples/">Work Examples</a></li>
-            <li><a href="../service-area/">Service Area</a></li>
-            <li><a href="../request/">Request Estimate</a></li>
-            <li><a href="../faq/">FAQ</a></li>
-          </ul>
+          <a href="../">Home</a>
+          <a href="../services/">Services</a>
+          <a href="../work-examples/">Work Examples</a>
+          <a href="../service-area/">Service Area</a>
+          <a href="../request/">Request Estimate</a>
+          <a href="../faq/">FAQ</a>
         </div>
         <div class="footer-col">
           <h4>Common Services</h4>
-          <ul>
-            <li><a href="../services/#wall-repair">Wall repair &amp; touch-ups</a></li>
-            <li><a href="../services/#door-trim">Door, trim &amp; hardware</a></li>
-            <li><a href="../services/#tv-mounting">TV mounting</a></li>
-            <li><a href="../services/#small-installs">Small installs</a></li>
-            <li><a href="../services/#punch-list">Punch-list fixes</a></li>
-          </ul>
+          <a href="../services/">Wall repair &amp; touch-ups</a>
+          <a href="../services/">Door, trim &amp; hardware</a>
+          <a href="../services/">TV mounting</a>
+          <a href="../services/">Small installs</a>
+          <a href="../services/">Punch-list fixes</a>
         </div>
-        <div class="footer-col">
+        <div class="footer-col footer-col--areas">
           <h4>Service Areas</h4>
-          <ul>
-            <li><a href="../service-area/vancouver-wa/">Vancouver, WA</a></li>
-            <li><a href="../service-area/portland-or/">Portland, OR</a></li>
-            <li><a href="../service-area/camas-wa/">Camas, WA</a></li>
-            <li><a href="../service-area/battle-ground-wa/">Battle Ground, WA</a></li>
-            <li><a href="../service-area/beaverton-or/">Beaverton, OR</a></li>
-            <li><a href="../service-area/hillsboro-or/">Hillsboro, OR</a></li>
-            <li class="footer-view-all"><a href="../service-area/">View all service areas &rarr;</a></li>
-          </ul>
+          <a href="../service-area/vancouver-wa/">Vancouver, WA</a>
+          <a href="../service-area/portland-or/">Portland, OR</a>
+          <a href="../service-area/camas-wa/">Camas, WA</a>
+          <a href="../service-area/battle-ground-wa/">Battle Ground, WA</a>
+          <a href="../service-area/beaverton-or/">Beaverton, OR</a>
+          <a href="../service-area/hillsboro-or/">Hillsboro, OR</a>
+          <a href="../service-area/">View all service areas</a>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Local Repair Pro. All rights reserved.</p>
+        <p class="footer-bottom-note">Service availability depends on location, scope, access, and scheduling.</p>
       </div>
     </div>
   </footer>
 
-  <script src="../assets/js/preview-main.js"></script>
+  <script>
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('mobile-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', function() {
+        var open = nav.hasAttribute('hidden') === false;
+        if (open) { nav.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
+        else { nav.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+      });
+    }
+  </script>
 </body>
 </html>
