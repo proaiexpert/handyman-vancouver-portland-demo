@@ -475,3 +475,15 @@ The /services/ page was added in `1153f7f` and cross-page chrome was fixed throu
 The /service-area/ hub was created in `f42f433`. Ten city pages were added in `5a60035` and polished through `0c3ea36`. P1 accessibility and metadata cleanup was completed in `54d3a0f`.
 Footer system was standardized across all pages in `a3640e6`. Landscape footer layout was refined in `87fcce0`.
 Documentation commits do not change the live site.
+
+## 2026-07-02 — Phase 4: Navigation and Premium Site Structure
+- feat: create /pricing/ page with estimate factors, request categories, and safe scope guidance
+- feat: create /about/ page with site purpose, structure benefits, and scope disclaimer
+- feat: create /guides/ page with 6 guide cards linking to services, FAQ, request form, work examples, and service area
+- feat: add Pricing, Guides, About to global header nav on all 19 pages
+- feat: add phone pill (Call/Text) to desktop header on all pages
+- feat: update mobile menu to include all nav items + phone + CTA on all pages
+- feat: update footer to include Pricing, Guides, About links on all pages
+- feat: update homepage explore section to 6-card layout including Pricing and Guides
+- fix: consistent header/footer width and visual scale across all pages
+- qa: link, header, footer, search, and mobile QA all pass
