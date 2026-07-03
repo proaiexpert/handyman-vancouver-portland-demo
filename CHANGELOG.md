@@ -1,3 +1,19 @@
+## 2026-07-02 — Mobile header auto-hide + sticky CTA + footer white-strip fix
+
+**Reported:** mobile header stuck/fixed covering viewport; sticky CTA missing on most pages; white strip below footer (portrait + landscape).
+
+**Root cause:** header auto-hide scroll logic only in preview-main.js/homepage inline (not in menu-toggle.js used by subpages); sticky CTA markup only on 4 pages; always-on body padding-bottom (58px) at ≤759px + off-white html/body background under the dark footer created the white band.
+
+**Fixes:**
+- menu-toggle.js: header auto-hide (down hides / up shows / top shows / never while menu open) + sticky-CTA visibility (after 260px, hide near footer, hide over open menu); isMobile() extended to short landscape (min-width:901 + max-height:500).
+- preview-styles.css: html background -> footer navy #0d1c2e; removed always-on + sticky-active body padding-bottom (killed footer gap); landscape-phone breakpoint so 901px+ short viewports use the hamburger (fixes 932x430 header-actions overflow).
+- index.html: homepage sticky JS aligned to footer-in-view hide logic.
+- Sticky CTA markup added to services, work-examples, request, service-area, faq, and all 10 city pages (correct per-depth Estimate links; request anchors to #request-form).
+
+**QA (rendered, Playwright):** portrait 430/390/375/360/320, landscape 844x390/932x430/812x375, desktop 1440/1280/1024/768. Header auto-hide PASS; hamburger PASS; reveal PASS; sticky CTA coverage PASS (19/19 pages); footer gap 0px portrait+landscape PASS; no new console errors; no mobile/landscape overflow.
+
+**Known pre-existing (out of scope):** desktop 1024px minor horizontal overflow, present at HEAD 7d2aa91 before this task.
+
 ## [Unreleased] — 2026-07 — Premium Visual Cohesion Pass
 
 ### Added

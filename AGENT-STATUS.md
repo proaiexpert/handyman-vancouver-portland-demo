@@ -1,62 +1,53 @@
 # Agent Status — Local Repair Pro Demo
 
-## Onboarding
-- Agent: New session takeover (previous agent hit usage limits)
-- Date: 2026-07-02
-- Repo: https://github.com/proaiexpert/handyman-vancouver-portland-demo
-- Live: https://proai-expert.com/handyman-vancouver-portland-demo/
+## Latest work: Mobile header auto-hide + sticky CTA + footer white-strip fix
 
-## GitHub Setup
-- Repo cloned: yes
-- Branch: main
-- Remote HEAD: a4aac38
-- Local HEAD: a4aac38 (before work)
-- Push access verified: yes (dry-run confirmed)
-- Token exposure: none (clean remote URL, ephemeral creds)
+### Issues reported
+- Mobile header stayed fixed/stuck on subpages, permanently covering viewport.
+- Sticky CTA (Call / Text / Estimate) missing on most public pages.
+- White strip / blank band appeared below the footer on mobile (portrait + landscape).
 
-## Phase 4 Status
-- Status: NOT COMPLETE → EXECUTED
-- Missing before work:
-  - /pricing/ page
-  - /about/ page
-  - /guides/ page
-  - Header nav missing Pricing, Guides, About on all pages
-  - Footer missing Pricing, Guides, About links on all pages
-  - Mobile menu missing Pricing, Guides, About on all pages
-  - Phone pill not present in desktop header on most pages
+### Root causes
+- Header scroll-direction auto-hide logic lived only in preview-main.js and the
+  homepage inline script. Subpages (services, work-examples, request, service-area,
+  faq, all 10 city pages) load menu-toggle.js, which had no header auto-hide — so
+  the sticky header never hid on scroll.
+- Sticky CTA markup existed only on homepage, pricing, about, guides.
+- White strip: body had an always-on `padding-bottom: 58px` at ≤759px plus the
+  sticky-active padding, and html/body background was off-white (#F7F2EA) so the
+  padded area below the dark footer rendered as a white band.
 
-## Changes Made
-- Created pricing/index.html (Pricing Approach page)
-- Created about/index.html (About page)
-- Created guides/index.html (Guides hub page)
-- Updated header on all 19 pages to include: Services, Work Examples, Service Area, Pricing, Guides, About, FAQ + phone pill + Request Estimate CTA
-- Updated mobile menu on all 19 pages to include all nav items + phone + CTA
-- Updated footer on all 19 pages to include Pricing, Guides, About links
-- Updated homepage explore section to include Pricing and Guides cards (6-card layout: Services, Work Examples, Service Area, Pricing, Guides, Request Estimate)
-- All pages share consistent header/footer/nav/phone/CTA
+### Fixes implemented
+- menu-toggle.js: added header auto-hide (scroll down hides, up shows, top always
+  shows, never hides while menu open), plus sticky-CTA visibility control (show
+  after 260px scroll, hide when footer enters viewport, hide while menu open).
+  isMobile() now also covers short landscape phones (min-width:901 + max-height:500).
+- CSS: html background set to footer navy (#0d1c2e) so no white shows below footer;
+  removed always-on body padding-bottom and the sticky-active padding that created
+  the bottom gap; added a landscape-phone breakpoint so 901px+ short viewports use
+  the compact hamburger header (fixes header-actions overflow at 932x430).
+- Sticky CTA markup added to all remaining public pages with correct relative
+  Estimate links per depth (request page anchors to #request-form).
 
-## QA Results
-- Link QA: PASS — all 11 required paths exist
-- Header nav QA: PASS — Pricing, Guides, About present on all pages
-- Footer QA: PASS — all links consistent
-- Search QA: PASS — no forbidden terms (free estimate, warranty, insured, fake reviews, etc.)
-- Mobile menu QA: PASS — 3-bar hamburger, all items, phone, CTA
-- "licensed trade specialist" used only in safe scope disclaimer context
-- "guaranteed" used only in "no guaranteed services" / "not guaranteed fixed quotes" safe context
+### Pages tested (rendered, Playwright)
+/, /faq/, /services/, /work-examples/, /service-area/, /service-area/vancouver-wa/,
+/service-area/lake-oswego-or/, /request/, /pricing/, /about/, /guides/
 
-## Remaining
-- None. Phase 4 complete.
+### Widths tested
+- Portrait: 430, 390, 375, 360, 320
+- Landscape: 844x390, 932x430, 812x375
+- Desktop regression: 1440, 1280, 1024, 768
 
-## Update 2026-07-02 — Mobile blank-content (reveal) fix
-- Bug: mobile showed header + partial hero + footer, blank middle content
-- Root cause: shared .reveal { opacity:0 } fail-closed; subpages don't load preview-main.js so content never revealed
-- Fix: .reveal fail-open (visible by default); hide only under html.js; disabled on mobile; 1200ms JS failsafe
-- Files: assets/css/preview-styles.css, assets/js/preview-main.js, index.html
-- Reveal: made fail-safe (kept subtle on desktop, disabled on mobile)
+### Results
+- Header auto-hide: PASS (hides on scroll down, shows on scroll up, shown at top and while menu open) on all pages.
+- Hamburger regression: PASS (opens/closes, 10 links, aria toggles, Escape closes, no console errors).
+- Reveal regression: PASS (0 zero-height reveal elements).
+- Sticky CTA coverage: PASS (present on all 19 public pages; Call/Text/Estimate usable; hidden over open menu and near footer).
+- Footer bottom: PASS (0px gap below footer in portrait and landscape; html navy background matches footer).
+- Console errors: none introduced. (Pre-existing benign "Unexpected identifier 'll'" on /request/ predates this task.)
+- Horizontal overflow: none at any mobile/landscape width after the landscape-phone breakpoint fix.
 
-## Update 2026-07-02 — Cache-proof mobile reveal failsafe
-- Live preview-styles.css was still edge-cached (last-modified 22:00, pre-fix)
-- Added unique-filename override reveal-mobile-failsafe-93c4241.css linked on all 19 pages
-- Override forces .reveal visible on mobile (≤768px) and reduced-motion with !important
-- Selector confirmed html.js .reveal (correct, has space)
-- Live HTML confirmed current (Phase 4 nav present, zero old terms)
+### Remaining issues (pre-existing, out of scope)
+- Desktop 1024px width shows minor horizontal overflow (docW ~1137). Verified present
+  at accepted HEAD 7d2aa91 before this task; it is a desktop 901–1099 header-band issue,
+  not a mobile issue, so left untouched per task scope.

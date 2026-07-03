@@ -3140,18 +3140,13 @@
       function updatePositions() {
         const heroRect = heroSection.getBoundingClientRect();
         heroBottom = heroRect.bottom + window.scrollY;
-        if (finalCta) {
-          const finalRect = finalCta.getBoundingClientRect();
-          footerTop = finalRect.top + window.scrollY - 120;
-        } else if (footer) {
-          const footerRect = footer.getBoundingClientRect();
-          footerTop = footerRect.top + window.scrollY - 120;
-        }
       }
 
       function updateSticky() {
         const scrollY = window.scrollY;
-        const inRange = scrollY > (heroBottom - 100) && scrollY < footerTop;
+        let footerInView = false;
+        if (footer) footerInView = footer.getBoundingClientRect().top < window.innerHeight;
+        const inRange = scrollY > (heroBottom - 100) && !footerInView;
         if (inRange && !isScrolling) {
           stickyBar.classList.add('is-visible');
           document.body.classList.add('sticky-active');
