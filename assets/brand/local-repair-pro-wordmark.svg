@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" role="img" aria-labelledby="title desc">
+  <title id="title">Local Repair Pro</title>
+  <desc id="desc">Horizontal Local Repair Pro wordmark with an architectural corner symbol.</desc>
+  <rect x="0" y="0" width="64" height="64" rx="12" fill="#102033"/>
+  <path d="M17 16h30v10H27v22H17V16Z" fill="#F7F2EA"/>
+  <path d="M31 30h16v18H37V40h-6V30Z" fill="#C9822B"/>
+  <text x="82" y="29" fill="#102033" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="800" letter-spacing="-.4">Local Repair Pro</text>
+  <text x="82" y="49" fill="#5F6B73" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" font-weight="650" letter-spacing="1.2">HOME REPAIR &amp; HANDYMAN SERVICES</text>
+</svg>
