@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Local Repair Pro symbol</title>
+  <desc id="desc">An architectural corner and door-frame mark built from precise rectangular lines.</desc>
+  <rect width="64" height="64" rx="12" fill="#102033"/>
+  <path d="M17 16h30v10H27v22H17V16Z" fill="#F7F2EA"/>
+  <path d="M31 30h16v18H37V40h-6V30Z" fill="#C9822B"/>
+</svg>
