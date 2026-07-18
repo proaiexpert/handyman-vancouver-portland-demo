@@ -48,9 +48,7 @@
       if (event.target.closest('a')) setMenu(false);
     });
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-        setMenu(false);
-      }
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') setMenu(false);
       if (event.key === 'Tab' && menuButton.getAttribute('aria-expanded') === 'true') {
         var targets = focusable(mobileMenu);
         if (!targets.length) return;
@@ -77,13 +75,9 @@
     if (!header) return;
     var y = window.scrollY;
     var menuOpen = menuButton && menuButton.getAttribute('aria-expanded') === 'true';
-    if (menuOpen || y < 80 || window.innerWidth > 1180) {
-      header.classList.remove('is-hidden');
-    } else if (y > lastY + 8) {
-      header.classList.add('is-hidden');
-    } else if (y < lastY - 8) {
-      header.classList.remove('is-hidden');
-    }
+    if (menuOpen || y < 80 || window.innerWidth > 1180) header.classList.remove('is-hidden');
+    else if (y > lastY + 8) header.classList.add('is-hidden');
+    else if (y < lastY - 8) header.classList.remove('is-hidden');
     lastY = y;
   }
   window.addEventListener('scroll', function () {
@@ -95,8 +89,7 @@
 
   function footerVisible() {
     if (!footer) return false;
-    var rect = footer.getBoundingClientRect();
-    return rect.top < window.innerHeight - 40;
+    return footer.getBoundingClientRect().top < window.innerHeight - 40;
   }
   function shouldShowSticky() {
     if (!stickyActions || window.innerWidth > 900) return false;
@@ -106,8 +99,7 @@
   var stickyTicking = false;
   function updateSticky() {
     stickyTicking = false;
-    if (!stickyActions) return;
-    stickyActions.classList.toggle('is-visible', shouldShowSticky());
+    if (stickyActions) stickyActions.classList.toggle('is-visible', shouldShowSticky());
   }
   if (stickyActions) {
     document.body.classList.add('has-sticky-actions');
@@ -142,6 +134,7 @@
   var modeFields = Array.prototype.slice.call(document.querySelectorAll('[data-mode-field]'));
   var status = document.querySelector('[data-form-status]');
   var submitLabel = document.querySelector('[data-submit-label]');
+  var submitButton = document.querySelector('[data-submit-button]');
   var currentIntent = 'repair';
 
   function normalizeIntent(value) {
@@ -176,8 +169,8 @@
     }
     if (moveFocus && requestForm) {
       requestForm.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
-      var first = requestForm.querySelector('input:not([hidden]), select:not([hidden]), textarea:not([hidden])');
-      if (first) window.setTimeout(function () { first.focus(); }, 250);
+      var firstControl = requestForm.querySelector('input:not([hidden]), select:not([hidden]), textarea:not([hidden])');
+      if (firstControl) window.setTimeout(function () { firstControl.focus(); }, 250);
     }
   }
 
@@ -202,6 +195,10 @@
 
   if (requestForm) {
     requestForm.setAttribute('novalidate', '');
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.removeAttribute('aria-disabled');
+    }
     requestForm.addEventListener('input', function (event) {
       if (event.target.matches('input, select, textarea')) clearFieldError(event.target);
     });
@@ -212,7 +209,7 @@
       var firstInvalid = null;
       controls.forEach(function (control) {
         clearFieldError(control);
-        if (!control.value.trim()) {
+        if (!String(control.value || '').trim()) {
           showFieldError(control, 'Please complete this field for the concept preview.');
           if (!firstInvalid) firstInvalid = control;
         }
@@ -224,7 +221,7 @@
       if (status) {
         status.textContent = 'Preview complete — no request was sent. This concept form does not collect or transmit personal information.';
         status.classList.add('is-visible');
-        status.focus({ preventScroll: true });
+        try { status.focus({ preventScroll: true }); } catch (error) { status.focus(); }
       }
     });
   }
