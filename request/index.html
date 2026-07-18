@@ -25,7 +25,7 @@
 </div>
 
 <div class="form-shell" id="request-form">
-<form data-request-form action="" method="post">
+<form data-request-form action="javascript:void(0)" method="post">
 <div class="form-grid">
 <div class="field" data-mode-field="all"><label for="name">Name <span aria-hidden="true">(optional)</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Smith"></div>
 <div class="field" data-mode-field="all"><label for="contact">Preferred contact method</label><select id="contact" name="contact_method"><option value="">Choose one</option><option>Email</option><option>Phone call</option><option>Text message</option></select><small>The contact channels shown on this concept site are not operational.</small></div>
@@ -40,7 +40,7 @@
 <div class="field field--full" data-mode-field="repair photos"><label for="photo-notes">Photo notes</label><textarea id="photo-notes" name="photo_notes" placeholder="Wide view, close-up, measurement, product label and any area that affects access."></textarea></div>
 <div class="field field--full" data-mode-field="repair"><label><input type="checkbox" name="punchlist" value="yes"> This request may include several smaller items grouped together.</label></div>
 <div class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1"></div>
-<div class="field field--full"><button class="btn btn--primary" type="submit"><span data-submit-label>Preview Repair Request</span></button><p class="form-note">Submitting this preview is intercepted in your browser. No network request is made, and Local Repair Pro is not represented as an operating service business.</p></div>
+<div class="field field--full"><button class="btn btn--primary" type="submit" data-submit-button disabled aria-disabled="true"><span data-submit-label>Preview Repair Request</span></button><noscript><p class="form-note">JavaScript is unavailable, so preview submission is disabled. No information can be sent.</p></noscript><p class="form-note">Submitting this preview is intercepted in your browser. No network request is made, and Local Repair Pro is not represented as an operating service business.</p></div>
 </div>
 </form>
 </div></div></section>
