@@ -1,196 +1,139 @@
-# Local Repair Pro — Vancouver WA Demo
+# Local Repair Pro
 
-## Project Purpose
+**Home Repair & Handyman Services**  
+**Classification:** Website Concept · In Development  
+**Direction:** Premium Local Repair Pro — Pacific Northwest Edition
 
-This is a production-like demo homepage for a local handyman / home repair service concept.
-It serves as a test case for the broader **ProAI Expert Website Production Factory** workflow.
+Local Repair Pro is a production-like website concept created by ProAI Expert for a Vancouver, Washington–first local handyman and home-repair experience. It is an internal Website Production Factory showcase, not a verified client engagement or operating service business.
 
-The site is demo-ready but not real public-launch-ready. Placeholder business data remains.
-`noindex, nofollow` is intentionally active until real business facts are verified.
+## Branch status
 
----
+- Base branch: `main`
+- Production-polish branch: `feature/local-repair-pro-production-polish-v1`
+- Initial `main` HEAD for this pass: `8605bb1e61d5be44296ec130ccc45b1a65e53ed9`
+- `main` is intentionally unchanged by this branch.
+- No pull request or publication is part of this phase.
 
-## Live URL
+## Preview relationship
 
-**Canonical root:** https://proai-expert.com/handyman-vancouver-portland-demo/
+Current public preview:
 
----
+`https://proai-expert.com/handyman-vancouver-portland-demo/`
 
-## Current Architecture
+The public preview follows `main`. Branch-only changes are not represented as live until a separate owner-approved merge and deployment decision.
 
-- `index.html` is the canonical root homepage.
-- `request/index.html` is the Request Review page — active and client-demo ready.
-- All old preview routes have been removed and return **404**.
-- The root is no longer a preview hub. No route cards appear on the live root.
-- Do not restore old preview routes.
+## Current canonical architecture on the working branch
 
-### Active routes
+### Primary pages
 
-| Route | Description |
-|---|---|
-| `/handyman-vancouver-portland-demo/` | Homepage — stable |
-| `/handyman-vancouver-portland-demo/request/` | Request Review — demo-safe form, noindex active |
+- `/`
+- `/services/`
+- `/examples/`
+- `/request/`
+- `/areas/`
+- `/pricing/`
+- `/guides/`
+- `/about/`
+- `/faq/`
+- `/privacy/`
+- `/terms/`
+- `/sitemap/` — noindex HTML navigation page, not an XML sitemap
+- `/404.html`
 
-### Old routes (all 404 — do not restore)
+### Canonical city-area pages
 
-- `/estimate-os.html`
-- `/pnw-craft-board.html`
-- `/hybrid-rotating-preview.html`
-- `/hybrid-transformation.html`
-- `/repairscope-transformation.html`
-- `/final-hero-reference.html`
-- `/final-hero-reference/`
-- `/homepage-v2-premium.html`
-- `/homepage-v2-premium/`
+- `/areas/vancouver-wa/`
+- `/areas/camas-wa/`
+- `/areas/battle-ground-wa/`
+- `/areas/portland-or/`
+- `/areas/hillsboro-or/`
+- `/areas/beaverton-or/`
+- `/areas/gresham-or/`
+- `/areas/tigard-or/`
+- `/areas/lake-oswego-or/`
+- `/areas/oregon-city-or/`
 
----
+### Compatibility routes
 
-## Stable Commit History
+The former `/work-examples/`, `/service-area/` and `/service-area/{city}/` paths remain as lightweight noindex compatibility pages pointing to the shorter canonical routes.
 
-| Commit | Type | Description |
-|---|---|---|
-| `01c97ca` | Website | Promoted final homepage to root, removed preview routes |
-| `fa445e4` | Website | Fixed sticky CTA Call button visibility and overlap behavior |
-| `1cda438` | Website | Added canonical, OG, Twitter, favicon, noindex; contrast-safe CTA text color |
-| `4a85815` | Docs | Updated README and created PROJECT-SNAPSHOT.md for stable demo snapshot |
-| `ac85850` | Docs | Extracted Website Production Factory docs to docs/website-production-factory/ |
-| `7b038cd` | Website | Added /request/ page with request review structure |
-| `894921e` | Website | Refined /request/ into two-path Quick Question / Repair Request form flow |
-| `9446655` | Website | Polished active path state, robust submit label, form separation |
+Historical preview paths, including `/homepage-v2-premium.html`, are obsolete and must not be restored as active pages.
 
-**Homepage stable commit: `1cda438`** — the homepage is unchanged since that commit.
+## Brand system
 
-**Request page commits:** `7b038cd` → `894921e` → `9446655` — added and refined the /request/ page.
+Code-based SVG assets:
 
-**Request form:** Demo-safe only. No real endpoint. No real upload. noindex remains active.
+- `assets/brand/local-repair-pro-symbol.svg`
+- `assets/brand/local-repair-pro-wordmark.svg`
+- `assets/brand/local-repair-pro-wordmark-light.svg`
+- `assets/brand/local-repair-pro-monochrome.svg`
+- `favicon.svg`
 
----
+The identity uses an architectural corner / door-frame geometry. It does not use stock marks, house-and-hammer clipart, shields, mascots or fake certification language.
 
-## Key Files
+## Shared front-end system
 
-| File | Purpose |
-|---|---|
-| `index.html` | Canonical root homepage |
-| `request/index.html` | Request Review page — two-path form, demo-safe, noindex active |
-| `assets/css/preview-styles.css` | All styles including sticky CTA, mobile layout, contrast tokens |
-| `assets/js/preview-main.js` | Shared JS (hamburger, FAQ, scenario swipe, scroll reveal) |
-| `assets/img/hero-finished-pnw-1536.webp` | Approved hero image |
+- `assets/css/site-v1.css`
+- `assets/js/site-v1.js`
 
----
+The shared system covers:
 
-## Current Demo Limitations
+- consistent desktop and mobile navigation;
+- menu Escape/focus handling;
+- no-JavaScript navigation fallback;
+- mobile sticky actions;
+- restrained reveal enhancement;
+- reduced-motion behavior;
+- request-mode query parameters;
+- client-side validation;
+- explicit prevention of real form transmission.
 
-This site is **not ready for real public launch** until the following are resolved:
+## Contact and concept safety
 
-- Placeholder phone: `tel:0000000000` — replace with real number
-- No real contact form or submission endpoint
-- No verified real business name, address, license, insurance, or reviews
-- No `LocalBusiness` schema (intentionally omitted until facts are verified)
-- No sitemap entry while `noindex` is active
-- No real Google Map or exact service radius
-- No real portfolio or completed project claims
-- No real OG image (hero image used as fallback)
-- No privacy policy or legal pages
+Reserved concept contact data:
 
----
+- `(360) 555-0147`
+- `tel:+13605550147`
+- `sms:+13605550147`
+- `hello@localrepairpro.example`
 
-## Fake-Proof Content Guardrails
+These details are not represented as operational.
 
-### Forbidden claims — never add
+The request form is a browser-only preview. It does not send or store entered information. Its confirmation text states:
 
-- licensed *(as a self-claim)*
-- insured
-- bonded
-- 5-star
-- top-rated
-- years of experience
-- guaranteed
-- same-day
-- emergency / 24/7
-- completed projects
-- Our Work / portfolio
-- real address
-- exact service radius
-- serving all Portland metro
-- `LocalBusiness` schema with unverified facts
+> Preview complete — no request was sent. This concept form does not collect or transmit personal information.
 
-### Allowed language
+## Indexing and structured data
 
-- scope reviewed before scheduling
-- request reviewed by location, project type, and scope
-- photo-based request and review language
-- some work may require permits, licensed trades, or a different provider
+- Every public concept page remains `noindex, nofollow`.
+- No fictional `LocalBusiness` schema is used.
+- No production XML sitemap entry is added.
+- No analytics, tracking or external form endpoint is connected.
 
----
+## Fake-proof guardrails
 
-## QA Checklist
+Do not add or imply unverified:
 
-### Mobile widths
-- [ ] 430x932
-- [ ] 390x844
-- [ ] 375x812
-- [ ] 360x800
-- [ ] 320x700
+- client status;
+- reviews or ratings;
+- license, insurance, bond or certification;
+- years in business;
+- completed-project or customer counts;
+- guaranteed work, warranty, same-day or emergency availability;
+- exact pricing, response time or service radius;
+- operating address or employee identities;
+- verified before/after results.
 
-### Desktop widths
-- [ ] 1440x900
-- [ ] 1366x768
+The scenario images illustrate common project types and are not presented as completed Local Repair Pro work.
 
-### Functional checks
-- [ ] Sticky CTA appears after hero scroll, hides during scroll, reappears after stop
-- [ ] Sticky CTA Call button readable on light and dark backgrounds
-- [ ] Hamburger opens and closes correctly
-- [ ] FAQ opens and closes correctly
-- [ ] Scenario swipe works as internal horizontal scroll
-- [ ] Service Area chips do not clip
-- [ ] No horizontal body overflow
-- [ ] Old routes return 404
-- [ ] No forbidden claims in visible copy
-- [ ] No console errors
-- [ ] Required assets load (CSS, JS, hero image)
-- [ ] /request/ path selector switches correctly (Quick Question / Repair Request)
-- [ ] /request/ form validation works (required fields, focus, aria-live)
-- [ ] /request/ demo-safe submit message appears (no fake delivery claim)
-- [ ] /request/ footer and header links work
+## Internal audit
 
----
+See:
 
-## Launch-Readiness Checklist
+`docs/LOCAL_REPAIR_PRO_PRODUCTION_POLISH_AUDIT_V1.md`
 
-Before real public launch:
+The audit records the starting HEAD, controlling sources, route/asset inventory, findings, retained decisions, compatibility strategy, current-reference benchmark, tests and remaining visual-QA risks.
 
-- [ ] Replace `tel:0000000000` with real phone number
-- [ ] Connect real contact form endpoint to /request/ (Formspree, Netlify Forms, or similar)
-- [ ] Verify real business name, address, license status, and service area
-- [ ] Decide whether to remove `noindex, nofollow`
-- [ ] Only then add this URL to `sitemap.xml`
-- [ ] Add `LocalBusiness` schema only when facts are verified
-- [ ] Add a dedicated OG image if needed
-- [ ] Add privacy policy and legal pages if required
+## Launch limitations
 
----
-
-## Visual Direction
-
-**Approved direction:** Premium Local Repair Pro — Pacific Northwest Edition
-
-- Dark navy hero (`#102033`) with warm amber accents (`#C9822B`)
-- Forest green secondary (`#243D32`)
-- Warm off-white background (`#F7F2EA`)
-- Georgia serif headings, system-ui body
-- Floating pill sticky CTA dock (mobile only)
-- Scroll-reveal sections
-
-## Production Factory Documentation
-
-This project includes a reusable workflow library extracted from the Handyman v2 build:
-
-| File | Description |
-|------|-------------|
-| [WEBSITE-PRODUCTION-FACTORY.md](docs/website-production-factory/WEBSITE-PRODUCTION-FACTORY.md) | 20-phase master workflow for building handyman/service-business demo sites |
-| [PROMPT-LIBRARY.md](docs/website-production-factory/PROMPT-LIBRARY.md) | 19 reusable prompt templates for every production phase |
-| [QA-CHECKLISTS.md](docs/website-production-factory/QA-CHECKLISTS.md) | 20 QA checklists covering accessibility, SEO, mobile, and performance |
-| [AGENT-TASK-TEMPLATES.md](docs/website-production-factory/AGENT-TASK-TEMPLATES.md) | 10 coding-agent task templates with guardrails and acceptance criteria |
-| [HANDYMAN-V2-CASE-STUDY.md](docs/website-production-factory/HANDYMAN-V2-CASE-STUDY.md) | Full case study: decisions, fixes, and lessons from this build |
-
-See [`docs/website-production-factory/`](docs/website-production-factory/) for the complete library.
+This branch is not a real-business launch package. A future operating version would still require verified business facts, real contact channels, secure form/storage choices, legal review appropriate to the business, licensed image rights, analytics decisions, real project evidence and owner-approved deployment.
