@@ -4,6 +4,20 @@
 
   document.documentElement.classList.add('js');
 
+  /* Load the shared premium-recovery layer from the same base path as this script.
+     Base UI remains complete when JavaScript is unavailable. */
+  (function loadPremiumLayer() {
+    var script = document.currentScript;
+    if (!script || !script.src || document.querySelector('link[data-premium-recovery]')) return;
+    var href = script.src.replace(/assets\/js\/site-v1\.js(?:\?.*)?$/, 'assets/css/premium-recovery-v1.css');
+    if (href === script.src) return;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.setAttribute('data-premium-recovery', '');
+    document.head.appendChild(link);
+  }());
+
   var header = document.querySelector('[data-site-header]');
   var menuButton = document.querySelector('[data-menu-button]');
   var mobileMenu = document.querySelector('[data-mobile-menu]');
@@ -114,8 +128,9 @@
     updateSticky();
   }
 
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var revealItems = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if ('IntersectionObserver' in window && !reduceMotion.matches) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -127,6 +142,31 @@
     revealItems.forEach(function (item) { observer.observe(item); });
   } else {
     revealItems.forEach(function (item) { item.classList.add('is-visible'); });
+  }
+
+  /* Restored scenario rail: desktop auto-loop only while visible; mobile and
+     reduced-motion users receive a normal swipeable horizontal rail. */
+  var scenarioRail = document.querySelector('[data-scenario-rail]');
+  if (scenarioRail) {
+    var railInView = false;
+    function railCanPlay() {
+      return railInView && window.innerWidth > 680 && window.innerHeight > 500 && !reduceMotion.matches;
+    }
+    function updateRail() {
+      scenarioRail.classList.toggle('is-playing', railCanPlay());
+    }
+    if ('IntersectionObserver' in window) {
+      var railObserver = new IntersectionObserver(function (entries) {
+        railInView = entries.some(function (entry) { return entry.isIntersecting; });
+        updateRail();
+      }, { rootMargin: '80px 0px 80px 0px', threshold: .08 });
+      railObserver.observe(scenarioRail);
+    } else {
+      railInView = true;
+      updateRail();
+    }
+    window.addEventListener('resize', updateRail, { passive: true });
+    if (typeof reduceMotion.addEventListener === 'function') reduceMotion.addEventListener('change', updateRail);
   }
 
   var requestForm = document.querySelector('[data-request-form]');
@@ -168,7 +208,7 @@
       status.textContent = '';
     }
     if (moveFocus && requestForm) {
-      requestForm.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      requestForm.scrollIntoView({ block: 'start', behavior: reduceMotion.matches ? 'auto' : 'smooth' });
       var firstControl = requestForm.querySelector('input:not([hidden]), select:not([hidden]), textarea:not([hidden])');
       if (firstControl) window.setTimeout(function () { firstControl.focus(); }, 250);
     }

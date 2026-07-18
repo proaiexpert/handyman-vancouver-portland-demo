@@ -1,136 +1,108 @@
-# Agent Status — Local Repair Pro Production-Like Polish V1
+# Agent Status — Local Repair Pro Premium Recovery V1
 
 ## Operating context
 
 - Repository: `proaiexpert/handyman-vancouver-portland-demo`
-- Base: `main`
-- Initial `main` HEAD: `8605bb1e61d5be44296ec130ccc45b1a65e53ed9`
-- Working branch: `feature/local-repair-pro-production-polish-v1`
+- Deployment branch: `main`
+- Published production-like polish commit: `5bf17021be7063d81ac112c5209d787cb26411e7`
+- Current recovery branch: `feature/local-repair-pro-premium-recovery-v1`
 - Project classification: **Website Concept · In Development**
-- `main` modified: **No**
-- PR created: **No**
-- Published: **No**
+- Public preview: `https://proai-expert.com/handyman-vancouver-portland-demo/`
+- Real client or operating business: **No**
 
-## Controlling project truth
+## Current project truth
 
 - Name: **Local Repair Pro**
 - Descriptor: **Home Repair & Handyman Services**
 - Core line: **Thoughtful repairs. Noticeably better.**
-- Primary market: Vancouver, WA and Clark County
-- Secondary market: selected Portland-area requests reviewed by location, access and scope
+- Primary geography: Vancouver, WA and Clark County
+- Secondary geography: selected Portland-area requests reviewed by location, access and scope
 - Primary CTA: **Request Estimate**
 - Secondary CTA: **Send Photos**
-- Not a verified client engagement or operating business
 
-## Completed on the working branch
+## Why this recovery pass exists
 
-### Audit and research
+The production-like polish substantially improved consistency, route architecture, concept safety, form behavior and documentation. Owner review then identified a real tradeoff: several pages became cleaner but visually flatter, and the homepage lost one of its strongest signature interactions.
 
-- Read the current Local Repair Pro portfolio case pack.
-- Read the shared portfolio art-direction and motion system.
-- Read the current portfolio handoff.
-- Reviewed current repo documentation and recent history.
-- Recorded the forensic baseline in `docs/LOCAL_REPAIR_PRO_PRODUCTION_POLISH_AUDIT_V1.md`.
-- Documented a narrow contemporary benchmark without copying external brands, layouts, text or claims.
+This pass restores selected high-value features without returning to the old page-local CSS architecture or reintroducing the earlier defects.
 
-### Brand
+## Recovered and improved
 
-- Added original architectural SVG symbol.
-- Added dark, light and monochrome horizontal wordmarks.
-- Added SVG favicon.
-- Normalized descriptor and concept-safe contact presentation.
+### Homepage scenario rail
 
-### Shared UI system
+- Replaced the reduced four-card grid with a full-width rail using all eight existing scenario images.
+- Added a duplicated second set for a continuous loop.
+- Auto-motion begins only while the rail is visible.
+- Desktop hover and keyboard focus pause the motion.
+- Mobile and short landscape use manual horizontal swipe with scroll snap.
+- `prefers-reduced-motion` disables automatic movement.
+- Concept images remain clearly described as example categories, not completed projects.
 
-- Added `assets/css/site-v1.css`.
-- Added `assets/js/site-v1.js`.
-- Implemented one desktop/mobile header system.
-- Implemented accessible menu close, Escape, focus containment/restoration and body lock.
-- Added no-JavaScript navigation fallback.
-- Added restrained motion and reduced-motion handling.
-- Added mobile sticky Call / Text / Estimate actions with footer collision logic.
+### Homepage hero and shared premiumity
 
-### Content and routes
+- Added restrained navy/forest/amber depth and architectural grid accents.
+- Added image-frame treatment and controlled image scale response.
+- Restored richer hover behavior for hero chips and calls to action.
+- Added premium interaction treatment to field notes, service rows, process steps, service-area cards and FAQ items.
+- Added a stronger final conversion-band composition.
 
-- Rebuilt homepage around the approved hero and commercial section order.
-- Rebuilt Services into five clear service families.
-- Added canonical `/examples/` page with eight honest example scenarios.
-- Added canonical `/areas/` hub and ten concise city-area pages.
-- Rebuilt Pricing, Guides, About and FAQ as complete customer-facing pages.
-- Added Privacy, Terms, HTML sitemap and 404 pages.
-- Replaced former `/work-examples/`, `/service-area/` and city paths with lightweight compatibility pages.
+### Internal page heroes
 
-### Request flow
+- Retained one shared `.page-hero` implementation across the site.
+- Added an architectural symbol field, framed geometry, radial depth and scope/context/next-step micro-label.
+- Avoided separate page-local hero CSS or template-specific one-off effects.
+- Mobile layouts reduce the decoration rather than removing content.
 
-- Removed the baseline inline-script parse failure by replacing the old implementation.
-- Added Repair Request, Quick Question and Send Photos intents.
-- Added `?intent=photos` and `?intent=question` handling.
-- Normalized form fields.
-- Added client-side validation.
-- Disabled submission when JavaScript is unavailable.
-- Prevented network transmission.
-- Added exact concept-safe confirmation copy.
+### Architecture retained
 
-### Safety and indexing
+- Short canonical `/examples/` and `/areas/` routes remain.
+- Former long routes remain compatibility pages.
+- Header, footer, mobile navigation and request flow remain shared.
+- Privacy, Terms, sitemap and 404 remain in place.
+- No obsolete preview route was restored.
 
-- Replaced public placeholder contact values with reserved fictional 555-01xx and `.example` data.
-- Added one discreet footer disclosure.
-- Kept all pages `noindex, nofollow`.
-- Added no LocalBusiness schema, analytics, tracking, XML sitemap entry or external form endpoint.
-- Added no fake review, license, insurance, warranty, result, address, employee or business metric.
+## Shared files
 
-## Verification completed
+- `assets/css/site-v1.css` — accessible base.
+- `assets/css/premium-recovery-v1.css` — recovered premium visual layer.
+- `assets/js/site-v1.js` — navigation, sticky actions, reveal logic, premium-layer loading, viewport-aware scenario rail and request flow.
 
-- Branch compares ahead of `main` with no divergence from another base.
-- Route files exist for all required canonical and compatibility paths.
-- Relative paths were reviewed at root, one-level and two-level depths.
-- Canonical URLs point to the short current routes.
-- Compatibility pages are noindex and point to canonical routes.
-- Main content pages contain a single H1.
-- Essential content is present in HTML before JavaScript enhancement.
-- No-JavaScript narrow-screen navigation fallback added.
-- Request form cannot transmit when JavaScript is absent and is intercepted when JavaScript is active.
-- Reduced-motion rules are present.
-- Static contact, concept-status and fake-proof checks completed against the changed public pages.
+## Concept safety retained
 
-## Verification not completed in this environment
+- Reserved phone: `(360) 555-0147`.
+- Reserved email: `hello@localrepairpro.example`.
+- No operating address, hours, license, insurance, bond or registration number.
+- No reviews, ratings, years in business, project counts or business metrics.
+- No exact pricing, guaranteed availability, emergency service or fixed response time.
+- No LocalBusiness schema.
+- No analytics or external form endpoint.
+- Every concept page remains `noindex, nofollow`.
 
-The connected GitHub environment does not expose a browser/Playwright execution surface, and the local container cannot resolve GitHub to obtain a checkout. Therefore the following must not be claimed as passed:
+## Verification completed in this pass
 
-- rendered desktop/tablet/mobile QA;
-- actual mobile-menu interaction in Chromium/Safari;
-- keyboard and focus behavior in a real browser;
-- 200% / 400% zoom and reflow;
-- visual horizontal-overflow measurement;
-- console-runtime verification;
-- LCP/CLS measurement;
-- full-page screenshots.
+- Confirmed the former homepage implementation contained the requested seamless scenario rail behavior.
+- Reimplemented the rail inside the new shared architecture rather than copying the old page wholesale.
+- Confirmed all eight referenced scenario assets already exist.
+- Confirmed rail duplicates are `aria-hidden`.
+- Confirmed mobile and reduced-motion CSS remove automatic movement.
+- Confirmed page-hero premiumity is applied through the shared CSS layer.
+- Confirmed no route, contact or concept-status claim was changed.
+- Confirmed the original request-flow interception and safety copy remain intact.
 
-## Required next gate
+## Browser review still required
 
-Run the working branch in a browser-capable sandbox and capture:
+This environment still does not provide a full Playwright/browser rendering surface. After this branch reaches `main`, owner review should check:
 
-- desktop homepage;
-- mobile homepage;
-- desktop request page;
-- mobile request page;
-- services or examples page;
-- open mobile navigation.
-
-Required viewport coverage:
-
-- 1440 desktop;
-- 1024;
-- 768;
-- 430;
-- 390;
-- 375;
-- 360;
-- 320;
-- short-height landscape.
+- scenario rail speed and card size on desktop;
+- manual swipe and bottom spacing on mobile;
+- homepage hero crop and image-frame balance;
+- internal hero composition at desktop, tablet and narrow mobile widths;
+- any page that still feels too sparse;
+- sticky CTA and footer behavior;
+- runtime console and horizontal overflow.
 
 ## Current decision
 
-**NOT READY — BLOCKERS REMAIN**
+**READY FOR LIVE OWNER BROWSING — NOT FINAL DESIGN APPROVAL**
 
-Reason: implementation and static checks are complete on the branch, but owner-facing visual review must be preceded by actual rendered QA and the required screenshot evidence. Do not merge, publish or create a PR until that gate is completed.
+The pass is intentionally a fast premium recovery. The next session should improve individual weak pages based on actual owner browsing rather than starting another broad site rewrite.
