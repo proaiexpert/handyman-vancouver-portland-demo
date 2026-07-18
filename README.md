@@ -13,13 +13,13 @@ Local Repair Pro is a production-like website concept created by ProAI Expert fo
 - Public preview: `https://proai-expert.com/handyman-vancouver-portland-demo/`
 - Initial pre-polish checkpoint: `8605bb1e61d5be44296ec130ccc45b1a65e53ed9`
 - Production-like polish squash: `5bf17021be7063d81ac112c5209d787cb26411e7`
-- Premium recovery source branch: `feature/local-repair-pro-premium-recovery-v1`
+- Published premium-recovery squash: `4fe9d76c5d960c4e9230d7b16e7e4469ef02aba9`
 
-The production-like polish was promoted to `main` through PR #1. Git history retains the previous site and provides a clear rollback path.
+The production-like polish was promoted through PR #1. The focused premium-recovery pass was promoted through PR #2. Both previous states remain available through Git history, providing a clear rollback path.
 
-## Current experience
+## Current live experience
 
-The site now combines the cleaner shared architecture introduced in the production-like polish with selected premium interactions recovered from the earlier version:
+The current `main` combines the cleaner shared architecture introduced in the production-like polish with selected premium interactions recovered from the earlier version:
 
 - original Local Repair Pro SVG identity;
 - consistent desktop and mobile navigation;
@@ -76,7 +76,7 @@ Historical preview paths, including `/homepage-v2-premium.html`, remain obsolete
 
 - `assets/css/site-v1.css` — structural and accessible base system.
 - `assets/css/premium-recovery-v1.css` — restrained premium composition and recovered visual interactions.
-- `assets/js/site-v1.js` — navigation, sticky actions, reveal enhancement, viewport-aware scenario rail and request-flow behavior.
+- `assets/js/site-v1.js` — navigation, sticky actions, reveal enhancement, premium-layer loading, viewport-aware scenario rail and request-flow behavior.
 
 The base site remains readable without JavaScript. JavaScript adds menu behavior, premium recovery styling, viewport-aware motion and request-form enhancement.
 
@@ -119,6 +119,6 @@ Do not add or imply unverified client status, reviews, ratings, license, insuran
 - `docs/PREMIUM_RECOVERY_PASS_V1.md`
 - `AGENT-STATUS.md`
 
-## Remaining review work
+## Current review stage
 
-The current site is intended for owner browsing and practical feedback. The next controlled pass should review each page in a real browser, identify pages that still feel visually sparse, and improve them individually without reopening the entire architecture or weakening concept safety.
+The live site is ready for owner browsing and practical feedback, but not final design approval. The next controlled pass should review each page in a real browser, identify pages that still feel visually sparse, and improve them individually without reopening the entire architecture or weakening concept safety.

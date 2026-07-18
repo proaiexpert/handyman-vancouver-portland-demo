@@ -5,7 +5,7 @@
 - Repository: `proaiexpert/handyman-vancouver-portland-demo`
 - Deployment branch: `main`
 - Published production-like polish commit: `5bf17021be7063d81ac112c5209d787cb26411e7`
-- Current recovery branch: `feature/local-repair-pro-premium-recovery-v1`
+- Published premium-recovery commit: `4fe9d76c5d960c4e9230d7b16e7e4469ef02aba9`
 - Project classification: **Website Concept · In Development**
 - Public preview: `https://proai-expert.com/handyman-vancouver-portland-demo/`
 - Real client or operating business: **No**
@@ -20,13 +20,13 @@
 - Primary CTA: **Request Estimate**
 - Secondary CTA: **Send Photos**
 
-## Why this recovery pass exists
+## Why the premium-recovery pass was needed
 
-The production-like polish substantially improved consistency, route architecture, concept safety, form behavior and documentation. Owner review then identified a real tradeoff: several pages became cleaner but visually flatter, and the homepage lost one of its strongest signature interactions.
+The production-like polish substantially improved consistency, route architecture, concept safety, form behavior and documentation. Live owner review then identified a real tradeoff: several pages became cleaner but visually flatter, and the homepage lost one of its strongest signature interactions.
 
-This pass restores selected high-value features without returning to the old page-local CSS architecture or reintroducing the earlier defects.
+The premium-recovery pass restored selected high-value features without returning to the old page-local CSS architecture or reintroducing the earlier defects.
 
-## Recovered and improved
+## Published recovery work
 
 ### Homepage scenario rail
 
@@ -36,7 +36,7 @@ This pass restores selected high-value features without returning to the old pag
 - Desktop hover and keyboard focus pause the motion.
 - Mobile and short landscape use manual horizontal swipe with scroll snap.
 - `prefers-reduced-motion` disables automatic movement.
-- Concept images remain clearly described as example categories, not completed projects.
+- Concept images remain described as example categories, not completed projects.
 
 ### Homepage hero and shared premiumity
 
@@ -50,8 +50,8 @@ This pass restores selected high-value features without returning to the old pag
 
 - Retained one shared `.page-hero` implementation across the site.
 - Added an architectural symbol field, framed geometry, radial depth and scope/context/next-step micro-label.
-- Avoided separate page-local hero CSS or template-specific one-off effects.
-- Mobile layouts reduce the decoration rather than removing content.
+- Avoided separate page-local hero CSS and template-specific one-off effects.
+- Mobile layouts reduce decoration rather than removing content.
 
 ### Architecture retained
 
@@ -78,26 +78,27 @@ This pass restores selected high-value features without returning to the old pag
 - No analytics or external form endpoint.
 - Every concept page remains `noindex, nofollow`.
 
-## Verification completed in this pass
+## Verification completed
 
 - Confirmed the former homepage implementation contained the requested seamless scenario rail behavior.
 - Reimplemented the rail inside the new shared architecture rather than copying the old page wholesale.
-- Confirmed all eight referenced scenario assets already exist.
+- Confirmed all eight referenced scenario assets exist.
 - Confirmed rail duplicates are `aria-hidden`.
 - Confirmed mobile and reduced-motion CSS remove automatic movement.
 - Confirmed page-hero premiumity is applied through the shared CSS layer.
-- Confirmed no route, contact or concept-status claim was changed.
-- Confirmed the original request-flow interception and safety copy remain intact.
+- Confirmed no route, contact or concept-status claim changed.
+- Confirmed the request-flow interception and safety copy remain intact.
+- Confirmed PR #2 was squash-merged into `main` as `4fe9d76c5d960c4e9230d7b16e7e4469ef02aba9`.
 
-## Browser review still required
+## Current live review checklist
 
-This environment still does not provide a full Playwright/browser rendering surface. After this branch reaches `main`, owner review should check:
+This environment does not provide a full Playwright/browser rendering surface. Owner browsing should now check:
 
 - scenario rail speed and card size on desktop;
 - manual swipe and bottom spacing on mobile;
 - homepage hero crop and image-frame balance;
 - internal hero composition at desktop, tablet and narrow mobile widths;
-- any page that still feels too sparse;
+- pages that still feel too sparse;
 - sticky CTA and footer behavior;
 - runtime console and horizontal overflow.
 
@@ -105,4 +106,4 @@ This environment still does not provide a full Playwright/browser rendering surf
 
 **READY FOR LIVE OWNER BROWSING — NOT FINAL DESIGN APPROVAL**
 
-The pass is intentionally a fast premium recovery. The next session should improve individual weak pages based on actual owner browsing rather than starting another broad site rewrite.
+The next session should improve individual weak pages based on actual browsing rather than start another broad site rewrite.
