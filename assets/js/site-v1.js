@@ -2,74 +2,51 @@
 (function () {
   'use strict';
 
+  document.documentElement.classList.remove('no-js');
   document.documentElement.classList.add('js');
   var siteScript = document.currentScript;
-
-  /* Load the shared premium-recovery layer from the same base path as this script.
-     Base UI remains complete when JavaScript is unavailable. */
-  (function loadPremiumLayer() {
-    var script = siteScript;
-    if (!script || !script.src || document.querySelector('link[data-premium-recovery]')) return;
-    var href = script.src.replace(/assets\/js\/site-v1\.js(?:\?.*)?$/, 'assets/css/premium-recovery-v1.css');
-    if (href === script.src) return;
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = href;
-    link.setAttribute('data-premium-recovery', '');
-    document.head.appendChild(link);
-  }());
 
   /* Signature hero family. The source page remains complete without JavaScript;
      this layer adds only art-directed media, registration marks and short labels. */
   (function buildSignatureHero() {
-    var hero = document.querySelector('.page-hero');
-    if (!hero || !siteScript || !siteScript.src) return;
+    var hero = document.querySelector('.page-hero[data-signature-hero]');
+    var visual = hero && hero.querySelector('.signature-hero-visual');
+    if (!hero || !visual || !siteScript || !siteScript.src) return;
 
-    var path = window.location.pathname.toLowerCase();
     var assets = siteScript.src.replace(/assets\/js\/site-v1\.js(?:\?.*)?$/, 'assets/');
     if (assets === siteScript.src) return;
 
-    var type = '';
-    var variant = '';
-    var visual = document.createElement('div');
-    visual.className = 'signature-hero-visual';
-    visual.setAttribute('aria-hidden', 'true');
-
-    function image(file) {
-      return '<img src="' + assets + 'img/' + file + '" alt="" width="1200" height="900" loading="lazy" decoding="async">';
+    var key = hero.getAttribute('data-signature-hero');
+    function image(file, primary) {
+      var size = file.indexOf('service-area-') === 0 ? ' width="1400" height="1050"' :
+        file.indexOf('hero-finished-') === 0 ? ' width="1536" height="1024"' : ' width="900" height="1500"';
+      return '<img src="' + assets + 'img/' + file + '" alt=""' + size +
+        ' loading="' + (primary ? 'eager' : 'lazy') + '" decoding="async">';
     }
 
-    if (/\/request\/?$/.test(path)) {
-      type = 'photo-path';
+    if (key === 'request') {
       visual.innerHTML =
-        '<div class="signature-photo-main">' + image('hero-finished-pnw-1536.webp') + '<span>01 / WIDE VIEW</span></div>' +
-        '<div class="signature-photo-detail">' + image('hero-finished-pnw-1536.webp') + '<span>02 / USEFUL DETAIL</span></div>' +
+        '<div class="signature-photo-main">' + image('hero-finished-pnw-1536.webp', true) + '<span>01 / WIDE VIEW</span></div>' +
+        '<div class="signature-photo-detail">' + image('hero-finished-pnw-1536.webp', false) + '<span>02 / USEFUL DETAIL</span></div>' +
         '<div class="signature-intents"><span>Repair request</span><span>Quick question</span><span>Photo guidance</span></div>' +
         '<ol class="signature-sequence"><li><b>01</b>Describe</li><li><b>02</b>Add context</li><li><b>03</b>Review scope</li></ol>';
-    } else if (/\/(examples|services)\/?$/.test(path)) {
-      type = 'contact-sheet';
-      variant = /\/services\/?$/.test(path) ? 'services' : 'examples';
-      if (variant === 'services') {
+    } else if (key === 'services' || key === 'examples') {
+      if (key === 'services') {
         visual.innerHTML =
-          '<div class="signature-contact-main">' + image('scenarios/01-trim-baseboard-refresh.webp') + '<span>FINISH DETAIL / SCOPE 01</span></div>' +
+          '<div class="signature-contact-main">' + image('scenarios/01-trim-baseboard-refresh.webp', true) + '<span>FINISH DETAIL / SCOPE 01</span></div>' +
           '<ol class="signature-service-index"><li>01 / Finish repair</li><li>02 / Doors &amp; trim</li><li>03 / Small installs</li><li>04 / Fixture review</li><li>05 / Punch-lists</li></ol>';
       } else {
         visual.innerHTML =
-          '<div class="signature-contact-main">' + image('scenarios/05-entry-door-exterior-trim.webp') + '<span>COMMON PROJECT TYPES</span></div>' +
-          '<div class="signature-contact-support">' + image('scenarios/01-trim-baseboard-refresh.webp') + image('scenarios/03-door-hardware-details.webp') + image('scenarios/04-bathroom-detail-touchup.webp') + '</div>' +
+          '<div class="signature-contact-main">' + image('scenarios/05-entry-door-exterior-trim.webp', true) + '<span>COMMON PROJECT TYPES</span></div>' +
+          '<div class="signature-contact-support">' + image('scenarios/01-trim-baseboard-refresh.webp', false) + image('scenarios/03-door-hardware-details.webp', false) + image('scenarios/04-bathroom-detail-touchup.webp', false) + '</div>' +
           '<p>CONCEPT IMAGES / CATEGORY REFERENCE</p>';
       }
-    } else if (/\/areas(?:\/|$)/.test(path)) {
-      type = 'regional';
-      variant = /\/portland-or\/?$/.test(path) ? 'portland' : (/\/vancouver-wa\/?$/.test(path) ? 'vancouver' : (/\/areas\/?$/.test(path) ? 'hub' : 'clark'));
+    } else if (key === 'areas-hub' || key === 'vancouver' || key === 'clark' || key === 'portland-metro') {
       visual.innerHTML =
-        '<div class="signature-map">' + image('service-area-vancouver-portland-map.webp') + '</div>' +
+        '<div class="signature-map">' + image('service-area-vancouver-portland-map.webp', true) + '</div>' +
         '<div class="signature-region-register"><span>VANCOUVER / PRIMARY</span><span>CLARK COUNTY / CONTEXT</span><span>PORTLAND / SCOPE REVIEW</span></div>' +
         '<p>REGIONAL ORIENTATION / NO FIXED RADIUS</p>';
-    } else if (/\/(pricing|guides|about|faq)\/?$/.test(path)) {
-      type = 'editorial';
-      var key = path.match(/\/(pricing|guides|about|faq)\/?$/)[1];
-      variant = key;
+    } else if (/^(pricing|guides|about|faq)$/.test(key)) {
       var editorial = {
         pricing: ['ACCESS', 'MATERIALS', 'CONDITION', 'COMPLEXITY', 'GROUPED TASKS', 'LOCATION'],
         guides: ['01 / PHOTOS', '02 / PUNCH-LIST', '03 / ACCESS', '04 / PRODUCTS', '05 / BOUNDARIES'],
@@ -80,19 +57,10 @@
       visual.innerHTML =
         '<div class="signature-editorial-heading"><span>LOCAL REPAIR PRO / FIELD 0' + (key === 'pricing' ? '1' : key === 'guides' ? '2' : key === 'about' ? '3' : '4') + '</span><strong>' + title + '</strong></div>' +
         '<ol class="signature-matrix">' + editorial[key].map(function (item, index) { return '<li><b>' + String(index + 1).padStart(2, '0') + '</b><span>' + item + '</span></li>'; }).join('') + '</ol>' +
-        '<div class="signature-material-strip">' + image('scenarios/01-trim-baseboard-refresh.webp') + '<span>DETAIL / CONTEXT / NEXT STEP</span></div>';
+        '<div class="signature-material-strip">' + image('scenarios/01-trim-baseboard-refresh.webp', true) + '<span>DETAIL / CONTEXT / NEXT STEP</span></div>';
     }
 
-    if (!type) return;
-    hero.classList.add('signature-hero', 'signature-hero--' + type);
-    if (variant) hero.classList.add('signature-hero--' + variant);
-    var container = hero.querySelector(':scope > .container');
-    if (!container) return;
-    var shell = document.createElement('div');
-    shell.className = 'signature-hero-shell';
-    hero.insertBefore(shell, container);
-    shell.appendChild(container);
-    shell.appendChild(visual);
+    if (!visual.innerHTML) return;
     window.requestAnimationFrame(function () { hero.classList.add('is-set'); });
   }());
 
@@ -207,8 +175,36 @@
   }
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var revealItems = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-  revealItems.forEach(function (item) { item.classList.add('is-visible'); });
+  var effectItems = Array.prototype.slice.call(document.querySelectorAll('[data-energy-effect]'));
+  if ('IntersectionObserver' in window && !reduceMotion.matches) {
+    var effectObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-set');
+        effectObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: .18 });
+    effectItems.forEach(function (item) { effectObserver.observe(item); });
+  } else {
+    effectItems.forEach(function (item) { item.classList.add('is-set'); });
+  }
+
+  var scopeRows = Array.prototype.slice.call(document.querySelectorAll('[data-scope-row]'));
+  var scopeLinks = Array.prototype.slice.call(document.querySelectorAll('[data-scope-link]'));
+  if (scopeRows.length && scopeLinks.length && 'IntersectionObserver' in window) {
+    var scopeObserver = new IntersectionObserver(function (entries) {
+      var visible = entries.filter(function (entry) { return entry.isIntersecting; })
+        .sort(function (a, b) { return b.intersectionRatio - a.intersectionRatio; })[0];
+      if (!visible) return;
+      var id = visible.target.id;
+      scopeRows.forEach(function (row) { row.classList.toggle('is-active', row.id === id); });
+      scopeLinks.forEach(function (link) {
+        if (link.getAttribute('href') === '#' + id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    }, { rootMargin: '-24% 0px -52% 0px', threshold: [0, .2, .5] });
+    scopeRows.forEach(function (row) { scopeObserver.observe(row); });
+  }
 
   /* Restored scenario rail: desktop auto-loop only while visible; mobile and
      reduced-motion users receive a normal swipeable horizontal rail. */
@@ -240,6 +236,7 @@
   var modeFields = Array.prototype.slice.call(document.querySelectorAll('[data-mode-field]'));
   var status = document.querySelector('[data-form-status]');
   var submitLabel = document.querySelector('[data-submit-label]');
+  var intentStatus = document.querySelector('[data-intent-status]');
   var submitButton = document.querySelector('[data-submit-button]');
   var currentIntent = 'repair';
 
@@ -268,6 +265,11 @@
     if (submitLabel) {
       submitLabel.textContent = currentIntent === 'question' ? 'Preview Quick Question' :
         currentIntent === 'photos' ? 'Preview Photo Request' : 'Preview Repair Request';
+    }
+    if (intentStatus) {
+      intentStatus.textContent = currentIntent === 'question' ? 'Quick Question / describe / clarify fit' :
+        currentIntent === 'photos' ? 'Photo Guidance / wide view / useful detail / review scope' :
+        'Repair Request / describe / add context / review scope';
     }
     if (status) {
       status.classList.remove('is-visible');

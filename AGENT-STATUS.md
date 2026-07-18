@@ -1,109 +1,68 @@
-# Agent Status — Local Repair Pro Premium Recovery V1
+# Agent Status — Local Repair Pro Page Energy Stabilization V1
 
 ## Operating context
 
 - Repository: `proaiexpert/handyman-vancouver-portland-demo`
 - Deployment branch: `main`
-- Published production-like polish commit: `5bf17021be7063d81ac112c5209d787cb26411e7`
-- Published premium-recovery commit: `4fe9d76c5d960c4e9230d7b16e7e4469ef02aba9`
-- Project classification: **Website Concept · In Development**
+- Starting `main` HEAD: `4de249aed85005df9393de348452dd6758314031`
+- Feature branch: `feature/local-repair-pro-page-energy-stabilization-v1`
+- Signature hero publication: already present on current `main`
 - Public preview: `https://proai-expert.com/handyman-vancouver-portland-demo/`
-- Real client or operating business: **No**
+- Classification: **Website Concept · In Development**
 
-## Current project truth
+## Deployment status
 
-- Name: **Local Repair Pro**
-- Descriptor: **Home Repair & Handyman Services**
-- Core line: **Thoughtful repairs. Noticeably better.**
-- Primary geography: Vancouver, WA and Clark County
-- Secondary geography: selected Portland-area requests reviewed by location, access and scope
-- Primary CTA: **Request Estimate**
-- Secondary CTA: **Send Photos**
+At the start of this pass, cache-busted HTML, `site-v1.css`, `premium-recovery-v1.css`, `photo-to-scope-v1.css` and `site-v1.js` matched local `main` after line-ending normalization. Classification: **A — LIVE MATCHES MAIN**.
 
-## Why the premium-recovery pass was needed
+The current feature branch is not merged, published or deployed. The public site remains on `main` at the starting state until the owner makes a later publication decision.
 
-The production-like polish substantially improved consistency, route architecture, concept safety, form behavior and documentation. Live owner review then identified a real tradeoff: several pages became cleaner but visually flatter, and the homepage lost one of its strongest signature interactions.
+## Stabilization completed on the feature branch
 
-The premium-recovery pass restored selected high-value features without returning to the old page-local CSS architecture or reintroducing the earlier defects.
+- consolidated the approved Photo to Scope rules into `premium-recovery-v1.css`;
+- removed `photo-to-scope-v1.css` and all references;
+- removed the JavaScript premium-stylesheet loader;
+- linked premium CSS directly from every primary and canonical city page;
+- added route-appropriate static hero shells and decorative slots to HTML;
+- changed JavaScript to populate only the reserved visual slot;
+- changed primary internal hero visuals from lazy to eager loading;
+- retained explicit media dimensions and WebP assets;
+- corrected Oregon routes to the Portland-metro family;
+- removed the generic `.reveal` activation system and the nearly invisible copy entrance.
 
-## Published recovery work
+## Page-energy work
 
-### Homepage scenario rail
+- Homepage: Scope Lens, first-row Scope Trace, photo Process Sequence and final Surface Handoff.
+- Services: desktop `01–05` scope index with active-row registration; static mobile list.
+- Examples: twelve-column editorial rhythm using all eight existing scenarios; one-column mobile.
+- Request: unmistakable selected intent, compact live process label and aligned photo checklist sequence.
+- Service Area: Vancouver primary, Clark County context and Portland metro scope-review groups.
+- City pages: Vancouver, Clark County and Portland-metro variants plus a compact request-orientation strip.
+- Pricing: visible context and project logistics groups.
+- Guides: numbered practical field-note index.
+- About: Notice → Show → Clarify sequence.
+- FAQ: visible topic index and restrained native-details open state.
 
-- Replaced the reduced four-card grid with a full-width rail using all eight existing scenario images.
-- Added a duplicated second set for a continuous loop.
-- Auto-motion begins only while the rail is visible.
-- Desktop hover and keyboard focus pause the motion.
-- Mobile and short landscape use manual horizontal swipe with scroll snap.
-- `prefers-reduced-motion` disables automatic movement.
-- Concept images remain described as example categories, not completed projects.
+## Motion vocabulary
 
-### Homepage hero and shared premiumity
+Frame Set, Scope Trace, Detail Settle, Process Sequence, Surface Handoff and Scenario Rail only. Scenario Rail is the only continuous motion. Essential text and CTAs are visible before motion, and reduced-motion uses complete static states.
 
-- Added restrained navy/forest/amber depth and architectural grid accents.
-- Added image-frame treatment and controlled image scale response.
-- Restored richer hover behavior for hero chips and calls to action.
-- Added premium interaction treatment to field notes, service rows, process steps, service-area cards and FAQ items.
-- Added a stronger final conversion-band composition.
+## Project truth retained
 
-### Internal page heroes
+- Local Repair Pro name, logo, routes and service architecture are unchanged.
+- Reserved phone and `.example` email are unchanged.
+- No real submission, analytics, external endpoint or upload UI was added.
+- No reviews, credentials, guarantees, prices, response times, availability, address, staff or completed-project proof was added.
+- Scenario imagery remains explicitly conceptual.
 
-- Retained one shared `.page-hero` implementation across the site.
-- Added an architectural symbol field, framed geometry, radial depth and scope/context/next-step micro-label.
-- Avoided separate page-local hero CSS and template-specific one-off effects.
-- Mobile layouts reduce decoration rather than removing content.
+## Owner-review items
 
-### Architecture retained
-
-- Short canonical `/examples/` and `/areas/` routes remain.
-- Former long routes remain compatibility pages.
-- Header, footer, mobile navigation and request flow remain shared.
-- Privacy, Terms, sitemap and 404 remain in place.
-- No obsolete preview route was restored.
-
-## Shared files
-
-- `assets/css/site-v1.css` — accessible base.
-- `assets/css/premium-recovery-v1.css` — recovered premium visual layer.
-- `assets/js/site-v1.js` — navigation, sticky actions, reveal logic, premium-layer loading, viewport-aware scenario rail and request flow.
-
-## Concept safety retained
-
-- Reserved phone: `(360) 555-0147`.
-- Reserved email: `hello@localrepairpro.example`.
-- No operating address, hours, license, insurance, bond or registration number.
-- No reviews, ratings, years in business, project counts or business metrics.
-- No exact pricing, guaranteed availability, emergency service or fixed response time.
-- No LocalBusiness schema.
-- No analytics or external form endpoint.
-- Every concept page remains `noindex, nofollow`.
-
-## Verification completed
-
-- Confirmed the former homepage implementation contained the requested seamless scenario rail behavior.
-- Reimplemented the rail inside the new shared architecture rather than copying the old page wholesale.
-- Confirmed all eight referenced scenario assets exist.
-- Confirmed rail duplicates are `aria-hidden`.
-- Confirmed mobile and reduced-motion CSS remove automatic movement.
-- Confirmed page-hero premiumity is applied through the shared CSS layer.
-- Confirmed no route, contact or concept-status claim changed.
-- Confirmed the request-flow interception and safety copy remain intact.
-- Confirmed PR #2 was squash-merged into `main` as `4fe9d76c5d960c4e9230d7b16e7e4469ef02aba9`.
-
-## Current live review checklist
-
-This environment does not provide a full Playwright/browser rendering surface. Owner browsing should now check:
-
-- scenario rail speed and card size on desktop;
-- manual swipe and bottom spacing on mobile;
-- homepage hero crop and image-frame balance;
-- internal hero composition at desktop, tablet and narrow mobile widths;
-- pages that still feel too sparse;
-- sticky CTA and footer behavior;
-- runtime console and horizontal overflow.
+- judge the Services index usefulness at desktop widths;
+- confirm Examples editorial size changes feel practical rather than portfolio-like;
+- review Request intent terminology and form connection;
+- review map crop and three regional city variants;
+- confirm compact mobile hero visuals remain sufficiently tangible;
+- decide whether any downstream section needs less visual emphasis.
 
 ## Current decision
 
-**READY FOR LIVE OWNER BROWSING — NOT FINAL DESIGN APPROVAL**
-
-The next session should improve individual weak pages based on actual browsing rather than start another broad site rewrite.
+Implementation is prepared for local browser QA and owner live review. Do not merge or publish from this branch without explicit owner instruction.

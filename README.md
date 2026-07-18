@@ -4,121 +4,81 @@
 **Classification:** Website Concept · In Development  
 **Direction:** Premium Local Repair Pro — Pacific Northwest Edition
 
-Local Repair Pro is a production-like website concept created by ProAI Expert for a Vancouver, Washington–first handyman and home-repair experience. It is an internal Website Production Factory showcase, not a verified client engagement or operating service business.
+Local Repair Pro is a production-like ProAI Expert concept for a Vancouver, Washington-first handyman and home-repair experience. It is not a verified client engagement or operating service business.
 
-## Current deployment state
+## Current repository state
 
 - Repository: `proaiexpert/handyman-vancouver-portland-demo`
 - Deployment branch: `main`
+- Starting `main` for the current pass: `4de249aed85005df9393de348452dd6758314031`
+- Current implementation branch: `feature/local-repair-pro-page-energy-stabilization-v1`
 - Public preview: `https://proai-expert.com/handyman-vancouver-portland-demo/`
-- Initial pre-polish checkpoint: `8605bb1e61d5be44296ec130ccc45b1a65e53ed9`
-- Production-like polish squash: `5bf17021be7063d81ac112c5209d787cb26411e7`
-- Published premium-recovery squash: `4fe9d76c5d960c4e9230d7b16e7e4469ef02aba9`
+- Live parity at the start of this pass: **A — live matches main**
 
-The production-like polish was promoted through PR #1. The focused premium-recovery pass was promoted through PR #2. Both previous states remain available through Git history, providing a clear rollback path.
+The signature hero family and Photo to Scope homepage are already published on `main`. The current feature branch stabilizes that system and extends the same identity into downstream page sections. It is prepared for local owner review only; it is not merged or deployed.
 
-## Current live experience
+## Current experience
 
-The current `main` combines the cleaner shared architecture introduced in the production-like polish with selected premium interactions recovered from the earlier version:
+- Photo to Scope homepage hero with visible-first copy and CTAs;
+- four related hero archetypes for request, project types, regional orientation and editorial method;
+- final hero space present in static HTML before JavaScript enhancement;
+- direct premium stylesheet links on primary and city pages;
+- organized five-family service scope index;
+- editorial eight-scenario library with explicit concept-image disclosure;
+- three connected request intents and browser-only form preview;
+- three truthful regional fields and three controlled city-page variants;
+- pricing context separated into visible context and project logistics;
+- practical guide index, Notice → Show → Clarify method and FAQ topic index;
+- Scenario Rail as the only continuous-motion component;
+- visible-first Frame Set, Scope Trace, Detail Settle, Process Sequence and Surface Handoff effects.
 
-- original Local Repair Pro SVG identity;
-- consistent desktop and mobile navigation;
-- approved Pacific Northwest hero image and positioning;
-- restored full-width scenario rail with eight visual categories;
-- desktop auto-loop only while the rail is visible;
-- hover and keyboard-focus pause;
-- manual swipe and scroll snap on mobile;
-- reduced-motion fallback;
-- architectural hero compositions on internal pages;
-- richer shared hover/focus treatment for field notes, services, process steps, area cards and FAQ;
-- structured three-intent request preview with no data transmission;
-- short canonical routes and compatibility handling for former URLs;
-- concept-safe Privacy, Terms, sitemap and 404 pages.
+## Front-end architecture
+
+- `assets/css/site-v1.css` — structural, responsive and accessible fallback system.
+- `assets/css/premium-recovery-v1.css` — final Photo to Scope, signature hero and page-energy layer.
+- `assets/js/site-v1.js` — navigation, sticky actions, static-slot hero enhancement, named one-time effects, scenario rail and request behavior.
+
+`photo-to-scope-v1.css` has been consolidated into the final premium stylesheet and removed. Essential premium CSS is not injected by JavaScript. With JavaScript disabled, empty decorative hero slots are hidden and the complete text-first hero remains readable.
+
+## Motion vocabulary
+
+Only these effects are approved:
+
+1. Frame Set
+2. Scope Trace
+3. Detail Settle
+4. Process Sequence
+5. Surface Handoff
+6. Scenario Rail
+
+Scenario Rail is the only continuous effect. Reduced-motion users receive complete static final states.
+
+## Regional families
+
+- **Vancouver primary:** Vancouver.
+- **Clark County context:** Camas and Battle Ground.
+- **Portland metro / scope review:** Portland, Hillsboro, Beaverton, Gresham, Tigard, Lake Oswego and Oregon City.
+- **Service Area hub:** its own regional orientation.
+
+No exact radius, travel time, availability or guaranteed coverage is represented.
 
 ## Canonical routes
 
-### Primary pages
+Primary pages: `/`, `/services/`, `/examples/`, `/request/`, `/areas/`, `/pricing/`, `/guides/`, `/about/`, `/faq/`, `/privacy/`, `/terms/`, `/sitemap/` and `/404.html`.
 
-- `/`
-- `/services/`
-- `/examples/`
-- `/request/`
-- `/areas/`
-- `/pricing/`
-- `/guides/`
-- `/about/`
-- `/faq/`
-- `/privacy/`
-- `/terms/`
-- `/sitemap/` — noindex HTML navigation page
-- `/404.html`
-
-### City-area pages
-
-- `/areas/vancouver-wa/`
-- `/areas/camas-wa/`
-- `/areas/battle-ground-wa/`
-- `/areas/portland-or/`
-- `/areas/hillsboro-or/`
-- `/areas/beaverton-or/`
-- `/areas/gresham-or/`
-- `/areas/tigard-or/`
-- `/areas/lake-oswego-or/`
-- `/areas/oregon-city-or/`
-
-### Compatibility paths
-
-The former `/work-examples/`, `/service-area/` and `/service-area/{city}/` routes remain as lightweight noindex compatibility pages pointing to the shorter canonical routes.
-
-Historical preview paths, including `/homepage-v2-premium.html`, remain obsolete and must not be restored as active public pages.
-
-## Shared front-end system
-
-- `assets/css/site-v1.css` — structural and accessible base system.
-- `assets/css/premium-recovery-v1.css` — restrained premium composition and recovered visual interactions.
-- `assets/js/site-v1.js` — navigation, sticky actions, reveal enhancement, premium-layer loading, viewport-aware scenario rail and request-flow behavior.
-
-The base site remains readable without JavaScript. JavaScript adds menu behavior, premium recovery styling, viewport-aware motion and request-form enhancement.
-
-## Brand assets
-
-- `assets/brand/local-repair-pro-symbol.svg`
-- `assets/brand/local-repair-pro-wordmark.svg`
-- `assets/brand/local-repair-pro-wordmark-light.svg`
-- `assets/brand/local-repair-pro-monochrome.svg`
-- `favicon.svg`
-
-The identity uses architectural corner and door-frame geometry. It does not use stock marks, house-and-hammer clipart, shields, mascots or fake certification language.
+City pages remain under `/areas/{city-state}/`. Former `/work-examples/`, `/service-area/` and `/service-area/{city}/` paths remain compatibility routes.
 
 ## Contact and concept safety
-
-Reserved fictional contact data:
 
 - `(360) 555-0147`
 - `tel:+13605550147`
 - `sms:+13605550147`
 - `hello@localrepairpro.example`
 
-The request form is a browser-only preview. It does not send or store entered information. Confirmation text states:
+The request form is browser-only. It does not send or store entered information. Every concept page remains `noindex, nofollow`; there is no analytics, external form endpoint or fictional LocalBusiness schema.
 
-> Preview complete — no request was sent. This concept form does not collect or transmit personal information.
-
-## Indexing and fake-proof guardrails
-
-- Every public concept page remains `noindex, nofollow`.
-- No fictional `LocalBusiness` schema is used.
-- No production XML sitemap entry is added.
-- No analytics, tracking or external form endpoint is connected.
-- Scenario images illustrate common project types and are not presented as completed Local Repair Pro work.
-
-Do not add or imply unverified client status, reviews, ratings, license, insurance, bond, warranty, years in business, exact pricing, response time, operating address, employee identity, project results or business metrics.
-
-## Documentation
-
-- `docs/LOCAL_REPAIR_PRO_PRODUCTION_POLISH_AUDIT_V1.md`
-- `docs/PREMIUM_RECOVERY_PASS_V1.md`
-- `AGENT-STATUS.md`
+Scenario images illustrate common project categories and are not presented as completed Local Repair Pro work. Do not add unverified reviews, ratings, credentials, guarantees, years, counts, exact prices, response times, availability, address, employees or project claims.
 
 ## Current review stage
 
-The live site is ready for owner browsing and practical feedback, but not final design approval. The next controlled pass should review each page in a real browser, identify pages that still feel visually sparse, and improve them individually without reopening the entire architecture or weakening concept safety.
+The current feature branch requires owner live visual review in local Chrome before any merge or deployment decision. Review priorities are the editorial Examples rhythm, the compact mobile signature visuals, the Services sticky index and the three regional city variants.
