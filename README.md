@@ -1,7 +1,7 @@
 # Local Repair Pro
 
 **Home Repair & Handyman Services**  
-**Classification:** Website Concept · In Development  
+**Classification:** Website Concept · Client-Facing Demonstration  
 **Direction:** Premium Local Repair Pro — Pacific Northwest Edition
 
 Local Repair Pro is a production-like ProAI Expert concept for a Vancouver, Washington-first handyman and home-repair experience. It is not a verified client engagement or operating service business.
@@ -10,12 +10,12 @@ Local Repair Pro is a production-like ProAI Expert concept for a Vancouver, Wash
 
 - Repository: `proaiexpert/handyman-vancouver-portland-demo`
 - Deployment branch: `main`
-- Starting `main` for the current pass: `4de249aed85005df9393de348452dd6758314031`
-- Current implementation branch: `feature/local-repair-pro-page-energy-stabilization-v1`
+- Published implementation commit: `f79ea0303f6857adea20ab272735c592f3616345`
+- Source feature branch: `feature/local-repair-pro-page-energy-stabilization-v1`
 - Public preview: `https://proai-expert.com/handyman-vancouver-portland-demo/`
-- Live parity at the start of this pass: **A — live matches main**
+- Owner approval: **approved for merge and publication on 2026-07-19**
 
-The signature hero family and Photo to Scope homepage are already published on `main`. The current feature branch stabilizes that system and extends the same identity into downstream page sections. It is prepared for local owner review only; it is not merged or deployed.
+The approved page-energy and stabilization implementation was fast-forwarded into `main`. GitHub Pages propagation and cache parity should be verified on the public URL after publication.
 
 ## Current experience
 
@@ -38,7 +38,7 @@ The signature hero family and Photo to Scope homepage are already published on `
 - `assets/css/premium-recovery-v1.css` — final Photo to Scope, signature hero and page-energy layer.
 - `assets/js/site-v1.js` — navigation, sticky actions, static-slot hero enhancement, named one-time effects, scenario rail and request behavior.
 
-`photo-to-scope-v1.css` has been consolidated into the final premium stylesheet and removed. Essential premium CSS is not injected by JavaScript. With JavaScript disabled, empty decorative hero slots are hidden and the complete text-first hero remains readable.
+`photo-to-scope-v1.css` was consolidated into the final premium stylesheet and removed. Essential premium CSS is not injected by JavaScript. With JavaScript disabled, empty decorative hero slots are hidden and the complete text-first hero remains readable.
 
 ## Motion vocabulary
 
@@ -81,4 +81,4 @@ Scenario images illustrate common project categories and are not presented as co
 
 ## Current review stage
 
-The current feature branch requires owner live visual review in local Chrome before any merge or deployment decision. Review priorities are the editorial Examples rhythm, the compact mobile signature visuals, the Services sticky index and the three regional city variants.
+The design and implementation are approved as a client-facing demonstration. Do not start another broad visual pass. Future expansion should be driven by verified client data, real project imagery, production contact/form integrations and specific operational requirements.
