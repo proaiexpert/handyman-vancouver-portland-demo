@@ -1,15 +1,15 @@
 # LOCAL_REPAIR_PRO_CURRENT_HANDOFF_AND_EXECUTION_PROTOCOL_V1
 
-**Status:** Active controlling handoff
-**Updated:** 2026-07-18
-**Repository:** `proaiexpert/handyman-vancouver-portland-demo`
-**Deployment branch:** `main`
-**Starting main HEAD for current pass:** `4de249aed85005df9393de348452dd6758314031`
-**Current feature branch:** `feature/local-repair-pro-page-energy-stabilization-v1`
+**Status:** Active controlling handoff  
+**Updated:** 2026-07-19  
+**Repository:** `proaiexpert/handyman-vancouver-portland-demo`  
+**Deployment branch:** `main`  
+**Published implementation commit:** `f79ea0303f6857adea20ab272735c592f3616345`  
+**Source feature branch:** `feature/local-repair-pro-page-energy-stabilization-v1`
 
 ## 1. Current project truth
 
-Local Repair Pro is a ProAI Expert **Website Concept · In Development** for a Vancouver, Washington-first home-repair experience. It is not a verified client engagement or operating business.
+Local Repair Pro is a ProAI Expert **Website Concept · Client-Facing Demonstration** for a Vancouver, Washington-first home-repair experience. It is not a verified client engagement or operating business.
 
 Keep the Local Repair Pro name, original SVG logo, current routes, five service families, Photo to Scope method, three request intents and concept-safety system. Do not reopen those decisions without a verified defect.
 
@@ -24,11 +24,13 @@ Retain `noindex, nofollow`, browser-only request preview, no analytics, no exter
 
 ## 2. Current published baseline
 
-The signature hero family and Photo to Scope homepage are already published on `main` at `4de249aed85005df9393de348452dd6758314031`.
+The owner approved the page-energy and stabilization implementation on 2026-07-19. `main` was fast-forwarded to `f79ea0303f6857adea20ab272735c592f3616345` because the feature branch was exactly one commit ahead of the previous `main` baseline.
 
-At the start of the stabilization pass, cache-busted public HTML, all three then-active stylesheets and `site-v1.js` matched local `main`. Deployment parity classification: **A — LIVE MATCHES MAIN**.
+The public target remains:
 
-The current stabilization feature branch is local/remote feature work only. It is not merged or deployed.
+`https://proai-expert.com/handyman-vancouver-portland-demo/`
+
+After a publication change, verify the public site with a hard reload, disabled browser cache and a cache-busted request. Do not treat one stale crawler response as a source-code defect.
 
 ## 3. Final CSS architecture
 
@@ -40,9 +42,9 @@ The current stabilization feature branch is local/remote feature work only. It i
 
 ## 4. Hero construction
 
-The route-appropriate hero class, signature shell, text container and visual slot now exist in static HTML. JavaScript populates only the art-directed contents of the reserved visual slot; it does not move or wrap the primary text after parsing.
+The route-appropriate hero class, signature shell, text container and visual slot exist in static HTML. JavaScript populates only the art-directed contents of the reserved visual slot; it does not move or wrap the primary text after parsing.
 
-Without JavaScript, the empty decorative slot is hidden and the complete text hero remains readable. With JavaScript, the slot dimensions are already reserved before enhancement. Primary internal hero visuals load eagerly; secondary support crops remain lazy where useful.
+Without JavaScript, the empty decorative slot is hidden and the complete text hero remains readable. With JavaScript, the slot dimensions are reserved before enhancement. Primary internal hero visuals load eagerly; secondary support crops remain lazy where useful.
 
 ## 5. Regional classification
 
@@ -55,7 +57,7 @@ Use exactly these families:
 
 Never invent a radius, travel time, service guarantee, availability, location pin or neighborhood proof.
 
-## 6. Current downstream system
+## 6. Published downstream system
 
 - Homepage: Scope Lens, restrained service-row trace, photo sequence and final surface handoff.
 - Services: organized five-family scope index.
@@ -87,18 +89,18 @@ Never add unverified client status, reviews, ratings, licensing, insurance, guar
 
 Do not create a real upload, estimate, booking or submission state without a separately approved production integration.
 
-## 9. Owner review protocol
+## 9. Current operating rule
 
-Use the real locally served site in Chrome as the primary approval surface. Current local URL for this pass: `http://127.0.0.1:4187/`.
+The current design is approved as a client-facing demonstration. Do not begin another broad art-direction, hero or motion pass.
 
-Review the homepage, Services, Examples, Request, Service Area, one city from each regional family, Pricing, Guides, About and FAQ at desktop, tablet, mobile and short landscape. Consolidate owner feedback into one controlled correction pass.
+Future work must be triggered by one of the following:
 
-Do not merge, update `main` or deploy until the owner explicitly approves the feature branch.
+- a verified functional or responsive defect;
+- real client identity, contact and operating information;
+- verified project photography or proof;
+- a production form, analytics, privacy or SEO integration;
+- a specific client customization requirement.
 
-## 10. Remaining owner decisions
+## 10. Branch cleanup
 
-- whether the Services desktop index should remain sticky;
-- whether the Examples editorial scale is sufficiently practical;
-- whether the regional map crop feels informative without becoming map proof;
-- whether any one-time downstream effect should be reduced further;
-- whether this feature branch is ready for a later merge/publication task.
+After confirming that `main` and the public site are stable, obsolete feature and handoff branches may be deleted. Preserve `main`. Do not delete a branch that contains commits not reachable from `main`.
