@@ -1,22 +1,22 @@
-# Agent Status — Local Repair Pro Page Energy Stabilization V1
+# Agent Status — Local Repair Pro Published Stabilization V1
 
 ## Operating context
 
 - Repository: `proaiexpert/handyman-vancouver-portland-demo`
 - Deployment branch: `main`
-- Starting `main` HEAD: `4de249aed85005df9393de348452dd6758314031`
-- Feature branch: `feature/local-repair-pro-page-energy-stabilization-v1`
-- Signature hero publication: already present on current `main`
+- Starting baseline for the stabilization pass: `4de249aed85005df9393de348452dd6758314031`
+- Published implementation commit: `f79ea0303f6857adea20ab272735c592f3616345`
+- Source feature branch: `feature/local-repair-pro-page-energy-stabilization-v1`
 - Public preview: `https://proai-expert.com/handyman-vancouver-portland-demo/`
-- Classification: **Website Concept · In Development**
+- Classification: **Website Concept · Client-Facing Demonstration**
 
-## Deployment status
+## Publication status
 
-At the start of this pass, cache-busted HTML, `site-v1.css`, `premium-recovery-v1.css`, `photo-to-scope-v1.css` and `site-v1.js` matched local `main` after line-ending normalization. Classification: **A — LIVE MATCHES MAIN**.
+The owner approved the stabilization implementation on 2026-07-19. `main` was fast-forwarded to the approved implementation commit. No PR or merge commit was required because the feature branch was exactly one commit ahead of `main`.
 
-The current feature branch is not merged, published or deployed. The public site remains on `main` at the starting state until the owner makes a later publication decision.
+GitHub Pages propagation and cache parity should be checked on the public URL after the branch update. A stale browser or crawler response should not be treated as a source defect until a hard reload and cache-busted verification are completed.
 
-## Stabilization completed on the feature branch
+## Published stabilization
 
 - consolidated the approved Photo to Scope rules into `premium-recovery-v1.css`;
 - removed `photo-to-scope-v1.css` and all references;
@@ -29,12 +29,12 @@ The current feature branch is not merged, published or deployed. The public site
 - corrected Oregon routes to the Portland-metro family;
 - removed the generic `.reveal` activation system and the nearly invisible copy entrance.
 
-## Page-energy work
+## Published page-energy system
 
 - Homepage: Scope Lens, first-row Scope Trace, photo Process Sequence and final Surface Handoff.
 - Services: desktop `01–05` scope index with active-row registration; static mobile list.
 - Examples: twelve-column editorial rhythm using all eight existing scenarios; one-column mobile.
-- Request: unmistakable selected intent, compact live process label and aligned photo checklist sequence.
+- Request: selected intent, compact live process label and aligned photo checklist sequence.
 - Service Area: Vancouver primary, Clark County context and Portland metro scope-review groups.
 - City pages: Vancouver, Clark County and Portland-metro variants plus a compact request-orientation strip.
 - Pricing: visible context and project logistics groups.
@@ -54,15 +54,8 @@ Frame Set, Scope Trace, Detail Settle, Process Sequence, Surface Handoff and Sce
 - No reviews, credentials, guarantees, prices, response times, availability, address, staff or completed-project proof was added.
 - Scenario imagery remains explicitly conceptual.
 
-## Owner-review items
-
-- judge the Services index usefulness at desktop widths;
-- confirm Examples editorial size changes feel practical rather than portfolio-like;
-- review Request intent terminology and form connection;
-- review map crop and three regional city variants;
-- confirm compact mobile hero visuals remain sufficiently tangible;
-- decide whether any downstream section needs less visual emphasis.
-
 ## Current decision
 
-Implementation is prepared for local browser QA and owner live review. Do not merge or publish from this branch without explicit owner instruction.
+**APPROVED AND PUBLISHED TO `main` AS A CLIENT-FACING DEMONSTRATION.**
+
+Do not start another broad visual rewrite. Future work should be limited to verified production integrations, real client content or a confirmed defect. Obsolete feature and handoff branches may be removed after confirming that `main` and the public site are stable.
