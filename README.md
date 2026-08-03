@@ -1,84 +1,131 @@
 # Local Repair Pro
 
-**Home Repair & Handyman Services**  
-**Classification:** Website Concept · Client-Facing Demonstration  
-**Direction:** Premium Local Repair Pro — Pacific Northwest Edition
+A production-like local-service website concept demonstrating how a handyman or home-repair business could turn photos, repair details, location, and scope into a clearer first-contact workflow.
 
-Local Repair Pro is a production-like ProAI Expert concept for a Vancouver, Washington-first handyman and home-repair experience. It is not a verified client engagement or operating service business.
+**Status:** Website concept · Client-facing demonstration  
+**Operating-business status:** Not a verified client engagement or operating service business  
+**Live demo:** [Local Repair Pro](https://proai-expert.com/handyman-vancouver-portland-demo/)  
+**ProAI Expert case study:** [Local Repair Pro](https://proai-expert.com/case-studies/local-repair-pro/)
 
-## Current repository state
+## Concept purpose
 
-- Repository: `proaiexpert/handyman-vancouver-portland-demo`
-- Deployment branch: `main`
-- Published implementation commit: `f79ea0303f6857adea20ab272735c592f3616345`
-- Source feature branch: `feature/local-repair-pro-page-energy-stabilization-v1`
-- Public preview: `https://proai-expert.com/handyman-vancouver-portland-demo/`
-- Owner approval: **approved for merge and publication on 2026-07-19**
+Local Repair Pro demonstrates a premium but practical digital experience for homeowners who may not know the correct service category before making contact. The core idea is **Photo to Scope**: begin with a short description, clear photos, general location, and access details so the request can be organized before scheduling or referral.
 
-The approved page-energy and stabilization implementation was fast-forwarded into `main`. GitHub Pages propagation and cache parity should be verified on the public URL after publication.
+The project is intentionally presented as a concept. It does not claim real customers, completed jobs, operating coverage, licenses, reviews, response times, pricing, availability, or business performance.
 
-## Current experience
+## Demonstrated capabilities
 
-- Photo to Scope homepage hero with visible-first copy and CTAs;
-- four related hero archetypes for request, project types, regional orientation and editorial method;
-- final hero space present in static HTML before JavaScript enhancement;
-- direct premium stylesheet links on primary and city pages;
-- organized five-family service scope index;
-- editorial eight-scenario library with explicit concept-image disclosure;
-- three connected request intents and browser-only form preview;
-- three truthful regional fields and three controlled city-page variants;
-- pricing context separated into visible context and project logistics;
-- practical guide index, Notice → Show → Clarify method and FAQ topic index;
-- Scenario Rail as the only continuous-motion component;
-- visible-first Frame Set, Scope Trace, Detail Settle, Process Sequence and Surface Handoff effects.
+- local-service positioning for Vancouver, Washington and nearby Pacific Northwest markets;
+- Photo-to-Scope request preparation;
+- service-family and scenario-based information architecture;
+- request, photo-checklist, pricing-context, FAQ, guide, and service-area pathways;
+- regional pages that remain truthful about location and scope review;
+- browser-only form behavior for demonstration purposes;
+- responsive mobile, tablet, desktop, and low-height landscape layouts;
+- visible-first content with progressive JavaScript enhancement;
+- accessible navigation, focus states, reduced-motion support, and no-JavaScript fallbacks.
+
+## Experience architecture
+
+The concept organizes the customer journey around four questions:
+
+1. What needs attention?
+2. What do the photos and access conditions show?
+3. Where is the request located?
+4. What should happen next: clarification, grouping, scheduling review, or referral?
+
+Primary routes include:
+
+- `/`
+- `/services/`
+- `/examples/`
+- `/request/`
+- `/areas/`
+- `/pricing/`
+- `/guides/`
+- `/about/`
+- `/faq/`
+- `/privacy/`
+- `/terms/`
+
+City pages remain under `/areas/{city-state}/`. Compatibility routes are retained where required by the current implementation.
+
+## Regional model
+
+The demonstration uses a controlled regional hierarchy:
+
+- **Primary:** Vancouver, Washington;
+- **Clark County context:** nearby communities such as Camas and Battle Ground;
+- **Portland metro context:** selected Oregon communities reviewed by location and scope;
+- **Service-area hub:** general orientation without guaranteed coverage.
+
+No exact service radius, travel time, scheduling availability, or guaranteed geographic coverage is represented.
 
 ## Front-end architecture
 
-- `assets/css/site-v1.css` — structural, responsive and accessible fallback system.
-- `assets/css/premium-recovery-v1.css` — final Photo to Scope, signature hero and page-energy layer.
-- `assets/js/site-v1.js` — navigation, sticky actions, static-slot hero enhancement, named one-time effects, scenario rail and request behavior.
+The site uses a static, dependency-light implementation:
 
-`photo-to-scope-v1.css` was consolidated into the final premium stylesheet and removed. Essential premium CSS is not injected by JavaScript. With JavaScript disabled, empty decorative hero slots are hidden and the complete text-first hero remains readable.
+- semantic HTML5;
+- responsive CSS;
+- minimal vanilla JavaScript;
+- direct stylesheet delivery;
+- local optimized imagery;
+- GitHub Pages-compatible routing;
+- no required framework, CMS, database, or build step.
 
-## Motion vocabulary
+Core files:
 
-Only these effects are approved:
+- `assets/css/site-v1.css` — structural, responsive, and accessible fallback system;
+- `assets/css/premium-recovery-v1.css` — premium visual and signature-interaction layer;
+- `assets/js/site-v1.js` — navigation, sticky actions, progressive enhancement, and demo request behavior.
 
-1. Frame Set
-2. Scope Trace
-3. Detail Settle
-4. Process Sequence
-5. Surface Handoff
-6. Scenario Rail
+Essential content and hierarchy remain readable without JavaScript.
 
-Scenario Rail is the only continuous effect. Reduced-motion users receive complete static final states.
+## Interaction and motion
 
-## Regional families
+The approved motion vocabulary is intentionally limited:
 
-- **Vancouver primary:** Vancouver.
-- **Clark County context:** Camas and Battle Ground.
-- **Portland metro / scope review:** Portland, Hillsboro, Beaverton, Gresham, Tigard, Lake Oswego and Oregon City.
-- **Service Area hub:** its own regional orientation.
+- Frame Set;
+- Scope Trace;
+- Detail Settle;
+- Process Sequence;
+- Surface Handoff;
+- Scenario Rail.
 
-No exact radius, travel time, availability or guaranteed coverage is represented.
+Scenario Rail is the only continuous effect. Reduced-motion users receive complete static states.
 
-## Canonical routes
+## Truthful demonstration boundaries
 
-Primary pages: `/`, `/services/`, `/examples/`, `/request/`, `/areas/`, `/pricing/`, `/guides/`, `/about/`, `/faq/`, `/privacy/`, `/terms/`, `/sitemap/` and `/404.html`.
+The repository and demo must not add or imply:
 
-City pages remain under `/areas/{city-state}/`. Former `/work-examples/`, `/service-area/` and `/service-area/{city}/` paths remain compatibility routes.
+- real clients or completed projects;
+- testimonials, ratings, or review counts;
+- verified licenses, credentials, staff, or years in business;
+- guaranteed prices, response times, availability, or coverage;
+- a real production phone, SMS, email, or operating address;
+- a functional production intake endpoint;
+- fictional LocalBusiness schema, analytics adoption, or conversion results.
 
-## Contact and concept safety
+Current contact values are placeholders. The request form is browser-only and does not send or store submitted information. Scenario imagery represents common repair categories and is not presented as completed Local Repair Pro work.
 
-- `(360) 555-0147`
-- `tel:+13605550147`
-- `sms:+13605550147`
-- `hello@localrepairpro.example`
+## Current state
 
-The request form is browser-only. It does not send or store entered information. Every concept page remains `noindex, nofollow`; there is no analytics, external form endpoint or fictional LocalBusiness schema.
+The design and implementation are approved as a client-facing demonstration. Broad visual redesign is not the next step.
 
-Scenario images illustrate common project categories and are not presented as completed Local Repair Pro work. Do not add unverified reviews, ratings, credentials, guarantees, years, counts, exact prices, response times, availability, address, employees or project claims.
+A real deployment would require:
 
-## Current review stage
+- verified business identity and ownership;
+- real contact information;
+- confirmed service scope and geographic coverage;
+- applicable licensing and permit rules;
+- real project photography and approved proof;
+- a privacy-reviewed production form endpoint;
+- analytics and operational integrations only after explicit approval;
+- removal of `noindex, nofollow` only when the business and launch conditions are verified.
 
-The design and implementation are approved as a client-facing demonstration. Do not start another broad visual pass. Future expansion should be driven by verified client data, real project imagery, production contact/form integrations and specific operational requirements.
+## Role of ProAI Expert
+
+**ProAI Expert** created the concept positioning, service architecture, Photo-to-Scope workflow, regional information model, responsive experience, truthful-demo boundaries, and production-like front-end implementation.
+
+- ProAI Expert: https://proai-expert.com/
+- Project case study: https://proai-expert.com/case-studies/local-repair-pro/
